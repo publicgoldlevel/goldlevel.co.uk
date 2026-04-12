@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grounded Abundance | Security controls</title>
+  <meta name="description" content="Front-end security controls for the static Grounded Abundance front door." />
+  <meta property="og:title" content="Grounded Abundance | Security controls" />
+  <meta property="og:description" content="Front-end security controls for the static Grounded Abundance front door." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goldlevel.co.uk/security.html" />
+  <link rel="canonical" href="https://goldlevel.co.uk/security.html" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="glv:domain" content="goldlevel.co.uk" />
+  <meta name="glv:price" content="Starting from £44" />
+  <meta name="glv:proton" content="publicgoldlevel@pm.me" />
+  <meta name="glv:signal" content="@goldlevel0.5" />
+  <meta name="glv:public" content="@tomsg3" />
+  <meta name="glv:trace" content="GLV-STATIC-UK-01" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; frame-src 'none'; child-src 'none'; img-src 'self' data:; font-src 'self'; style-src 'self'; script-src 'self'; connect-src 'none'; media-src 'none'; manifest-src 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content" />
+  <link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+  <header class="policy-header"><div class="container"><div class="breadcrumb"><a class="muted-link" href="index.html">Home</a> / Security controls</div><div class="eyebrow">Grounded Abundance</div><h1 class="section-title" style="margin-top:20px;">Security controls</h1><p class="page-lead">This page explains what the front end is doing to stay narrow, reduce attack surface, and keep the onward route aligned with a higher-trust static setup.</p><div class="utility-links"><a class="text-btn" href="index.html">Return to main page</a><a class="text-btn" href="privacy.html">Privacy</a><a class="text-btn" href="terms.html">Terms</a><a class="text-btn" href="data-rights.html">Data rights</a></div></div></header>
+  <main class="policy-main"><div class="container"><div class="policy-grid">
+    <article class="policy-card"><h2>What is active on the front end</h2><p>This static build applies visible and invisible controls intended to reduce attack surface and reduce accidental oversharing.</p><ul><li>Strict content security policy in the page.</li><li>No third-party trackers or widget scripts.</li><li>Bounded fields and client-side normalization.</li><li>No HTML rendering from visitor input.</li><li>Anti-bot checks including hidden traps, timing checks, and interaction thresholds.</li></ul></article>
+    <article class="policy-card"><h2>What is deliberately not on this site</h2><p>This site is intentionally narrow.</p><ul><li>No CMS.</li><li>No database.</li><li>No plugin ecosystem.</li><li>No web chat widget.</li><li>No live message storage through the page itself.</li></ul></article>
+    <article class="policy-card"><h2>Why the onward channels are limited</h2><p>Signal and Proton Mail are the only onward routes in this version. That keeps the interface narrower and avoids mixing the front door with softer public messaging paths.</p><ul><li>Signal is positioned as the primary private route.</li><li>Proton Mail is positioned as the structured written route.</li><li>The page is designed to keep the full note local until you choose otherwise.</li></ul></article>
+    <article class="policy-card"><h2>What this page does not claim</h2><p>This page does not claim perfect security, total legal sufficiency, or full operational proof by wording alone.</p><ul><li>Front-end controls matter, but they are not the whole stack.</li><li>Security truth depends on the live environment as deployed.</li><li>This page is written to stay honest about that boundary.</li></ul></article>
+  </div><div class="notice-band" style="margin-top:18px;">Operational base: England, United Kingdom. This page is written to support transparency, consent, minimization, and user understanding in plain English. It is not legal advice and it does not replace a full legal review of the live operating environment.</div></div></main>
+  <footer class="footer"><div class="container footer-inner"><div><strong>Grounded Abundance</strong><br />Static front door with separate policy pages</div><div class="contact-stack"><div class="contact-line"><strong>Domain:</strong> <span id="footerDomainText">goldlevel.co.uk</span></div><div class="contact-line"><strong>Proton Mail:</strong> <span id="footerProtonText">publicgoldlevel@pm.me</span></div><div class="contact-line"><strong>Signal:</strong> <span id="footerSignalText">@goldlevel0.5</span></div><div class="contact-line"><strong>Public handle:</strong> <span id="footerHandleText">@tomsg3</span></div><div class="utility-links"><button class="text-btn" type="button" id="footerCopyProtonButton">Copy Proton Mail</button><button class="text-btn" type="button" id="footerCopySignalButton">Copy Signal</button><button class="text-btn" type="button" id="footerCopyDomainButton">Copy domain</button></div></div></div></footer>
+  <script src="assets/site.js" defer></script>
+</body>
+</html>
