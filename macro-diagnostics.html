@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goldlevel | Background Reads</title>
+  <meta name="description" content="Background reads for Goldlevel Pressure Reads: macro context, evidence boundaries, and the public topology graphic held as a secondary trust layer rather than the front door." />
+  <meta property="og:title" content="Goldlevel | Background Reads" />
+  <meta property="og:description" content="Background reads and evidence boundaries for the wider body of work." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://goldlevel.co.uk/macro-diagnostics.html" />
+  <link rel="canonical" href="https://goldlevel.co.uk/macro-diagnostics.html" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="glv:domain" content="goldlevel.co.uk" />
+  <meta name="glv:trace" content="GLV-BACKGROUND-DIAGNOSTICS-02" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; media-src 'none'; form-action 'none'; upgrade-insecure-requests" />
+  <style>
+    :root {
+      --bg: #0a0f16;
+      --bg-soft: #111827;
+      --panel: rgba(16, 24, 40, 0.78);
+      --panel-strong: rgba(17, 24, 39, 0.94);
+      --line: rgba(255,255,255,0.10);
+      --line-strong: rgba(255,255,255,0.16);
+      --text: #e8edf5;
+      --muted: #9aa7bb;
+      --accent: #d4af37;
+      --accent-soft: rgba(212,175,55,0.18);
+      --info-soft: rgba(88, 145, 255, 0.12);
+      --danger-soft: rgba(227, 82, 82, 0.14);
+      --shadow: 0 24px 70px rgba(0,0,0,0.38);
+      --radius: 22px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,0.13), transparent 28%),
+        radial-gradient(circle at 90% 10%, rgba(94,135,255,0.10), transparent 22%),
+        linear-gradient(180deg, #08111c 0%, #0a0f16 36%, #0d1420 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: rgba(6, 10, 17, 0.84);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .topbar-inner {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #f5d567, var(--accent));
+      box-shadow: 0 0 0 6px rgba(212,175,55,0.16);
+      flex: none;
+    }
+
+    .utility-links, .pill-row, .cta-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .contact-pill, .chip {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .contact-pill strong, .chip strong { color: var(--text); }
+
+
+    .contact-pill .icon-shell {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212,175,55,0.22);
+      background: rgba(212,175,55,0.10);
+      color: #f7df8a;
+      flex: none;
+    }
+
+    .contact-pill svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .signature-title {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.24);
+      background: linear-gradient(135deg, rgba(212,175,55,0.16), rgba(212,175,55,0.08));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 24px rgba(0,0,0,0.18);
+      color: #f8e8ad;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero { padding: 58px 0 26px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.82fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-copy, .hero-card, .panel, .footer-inner {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .hero-card, .footer-inner { background: var(--panel-strong); }
+
+    .eyebrow, .section-marker {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      width: 100%;
+      margin: 0 0 20px;
+      color: #f1df9a;
+      font-size: 0.82rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .eyebrow::before,
+    .eyebrow::after,
+    .section-marker::before,
+    .section-marker::after {
+      content: "";
+      flex: 1 1 auto;
+      min-width: 38px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.72) 48%, transparent 100%);
+    }
+
+    .headline {
+      font-size: clamp(2.35rem, 4.8vw, 4.15rem);
+      line-height: 1.02;
+      letter-spacing: -0.045em;
+      margin: 0;
+      max-width: 11ch;
+    }
+
+    .accent { color: #f2cd57; }
+    .subhead, .section-copy, .panel p, .panel li, .meta-list, .footnote { color: var(--muted); }
+    .subhead {
+      margin: 20px 0 0;
+      font-size: 1.08rem;
+      max-width: 66ch;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      font-weight: 600;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f0cc63 0%, #c39a20 100%);
+      color: #1a1304;
+      box-shadow: 0 16px 40px rgba(195,154,32,0.28);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.04);
+      border-color: var(--line-strong);
+      color: var(--text);
+    }
+
+    .band {
+      margin-top: 22px;
+      padding: 15px 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(212,175,55,0.20);
+      background: rgba(212,175,55,0.08);
+      color: #f3e4ac;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.42) 50%, transparent 100%);
+      margin: 0 0 22px;
+    }
+
+    .section { padding: 18px 0; }
+    .section-title {
+      margin: 0;
+      font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .status-card {
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .status-card.front-door { background: rgba(146, 231, 170, 0.08); border-color: rgba(146, 231, 170, 0.22); }
+    .status-card.overlay { background: var(--info-soft); border-color: rgba(88,145,255,0.18); }
+    .status-card.boundary { background: var(--danger-soft); border-color: rgba(227,82,82,0.18); }
+
+    .figure-panel { display: grid; gap: 16px; }
+    .figure-title { margin: 0; font-size: 1.5rem; letter-spacing: -0.02em; }
+    .figure-subtitle { margin: 0; color: var(--muted); }
+    .infographic-frame {
+      margin-top: 6px;
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .infographic-frame img {
+      display: block;
+      width: min(100%, 940px);
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+    }
+
+    .footer { padding: 18px 0 44px; }
+    .footer-inner {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+    }
+
+    .contact-stack { display: grid; gap: 12px; }
+    .contact-line strong { color: var(--text); }
+
+    @media (max-width: 980px) {
+      .hero-grid, .grid-3, .grid-2, .footer-inner { grid-template-columns: 1fr; }
+      .headline { max-width: none; }
+    }
+
+    @media (max-width: 640px) {
+      .hero { padding-top: 34px; }
+      .hero-copy, .hero-card, .panel, .footer-inner { padding: 20px; }
+      .headline { font-size: 2.25rem; }
+      .topbar-inner { padding: 12px 0; }
+      .contact-pill { width: 100%; justify-content: space-between; }
+      .contact-pill .icon-shell { margin-right: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand"><span class="brand-dot"></span><span>Goldlevel</span></div>
+      <div class="utility-links" aria-label="site navigation">
+        <a class="contact-pill" href="index.html"><span class="icon-shell" aria-hidden="true">←</span><strong>Pressure Reads</strong></a>
+        <a class="contact-pill" href="mailto:info@goldlevel.co.uk"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.2-.25 6.8 5.35 6.8-5.35H5.2Zm13.3 2.07-5.58 4.38a1.5 1.5 0 0 1-1.84 0L5.5 7.57v10.68c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75V7.57Z"/></svg></span><strong>info@goldlevel.co.uk</strong></a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="signature-title">Background Reads</span></div>
+        <h1 class="headline">Macro background and evidence boundaries for the wider <span class="accent">body of work</span></h1>
+        <p class="subhead">This page is now a secondary trust layer. The front door is the Pressure Read offer. This page stays in the background for people who want more context on the wider diagnostic style, evidence discipline, and public topology work.</p>
+        <div class="pill-row" aria-label="page tags" style="margin-top:22px;">
+          <span class="chip"><strong>Secondary layer</strong> not the first buy</span>
+          <span class="chip"><strong>Bounded</strong> background context</span>
+          <span class="chip"><strong>Separate</strong> from the commercial front door</span>
+        </div>
+        <div class="cta-row" style="margin-top:26px;">
+          <a class="btn btn-primary" href="index.html">Go to Pressure Reads</a>
+          <a class="btn btn-secondary" href="#topology-diagnostic">Open topology graphic</a>
+        </div>
+        <div class="band"><strong>Use of this page:</strong> context, positioning background, and evidence boundaries. <strong>Do not use it as the main entry point</strong> for first-time buyers.</div>
+      </div>
+
+      <aside class="hero-card" aria-label="page status">
+        <h3 style="margin-top:0; margin-bottom:12px;">Page role</h3>
+        <ul class="meta-list">
+          <li><strong>Primary role:</strong> support page, not the front door</li>
+          <li><strong>Main offer lives on:</strong> Pressure Reads</li>
+          <li><strong>Use case:</strong> people who want the wider context</li>
+          <li><strong>Boundary:</strong> not a live-market proof engine</li>
+          <li><strong>Date marker:</strong> 14 Apr 2026</li>
+        </ul>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="divider"></div>
+        <h2 class="section-title">Why this page was changed</h2>
+        <p class="section-copy">The feedback on the wider presentation was clear: the first surface was carrying too many ideas at once. So this page has been cut back. It now supports the main offer instead of competing with it.</p>
+        <div class="grid-3">
+          <article class="status-card front-door">
+            <h3 style="margin-top:0;">What now belongs on the front door</h3>
+            <p>One clear commercial packet: Pressure Reads. Short input, short turnaround, one-page written read, simple pricing.</p>
+          </article>
+          <article class="status-card overlay">
+            <h3 style="margin-top:0;">What stays here</h3>
+            <p>Macro context, topology work, interpretive discipline, and the wider shape of the thinking behind the service.</p>
+          </article>
+          <article class="status-card boundary">
+            <h3 style="margin-top:0;">What this page should not do</h3>
+            <p>It should not ask a new visitor to decode the whole system before understanding the first thing they can actually buy.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="topology-diagnostic">
+      <div class="container">
+        <div class="section-marker"><span>Topology diagnostic</span></div>
+        <div class="divider"></div>
+        <article class="panel figure-panel">
+          <h2 class="figure-title">How Nvidia and OpenAI Fuel the AI Money Machine — Corrected Topology</h2>
+          <p class="figure-subtitle">Held here as a bounded public reference. It stays available, but it now sits behind the simpler commercial front door rather than acting as the front door itself.</p>
+          <div class="infographic-frame">
+            <img src="GOLDLEVEL%20Topology%20Diagnostic.png" alt="How Nvidia and OpenAI Fuel the AI Money Machine — Corrected Topology infographic, as of 14 Apr 2026" />
+          </div>
+          <p class="footnote">If this image is used publicly, keep the evidence boundary clear. It is a topology read, not a fully certified live-market register.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-marker"><span>Evidence boundary</span></div>
+        <div class="divider"></div>
+        <div class="grid-3">
+          <article class="status-card">
+            <h3 style="margin-top:0;">Verified backdrop</h3>
+            <p>Use this layer for the wider macro conditions and public evidence base that can be stated cleanly without inflation.</p>
+          </article>
+          <article class="status-card overlay">
+            <h3 style="margin-top:0;">Interpretive layer</h3>
+            <p>Use this layer for sensemaking, concentration reads, reception risk, and the wider diagnostic lens. Label it as interpretive.</p>
+          </article>
+          <article class="status-card boundary">
+            <h3 style="margin-top:0;">Not claimed here</h3>
+            <p>Do not present this page as a live-news adjudication engine, a certified valuation page, or a hard proof surface for every company-level detail.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-marker"><span>Practical reading rules</span></div>
+        <div class="divider"></div>
+        <div class="grid-2">
+          <article class="panel">
+            <h2 class="section-title">Keep it useful</h2>
+            <ul>
+              <li>Let the homepage do the selling.</li>
+              <li>Let this page do the supporting.</li>
+              <li>Keep commercial claims smaller than the evidence allows.</li>
+              <li>Keep the wider body of work accessible without forcing it on the first buyer.</li>
+            </ul>
+          </article>
+          <article class="panel">
+            <h2 class="section-title">Keep it human-fit</h2>
+            <ul>
+              <li>Buyers need one clean first step, not total worldview compression.</li>
+              <li>Trust grows when the front page is easy to understand in seconds.</li>
+              <li>Wider diagnostics help once curiosity is already there.</li>
+              <li>Background pages should deepen trust, not create first-contact confusion.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="brand" style="margin-bottom: 12px;"><span class="brand-dot"></span><span>Goldlevel</span></div>
+        <p class="footnote">Background context for the wider diagnostic system. The commercial front door is the Pressure Read page.</p>
+        <div class="utility-links">
+          <a class="contact-pill" href="index.html"><span>Open</span><strong>Pressure Reads</strong></a>
+        </div>
+      </div>
+      <div class="contact-stack">
+        <div class="contact-line"><strong>Domain:</strong> <span>goldlevel.co.uk</span></div>
+        <div class="contact-line"><strong>Email:</strong> <span>info@goldlevel.co.uk</span></div>
+        <div class="contact-line"><strong>Signal:</strong> <span>@goldlevel0.5</span></div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
