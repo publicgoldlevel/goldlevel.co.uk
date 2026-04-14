@@ -3,21 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Grounded Abundance | For Operators Making Decisions inside Volatility</title>
-  <meta name="description" content="Strategic clarity and decision support for founders, operators, investors, and senior professionals navigating volatility with clearer scope and cleaner next steps." />
-  <meta property="og:title" content="Grounded Abundance | For Operators Making Decisions inside Volatility" />
-  <meta property="og:description" content="Strategic clarity and decision support for founders, operators, investors, and senior professionals navigating volatility with clearer scope and cleaner next steps." />
+  <title>Goldlevel | Pressure Reads</title>
+  <meta name="description" content="Concise outside reads for people under live pressure. Send a voice note, message thread, page, notes, or short written context. Get a one-page written read back in 24 to 48 hours." />
+  <meta property="og:title" content="Goldlevel | Pressure Reads" />
+  <meta property="og:description" content="A clear commercial front door: concise outside reads for people under live pressure." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://goldlevel.co.uk/" />
   <link rel="canonical" href="https://goldlevel.co.uk/" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="color-scheme" content="dark" />
   <meta name="glv:domain" content="goldlevel.co.uk" />
-  <meta name="glv:price" content="Starting from £44" />
+  <meta name="glv:price" content="£25 / £35 / £44" />
   <meta name="glv:email" content="info@goldlevel.co.uk" />
   <meta name="glv:signal" content="@goldlevel0.5" />
-  <meta name="glv:public" content="@tomsg3" />
-  <meta name="glv:trace" content="GLV-STATIC-UK-02" />
+  <meta name="glv:trace" content="GLV-PRESSURE-READ-01" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; media-src 'none'; form-action 'none'; upgrade-insecure-requests" />
   <style>
     :root {
@@ -31,10 +30,10 @@
       --muted: #9aa7bb;
       --accent: #d4af37;
       --accent-soft: rgba(212,175,55,0.18);
-      --success: #b8f3c8;
+      --danger-soft: rgba(227, 82, 82, 0.14);
+      --success-soft: rgba(146, 231, 170, 0.10);
       --shadow: 0 24px 70px rgba(0,0,0,0.38);
       --radius: 22px;
-      --radius-sm: 14px;
       --container: 1180px;
     }
 
@@ -49,7 +48,7 @@
         radial-gradient(circle at 90% 10%, rgba(94,135,255,0.10), transparent 22%),
         linear-gradient(180deg, #08111c 0%, #0a0f16 36%, #0d1420 100%);
       min-height: 100vh;
-      line-height: 1.55;
+      line-height: 1.58;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -61,7 +60,7 @@
       top: 0;
       z-index: 20;
       backdrop-filter: blur(16px);
-      background: rgba(6, 10, 17, 0.82);
+      background: rgba(6, 10, 17, 0.84);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -91,14 +90,14 @@
       flex: none;
     }
 
-    .contact-strip {
+    .contact-strip, .chip-row, .cta-row, .utility-links, .bullet-row {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       align-items: center;
     }
 
-    .contact-pill {
+    .contact-pill, .chip {
       display: inline-flex;
       gap: 8px;
       align-items: center;
@@ -110,101 +109,101 @@
       font-size: 0.94rem;
     }
 
-    .contact-pill strong { color: var(--text); }
+    .contact-pill strong, .chip strong { color: var(--text); }
 
-    .hero {
-      padding: 64px 0 32px;
+
+    .contact-pill .icon-shell {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(212,175,55,0.22);
+      background: rgba(212,175,55,0.10);
+      color: #f7df8a;
+      flex: none;
     }
+
+    .contact-pill svg {
+      width: 15px;
+      height: 15px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .signature-title {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(212,175,55,0.24);
+      background: linear-gradient(135deg, rgba(212,175,55,0.16), rgba(212,175,55,0.08));
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 24px rgba(0,0,0,0.18);
+      color: #f8e8ad;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .hero { padding: 62px 0 30px; }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.35fr) minmax(320px, 0.8fr);
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.84fr);
       gap: 24px;
       align-items: stretch;
     }
 
-    .hero-copy, .hero-card, .panel, .message-panel, .preview-panel {
+    .hero-copy, .hero-card, .panel, .package-card, .composer-panel, .footer-inner {
       border: 1px solid var(--line);
       background: var(--panel);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .hero-copy {
-      padding: 34px;
-    }
+    .hero-copy, .hero-card, .panel, .package-card, .composer-panel, .footer-inner { padding: 28px; }
 
     .eyebrow {
-      display: flex;
+      display: inline-flex;
+      gap: 8px;
       align-items: center;
-      justify-content: center;
-      gap: 14px;
-      width: 100%;
-      margin: 0 0 22px;
-      color: #f1df9a;
-      font-size: 0.86rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      text-align: center;
-    }
-
-    .eyebrow::before,
-    .eyebrow::after,
-    .section-marker::before,
-    .section-marker::after {
-      content: "";
-      flex: 1 1 auto;
-      min-width: 38px;
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.72) 48%, transparent 100%);
-    }
-
-    .section-marker {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      margin: 0 0 20px;
-      color: #f1df9a;
-      font-size: 0.82rem;
-      letter-spacing: 0.26em;
-      text-transform: uppercase;
-      text-align: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: rgba(255,255,255,0.03);
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 18px;
     }
 
     .headline {
-      font-size: clamp(2.5rem, 4.8vw, 4.65rem);
+      font-size: clamp(2.6rem, 5vw, 4.8rem);
       line-height: 1.02;
       letter-spacing: -0.045em;
       margin: 0;
-      max-width: 12ch;
+      max-width: 10ch;
     }
 
     .accent { color: #f2cd57; }
 
-    .subhead {
-      margin: 20px 0 0;
-      font-size: 1.14rem;
+    .subhead, .section-copy, .panel p, .panel li, .package-card p, .micro, .status, .footer-note, .field-note {
       color: var(--muted);
-      max-width: 62ch;
     }
 
-    .chip-row, .cta-row, .utility-links, .next-step-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
+    .subhead {
+      margin: 18px 0 0;
+      font-size: 1.12rem;
+      max-width: 60ch;
     }
 
     .chip-row { margin-top: 22px; }
     .chip {
-      display: inline-flex;
       padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid rgba(212,175,55,0.22);
+      border-color: rgba(212,175,55,0.22);
       background: rgba(212,175,55,0.08);
       color: #f8e8ad;
-      font-size: 0.92rem;
     }
 
     .cta-row { margin-top: 28px; }
@@ -247,245 +246,254 @@
       border: 0;
     }
 
-    .band, .notice-band {
-      margin-top: 24px;
+    .band {
+      margin-top: 22px;
       padding: 15px 16px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.035);
-      color: var(--muted);
+      border-radius: 16px;
+      border: 1px solid rgba(212,175,55,0.20);
+      background: rgba(212,175,55,0.08);
+      color: #f3e4ac;
     }
 
-    .band strong, .notice-band strong { color: var(--text); }
-
     .hero-card {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: 18px;
-      justify-content: space-between;
+      align-content: start;
+      background: var(--panel-strong);
+    }
+
+    .price-stack {
+      display: grid;
+      gap: 12px;
     }
 
     .price-badge {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
+      display: inline-grid;
       gap: 4px;
+      align-self: start;
       padding: 16px 18px;
-      border-radius: 20px;
+      border-radius: 18px;
       border: 1px solid rgba(212,175,55,0.22);
-      background: linear-gradient(180deg, rgba(212,175,55,0.14), rgba(212,175,55,0.05));
+      background: rgba(212,175,55,0.10);
     }
 
     .price-badge span {
-      font-size: 1.5rem;
+      font-size: 1.65rem;
       font-weight: 700;
-      color: #fff1bb;
+      color: #fdecb0;
+      letter-spacing: -0.03em;
     }
 
-    .price-badge small { color: var(--muted); font-size: 0.95rem; }
+    .price-badge small { color: var(--muted); }
 
-    .quick-points { margin: 0; padding-left: 20px; color: var(--muted); }
-    .quick-points li + li { margin-top: 12px; }
-
-    .section {
-      padding: 24px 0 34px;
+    .quick-points, .check-list {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
     }
 
+    .section { padding: 18px 0; }
     .divider {
-      width: 100%;
-      height: 2px;
-      background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.12) 8%, rgba(255,255,255,0.34) 24%, rgba(255,255,255,0.34) 76%, rgba(212,175,55,0.12) 92%, transparent 100%);
-      box-shadow: 0 0 24px rgba(212,175,55,0.12);
-      margin: 10px 0 28px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.42) 50%, transparent 100%);
+      margin: 0 0 22px;
     }
 
     .section-title {
-      font-size: clamp(1.55rem, 2.4vw, 2.2rem);
-      margin: 0 0 12px;
+      margin: 0;
+      font-size: clamp(1.65rem, 2.4vw, 2.3rem);
       letter-spacing: -0.03em;
     }
 
     .section-copy {
-      margin: 0 0 20px;
-      color: var(--muted);
-      max-width: 74ch;
-    }
-
-    .grid-2, .grid-3, .apply-grid, .channel-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .apply-grid { grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr); align-items: start; }
-    .channel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-
-    .panel, .message-panel, .preview-panel {
-      padding: 26px;
-    }
-
-    .panel h3, .panel h4, .channel-card h4 { margin-top: 0; margin-bottom: 10px; }
-    .panel p, .channel-card p, .micro, .field-note, .status, .faq-item p { color: var(--muted); }
-
-    .panel ul {
       margin: 12px 0 0;
-      padding-left: 20px;
-      color: var(--muted);
+      max-width: 72ch;
     }
 
-    .panel li + li { margin-top: 10px; }
-
-    .message-shell {
+    .grid-3 {
       display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      margin-top: 20px;
     }
 
-    .field-grid {
+    .grid-2 {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .package-card {
+      display: grid;
+      gap: 14px;
+      align-content: start;
+    }
+
+    .package-card.featured {
+      border-color: rgba(212,175,55,0.32);
+      background: linear-gradient(180deg, rgba(212,175,55,0.10), rgba(16,24,40,0.78));
+    }
+
+    .package-tier {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .package-tier strong {
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .package-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      color: #fdecb0;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 7px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .small-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .small-box {
+      padding: 14px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.03);
+    }
+
+    .small-box strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.96rem;
+    }
+
+    .composer-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .composer-panel form {
+      display: grid;
       gap: 14px;
     }
 
     label {
-      display: flex;
-      flex-direction: column;
+      display: grid;
       gap: 8px;
       color: var(--text);
       font-weight: 600;
-      font-size: 0.95rem;
     }
 
     input, select, textarea {
       width: 100%;
       border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--line-strong);
+      background: rgba(8, 14, 24, 0.88);
       color: var(--text);
       padding: 13px 14px;
-      outline: none;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    input:focus, select:focus, textarea:focus {
-      border-color: rgba(212,175,55,0.45);
-      box-shadow: 0 0 0 4px rgba(212,175,55,0.12);
     }
 
     textarea {
       resize: vertical;
-      min-height: 132px;
+      min-height: 118px;
     }
 
-    .micro { margin: 0; font-size: 0.92rem; }
-    .field-note { margin: 0; font-size: 0.9rem; }
-
-    .composer-actions {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .message-output {
-      min-height: 320px;
-      white-space: pre-wrap;
-      font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
-      font-size: 0.94rem;
-      padding: 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.025);
-      color: #edf3fb;
-      overflow-wrap: anywhere;
+    .inline-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
     .status {
       min-height: 24px;
-      font-size: 0.94rem;
+      font-size: 0.95rem;
     }
 
-    .good { color: var(--success); }
+    .status.good { color: #c7f6d7; }
 
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    .channel-card {
-      padding: 18px;
+    .message-output {
+      white-space: pre-wrap;
+      margin: 0;
       border-radius: 18px;
+      padding: 18px;
+      background: rgba(8, 14, 24, 0.9);
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.025);
+      min-height: 320px;
+      overflow-wrap: anywhere;
+      color: var(--text);
     }
 
-    .quote-panel {
-      border: 1px solid rgba(212,175,55,0.18);
-      background: rgba(212,175,55,0.05);
-      color: #f0e0a2;
+    .callout {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(146, 231, 170, 0.18);
+      background: var(--success-soft);
     }
 
-    .faq {
-      display: grid;
-      gap: 14px;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+    .warning {
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(227, 82, 82, 0.18);
+      background: var(--danger-soft);
     }
 
-    .faq-item {
-      padding: 22px;
-      border-radius: 20px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.025);
-    }
-
-    .footer {
-      padding: 18px 0 44px;
-    }
-
+    .footer { padding: 18px 0 44px; }
     .footer-inner {
       display: grid;
-      gap: 16px;
       grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
+      gap: 16px;
       background: var(--panel-strong);
-      padding: 24px;
     }
 
     .contact-stack { display: grid; gap: 12px; }
-    .contact-line { color: var(--muted); }
     .contact-line strong { color: var(--text); }
 
     @media (max-width: 980px) {
-      .hero-grid, .apply-grid, .grid-2, .grid-3, .footer-inner, .faq, .contact-cards {
-        grid-template-columns: 1fr;
-      }
-      .field-grid, .channel-grid { grid-template-columns: 1fr; }
+      .hero-grid, .grid-3, .grid-2, .composer-wrap, .footer-inner, .small-grid { grid-template-columns: 1fr; }
       .headline { max-width: none; }
     }
 
     @media (max-width: 640px) {
       .hero { padding-top: 34px; }
-      .hero-copy, .hero-card, .panel, .message-panel, .preview-panel, .footer-inner { padding: 20px; }
+      .hero-copy, .hero-card, .panel, .package-card, .composer-panel, .footer-inner { padding: 20px; }
       .headline { font-size: 2.35rem; }
-      .eyebrow, .section-marker { gap: 10px; letter-spacing: 0.18em; }
       .topbar-inner { padding: 12px 0; }
       .contact-pill { width: 100%; justify-content: space-between; }
+      .contact-pill .icon-shell { margin-right: 10px; }
+      .inline-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="brand"><span class="brand-dot"></span><span>---- Grounded Abundance ----</span></div>
+      <div class="brand"><span class="brand-dot"></span><span>Goldlevel</span></div>
       <div class="contact-strip" aria-label="top contact details">
-        <a class="contact-pill" href="macro-diagnostics.html"><span>Ledger</span><strong>Macro Diagnostics</strong></a>
-        <a class="contact-pill" href="mailto:info@goldlevel.co.uk"><span>Email</span><strong>info@goldlevel.co.uk</strong></a>
-        <button class="contact-pill" type="button" id="topCopyEmail"><span>Copy</span><strong>Email address</strong></button>
-        <button class="contact-pill" type="button" id="topCopySignal"><span>Signal</span><strong>@goldlevel0.5</strong></button>
+        <a class="contact-pill" href="mailto:info@goldlevel.co.uk"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.2-.25 6.8 5.35 6.8-5.35H5.2Zm13.3 2.07-5.58 4.38a1.5 1.5 0 0 1-1.84 0L5.5 7.57v10.68c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75V7.57Z"/></svg></span><strong>info@goldlevel.co.uk</strong></a>
+        <button class="contact-pill" type="button" id="topCopyEmail"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2.75A1.75 1.75 0 0 0 7.25 4.5v.25H6A2.75 2.75 0 0 0 3.25 7.5v11A2.75 2.75 0 0 0 6 21.25h9A2.75 2.75 0 0 0 17.75 18.5v-11A2.75 2.75 0 0 0 15 4.75h-1.25V4.5A1.75 1.75 0 0 0 12 2.75H9Zm3.25 2V4.5a.25.25 0 0 0-.25-.25H9a.25.25 0 0 0-.25.25v.25h3.5Zm-6.25 1.5h9c.69 0 1.25.56 1.25 1.25v11c0 .69-.56 1.25-1.25 1.25H6c-.69 0-1.25-.56-1.25-1.25v-11c0-.69.56-1.25 1.25-1.25Zm13.5 2.5h-1v9.75A3.25 3.25 0 0 1 15.25 22h-8v.5c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75v-12c0-.41-.34-.75-.75-.75Z"/></svg></span><strong>Copy email</strong></button>
+        <button class="contact-pill" type="button" id="topCopySignal"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-5.39 0-9.75 3.94-9.75 8.8 0 2.72 1.36 5.15 3.49 6.77l-.72 3.43c-.08.39.28.71.64.57l4.02-1.62c.75.17 1.52.25 2.32.25 5.39 0 9.75-3.94 9.75-8.8S17.39 2.5 12 2.5Zm-4.1 11.48c-.6 0-1.08-.49-1.08-1.1 0-.6.48-1.09 1.08-1.09.61 0 1.09.49 1.09 1.09 0 .61-.48 1.1-1.09 1.1Zm4.1 0c-.61 0-1.09-.49-1.09-1.1 0-.6.48-1.09 1.09-1.09.6 0 1.08.49 1.08 1.09 0 .61-.48 1.1-1.08 1.1Zm4.09 0c-.6 0-1.08-.49-1.08-1.1 0-.6.48-1.09 1.08-1.09.61 0 1.09.49 1.09 1.09 0 .61-.48 1.1-1.09 1.1Z"/></svg></span><strong>@goldlevel0.5</strong></button>
       </div>
     </div>
   </div>
@@ -493,252 +501,244 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow"><span>Grounded Abundance</span></div>
-        <h1 class="headline">For Operators Making Decisions inside <span class="accent">Volatility</span></h1>
-        <p class="subhead">Strategic decision support for founders, operators, investors, and senior professionals who need clearer judgment, tighter scope, and a cleaner next move under live pressure.</p>
+        <div class="eyebrow"><span class="signature-title">Pressure Reads</span></div>
+        <h1 class="headline">A concise outside read for people under <span class="accent">live pressure</span></h1>
+        <p class="subhead">Send a voice note, message thread, page, notes, or short written context. I will return a one-page written read in 24 to 48 hours. Clear, bounded, and easy to act on.</p>
         <div class="chip-row" aria-label="key themes">
-          <span class="chip">Operator judgment</span>
-          <span class="chip">Strategic clarity</span>
-          <span class="chip">Decision support</span>
-          <span class="chip">Clean scope</span>
-          <span class="chip">Private contact</span>
+          <span class="chip">Live pressure</span>
+          <span class="chip">One-page read</span>
+          <span class="chip">24-48 hours</span>
+          <span class="chip">Email or Signal</span>
+          <span class="chip">No vague discovery call</span>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#contact-composer">Prepare your outreach note</a>
-          <a class="btn btn-secondary" href="#fit">See whether this is a fit</a>
-          <a class="btn btn-secondary" href="macro-diagnostics.html">Open Macro Diagnostics</a>
+          <a class="btn btn-primary" href="#packages">See packages</a>
+          <a class="btn btn-secondary" href="#contact-composer">Prepare your message</a>
         </div>
-        <div class="band"><strong>Primary contact:</strong> info@goldlevel.co.uk &nbsp;|&nbsp; <strong>Signal:</strong> @goldlevel0.5</div>
+        <div class="band"><strong>Good fit:</strong> you are in a live situation, too close to it, and need a cleaner outside read on what matters now and what to do next.</div>
       </div>
       <aside class="hero-card" aria-label="offer summary">
-        <div class="price-badge"><span id="priceText">Starting from £44</span><small>initial strategic assessment</small></div>
-        <ul class="quick-points">
-          <li>One clear starting point instead of a vague multi-step intake.</li>
-          <li>Built for founders, operators, investors, and senior professionals managing meaningful complexity.</li>
-          <li>Designed to sharpen judgment, clarify priorities, and define a workable next step.</li>
-          <li>Private onward contact is limited to Email or Signal.</li>
-        </ul>
+        <div class="price-stack">
+          <div class="price-badge"><span>£25 / £35 / £44</span><small>Bronze, Silver, Gold</small></div>
+          <ul class="quick-points">
+            <li>One clear commercial front door instead of a broad abstract offer.</li>
+            <li>Simple input: voice note, thread, page, notes, or short written context.</li>
+            <li>Simple output: one-page written read with optional follow-up depending on package.</li>
+            <li>Private onward contact is limited to Email or Signal.</li>
+          </ul>
+        </div>
+        <div class="callout"><strong>Turnaround:</strong> 24 to 48 hours from receiving enough context to start.</div>
       </aside>
     </div>
   </header>
 
   <main>
-    <section class="section" id="fit">
+    <section class="section" id="packages">
       <div class="container">
-        <div class="section-marker"><span>Who this is for</span></div>
         <div class="divider"></div>
-        <h2 class="section-title">Who this is for</h2>
-        <p class="section-copy">This is built for people and systems that are still operating, but under avoidable strain: operators making decisions in volatility, founders carrying too much alone, senior contributors navigating unclear scope, and professionals who need a cleaner read on what matters now.</p>
+        <h2 class="section-title">Pick a package</h2>
+        <p class="section-copy">Same core service across all three: a concise outside read on your situation. The difference is how much follow-up is included.</p>
         <div class="grid-3">
-          <article class="panel"><h3>Operators under live pressure</h3><p>For decision-makers working inside uncertainty, compressed timelines, signal overload, or sustained accountability.</p></article>
-          <article class="panel"><h3>Founders and principals</h3><p>For people leading through ambiguity who need a sharper operating view rather than more noise.</p></article>
-          <article class="panel"><h3>Professionals in reconstruction</h3><p>For senior professionals rebuilding traction, boundaries, and operating confidence without performative noise.</p></article>
+          <article class="package-card">
+            <div class="package-tier">
+              <strong>Bronze</strong>
+              <span class="package-price">£25</span>
+            </div>
+            <span class="tag">Fast first-pass read</span>
+            <p>A clean one-page written read. Good when you want a first outside view without any follow-up round.</p>
+            <ul class="check-list">
+              <li>One-page written read</li>
+              <li>24 to 48-hour turnaround</li>
+              <li>Email or Signal delivery</li>
+              <li>No follow-up included</li>
+            </ul>
+          </article>
+
+          <article class="package-card featured">
+            <div class="package-tier">
+              <strong>Silver</strong>
+              <span class="package-price">£35</span>
+            </div>
+            <span class="tag">Most balanced option</span>
+            <p>The same one-page read, plus one written follow-up response if you want to clarify a point after reading it.</p>
+            <ul class="check-list">
+              <li>One-page written read</li>
+              <li>One written follow-up response</li>
+              <li>24 to 48-hour turnaround</li>
+              <li>Best if you need a bit of back-and-forth</li>
+            </ul>
+          </article>
+
+          <article class="package-card">
+            <div class="package-tier">
+              <strong>Gold</strong>
+              <span class="package-price">£44</span>
+            </div>
+            <span class="tag">Read plus second pass</span>
+            <p>The one-page read, one follow-up, and a second short readout after your clarification so the direction lands more cleanly.</p>
+            <ul class="check-list">
+              <li>One-page written read</li>
+              <li>One written follow-up response</li>
+              <li>Second short readout after clarification</li>
+              <li>Best if the situation is more layered</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-marker"><span>Scope and positioning</span></div>
+        <div class="divider"></div>
+        <div class="grid-2">
+          <article class="panel">
+            <h2 class="section-title">What you send</h2>
+            <p class="section-copy">Send the material in the format that is easiest for you. Keep it current, relevant, and light enough to scan.</p>
+            <div class="small-grid">
+              <div class="small-box"><strong>Voice note</strong><span class="micro">Best if talking is easier than writing.</span></div>
+              <div class="small-box"><strong>Message thread</strong><span class="micro">Useful for relational, work, or decision context.</span></div>
+              <div class="small-box"><strong>Page or document</strong><span class="micro">Useful if the pressure sits inside text or presentation.</span></div>
+              <div class="small-box"><strong>Notes or short written context</strong><span class="micro">Good for quick situational summaries.</span></div>
+            </div>
+          </article>
+          <article class="panel">
+            <h2 class="section-title">What you get back</h2>
+            <p class="section-copy">The read is written in casual, direct English. The aim is clarity, not performance.</p>
+            <ul class="check-list">
+              <li>What the actual pressure seems to be</li>
+              <li>What looks like noise, drag, or distortion</li>
+              <li>What matters most right now</li>
+              <li>A cleaner next-step read</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
         <div class="divider"></div>
         <div class="grid-2">
           <article class="panel">
             <h2 class="section-title">What this is</h2>
-            <p class="section-copy">An initial strategic assessment for clearer judgment, tighter scope, and a more disciplined next-step structure.</p>
-            <ul>
-              <li>A concise read on the current decision environment</li>
-              <li>Clearer separation between signal, noise, and avoidable drag</li>
-              <li>Narrowed next steps that can hold under real conditions</li>
-              <li>A practical written summary or action note after the session</li>
+            <p class="section-copy">A bounded outside read. It is for moments where the situation feels noisy, heavy, or hard to judge from the inside.</p>
+            <ul class="check-list">
+              <li>Outside perspective, not performative coaching</li>
+              <li>Short written diagnostic, not a vague open-ended process</li>
+              <li>Useful when you need a first clean step</li>
+              <li>Built to be legible fast</li>
             </ul>
           </article>
           <article class="panel">
             <h2 class="section-title">What this is not</h2>
-            <p class="section-copy">This page is designed to keep the route professional, bounded, and clear.</p>
-            <ul>
-              <li>Not diagnosis or treatment</li>
+            <p class="section-copy">This service is intentionally narrow. It keeps the first exchange simple and bounded.</p>
+            <ul class="check-list">
               <li>Not emergency or crisis support</li>
               <li>Not legal, medical, or financial advice</li>
-              <li>Not a broad discovery process with undefined scope</li>
+              <li>Not diagnosis or treatment</li>
+              <li>Not a broad consulting engagement by default</li>
             </ul>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-marker"><span>How it works</span></div>
-        <div class="divider"></div>
-        <h2 class="section-title">How the contact flow works</h2>
-        <div class="grid-3">
-          <article class="panel"><h3>1. Select the context</h3><p>Use the dropdowns below to frame the type of support, timing, and decision environment.</p></article>
-          <article class="panel"><h3>2. Generate the note</h3><p>The page drafts a concise, professional outreach message in plain English based on your selections.</p></article>
-          <article class="panel"><h3>3. Transfer privately</h3><p>Copy the note into Email or Signal and continue through the channel that best fits the conversation.</p></article>
         </div>
       </div>
     </section>
 
     <section class="section" id="contact-composer">
       <div class="container">
-        <div class="section-marker"><span>Prepare your outreach</span></div>
         <div class="divider"></div>
-        <div class="apply-grid">
-          <article class="message-panel">
-            <div class="section-marker"><span>Contact note builder</span></div>
-            <h2 class="section-title">Prepare your outreach note</h2>
-            <p class="section-copy">Use the structured fields below to produce a concise, investor-facing message suitable for first contact. The final note is designed for direct transfer into Email or Signal.</p>
-            <div class="chip-row">
-              <span class="chip">Professional English</span>
-              <span class="chip">Structured selection</span>
-              <span class="chip">Copy-ready output</span>
-              <span class="chip">Email or Signal</span>
-            </div>
-            <div class="divider"></div>
-            <div class="message-shell">
-              <div class="field-grid">
-                <label>Preferred contact channel
+        <h2 class="section-title">Prepare your message</h2>
+        <p class="section-copy">This page does not send anything for you. It just helps you draft a clean message for Email or Signal.</p>
+        <div class="composer-wrap">
+          <article class="composer-panel">
+            <form>
+              <div class="inline-grid">
+                <label>Package
+                  <select id="packageType">
+                    <option value="Bronze Pressure Read (£25)">Bronze — £25</option>
+                    <option value="Silver Pressure Read (£35)" selected>Silver — £35</option>
+                    <option value="Gold Pressure Read (£44)">Gold — £44</option>
+                  </select>
+                </label>
+                <label>Send via
                   <select id="contactChannel">
                     <option value="Email">Email</option>
                     <option value="Signal">Signal</option>
                   </select>
                 </label>
-                <label>Support context
-                  <select id="supportType">
-                    <option value="Strategic decision support">Strategic decision support</option>
-                    <option value="Founder or principal support">Founder or principal support</option>
-                    <option value="Investor or advisory support">Investor or advisory support</option>
-                    <option value="Team or operating-structure support">Team or operating-structure support</option>
-                  </select>
+              </div>
+
+              <div class="inline-grid">
+                <label>Your name
+                  <input type="text" id="fullName" placeholder="Your name" maxlength="80" />
                 </label>
-                <label>Primary decision environment
-                  <select id="pressureType">
-                    <option value="Leadership pressure or operator strain">Leadership pressure or operator strain</option>
-                    <option value="A live decision with unclear next steps">A live decision with unclear next steps</option>
-                    <option value="Scope drift or overloaded accountability">Scope drift or overloaded accountability</option>
-                    <option value="Structural friction or operating misalignment">Structural friction or operating misalignment</option>
-                    <option value="Commercial pressure with compressed decision space">Commercial pressure with compressed decision space</option>
-                  </select>
-                </label>
-                <label>Decision timeline
-                  <select id="timingWindow">
-                    <option value="ready to move within the next 7 days">Ready within 7 days</option>
-                    <option value="looking to engage this month">Ready this month</option>
-                    <option value="considering the right route within the next 90 days">Considering within 90 days</option>
-                    <option value="reviewing fit before committing further">Reviewing fit</option>
-                  </select>
-                </label>
-                <label>Engagement readiness
-                  <select id="readinessLevel">
-                    <option value="ready for paid work now, provided the scope is clear">Ready for paid work now</option>
-                    <option value="open to a paid starting point with defined scope">Open to a paid starting point</option>
-                    <option value="still assessing timing and priority before committing budget">Still assessing timing and budget</option>
-                  </select>
-                </label>
-                <label>Operating role
-                  <select id="roleType">
-                    <option value="operator">Operator</option>
-                    <option value="founder">Founder</option>
-                    <option value="investor or principal">Investor or principal</option>
-                    <option value="senior professional">Senior professional</option>
-                    <option value="advisor">Advisor</option>
+                <label>Input type
+                  <select id="inputType">
+                    <option value="voice note">Voice note</option>
+                    <option value="message thread">Message thread</option>
+                    <option value="page or document">Page or document</option>
+                    <option value="notes">Notes</option>
+                    <option value="short written context">Short written context</option>
                   </select>
                 </label>
               </div>
 
-              <label>Name
-                <input type="text" id="fullName" placeholder="Your name" maxlength="80" />
+              <label>What is going on?
+                <textarea id="currentSituation" maxlength="900" placeholder="Explain the live pressure in a few clear sentences."></textarea>
+              </label>
+              <p class="field-note">Do not include passwords, payment details, hidden third-party data, or anything you do not have the right to share.</p>
+
+              <label>What would make this useful?
+                <textarea id="desiredOutcome" maxlength="500" placeholder="For example: I want a cleaner read on what matters now, what to ignore, and what to do next."></textarea>
               </label>
 
-              <label>Organisation or venture <span class="micro">Optional</span>
-                <input type="text" id="organisation" placeholder="Organisation, venture, or operating context" maxlength="120" />
-              </label>
-
-              <label>Current situation
-                <textarea id="currentSituation" maxlength="800" placeholder="Summarise the current pressure in two or three clean sentences."></textarea>
-              </label>
-              <p class="field-note">Keep the note current, decision-relevant, and proportionate. Do not include confidential files, passwords, payment data, or special-category personal data.</p>
-
-              <label>What outcome would make the first conversation useful?
-                <textarea id="desiredOutcome" maxlength="500" placeholder="State the decision, clarity, or next-step outcome you want from an initial conversation."></textarea>
-              </label>
-
-              <div class="composer-actions">
+              <div class="cta-row">
                 <button class="btn btn-primary" type="button" id="generateMessageButton">Generate message</button>
                 <button class="btn btn-secondary" type="button" id="copyMessageButton">Copy message</button>
                 <a class="btn btn-secondary" href="mailto:info@goldlevel.co.uk" id="openEmailButton">Open email draft</a>
               </div>
               <div class="status" id="composerStatus" aria-live="polite"></div>
-            </div>
+            </form>
           </article>
 
-          <aside class="preview-panel">
-            <div class="section-marker"><span>Message preview</span></div>
-            <h2 class="section-title">Message preview</h2>
-            <p class="section-copy">This preview updates into a direct first-contact note suitable for transfer into Email or Signal.</p>
-            <div class="message-output" id="messageOutput"></div>
-            <div class="contact-cards">
-              <div class="channel-card">
-                <h4>Email</h4>
-                <p>Primary written contact for a structured first note.</p>
-                <div class="next-step-actions">
-                  <button class="btn btn-secondary" type="button" id="copyEmailButton">Copy email address</button>
-                  <a class="text-btn" href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a>
-                </div>
-              </div>
-              <div class="channel-card">
-                <h4>Signal</h4>
-                <p>Alternative route for a tighter, faster exchange when appropriate.</p>
-                <div class="next-step-actions">
-                  <button class="btn btn-secondary" type="button" id="copySignalButton">Copy Signal handle</button>
-                  <span class="text-btn">@goldlevel0.5</span>
-                </div>
-              </div>
-            </div>
-            <div class="band quote-panel"><strong>Contact note:</strong> Prepare the message here, then transfer it directly into Email or Signal. The page does not submit anything on your behalf.</div>
-          </aside>
+          <article class="panel" aria-label="message preview">
+            <h3 style="margin-top:0; margin-bottom:12px;">Message preview</h3>
+            <p class="section-copy" style="margin-top:0; margin-bottom:16px;">Edit the fields on the left, then copy this into Email or Signal.</p>
+            <pre class="message-output" id="messageOutput">Hello,
+
+I would like to book a Silver Pressure Read (£35).
+
+I will send a short written context. The live pressure is that I need a clearer outside read on what matters now and what the next clean step is.
+
+A useful outcome would be a concise one-page read that helps me separate signal from noise.
+
+Best,
+A prospective client</pre>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="section-marker"><span>What to include</span></div>
         <div class="divider"></div>
-        <h2 class="section-title">What to include in the message</h2>
         <div class="grid-2">
           <article class="panel">
-            <h3>Useful content</h3>
-            <ul>
-              <li>Your role and operating context</li>
-              <li>The decision environment or pressure you are currently navigating</li>
-              <li>The timing window for action or review</li>
-              <li>The outcome you want from an initial conversation</li>
+            <h2 class="section-title">A few practical rules</h2>
+            <ul class="check-list">
+              <li>The clearer the input, the cleaner the read.</li>
+              <li>If the material is too thin, turnaround starts once enough context is provided.</li>
+              <li>If the material points to urgent risk or emergency support, this is not the right route.</li>
+              <li>Macro work and wider diagnostics live on a separate background page, not on the front door.</li>
             </ul>
+            <div class="cta-row" style="margin-top:18px;">
+              <a class="btn btn-secondary" href="macro-diagnostics.html">Open Background Reads</a>
+            </div>
           </article>
           <article class="panel">
-            <h3>Keep it concise</h3>
-            <ul>
-              <li>Use plain English and current facts</li>
-              <li>Keep the note short enough to read quickly</li>
-              <li>Do not send attachments or confidential records on first contact</li>
-              <li>Use Email or Signal only for onward contact from this page</li>
-            </ul>
+            <h2 class="section-title">Why this page is simpler now</h2>
+            <p class="section-copy">The old framing was broader and more abstract. This version keeps one clear idea on the page: send the situation, get a concise outside read back.</p>
+            <div class="warning"><strong>Boundaries matter:</strong> this page is the front door, not the whole system. The wider body of work can still exist, but it should not make the first buy harder to understand.</div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-marker"><span>Frequently asked questions</span></div>
-        <div class="divider"></div>
-        <h2 class="section-title">Frequently asked questions</h2>
-        <div class="faq">
-          <article class="faq-item"><h4>Is this clinical support?</h4><p>No. This is a non-clinical, practical, bounded advisory route.</p></article>
-          <article class="faq-item"><h4>How do I make first contact?</h4><p>Use the outreach composer, then transfer the generated note to Email or Signal.</p></article>
-          <article class="faq-item"><h4>Why replace the web intake?</h4><p>This version is positioned to feel more professional and more private by moving first contact into direct channels.</p></article>
-          <article class="faq-item"><h4>What is the entry point called now?</h4><p>The entry point is positioned as an initial strategic assessment.</p></article>
         </div>
       </div>
     </section>
@@ -747,12 +747,12 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <strong>---- Grounded Abundance ----</strong><br />
-        Strategic clarity • Decision support • Continuity
-        <div class="utility-links" aria-label="footer policy links" style="margin-top: 14px;">
-          <a class="text-btn" href="macro-diagnostics.html">Macro diagnostics</a>
-          <a class="text-btn" href="privacy.html">Privacy notice</a>
-          <a class="text-btn" href="terms.html">Terms &amp; conditions</a>
+        <div class="brand" style="margin-bottom: 12px;"><span class="brand-dot"></span><span>Goldlevel</span></div>
+        <p class="footer-note">Concise outside reads for people under live pressure.</p>
+        <div class="utility-links">
+          <a class="text-btn" href="macro-diagnostics.html">Background Reads</a>
+          <a class="text-btn" href="privacy.html">Privacy</a>
+          <a class="text-btn" href="terms.html">Terms</a>
           <a class="text-btn" href="data-rights.html">Data rights</a>
           <a class="text-btn" href="security.html">Security controls</a>
         </div>
@@ -777,14 +777,10 @@
       const domainName = 'goldlevel.co.uk';
 
       const ids = {
+        packageType: document.getElementById('packageType'),
         channel: document.getElementById('contactChannel'),
-        supportType: document.getElementById('supportType'),
-        pressureType: document.getElementById('pressureType'),
-        timingWindow: document.getElementById('timingWindow'),
-        readinessLevel: document.getElementById('readinessLevel'),
-        roleType: document.getElementById('roleType'),
         fullName: document.getElementById('fullName'),
-        organisation: document.getElementById('organisation'),
+        inputType: document.getElementById('inputType'),
         currentSituation: document.getElementById('currentSituation'),
         desiredOutcome: document.getElementById('desiredOutcome'),
         output: document.getElementById('messageOutput'),
@@ -804,31 +800,25 @@
       function buildMessage() {
         const channel = valueOf(ids.channel, 'Email');
         const name = valueOf(ids.fullName, 'A prospective client');
-        const organisation = valueOf(ids.organisation);
-        const supportType = valueOf(ids.supportType);
-        const pressureType = valueOf(ids.pressureType);
-        const timingWindow = valueOf(ids.timingWindow);
-        const readinessLevel = valueOf(ids.readinessLevel);
-        const roleType = valueOf(ids.roleType);
-        const currentSituation = valueOf(ids.currentSituation, 'I am working through a live decision environment and would value a clearer external read on priorities, scope, and next steps.');
-        const desiredOutcome = valueOf(ids.desiredOutcome, 'A sharper understanding of what matters now, what can be narrowed, and whether an initial strategic assessment is the right next step.');
-
-        const introRole = organisation ? `${roleType} working within ${organisation}` : `${roleType}`;
+        const packageType = valueOf(ids.packageType, 'Silver Pressure Read (£35)');
+        const inputType = valueOf(ids.inputType, 'short written context');
+        const currentSituation = valueOf(ids.currentSituation, 'I need a clearer outside read on a live situation and what the next clean step is.');
+        const desiredOutcome = valueOf(ids.desiredOutcome, 'A concise one-page read that helps me separate signal from noise and decide what to do next.');
         const greeting = 'Hello,';
-        const subjectLine = `Subject: Initial enquiry regarding ${supportType.toLowerCase()}`;
+        const subjectLine = `Subject: ${packageType}`;
 
         const body = [
           greeting,
           '',
-          `My name is ${name}, and I am reaching out as a ${introRole}. I am looking for ${supportType.toLowerCase()} and would like to explore whether your scope is a fit for the situation below.`,
+          `I would like to book a ${packageType}.`,
           '',
-          `The main pressure I am navigating is ${pressureType.toLowerCase()}, and the timing is ${timingWindow}. In brief, ${sentenceCase(currentSituation)}`,
+          `I will send a ${inputType}. The live pressure is: ${sentenceCase(currentSituation)}`,
           '',
-          `I am ${readinessLevel}. A useful first conversation would help clarify ${desiredOutcome ? desiredOutcome.charAt(0).toLowerCase() + desiredOutcome.slice(1) : 'the most useful next step and whether an initial strategic assessment is appropriate'}.`,
+          `A useful outcome would be: ${sentenceCase(desiredOutcome)}`,
           '',
-          'If this sits within your current scope, I would appreciate guidance on the most suitable next step.',
+          'Please let me know the next step.',
           '',
-          'Best regards,',
+          'Best,',
           name
         ].join('\n');
 
@@ -840,7 +830,7 @@
         ids.output.textContent = message;
 
         const bodyOnly = message.replace(/^Subject:.*\n\n/, '');
-        const subject = ids.supportType ? `Initial enquiry regarding ${valueOf(ids.supportType, 'support').toLowerCase()}` : 'Initial enquiry regarding support';
+        const subject = valueOf(ids.packageType, 'Pressure Read');
         ids.emailButton.href = `mailto:${encodeURIComponent(emailAddress)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyOnly)}`;
       }
 
@@ -855,35 +845,39 @@
         }
       }
 
-      function wireCopyButton(id, getter, successMessage) {
+      const watchedIds = ['packageType', 'contactChannel', 'fullName', 'inputType', 'currentSituation', 'desiredOutcome'];
+      watchedIds.forEach((id) => {
         const el = document.getElementById(id);
-        if (!el) return;
-        el.addEventListener('click', function () { copyText(getter(), successMessage); });
-      }
-
-      ['change', 'input'].forEach(function (eventName) {
-        [ids.channel, ids.supportType, ids.pressureType, ids.timingWindow, ids.readinessLevel, ids.roleType, ids.fullName, ids.organisation, ids.currentSituation, ids.desiredOutcome]
-          .filter(Boolean)
-          .forEach(function (el) { el.addEventListener(eventName, refreshMessage); });
+        if (el) {
+          el.addEventListener('input', refreshMessage);
+          el.addEventListener('change', refreshMessage);
+        }
       });
 
-      document.getElementById('generateMessageButton').addEventListener('click', function () {
+      document.getElementById('generateMessageButton')?.addEventListener('click', function () {
         refreshMessage();
-        ids.status.textContent = 'Message updated. Review it, then copy it into Email or Signal.';
+        ids.status.textContent = 'Message updated.';
         ids.status.className = 'status good';
       });
 
-      document.getElementById('copyMessageButton').addEventListener('click', function () {
-        copyText(ids.output.textContent, 'Message copied and ready to transfer.');
+      document.getElementById('copyMessageButton')?.addEventListener('click', function () {
+        refreshMessage();
+        copyText(ids.output.textContent, 'Message copied.');
       });
 
-      wireCopyButton('copyEmailButton', () => emailAddress, 'Email address copied.');
-      wireCopyButton('copySignalButton', () => signalHandle, 'Signal handle copied.');
-      wireCopyButton('topCopyEmail', () => emailAddress, 'Email address copied.');
-      wireCopyButton('topCopySignal', () => signalHandle, 'Signal handle copied.');
-      wireCopyButton('footerCopyEmailButton', () => emailAddress, 'Email address copied.');
-      wireCopyButton('footerCopySignalButton', () => signalHandle, 'Signal handle copied.');
-      wireCopyButton('footerCopyDomainButton', () => domainName, 'Domain copied.');
+      function wireCopy(buttonId, text, message) {
+        const button = document.getElementById(buttonId);
+        if (!button) return;
+        button.addEventListener('click', function () {
+          copyText(text, message);
+        });
+      }
+
+      wireCopy('topCopyEmail', emailAddress, 'Email address copied.');
+      wireCopy('topCopySignal', signalHandle, 'Signal handle copied.');
+      wireCopy('footerCopyEmailButton', emailAddress, 'Email address copied.');
+      wireCopy('footerCopySignalButton', signalHandle, 'Signal handle copied.');
+      wireCopy('footerCopyDomainButton', domainName, 'Domain copied.');
 
       refreshMessage();
     })();
