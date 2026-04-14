@@ -209,6 +209,7 @@ textarea { min-height: 132px; resize: vertical; }
   .hero-card, .panel, .faq-item, .policy-card { padding: 18px; }
   .btn, .text-btn { width: 100%; }
 }
+
 .figure-panel {
   display: flex;
   flex-direction: column;
@@ -216,6 +217,7 @@ textarea { min-height: 132px; resize: vertical; }
   text-align: center;
 }
 
+src="assets/GOLDLEVEL-Topology-Diagnostic.png"
 .figure-title {
   width: 100%;
   margin: 0 0 12px;
@@ -250,3 +252,11 @@ textarea { min-height: 132px; resize: vertical; }
   object-fit: contain;
   background: rgba(255,255,255,0.02);
 }
+
+<img
+  class="diagnostic-image"
+  src="./assets/GOLDLEVEL-Topology-Diagnostic.png"
+  alt="How Nvidia and OpenAI Fuel the AI Money Machine — Corrected Topology infographic, as of 14 Apr 2026"
+  loading="lazy"
+  decoding="async"
+/>
