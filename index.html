@@ -11,9 +11,11 @@
   <meta property="og:url" content="https://goldlevel.co.uk/" />
   <link rel="canonical" href="https://goldlevel.co.uk/" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="color-scheme" content="dark light" />
+  <meta name="color-scheme" content="dark" />
   <meta name="glv:domain" content="goldlevel.co.uk" />
   <meta name="glv:price" content="Starting from £44" />
+  <meta name="glv:email" content="info@goldlevel.co.uk" />
+  <meta name="glv:signal" content="@goldlevel0.5" />
   <meta name="glv:public" content="@tomsg3" />
   <meta name="glv:trace" content="GLV-STATIC-UK-02" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; media-src 'none'; form-action 'none'; upgrade-insecure-requests" />
@@ -54,22 +56,6 @@
     button, input, select, textarea { font: inherit; }
     .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
 
-    body[data-theme="contrast"] {
-      --bg: #eef3f8;
-      --bg-soft: #f8fafc;
-      --panel: rgba(255, 255, 255, 0.92);
-      --panel-strong: rgba(255, 255, 255, 0.98);
-      --line: rgba(15,23,42,0.12);
-      --line-strong: rgba(15,23,42,0.18);
-      --text: #142033;
-      --muted: #4b6077;
-      --shadow: 0 20px 46px rgba(15,23,42,0.08);
-      background:
-        radial-gradient(circle at top left, rgba(212,175,55,0.10), transparent 24%),
-        radial-gradient(circle at 90% 10%, rgba(94,135,255,0.08), transparent 20%),
-        linear-gradient(180deg, #f5f8fc 0%, #edf2f7 52%, #f7fafc 100%);
-    }
-
     .topbar {
       position: sticky;
       top: 0;
@@ -77,11 +63,6 @@
       backdrop-filter: blur(16px);
       background: rgba(6, 10, 17, 0.82);
       border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    body[data-theme="contrast"] .topbar {
-      background: rgba(247, 250, 252, 0.88);
-      border-bottom: 1px solid rgba(15,23,42,0.10);
     }
 
     .topbar-inner {
@@ -127,12 +108,6 @@
       background: rgba(255,255,255,0.03);
       color: var(--muted);
       font-size: 0.94rem;
-    }
-
-    .theme-toggle strong { min-width: 116px; text-align: left; }
-
-    body[data-theme="contrast"] .contact-pill {
-      background: rgba(255,255,255,0.82);
     }
 
     .contact-pill strong { color: var(--text); }
@@ -315,143 +290,6 @@
 
     .section {
       padding: 24px 0 34px;
-    }
-
-    .section-soft {
-      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
-      border-top: 1px solid rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .section-contrast {
-      background: linear-gradient(180deg, rgba(248,250,252,0.96), rgba(241,245,249,0.94));
-      border-top: 1px solid rgba(15,23,42,0.08);
-      border-bottom: 1px solid rgba(15,23,42,0.08);
-      color: #142033;
-    }
-
-    .section-contrast .divider {
-      background: linear-gradient(90deg, transparent 0%, rgba(195,154,32,0.12) 8%, rgba(15,23,42,0.18) 24%, rgba(15,23,42,0.18) 76%, rgba(195,154,32,0.12) 92%, transparent 100%);
-      box-shadow: none;
-    }
-
-    .section-contrast .section-marker,
-    .section-contrast .section-title,
-    .section-contrast h3,
-    .section-contrast h4,
-    .section-contrast label,
-    .section-contrast .contact-line strong,
-    .section-contrast .band strong,
-    .section-contrast .notice-band strong {
-      color: #142033;
-    }
-
-    .section-contrast .section-copy,
-    .section-contrast .panel p,
-    .section-contrast .panel ul,
-    .section-contrast .panel li,
-    .section-contrast .channel-card p,
-    .section-contrast .micro,
-    .section-contrast .field-note,
-    .section-contrast .status,
-    .section-contrast .faq-item p,
-    .section-contrast .contact-line,
-    .section-contrast .quick-points,
-    .section-contrast .quick-points li {
-      color: #52657b;
-    }
-
-    .section-contrast .panel,
-    .section-contrast .message-panel,
-    .section-contrast .preview-panel,
-    .section-contrast .faq-item,
-    .section-contrast .channel-card,
-    .section-contrast .hero-card,
-    .section-contrast .hero-copy,
-    .section-contrast .footer-inner {
-      background: rgba(255,255,255,0.88);
-      border-color: rgba(15,23,42,0.10);
-      box-shadow: 0 16px 34px rgba(15,23,42,0.07);
-    }
-
-    .section-contrast input,
-    .section-contrast select,
-    .section-contrast textarea,
-    body[data-theme="contrast"] input,
-    body[data-theme="contrast"] select,
-    body[data-theme="contrast"] textarea {
-      background: rgba(255,255,255,0.95);
-      border-color: rgba(15,23,42,0.14);
-      color: #142033;
-    }
-
-    .section-contrast .message-output,
-    body[data-theme="contrast"] .message-output {
-      background: rgba(248,250,252,0.98);
-      border-color: rgba(15,23,42,0.10);
-      color: #142033;
-    }
-
-    .section-contrast .btn-secondary,
-    body[data-theme="contrast"] .btn-secondary {
-      background: rgba(255,255,255,0.88);
-      border-color: rgba(15,23,42,0.14);
-      color: #142033;
-    }
-
-    .section-contrast .band,
-    .section-contrast .notice-band,
-    body[data-theme="contrast"] .band,
-    body[data-theme="contrast"] .notice-band {
-      background: rgba(255,255,255,0.84);
-      border-color: rgba(15,23,42,0.10);
-      color: #52657b;
-    }
-
-    .section-contrast .chip,
-    body[data-theme="contrast"] .chip {
-      background: rgba(212,175,55,0.12);
-      border-color: rgba(195,154,32,0.22);
-      color: #6f5513;
-    }
-
-    body[data-theme="contrast"] .eyebrow,
-    body[data-theme="contrast"] .section-marker,
-    body[data-theme="contrast"] .text-btn {
-      color: #8f6a13;
-    }
-
-    body[data-theme="contrast"] .headline,
-    body[data-theme="contrast"] .section-title,
-    body[data-theme="contrast"] h3,
-    body[data-theme="contrast"] h4,
-    body[data-theme="contrast"] label,
-    body[data-theme="contrast"] .contact-pill strong,
-    body[data-theme="contrast"] .band strong,
-    body[data-theme="contrast"] .notice-band strong,
-    body[data-theme="contrast"] .brand {
-      color: #142033;
-    }
-
-    body[data-theme="contrast"] .subhead,
-    body[data-theme="contrast"] .section-copy,
-    body[data-theme="contrast"] .panel p,
-    body[data-theme="contrast"] .panel ul,
-    body[data-theme="contrast"] .panel li,
-    body[data-theme="contrast"] .channel-card p,
-    body[data-theme="contrast"] .micro,
-    body[data-theme="contrast"] .field-note,
-    body[data-theme="contrast"] .status,
-    body[data-theme="contrast"] .faq-item p,
-    body[data-theme="contrast"] .contact-line,
-    body[data-theme="contrast"] .quick-points,
-    body[data-theme="contrast"] .quick-points li {
-      color: #52657b;
-    }
-
-    body[data-theme="contrast"] .divider {
-      background: linear-gradient(90deg, transparent 0%, rgba(195,154,32,0.10) 8%, rgba(15,23,42,0.16) 24%, rgba(15,23,42,0.16) 76%, rgba(195,154,32,0.10) 92%, transparent 100%);
-      box-shadow: none;
     }
 
     .divider {
@@ -639,14 +477,15 @@
     }
   </style>
 </head>
-<body data-theme="dark">
+<body>
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="brand"><span class="brand-dot"></span><span>Grounded Abundance</span></div>
-      <div class="contact-strip" aria-label="top contact actions">
-        <button class="contact-pill" type="button" id="topOpenEmail"><span>Email</span><strong>Open draft</strong></button>
-        <button class="contact-pill" type="button" id="topCopyEmail"><span>Email</span><strong>Copy address</strong></button>
-        <button class="contact-pill" type="button" id="topCopySignal"><span>Signal</span><strong>Copy handle</strong></button>
+      <div class="brand"><span class="brand-dot"></span><span>---- Grounded Abundance ----</span></div>
+      <div class="contact-strip" aria-label="top contact details">
+        <a class="contact-pill" href="macro-diagnostics.html"><span>Ledger</span><strong>Macro Diagnostics</strong></a>
+        <a class="contact-pill" href="mailto:info@goldlevel.co.uk"><span>Email</span><strong>info@goldlevel.co.uk</strong></a>
+        <button class="contact-pill" type="button" id="topCopyEmail"><span>Copy</span><strong>Email address</strong></button>
+        <button class="contact-pill" type="button" id="topCopySignal"><span>Signal</span><strong>@goldlevel0.5</strong></button>
       </div>
     </div>
   </div>
@@ -665,10 +504,11 @@
           <span class="chip">Private contact</span>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#contact-composer">Prepare first contact note</a>
+          <a class="btn btn-primary" href="#contact-composer">Prepare your outreach note</a>
           <a class="btn btn-secondary" href="#fit">See whether this is a fit</a>
+          <a class="btn btn-secondary" href="macro-diagnostics.html">Open Macro Diagnostics</a>
         </div>
-        <div class="band"><strong>Direct contact:</strong> Use the email or Signal actions above, or prepare a first-contact note below. This page does not transmit messages on your behalf.</div>
+        <div class="band"><strong>Primary contact:</strong> info@goldlevel.co.uk &nbsp;|&nbsp; <strong>Signal:</strong> @goldlevel0.5</div>
       </div>
       <aside class="hero-card" aria-label="offer summary">
         <div class="price-badge"><span id="priceText">Starting from £44</span><small>initial strategic assessment</small></div>
@@ -683,28 +523,28 @@
   </header>
 
   <main>
-    <section class="section section-soft" id="fit">
+    <section class="section" id="fit">
       <div class="container">
         <div class="section-marker"><span>Who this is for</span></div>
         <div class="divider"></div>
         <h2 class="section-title">Who this is for</h2>
-        <p class="section-copy">This is built for people operating under avoidable strain: operators making decisions in volatility, founders carrying too much alone, senior contributors navigating unclear scope, and professionals who need a cleaner read on what matters now.</p>
+        <p class="section-copy">This is built for people and systems that are still operating, but under avoidable strain: operators making decisions in volatility, founders carrying too much alone, senior contributors navigating unclear scope, and professionals who need a cleaner read on what matters now.</p>
         <div class="grid-3">
           <article class="panel"><h3>Operators under live pressure</h3><p>For decision-makers working inside uncertainty, compressed timelines, signal overload, or sustained accountability.</p></article>
           <article class="panel"><h3>Founders and principals</h3><p>For people leading through ambiguity who need a sharper operating view rather than more noise.</p></article>
-          <article class="panel"><h3>Professionals in reconstruction</h3><p>For senior professionals rebuilding traction, boundaries, and operating clarity without performative noise.</p></article>
+          <article class="panel"><h3>Professionals in reconstruction</h3><p>For senior professionals rebuilding traction, boundaries, and operating confidence without performative noise.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section section-contrast">
+    <section class="section">
       <div class="container">
         <div class="section-marker"><span>Scope and positioning</span></div>
         <div class="divider"></div>
         <div class="grid-2">
           <article class="panel">
             <h2 class="section-title">What this is</h2>
-            <p class="section-copy">An initial strategic assessment focused on clearer judgment, tighter scope, and a more disciplined next step.</p>
+            <p class="section-copy">An initial strategic assessment for clearer judgment, tighter scope, and a more disciplined next-step structure.</p>
             <ul>
               <li>A concise read on the current decision environment</li>
               <li>Clearer separation between signal, noise, and avoidable drag</li>
@@ -714,7 +554,7 @@
           </article>
           <article class="panel">
             <h2 class="section-title">What this is not</h2>
-            <p class="section-copy">The route is kept professional, bounded, and clear from first contact onward.</p>
+            <p class="section-copy">This page is designed to keep the route professional, bounded, and clear.</p>
             <ul>
               <li>Not diagnosis or treatment</li>
               <li>Not emergency or crisis support</li>
@@ -726,28 +566,28 @@
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section">
       <div class="container">
         <div class="section-marker"><span>How it works</span></div>
         <div class="divider"></div>
         <h2 class="section-title">How the contact flow works</h2>
         <div class="grid-3">
           <article class="panel"><h3>1. Select the context</h3><p>Use the dropdowns below to frame the type of support, timing, and decision environment.</p></article>
-          <article class="panel"><h3>2. Generate the note</h3><p>The page prepares a concise first-contact note in plain English based on your selections.</p></article>
+          <article class="panel"><h3>2. Generate the note</h3><p>The page drafts a concise, professional outreach message in plain English based on your selections.</p></article>
           <article class="panel"><h3>3. Transfer privately</h3><p>Copy the note into Email or Signal and continue through the channel that best fits the conversation.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section section-contrast" id="contact-composer">
+    <section class="section" id="contact-composer">
       <div class="container">
-        <div class="section-marker"><span>Prepare first contact</span></div>
+        <div class="section-marker"><span>Prepare your outreach</span></div>
         <div class="divider"></div>
         <div class="apply-grid">
           <article class="message-panel">
-            <div class="section-marker"><span>First-contact note builder</span></div>
-            <h2 class="section-title">Prepare first contact note</h2>
-            <p class="section-copy">Use the structured fields below to produce a concise first-contact message suitable for direct transfer into Email or Signal. The wording is kept professional, neutral, and decision-relevant.</p>
+            <div class="section-marker"><span>Contact note builder</span></div>
+            <h2 class="section-title">Prepare your outreach note</h2>
+            <p class="section-copy">Use the structured fields below to produce a concise, investor-facing message suitable for first contact. The final note is designed for direct transfer into Email or Signal.</p>
             <div class="chip-row">
               <span class="chip">Professional English</span>
               <span class="chip">Structured selection</span>
@@ -817,7 +657,7 @@
               <label>Current situation
                 <textarea id="currentSituation" maxlength="800" placeholder="Summarise the current pressure in two or three clean sentences."></textarea>
               </label>
-              <p class="field-note">Keep the note current, decision-relevant, and proportionate. Do not include passwords, payment data, attachments, confidential records, or special-category personal data in first contact.</p>
+              <p class="field-note">Keep the note current, decision-relevant, and proportionate. Do not include confidential files, passwords, payment data, or special-category personal data.</p>
 
               <label>What outcome would make the first conversation useful?
                 <textarea id="desiredOutcome" maxlength="500" placeholder="State the decision, clarity, or next-step outcome you want from an initial conversation."></textarea>
@@ -826,7 +666,7 @@
               <div class="composer-actions">
                 <button class="btn btn-primary" type="button" id="generateMessageButton">Generate message</button>
                 <button class="btn btn-secondary" type="button" id="copyMessageButton">Copy message</button>
-                <button class="btn btn-secondary" type="button" id="openEmailButton">Open email draft</button>
+                <a class="btn btn-secondary" href="mailto:info@goldlevel.co.uk" id="openEmailButton">Open email draft</a>
               </div>
               <div class="status" id="composerStatus" aria-live="polite"></div>
             </div>
@@ -840,10 +680,10 @@
             <div class="contact-cards">
               <div class="channel-card">
                 <h4>Email</h4>
-                <p>Primary written route for a structured first note.</p>
+                <p>Primary written contact for a structured first note.</p>
                 <div class="next-step-actions">
                   <button class="btn btn-secondary" type="button" id="copyEmailButton">Copy email address</button>
-                  <button class="text-btn" type="button" id="cardOpenEmailButton">Open email draft</button>
+                  <a class="text-btn" href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a>
                 </div>
               </div>
               <div class="channel-card">
@@ -851,17 +691,17 @@
                 <p>Alternative route for a tighter, faster exchange when appropriate.</p>
                 <div class="next-step-actions">
                   <button class="btn btn-secondary" type="button" id="copySignalButton">Copy Signal handle</button>
-                  <span class="text-btn">Use the copy action for direct transfer.</span>
+                  <span class="text-btn">@goldlevel0.5</span>
                 </div>
               </div>
             </div>
-            <div class="band quote-panel"><strong>Contact note:</strong> Prepare the message here, then transfer it directly into Email or Signal. The page does not submit anything on your behalf, and contact details are action-based rather than openly published in the layout.</div>
+            <div class="band quote-panel"><strong>Contact note:</strong> Prepare the message here, then transfer it directly into Email or Signal. The page does not submit anything on your behalf.</div>
           </aside>
         </div>
       </div>
     </section>
 
-    <section class="section section-soft">
+    <section class="section">
       <div class="container">
         <div class="section-marker"><span>What to include</span></div>
         <div class="divider"></div>
@@ -889,16 +729,16 @@
       </div>
     </section>
 
-    <section class="section section-contrast">
+    <section class="section">
       <div class="container">
         <div class="section-marker"><span>Frequently asked questions</span></div>
         <div class="divider"></div>
         <h2 class="section-title">Frequently asked questions</h2>
         <div class="faq">
           <article class="faq-item"><h4>Is this clinical support?</h4><p>No. This is a non-clinical, practical, bounded advisory route.</p></article>
-          <article class="faq-item"><h4>How do I make first contact?</h4><p>Use the first-contact builder, then transfer the generated note to Email or Signal.</p></article>
-          <article class="faq-item"><h4>Why use direct contact instead of a web intake?</h4><p>It keeps first contact clearer, more private, and easier to handle without an open submission form.</p></article>
-          <article class="faq-item"><h4>What is the entry point called now?</h4><p>The entry point is an initial strategic assessment.</p></article>
+          <article class="faq-item"><h4>How do I make first contact?</h4><p>Use the outreach composer, then transfer the generated note to Email or Signal.</p></article>
+          <article class="faq-item"><h4>Why replace the web intake?</h4><p>This version is positioned to feel more professional and more private by moving first contact into direct channels.</p></article>
+          <article class="faq-item"><h4>What is the entry point called now?</h4><p>The entry point is positioned as an initial strategic assessment.</p></article>
         </div>
       </div>
     </section>
@@ -907,9 +747,10 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <strong>Grounded Abundance</strong><br />
+        <strong>---- Grounded Abundance ----</strong><br />
         Strategic clarity • Decision support • Continuity
         <div class="utility-links" aria-label="footer policy links" style="margin-top: 14px;">
+          <a class="text-btn" href="macro-diagnostics.html">Macro diagnostics</a>
           <a class="text-btn" href="privacy.html">Privacy notice</a>
           <a class="text-btn" href="terms.html">Terms &amp; conditions</a>
           <a class="text-btn" href="data-rights.html">Data rights</a>
@@ -918,10 +759,9 @@
       </div>
       <div class="contact-stack">
         <div class="contact-line"><strong>Domain:</strong> <span>goldlevel.co.uk</span></div>
-        <div class="contact-line"><strong>Email:</strong> <span id="footerEmailText">Use the copy or draft actions</span></div>
-        <div class="contact-line"><strong>Signal:</strong> <span id="footerSignalText">Use the copy action</span></div>
+        <div class="contact-line"><strong>Email:</strong> <span id="footerEmailText">info@goldlevel.co.uk</span></div>
+        <div class="contact-line"><strong>Signal:</strong> <span id="footerSignalText">@goldlevel0.5</span></div>
         <div class="utility-links">
-          <button class="text-btn" type="button" id="footerOpenEmailButton">Open email draft</button>
           <button class="text-btn" type="button" id="footerCopyEmailButton">Copy Email</button>
           <button class="text-btn" type="button" id="footerCopySignalButton">Copy Signal</button>
           <button class="text-btn" type="button" id="footerCopyDomainButton">Copy domain</button>
@@ -932,11 +772,8 @@
 
   <script>
     (function () {
-      const emailUser = 'info';
-      const emailHost = 'goldlevel.co.uk';
-      const emailAddress = `${emailUser}@${emailHost}`;
-      const signalParts = ['@goldlevel', '0.5'];
-      const signalHandle = signalParts.join('');
+      const emailAddress = 'info@goldlevel.co.uk';
+      const signalHandle = '@goldlevel0.5';
       const domainName = 'goldlevel.co.uk';
 
       const ids = {
@@ -966,14 +803,14 @@
 
       function buildMessage() {
         const channel = valueOf(ids.channel, 'Email');
-        const name = valueOf(ids.fullName, '[Your name]');
+        const name = valueOf(ids.fullName, 'A prospective client');
         const organisation = valueOf(ids.organisation);
         const supportType = valueOf(ids.supportType);
         const pressureType = valueOf(ids.pressureType);
         const timingWindow = valueOf(ids.timingWindow);
         const readinessLevel = valueOf(ids.readinessLevel);
         const roleType = valueOf(ids.roleType);
-        const currentSituation = valueOf(ids.currentSituation, 'I am working through a live decision environment and would value a clearer external read on priorities, boundaries, and next steps.');
+        const currentSituation = valueOf(ids.currentSituation, 'I am working through a live decision environment and would value a clearer external read on priorities, scope, and next steps.');
         const desiredOutcome = valueOf(ids.desiredOutcome, 'A sharper understanding of what matters now, what can be narrowed, and whether an initial strategic assessment is the right next step.');
 
         const introRole = organisation ? `${roleType} working within ${organisation}` : `${roleType}`;
@@ -983,13 +820,13 @@
         const body = [
           greeting,
           '',
-          `My name is ${name}, and I am reaching out as a ${introRole}. I am looking for ${supportType.toLowerCase()} and would like to explore whether this would be a fit for the situation below.`,
+          `My name is ${name}, and I am reaching out as a ${introRole}. I am looking for ${supportType.toLowerCase()} and would like to explore whether your scope is a fit for the situation below.`,
           '',
           `The main pressure I am navigating is ${pressureType.toLowerCase()}, and the timing is ${timingWindow}. In brief, ${sentenceCase(currentSituation)}`,
           '',
-          `I am ${readinessLevel}. A useful first conversation would help clarify: ${sentenceCase(desiredOutcome || 'the most useful next step and whether an initial strategic assessment is appropriate')}`,
+          `I am ${readinessLevel}. A useful first conversation would help clarify ${desiredOutcome ? desiredOutcome.charAt(0).toLowerCase() + desiredOutcome.slice(1) : 'the most useful next step and whether an initial strategic assessment is appropriate'}.`,
           '',
-          'If this is something you currently take on, I would appreciate guidance on the most suitable next step.',
+          'If this sits within your current scope, I would appreciate guidance on the most suitable next step.',
           '',
           'Best regards,',
           name
@@ -1004,12 +841,7 @@
 
         const bodyOnly = message.replace(/^Subject:.*\n\n/, '');
         const subject = ids.supportType ? `Initial enquiry regarding ${valueOf(ids.supportType, 'support').toLowerCase()}` : 'Initial enquiry regarding support';
-        ids.emailButton.dataset.mailto = `mailto:${encodeURIComponent(emailAddress)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyOnly)}`;
-      }
-
-      function openEmailDraft(target) {
-        const href = target && target.dataset ? target.dataset.mailto : `mailto:${encodeURIComponent(emailAddress)}`;
-        window.location.href = href;
+        ids.emailButton.href = `mailto:${encodeURIComponent(emailAddress)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyOnly)}`;
       }
 
       async function copyText(text, successMessage) {
@@ -1044,31 +876,6 @@
       document.getElementById('copyMessageButton').addEventListener('click', function () {
         copyText(ids.output.textContent, 'Message copied and ready to transfer.');
       });
-
-      document.getElementById('openEmailButton').addEventListener('click', function () {
-        openEmailDraft(this);
-      });
-
-      const topOpenEmail = document.getElementById('topOpenEmail');
-      if (topOpenEmail) {
-        topOpenEmail.addEventListener('click', function () {
-          window.location.href = `mailto:${encodeURIComponent(emailAddress)}`;
-        });
-      }
-
-      const cardOpenEmailButton = document.getElementById('cardOpenEmailButton');
-      if (cardOpenEmailButton) {
-        cardOpenEmailButton.addEventListener('click', function () {
-          openEmailDraft(document.getElementById('openEmailButton'));
-        });
-      }
-
-      const footerOpenEmailButton = document.getElementById('footerOpenEmailButton');
-      if (footerOpenEmailButton) {
-        footerOpenEmailButton.addEventListener('click', function () {
-          openEmailDraft(document.getElementById('openEmailButton'));
-        });
-      }
 
       wireCopyButton('copyEmailButton', () => emailAddress, 'Email address copied.');
       wireCopyButton('copySignalButton', () => signalHandle, 'Signal handle copied.');
