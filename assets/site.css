@@ -209,3 +209,44 @@ textarea { min-height: 132px; resize: vertical; }
   .hero-card, .panel, .faq-item, .policy-card { padding: 18px; }
   .btn, .text-btn { width: 100%; }
 }
+.figure-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.figure-title {
+  width: 100%;
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+  letter-spacing: -0.03em;
+}
+
+.figure-subtitle {
+  width: min(900px, 100%);
+  margin: 0 0 22px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.infographic-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0 4px;
+}
+
+.diagnostic-image {
+  display: block;
+  width: 100%;
+  max-width: 980px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  object-fit: contain;
+  background: rgba(255,255,255,0.02);
+}
