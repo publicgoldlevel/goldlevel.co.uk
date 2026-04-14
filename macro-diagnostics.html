@@ -298,6 +298,42 @@
       color: #edf3fb;
     }
 
+    .figure-panel {
+      padding: 28px;
+      text-align: center;
+    }
+
+    .figure-title {
+      margin: 0;
+      font-size: clamp(1.45rem, 2.2vw, 2rem);
+      letter-spacing: -0.03em;
+    }
+
+    .figure-subtitle {
+      margin: 10px auto 0;
+      max-width: 72ch;
+      color: var(--muted);
+    }
+
+    .infographic-frame {
+      margin-top: 22px;
+      padding: 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .infographic-frame img {
+      display: block;
+      width: min(100%, 940px);
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+    }
+
     .footnote {
       margin: 10px 0 0;
       font-size: 0.92rem;
@@ -379,6 +415,21 @@
   </header>
 
   <main>
+
+    <section class="section" id="topology-diagnostic">
+      <div class="container">
+        <div class="section-marker"><span>Topology diagnostic</span></div>
+        <div class="divider"></div>
+        <article class="panel figure-panel">
+          <h2 class="figure-title">How Nvidia and OpenAI Fuel the AI Money Machine — Corrected Topology</h2>
+          <p class="figure-subtitle">As of 14 Apr 2026. Public topology diagnostic showing reported compute, cloud, investment, and service relationships. Held here as a bounded visual reference above the evidence ledger.</p>
+          <div class="infographic-frame">
+            <img src="GOLDLEVEL%20Topology%20Diagnostic.png" alt="How Nvidia and OpenAI Fuel the AI Money Machine — Corrected Topology infographic, as of 14 Apr 2026" />
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="evidence-ledger">
       <div class="container">
         <div class="section-marker"><span>Evidence ledger</span></div>
