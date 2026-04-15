@@ -3,64 +3,70 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Goldlevel | Pressure Reads</title>
-  <meta name="description" content="Concise outside reads for people under live pressure. Send a voice note, message thread, page, notes, or short written context. Get a one-page written read back in 24 to 48 hours." />
-  <meta property="og:title" content="Goldlevel | Pressure Reads" />
-  <meta property="og:description" content="A clear commercial front door: concise outside reads for people under live pressure." />
+  <title>GOLDLEVEL | Concise outside reads</title>
+  <meta name="description" content="Concise outside reads for people, offers, and situations that need a cleaner view. Bounded written reads delivered in direct English." />
+  <meta property="og:title" content="GOLDLEVEL | Concise outside reads" />
+  <meta property="og:description" content="Concise outside reads for people, offers, and situations that need a cleaner view." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://goldlevel.co.uk/" />
   <link rel="canonical" href="https://goldlevel.co.uk/" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="color-scheme" content="dark" />
-  <meta name="glv:domain" content="goldlevel.co.uk" />
-  <meta name="glv:price" content="£25 / £35 / £44" />
-  <meta name="glv:email" content="info@goldlevel.co.uk" />
-  <meta name="glv:signal" content="@goldlevel0.5" />
-  <meta name="glv:trace" content="GLV-PRESSURE-READ-01" />
+  <meta name="color-scheme" content="dark light" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'unsafe-inline'; connect-src 'none'; media-src 'none'; form-action 'none'; upgrade-insecure-requests" />
   <style>
     :root {
-      --bg: #0a0f16;
-      --bg-soft: #111827;
-      --panel: rgba(16, 24, 40, 0.78);
-      --panel-strong: rgba(17, 24, 39, 0.94);
+      --bg: #0c1118;
+      --bg-2: #101723;
+      --panel: rgba(16, 23, 35, 0.84);
+      --panel-strong: rgba(19, 28, 42, 0.96);
+      --folio: linear-gradient(180deg, rgba(252,247,238,0.96), rgba(246,239,227,0.92));
+      --folio-line: rgba(27, 30, 36, 0.11);
+      --text: #edf1f7;
+      --muted: #a7b2c3;
+      --ink: #1f232a;
+      --accent: #d6b06a;
+      --accent-soft: rgba(214,176,106,0.13);
+      --accent-border: rgba(214,176,106,0.26);
       --line: rgba(255,255,255,0.10);
       --line-strong: rgba(255,255,255,0.16);
-      --text: #e8edf5;
-      --muted: #9aa7bb;
-      --accent: #d4af37;
-      --accent-soft: rgba(212,175,55,0.18);
-      --danger-soft: rgba(227, 82, 82, 0.14);
-      --success-soft: rgba(146, 231, 170, 0.10);
-      --shadow: 0 24px 70px rgba(0,0,0,0.38);
-      --radius: 22px;
+      --shadow: 0 28px 80px rgba(0,0,0,0.34);
+      --radius: 24px;
+      --radius-sm: 16px;
       --container: 1180px;
+      --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: var(--sans);
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(212,175,55,0.13), transparent 28%),
-        radial-gradient(circle at 90% 10%, rgba(94,135,255,0.10), transparent 22%),
-        linear-gradient(180deg, #08111c 0%, #0a0f16 36%, #0d1420 100%);
+        radial-gradient(circle at 0% 0%, rgba(214,176,106,0.10), transparent 26%),
+        radial-gradient(circle at 100% 10%, rgba(90,128,255,0.10), transparent 18%),
+        linear-gradient(180deg, #091018 0%, var(--bg) 34%, var(--bg-2) 100%);
       min-height: 100vh;
-      line-height: 1.58;
+      line-height: 1.6;
     }
 
     a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
     button, input, select, textarea { font: inherit; }
     .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible {
+      outline: 3px solid rgba(214,176,106,0.60);
+      outline-offset: 3px;
+    }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
       backdrop-filter: blur(16px);
-      background: rgba(6, 10, 17, 0.84);
+      background: rgba(8, 12, 18, 0.84);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -69,168 +75,220 @@
       gap: 14px;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
       flex-wrap: wrap;
+      padding: 14px 0;
     }
 
     .brand {
       display: flex;
-      gap: 12px;
       align-items: center;
-      font-weight: 700;
-      letter-spacing: 0.02em;
+      gap: 12px;
+      min-width: 0;
     }
 
     .brand-dot {
-      width: 10px;
-      height: 10px;
+      width: 12px;
+      height: 12px;
       border-radius: 999px;
-      background: linear-gradient(135deg, #f5d567, var(--accent));
-      box-shadow: 0 0 0 6px rgba(212,175,55,0.16);
+      background: linear-gradient(135deg, #f5d878, var(--accent));
+      box-shadow: 0 0 0 8px rgba(214,176,106,0.12);
       flex: none;
     }
 
-    .contact-strip, .chip-row, .cta-row, .utility-links, .bullet-row {
+    .brand-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+
+    .brand-name {
+      font-family: var(--serif);
+      font-size: 1.02rem;
+      letter-spacing: 0.01em;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.94rem;
+      padding: 8px 0;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 11px 15px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: var(--accent-soft);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .hero {
+      padding: 56px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .hero-copy, .hero-side, .panel, .package-card, .folio-card, .contact-card, .helper-shell, .footer-inner {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-copy, .hero-side, .panel, .package-card, .folio-card, .contact-card, .helper-shell {
+      padding: 28px;
+      background: var(--panel);
+    }
+
+    .hero-copy {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -110px;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(214,176,106,0.15), transparent 72%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: var(--accent-soft);
+      color: #f4dfa8;
+      font-size: 0.80rem;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    h1, h2, h3, h4 {
+      margin: 0;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--serif);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.8rem, 5.4vw, 5.25rem);
+      max-width: 10.8ch;
+    }
+
+    .lede {
+      margin: 20px 0 0;
+      font-size: 1.10rem;
+      color: var(--muted);
+      max-width: 62ch;
+    }
+
+    .hero-note {
+      margin-top: 22px;
+      padding: 18px 18px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--accent-border);
+      background: linear-gradient(180deg, rgba(214,176,106,0.11), rgba(214,176,106,0.04));
+    }
+
+    .hero-note strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 7px;
+      font-size: 0.96rem;
+    }
+
+    .hero-note em {
+      display: block;
+      color: #f5e9bf;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .chip-row, .cta-row, .mini-row, .helper-actions {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       align-items: center;
     }
 
-    .contact-pill, .chip {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 10px 14px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.03);
-      color: var(--muted);
-      font-size: 0.94rem;
-    }
-
-    .contact-pill strong, .chip strong { color: var(--text); }
-
-
-    .contact-pill .icon-shell {
-      width: 30px;
-      height: 30px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(212,175,55,0.22);
-      background: rgba(212,175,55,0.10);
-      color: #f7df8a;
-      flex: none;
-    }
-
-    .contact-pill svg {
-      width: 15px;
-      height: 15px;
-      display: block;
-      fill: currentColor;
-    }
-
-    .signature-title {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(212,175,55,0.24);
-      background: linear-gradient(135deg, rgba(212,175,55,0.16), rgba(212,175,55,0.08));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 10px 24px rgba(0,0,0,0.18);
-      color: #f8e8ad;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .hero { padding: 62px 0 30px; }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.84fr);
-      gap: 24px;
-      align-items: stretch;
-    }
-
-    .hero-copy, .hero-card, .panel, .package-card, .composer-panel, .footer-inner {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .hero-copy, .hero-card, .panel, .package-card, .composer-panel, .footer-inner { padding: 28px; }
-
-    .eyebrow {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--line-strong);
-      background: rgba(255,255,255,0.03);
-      color: var(--muted);
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-
-    .headline {
-      font-size: clamp(2.6rem, 5vw, 4.8rem);
-      line-height: 1.02;
-      letter-spacing: -0.045em;
-      margin: 0;
-      max-width: 10ch;
-    }
-
-    .accent { color: #f2cd57; }
-
-    .subhead, .section-copy, .panel p, .panel li, .package-card p, .micro, .status, .footer-note, .field-note {
-      color: var(--muted);
-    }
-
-    .subhead {
-      margin: 18px 0 0;
-      font-size: 1.12rem;
-      max-width: 60ch;
-    }
-
     .chip-row { margin-top: 22px; }
+
     .chip {
+      display: inline-flex;
       padding: 8px 12px;
-      border-color: rgba(212,175,55,0.22);
-      background: rgba(212,175,55,0.08);
-      color: #f8e8ad;
+      border-radius: 999px;
+      border: 1px solid rgba(214,176,106,0.20);
+      background: rgba(214,176,106,0.08);
+      color: #f7e7b3;
+      font-size: 0.92rem;
     }
 
     .cta-row { margin-top: 28px; }
 
-    .btn, .text-btn {
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      cursor: pointer;
-      border-radius: 999px;
-      transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease;
-      border: 1px solid transparent;
-    }
-
-    .btn:hover, .text-btn:hover { transform: translateY(-1px); }
-
-    .btn {
       padding: 13px 18px;
-      font-weight: 600;
       min-height: 46px;
+      border-radius: 999px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.15s ease, border-color 0.2s ease, background 0.2s ease;
+      cursor: pointer;
     }
+
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, #f0cc63 0%, #c39a20 100%);
-      color: #1a1304;
-      box-shadow: 0 16px 40px rgba(195,154,32,0.28);
+      background: linear-gradient(135deg, #f1d171 0%, #c9991d 100%);
+      color: #1b1407;
+      box-shadow: 0 16px 40px rgba(201,153,29,0.28);
     }
 
     .btn-secondary {
@@ -239,506 +297,657 @@
       color: var(--text);
     }
 
-    .text-btn {
-      padding: 0;
-      color: #f1d884;
-      background: transparent;
-      border: 0;
-    }
-
-    .band {
-      margin-top: 22px;
-      padding: 15px 16px;
-      border-radius: 16px;
-      border: 1px solid rgba(212,175,55,0.20);
-      background: rgba(212,175,55,0.08);
-      color: #f3e4ac;
-    }
-
-    .hero-card {
-      display: grid;
-      gap: 18px;
-      align-content: start;
-      background: var(--panel-strong);
-    }
-
-    .price-stack {
-      display: grid;
-      gap: 12px;
-    }
-
-    .price-badge {
-      display: inline-grid;
-      gap: 4px;
-      align-self: start;
-      padding: 16px 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(212,175,55,0.22);
-      background: rgba(212,175,55,0.10);
-    }
-
-    .price-badge span {
-      font-size: 1.65rem;
-      font-weight: 700;
-      color: #fdecb0;
-      letter-spacing: -0.03em;
-    }
-
-    .price-badge small { color: var(--muted); }
-
-    .quick-points, .check-list {
-      margin: 0;
-      padding-left: 18px;
-      display: grid;
-      gap: 10px;
-    }
-
-    .section { padding: 18px 0; }
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent 0%, rgba(212,175,55,0.42) 50%, transparent 100%);
-      margin: 0 0 22px;
-    }
-
-    .section-title {
-      margin: 0;
-      font-size: clamp(1.65rem, 2.4vw, 2.3rem);
-      letter-spacing: -0.03em;
-    }
-
-    .section-copy {
-      margin: 12px 0 0;
-      max-width: 72ch;
-    }
-
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .package-card {
-      display: grid;
-      gap: 14px;
-      align-content: start;
-    }
-
-    .package-card.featured {
-      border-color: rgba(212,175,55,0.32);
-      background: linear-gradient(180deg, rgba(212,175,55,0.10), rgba(16,24,40,0.78));
-    }
-
-    .package-tier {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      align-items: center;
-    }
-
-    .package-tier strong {
-      font-size: 1.2rem;
-      letter-spacing: -0.02em;
-    }
-
-    .package-price {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.04em;
-      color: #fdecb0;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      width: fit-content;
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.04);
+    .micro-note {
+      margin-top: 16px;
       color: var(--muted);
-      font-size: 0.86rem;
+      font-size: 0.94rem;
     }
 
-    .small-grid {
+    .hero-side {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
+      gap: 16px;
+      align-content: start;
     }
 
-    .small-box {
-      padding: 14px;
-      border-radius: 16px;
-      border: 1px solid var(--line);
+    .manuscript-cap {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: #f7e8b7;
+      margin-bottom: 6px;
+    }
+
+    .signal {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
       background: rgba(255,255,255,0.03);
     }
 
-    .small-box strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.96rem;
+    .signal-title {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.76rem;
+      font-weight: 700;
+      margin-bottom: 6px;
     }
 
-    .composer-wrap {
-      display: grid;
-      grid-template-columns: minmax(0, 1.04fr) minmax(300px, 0.96fr);
-      gap: 18px;
-      margin-top: 20px;
+    section {
+      padding: 26px 0 34px;
     }
 
-    .composer-panel form {
+    .section-head {
       display: grid;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .section-mark {
+      display: flex;
+      align-items: center;
       gap: 14px;
+      color: #f0ddaa;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-weight: 700;
+    }
+
+    .section-mark::before,
+    .section-mark::after {
+      content: "";
+      flex: 1 1 auto;
+      min-width: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent 0%, rgba(214,176,106,0.62) 45%, transparent 100%);
+    }
+
+    .section-sub {
+      font-family: var(--serif);
+      font-style: italic;
+      color: #d7c6a0;
+      font-size: 1rem;
+      margin: -2px 0 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 2.5vw, 2.45rem);
+      margin: 0;
+    }
+
+    .section-copy {
+      margin: 0;
+      color: var(--muted);
+      max-width: 72ch;
+    }
+
+    .grid-2, .grid-3, .packages, .send-grid, .contact-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .packages { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .send-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); }
+    .contact-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+    .panel p, .panel li, .package-card p, .package-card li, .folio-card p, .folio-card li, .contact-card p, .contact-card li, .helper-shell p, .footer-inner p {
+      color: var(--muted);
+    }
+
+    .panel ul, .package-card ul, .folio-card ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+    }
+
+    .panel li + li, .package-card li + li, .folio-card li + li { margin-top: 10px; }
+
+    .nontraditional {
+      display: grid;
+      grid-template-columns: 132px minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .margin-note {
+      position: sticky;
+      top: 92px;
+      align-self: start;
+      padding: 14px 12px;
+      border-radius: 18px;
+      border: 1px solid rgba(214,176,106,0.18);
+      background: rgba(214,176,106,0.06);
+      color: #e6d7b0;
+      font-size: 0.84rem;
+      line-height: 1.45;
+      font-family: var(--serif);
+      font-style: italic;
+    }
+
+    .margin-note strong {
+      display: block;
+      font-style: normal;
+      font-family: var(--sans);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-size: 0.72rem;
+      margin-bottom: 8px;
+    }
+
+    .package-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .package-card::after {
+      content: "";
+      position: absolute;
+      right: -28px;
+      bottom: -48px;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(214,176,106,0.16), transparent 70%);
+      pointer-events: none;
+    }
+
+    .package-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .package-head h3 { font-size: 1.55rem; }
+
+    .price {
+      color: #ffebb9;
+      font-weight: 800;
+      font-size: 1.12rem;
+      white-space: nowrap;
+    }
+
+    .package-tag {
+      display: inline-flex;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: var(--accent-soft);
+      color: #f0ddb0;
+      font-size: 0.80rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .folio-card {
+      background: var(--folio);
+      color: var(--ink);
+      border-color: var(--folio-line);
+      box-shadow: 0 20px 56px rgba(0,0,0,0.22);
+    }
+
+    .folio-card h3, .folio-card h4, .folio-card p strong { color: var(--ink); }
+    .folio-card p, .folio-card li { color: rgba(31,35,42,0.82); }
+
+    .folio-card .tiny-cap {
+      display: inline-flex;
+      margin-bottom: 12px;
+      color: rgba(31,35,42,0.58);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+
+    .manuscript-block {
+      padding: 18px 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(31,35,42,0.08);
+      background: linear-gradient(180deg, rgba(255,255,255,0.56), rgba(255,255,255,0.18));
+    }
+
+    .manuscript-block + .manuscript-block { margin-top: 14px; }
+
+    .quote {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      line-height: 1.42;
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .contact-card .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-card .contact-row:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .helper-shell details {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.02);
+      overflow: hidden;
+      margin-top: 16px;
+    }
+
+    .helper-shell summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .helper-shell summary::-webkit-details-marker { display: none; }
+
+    .summary-note {
+      color: var(--muted);
+      font-weight: 500;
+      font-size: 0.94rem;
+    }
+
+    .helper-inner {
+      padding: 0 20px 20px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .field-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
     }
 
     label {
-      display: grid;
-      gap: 8px;
-      color: var(--text);
-      font-weight: 600;
+      display: block;
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-bottom: 8px;
     }
 
     input, select, textarea {
       width: 100%;
       border-radius: 14px;
-      border: 1px solid var(--line-strong);
-      background: rgba(8, 14, 24, 0.88);
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
       color: var(--text);
       padding: 13px 14px;
+      outline: none;
     }
 
-    textarea {
-      resize: vertical;
-      min-height: 118px;
-    }
-
-    .inline-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-    }
-
-    .status {
-      min-height: 24px;
-      font-size: 0.95rem;
-    }
-
-    .status.good { color: #c7f6d7; }
+    textarea { resize: vertical; min-height: 132px; }
 
     .message-output {
+      min-height: 250px;
       white-space: pre-wrap;
-      margin: 0;
-      border-radius: 18px;
+      font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+      font-size: 0.94rem;
       padding: 18px;
-      background: rgba(8, 14, 24, 0.9);
-      border: 1px solid var(--line);
-      min-height: 320px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.025);
+      color: #edf3fb;
       overflow-wrap: anywhere;
-      color: var(--text);
+      margin-top: 14px;
     }
 
-    .callout {
-      padding: 16px 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(146, 231, 170, 0.18);
-      background: var(--success-soft);
+    .footer {
+      padding: 18px 0 44px;
     }
 
-    .warning {
-      padding: 16px 18px;
-      border-radius: 18px;
-      border: 1px solid rgba(227, 82, 82, 0.18);
-      background: var(--danger-soft);
-    }
-
-    .footer { padding: 18px 0 44px; }
     .footer-inner {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
       gap: 16px;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
       background: var(--panel-strong);
+      padding: 24px;
     }
 
-    .contact-stack { display: grid; gap: 12px; }
-    .contact-line strong { color: var(--text); }
+    .footer-title {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+    }
 
-    @media (max-width: 980px) {
-      .hero-grid, .grid-3, .grid-2, .composer-wrap, .footer-inner, .small-grid { grid-template-columns: 1fr; }
-      .headline { max-width: none; }
+    .footer small {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    @media (max-width: 1024px) {
+      .hero-grid, .grid-2, .grid-3, .packages, .send-grid, .contact-grid, .field-grid, .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .nontraditional {
+        grid-template-columns: 1fr;
+      }
+
+      .margin-note {
+        position: static;
+      }
+
+      h1 { max-width: none; }
     }
 
     @media (max-width: 640px) {
       .hero { padding-top: 34px; }
-      .hero-copy, .hero-card, .panel, .package-card, .composer-panel, .footer-inner { padding: 20px; }
-      .headline { font-size: 2.35rem; }
+      .hero-copy, .hero-side, .panel, .package-card, .folio-card, .contact-card, .helper-shell, .footer-inner { padding: 20px; }
+      h1 { font-size: 2.55rem; }
       .topbar-inner { padding: 12px 0; }
-      .contact-pill { width: 100%; justify-content: space-between; }
-      .contact-pill .icon-shell { margin-right: 10px; }
-      .inline-grid { grid-template-columns: 1fr; }
+      .nav-links { gap: 10px; }
+      .nav-cta { width: 100%; }
+      .section-mark { gap: 10px; letter-spacing: 0.14em; }
     }
   </style>
 </head>
 <body>
-  <div class="topbar">
+  <header class="topbar">
     <div class="container topbar-inner">
-      <div class="brand"><span class="brand-dot"></span><span>Goldlevel</span></div>
-      <div class="contact-strip" aria-label="top contact details">
-        <a class="contact-pill" href="mailto:info@goldlevel.co.uk"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.75A2.75 2.75 0 0 1 5.75 3h12.5A2.75 2.75 0 0 1 21 5.75v12.5A2.75 2.75 0 0 1 18.25 21H5.75A2.75 2.75 0 0 1 3 18.25V5.75Zm2.2-.25 6.8 5.35 6.8-5.35H5.2Zm13.3 2.07-5.58 4.38a1.5 1.5 0 0 1-1.84 0L5.5 7.57v10.68c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75V7.57Z"/></svg></span><strong>info@goldlevel.co.uk</strong></a>
-        <button class="contact-pill" type="button" id="topCopyEmail"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 2.75A1.75 1.75 0 0 0 7.25 4.5v.25H6A2.75 2.75 0 0 0 3.25 7.5v11A2.75 2.75 0 0 0 6 21.25h9A2.75 2.75 0 0 0 17.75 18.5v-11A2.75 2.75 0 0 0 15 4.75h-1.25V4.5A1.75 1.75 0 0 0 12 2.75H9Zm3.25 2V4.5a.25.25 0 0 0-.25-.25H9a.25.25 0 0 0-.25.25v.25h3.5Zm-6.25 1.5h9c.69 0 1.25.56 1.25 1.25v11c0 .69-.56 1.25-1.25 1.25H6c-.69 0-1.25-.56-1.25-1.25v-11c0-.69.56-1.25 1.25-1.25Zm13.5 2.5h-1v9.75A3.25 3.25 0 0 1 15.25 22h-8v.5c0 .41.34.75.75.75h11.5c.41 0 .75-.34.75-.75v-12c0-.41-.34-.75-.75-.75Z"/></svg></span><strong>Copy email</strong></button>
-        <button class="contact-pill" type="button" id="topCopySignal"><span class="icon-shell" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c-5.39 0-9.75 3.94-9.75 8.8 0 2.72 1.36 5.15 3.49 6.77l-.72 3.43c-.08.39.28.71.64.57l4.02-1.62c.75.17 1.52.25 2.32.25 5.39 0 9.75-3.94 9.75-8.8S17.39 2.5 12 2.5Zm-4.1 11.48c-.6 0-1.08-.49-1.08-1.1 0-.6.48-1.09 1.08-1.09.61 0 1.09.49 1.09 1.09 0 .61-.48 1.1-1.09 1.1Zm4.1 0c-.61 0-1.09-.49-1.09-1.1 0-.6.48-1.09 1.09-1.09.6 0 1.08.49 1.08 1.09 0 .61-.48 1.1-1.08 1.1Zm4.09 0c-.6 0-1.08-.49-1.08-1.1 0-.6.48-1.09 1.08-1.09.61 0 1.09.49 1.09 1.09 0 .61-.48 1.1-1.09 1.1Z"/></svg></span><strong>@goldlevel0.5</strong></button>
-      </div>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="eyebrow"><span class="signature-title">Pressure Reads</span></div>
-        <h1 class="headline">A concise outside read for people under <span class="accent">live pressure</span></h1>
-        <p class="subhead">Send a voice note, message thread, page, notes, or short written context. I will return a one-page written read in 24 to 48 hours. Clear, bounded, and easy to act on.</p>
-        <div class="chip-row" aria-label="key themes">
-          <span class="chip">Live pressure</span>
-          <span class="chip">One-page read</span>
-          <span class="chip">24-48 hours</span>
-          <span class="chip">Email or Signal</span>
-          <span class="chip">No vague discovery call</span>
-        </div>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#packages">See packages</a>
-          <a class="btn btn-secondary" href="#contact-composer">Prepare your message</a>
-        </div>
-        <div class="band"><strong>Good fit:</strong> you are in a live situation, too close to it, and need a cleaner outside read on what matters now and what to do next.</div>
-      </div>
-      <aside class="hero-card" aria-label="offer summary">
-        <div class="price-stack">
-          <div class="price-badge"><span>£25 / £35 / £44</span><small>Bronze, Silver, Gold</small></div>
-          <ul class="quick-points">
-            <li>One clear commercial front door instead of a broad abstract offer.</li>
-            <li>Simple input: voice note, thread, page, notes, or short written context.</li>
-            <li>Simple output: one-page written read with optional follow-up depending on package.</li>
-            <li>Private onward contact is limited to Email or Signal.</li>
-          </ul>
-        </div>
-        <div class="callout"><strong>Turnaround:</strong> 24 to 48 hours from receiving enough context to start.</div>
-      </aside>
+      <a class="brand" href="#top" aria-label="GOLDLEVEL home">
+        <span class="brand-dot"></span>
+        <span class="brand-stack">
+          <span class="brand-mark">GOLDLEVEL</span>
+          <span class="brand-name">Concise outside reads</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#packages">Packages</a>
+        <a href="#material">Material</a>
+        <a href="#return">What you get back</a>
+        <a href="#contact" class="nav-cta">Book a read</a>
+      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="section" id="packages">
-      <div class="container">
-        <div class="divider"></div>
-        <h2 class="section-title">Pick a package</h2>
-        <p class="section-copy">Same core service across all three: a concise outside read on your situation. The difference is how much follow-up is included.</p>
-        <div class="grid-3">
-          <article class="package-card">
-            <div class="package-tier">
-              <strong>Bronze</strong>
-              <span class="package-price">£25</span>
-            </div>
-            <span class="tag">Fast first-pass read</span>
-            <p>A clean one-page written read. Good when you want a first outside view without any follow-up round.</p>
-            <ul class="check-list">
-              <li>One-page written read</li>
-              <li>24 to 48-hour turnaround</li>
-              <li>Email or Signal delivery</li>
-              <li>No follow-up included</li>
-            </ul>
-          </article>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">A bounded written service</div>
+          <h1>A concise outside read on your situation.</h1>
+          <p class="lede">
+            Send the material that best shows what is going on. You receive a short written read in direct English so the situation becomes easier to see and easier to act on.
+          </p>
 
-          <article class="package-card featured">
-            <div class="package-tier">
-              <strong>Silver</strong>
-              <span class="package-price">£35</span>
-            </div>
-            <span class="tag">Most balanced option</span>
-            <p>The same one-page read, plus one written follow-up response if you want to clarify a point after reading it.</p>
-            <ul class="check-list">
-              <li>One-page written read</li>
-              <li>One written follow-up response</li>
-              <li>24 to 48-hour turnaround</li>
-              <li>Best if you need a bit of back-and-forth</li>
-            </ul>
-          </article>
+          <div class="hero-note" aria-label="Service note">
+            <em>A contained read rather than an open-ended process.</em>
+            <strong>What this is</strong>
+            A concise outside read for people who want a cleaner view of a situation, page, thread, decision, or personal/work context without turning the first step into a long intake.
+          </div>
 
-          <article class="package-card">
-            <div class="package-tier">
-              <strong>Gold</strong>
-              <span class="package-price">£44</span>
-            </div>
-            <span class="tag">Read plus second pass</span>
-            <p>The one-page read, one follow-up, and a second short readout after your clarification so the direction lands more cleanly.</p>
-            <ul class="check-list">
-              <li>One-page written read</li>
-              <li>One written follow-up response</li>
-              <li>Second short readout after clarification</li>
-              <li>Best if the situation is more layered</li>
-            </ul>
-          </article>
+          <div class="chip-row" aria-label="Common use cases">
+            <span class="chip">pages and documents</span>
+            <span class="chip">message threads</span>
+            <span class="chip">voice notes</span>
+            <span class="chip">work or relational context</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Book a read</a>
+            <a class="btn btn-secondary" href="#packages">Pick a package</a>
+          </div>
+
+          <p class="micro-note">Direct English. Bounded scope. Private first contact by email or Signal.</p>
+        </div>
+
+        <aside class="hero-side" aria-label="Offer summary">
+          <div>
+            <div class="manuscript-cap">The format</div>
+            <p class="micro-note">One core service across all three options: a concise outside read on your situation. The difference is how much follow-up is included.</p>
+          </div>
+
+          <div class="signal">
+            <div class="signal-title">Good for</div>
+            <p>Pages that need a cleaner outside view, situations that are easier to explain by voice than by email, and contexts where you want a first read before deciding what to do next.</p>
+          </div>
+
+          <div class="signal">
+            <div class="signal-title">Delivery</div>
+            <p>Email or Signal. Light enough to scan. Structured enough to use.</p>
+          </div>
+
+          <div class="signal">
+            <div class="signal-title">Tone</div>
+            <p>Casual, direct English. The aim is clarity, not performance.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="container nontraditional">
+        <div>
+          <div class="section-head">
+            <div class="section-mark">Pick a package</div>
+            <p class="section-sub">Same core service across all three: a concise outside read on your situation.</p>
+            <h2 class="section-title">Pick a package</h2>
+            <p class="section-copy">The difference is how much follow-up is included.</p>
+          </div>
+
+          <div class="packages">
+            <article class="package-card">
+              <div class="package-tag">Bronze</div>
+              <div class="package-head">
+                <h3>Bronze</h3>
+                <span class="price">£25</span>
+              </div>
+              <p><strong>Fast first-pass read</strong></p>
+              <p>A clean one-page written read. Good when you want a first outside view without any follow-up round.</p>
+              <ul>
+                <li>One-page written read</li>
+                <li>24 to 48-hour turnaround</li>
+                <li>Email or Signal delivery</li>
+                <li>No follow-up included</li>
+              </ul>
+            </article>
+
+            <article class="package-card">
+              <div class="package-tag">Silver</div>
+              <div class="package-head">
+                <h3>Silver</h3>
+                <span class="price">£35</span>
+              </div>
+              <p><strong>Most balanced option</strong></p>
+              <p>The same one-page read, plus one written follow-up response if you want to clarify a point after reading it.</p>
+              <ul>
+                <li>One-page written read</li>
+                <li>One written follow-up response</li>
+                <li>24 to 48-hour turnaround</li>
+                <li>Best if you need a bit of back-and-forth</li>
+              </ul>
+            </article>
+
+            <article class="package-card">
+              <div class="package-tag">Gold</div>
+              <div class="package-head">
+                <h3>Gold</h3>
+                <span class="price">£44</span>
+              </div>
+              <p><strong>Read plus second pass</strong></p>
+              <p>The one-page read, one follow-up, and a second short readout after your clarification so the direction lands more cleanly.</p>
+              <ul>
+                <li>One-page written read</li>
+                <li>One written follow-up response</li>
+                <li>Second short readout after clarification</li>
+                <li>Best if the situation is more layered</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section id="material">
       <div class="container">
-        <div class="divider"></div>
-        <div class="grid-2">
-          <article class="panel">
+        <div class="section-head">
+            <div class="section-mark">What you send</div>
+            <p class="section-sub">Send the material in the format that is easiest for you.</p>
             <h2 class="section-title">What you send</h2>
-            <p class="section-copy">Send the material in the format that is easiest for you. Keep it current, relevant, and light enough to scan.</p>
-            <div class="small-grid">
-              <div class="small-box"><strong>Voice note</strong><span class="micro">Best if talking is easier than writing.</span></div>
-              <div class="small-box"><strong>Message thread</strong><span class="micro">Useful for relational, work, or decision context.</span></div>
-              <div class="small-box"><strong>Page or document</strong><span class="micro">Useful if the pressure sits inside text or presentation.</span></div>
-              <div class="small-box"><strong>Notes or short written context</strong><span class="micro">Good for quick situational summaries.</span></div>
-            </div>
-          </article>
-          <article class="panel">
+            <p class="section-copy">Keep it current, relevant, and light enough to scan.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="panel">
+              <h3>Voice note</h3>
+              <p>Best if talking is easier than writing.</p>
+            </article>
+            <article class="panel">
+              <h3>Message thread</h3>
+              <p>Useful for relational, work, or decision context.</p>
+            </article>
+            <article class="panel">
+              <h3>Page or document</h3>
+              <p>Useful if the pressure sits inside text or presentation.</p>
+            </article>
+            <article class="panel">
+              <h3>Notes or short written context</h3>
+              <p>Good for quick situational summaries.</p>
+            </article>
+          </div>
+      </div>
+    </section>
+
+    <section id="return">
+      <div class="container">
+        <div class="section-head">
+            <div class="section-mark">What you get back</div>
+            <p class="section-sub">The read is written in casual, direct English.</p>
             <h2 class="section-title">What you get back</h2>
-            <p class="section-copy">The read is written in casual, direct English. The aim is clarity, not performance.</p>
-            <ul class="check-list">
-              <li>What the actual pressure seems to be</li>
-              <li>What looks like noise, drag, or distortion</li>
-              <li>What matters most right now</li>
-              <li>A cleaner next-step read</li>
-            </ul>
-          </article>
-        </div>
+            <p class="section-copy">The aim is clarity, not performance.</p>
+          </div>
+
+          <div class="grid-2">
+            <article class="panel">
+              <ul>
+                <li>What the actual pressure seems to be</li>
+                <li>What looks like noise, drag, or distortion</li>
+                <li>What matters most right now</li>
+                <li>A cleaner next-step read</li>
+              </ul>
+            </article>
+          </div>
       </div>
     </section>
 
-    <section class="section">
+    <section id="contact">
       <div class="container">
-        <div class="divider"></div>
-        <div class="grid-2">
-          <article class="panel">
-            <h2 class="section-title">What this is</h2>
-            <p class="section-copy">A bounded outside read. It is for moments where the situation feels noisy, heavy, or hard to judge from the inside.</p>
-            <ul class="check-list">
-              <li>Outside perspective, not performative coaching</li>
-              <li>Short written diagnostic, not a vague open-ended process</li>
-              <li>Useful when you need a first clean step</li>
-              <li>Built to be legible fast</li>
-            </ul>
-          </article>
-          <article class="panel">
-            <h2 class="section-title">What this is not</h2>
-            <p class="section-copy">This service is intentionally narrow. It keeps the first exchange simple and bounded.</p>
-            <ul class="check-list">
-              <li>Not emergency or crisis support</li>
-              <li>Not legal, medical, or financial advice</li>
-              <li>Not diagnosis or treatment</li>
-              <li>Not a broad consulting engagement by default</li>
-            </ul>
-          </article>
+        <div class="section-head">
+          <div class="section-mark">Book a read</div>
+          <p class="section-sub">Email or Signal. One clear next step.</p>
+          <h2 class="section-title">Book a read</h2>
+          <p class="section-copy">Use email or Signal for first contact. This keeps the route private, clear, and easy to act on.</p>
         </div>
-      </div>
-    </section>
 
-    <section class="section" id="contact-composer">
-      <div class="container">
-        <div class="divider"></div>
-        <h2 class="section-title">Prepare your message</h2>
-        <p class="section-copy">This page does not send anything for you. It just helps you draft a clean message for Email or Signal.</p>
-        <div class="composer-wrap">
-          <article class="composer-panel">
-            <form>
-              <div class="inline-grid">
-                <label>Package
-                  <select id="packageType">
-                    <option value="Bronze Pressure Read (£25)">Bronze — £25</option>
-                    <option value="Silver Pressure Read (£35)" selected>Silver — £35</option>
-                    <option value="Gold Pressure Read (£44)">Gold — £44</option>
-                  </select>
-                </label>
-                <label>Send via
-                  <select id="contactChannel">
-                    <option value="Email">Email</option>
-                    <option value="Signal">Signal</option>
-                  </select>
-                </label>
-              </div>
-
-              <div class="inline-grid">
-                <label>Your name
-                  <input type="text" id="fullName" placeholder="Your name" maxlength="80" />
-                </label>
-                <label>Input type
-                  <select id="inputType">
-                    <option value="voice note">Voice note</option>
-                    <option value="message thread">Message thread</option>
-                    <option value="page or document">Page or document</option>
-                    <option value="notes">Notes</option>
-                    <option value="short written context">Short written context</option>
-                  </select>
-                </label>
-              </div>
-
-              <label>What is going on?
-                <textarea id="currentSituation" maxlength="900" placeholder="Explain the live pressure in a few clear sentences."></textarea>
-              </label>
-              <p class="field-note">Do not include passwords, payment details, hidden third-party data, or anything you do not have the right to share.</p>
-
-              <label>What would make this useful?
-                <textarea id="desiredOutcome" maxlength="500" placeholder="For example: I want a cleaner read on what matters now, what to ignore, and what to do next."></textarea>
-              </label>
-
-              <div class="cta-row">
-                <button class="btn btn-primary" type="button" id="generateMessageButton">Generate message</button>
-                <button class="btn btn-secondary" type="button" id="copyMessageButton">Copy message</button>
-                <a class="btn btn-secondary" href="mailto:info@goldlevel.co.uk" id="openEmailButton">Open email draft</a>
-              </div>
-              <div class="status" id="composerStatus" aria-live="polite"></div>
-            </form>
-          </article>
-
-          <article class="panel" aria-label="message preview">
-            <h3 style="margin-top:0; margin-bottom:12px;">Message preview</h3>
-            <p class="section-copy" style="margin-top:0; margin-bottom:16px;">Edit the fields on the left, then copy this into Email or Signal.</p>
-            <pre class="message-output" id="messageOutput">Hello,
-
-I would like to book a Silver Pressure Read (£35).
-
-I will send a short written context. The live pressure is that I need a clearer outside read on what matters now and what the next clean step is.
-
-A useful outcome would be a concise one-page read that helps me separate signal from noise.
-
-Best,
-A prospective client</pre>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="divider"></div>
-        <div class="grid-2">
-          <article class="panel">
-            <h2 class="section-title">A few practical rules</h2>
-            <ul class="check-list">
-              <li>The clearer the input, the cleaner the read.</li>
-              <li>If the material is too thin, turnaround starts once enough context is provided.</li>
-              <li>If the material points to urgent risk or emergency support, this is not the right route.</li>
-              <li>Macro work and wider diagnostics live on a separate background page, not on the front door.</li>
-            </ul>
-            <div class="cta-row" style="margin-top:18px;">
-              <a class="btn btn-secondary" href="macro-diagnostics.html">Open Background Reads</a>
+        <div class="contact-grid">
+          <article class="contact-card">
+            <h3>Email</h3>
+            <p>Primary booking route for homepage traffic.</p>
+            <div class="contact-row">
+              <span>Address</span>
+              <a href="mailto:info@goldlevel.co.uk" style="color:#ffe8b0;">info@goldlevel.co.uk</a>
+            </div>
+            <div class="contact-row">
+              <span>Subject line</span>
+              <span>Bronze / Silver / Gold</span>
             </div>
           </article>
-          <article class="panel">
-            <h2 class="section-title">Why this page is simpler now</h2>
-            <p class="section-copy">The old framing was broader and more abstract. This version keeps one clear idea on the page: send the situation, get a concise outside read back.</p>
-            <div class="warning"><strong>Boundaries matter:</strong> this page is the front door, not the whole system. The wider body of work can still exist, but it should not make the first buy harder to understand.</div>
+
+          <article class="contact-card">
+            <h3>Signal</h3>
+            <p>Optional for tighter first contact.</p>
+            <div class="contact-row">
+              <span>Handle</span>
+              <span style="color:#ffe8b0;">@goldlevel0.5</span>
+            </div>
+            <div class="contact-row">
+              <span>Best use</span>
+              <span>Short booking notes</span>
+            </div>
           </article>
+
+          <article class="contact-card">
+            <h3>What to include</h3>
+            <p>Best first notes stay concrete.</p>
+            <div class="contact-row">
+              <span>Include</span>
+              <span>Context, material, and what outcome would help most.</span>
+            </div>
+            <div class="contact-row">
+              <span>Avoid</span>
+              <span>Passwords, payment data, or material you should not send on first contact.</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="helper">
+      <div class="container">
+        <div class="helper-shell">
+          <div class="section-head">
+            <div class="section-mark">Optional helper</div>
+            <p class="section-sub">Secondary utility, not the centre of the page.</p>
+            <h2 class="section-title">Draft the first note if that helps.</h2>
+            <p class="section-copy">This stays secondary on purpose. The main thing is the service itself. This is only here for people who want a faster way to draft the first message.</p>
+          </div>
+
+          <details>
+            <summary>
+              <span>Open the note helper</span>
+              <span class="summary-note">Generate a simple first-contact note</span>
+            </summary>
+            <div class="helper-inner">
+              <div class="field-grid">
+                <div>
+                  <label for="name">Your name</label>
+                  <input id="name" type="text" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="tier">Package</label>
+                  <select id="tier">
+                    <option value="Bronze">Bronze</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Gold">Gold</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-grid">
+                <div>
+                  <label for="material">What are you sending?</label>
+                  <textarea id="material" placeholder="Voice note, message thread, page, document, or notes."></textarea>
+                </div>
+                <div>
+                  <label for="outcome">What outcome would help most?</label>
+                  <textarea id="outcome" placeholder="What would make the read useful for you?"></textarea>
+                </div>
+              </div>
+
+              <label for="preview" style="margin-top: 14px;">Generated note</label>
+              <textarea id="preview" class="message-output" readonly placeholder="Your generated note will appear here."></textarea>
+
+              <div class="helper-actions">
+                <button class="btn btn-primary" id="generate" type="button">Generate note</button>
+                <button class="btn btn-secondary" id="copy" type="button">Copy note</button>
+              </div>
+            </div>
+          </details>
         </div>
       </div>
     </section>
@@ -747,139 +956,59 @@ A prospective client</pre>
   <footer class="footer">
     <div class="container footer-inner">
       <div>
-        <div class="brand" style="margin-bottom: 12px;"><span class="brand-dot"></span><span>Goldlevel</span></div>
-        <p class="footer-note">Concise outside reads for people under live pressure.</p>
-        <div class="utility-links">
-          <a class="text-btn" href="macro-diagnostics.html">Background Reads</a>
-          <a class="text-btn" href="privacy.html">Privacy</a>
-          <a class="text-btn" href="terms.html">Terms</a>
-          <a class="text-btn" href="data-rights.html">Data rights</a>
-          <a class="text-btn" href="security.html">Security controls</a>
-        </div>
+        <div class="footer-title">GOLDLEVEL</div>
+        <p>Concise outside reads for situations, pages, threads, and decisions that need a cleaner view.</p>
       </div>
-      <div class="contact-stack">
-        <div class="contact-line"><strong>Domain:</strong> <span>goldlevel.co.uk</span></div>
-        <div class="contact-line"><strong>Email:</strong> <span id="footerEmailText">info@goldlevel.co.uk</span></div>
-        <div class="contact-line"><strong>Signal:</strong> <span id="footerSignalText">@goldlevel0.5</span></div>
-        <div class="utility-links">
-          <button class="text-btn" type="button" id="footerCopyEmailButton">Copy Email</button>
-          <button class="text-btn" type="button" id="footerCopySignalButton">Copy Signal</button>
-          <button class="text-btn" type="button" id="footerCopyDomainButton">Copy domain</button>
-        </div>
+      <div>
+        <small>Email: info@goldlevel.co.uk - Signal: @goldlevel0.5</small>
       </div>
     </div>
   </footer>
 
   <script>
     (function () {
-      const emailAddress = 'info@goldlevel.co.uk';
-      const signalHandle = '@goldlevel0.5';
-      const domainName = 'goldlevel.co.uk';
+      const nameInput = document.getElementById('name');
+      const tierInput = document.getElementById('tier');
+      const materialInput = document.getElementById('material');
+      const outcomeInput = document.getElementById('outcome');
+      const preview = document.getElementById('preview');
+      const generate = document.getElementById('generate');
+      const copy = document.getElementById('copy');
 
-      const ids = {
-        packageType: document.getElementById('packageType'),
-        channel: document.getElementById('contactChannel'),
-        fullName: document.getElementById('fullName'),
-        inputType: document.getElementById('inputType'),
-        currentSituation: document.getElementById('currentSituation'),
-        desiredOutcome: document.getElementById('desiredOutcome'),
-        output: document.getElementById('messageOutput'),
-        status: document.getElementById('composerStatus'),
-        emailButton: document.getElementById('openEmailButton')
-      };
+      function buildNote() {
+        const name = nameInput.value.trim() || 'Your name';
+        const tier = tierInput.value;
+        const material = materialInput.value.trim() || '[the material I want to send]';
+        const outcome = outcomeInput.value.trim() || '[the outcome I would find most useful]';
 
-      function valueOf(el, fallback = '') {
-        return (el && typeof el.value === 'string' ? el.value.trim() : fallback) || fallback;
+        preview.value =
+`Hello,
+
+I would like to book the ${tier} package.
+
+I would like to send: ${material}
+
+A useful outcome for me would be: ${outcome}
+
+Best,
+${name}`;
       }
 
-      function sentenceCase(text) {
-        if (!text) return '';
-        return text.charAt(0).toUpperCase() + text.slice(1);
-      }
+      generate.addEventListener('click', buildNote);
 
-      function buildMessage() {
-        const channel = valueOf(ids.channel, 'Email');
-        const name = valueOf(ids.fullName, 'A prospective client');
-        const packageType = valueOf(ids.packageType, 'Silver Pressure Read (£35)');
-        const inputType = valueOf(ids.inputType, 'short written context');
-        const currentSituation = valueOf(ids.currentSituation, 'I need a clearer outside read on a live situation and what the next clean step is.');
-        const desiredOutcome = valueOf(ids.desiredOutcome, 'A concise one-page read that helps me separate signal from noise and decide what to do next.');
-        const greeting = 'Hello,';
-        const subjectLine = `Subject: ${packageType}`;
-
-        const body = [
-          greeting,
-          '',
-          `I would like to book a ${packageType}.`,
-          '',
-          `I will send a ${inputType}. The live pressure is: ${sentenceCase(currentSituation)}`,
-          '',
-          `A useful outcome would be: ${sentenceCase(desiredOutcome)}`,
-          '',
-          'Please let me know the next step.',
-          '',
-          'Best,',
-          name
-        ].join('\n');
-
-        return channel === 'Email' ? `${subjectLine}\n\n${body}` : body;
-      }
-
-      function refreshMessage() {
-        const message = buildMessage();
-        ids.output.textContent = message;
-
-        const bodyOnly = message.replace(/^Subject:.*\n\n/, '');
-        const subject = valueOf(ids.packageType, 'Pressure Read');
-        ids.emailButton.href = `mailto:${encodeURIComponent(emailAddress)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyOnly)}`;
-      }
-
-      async function copyText(text, successMessage) {
+      copy.addEventListener('click', async () => {
+        if (!preview.value) buildNote();
         try {
-          await navigator.clipboard.writeText(text);
-          ids.status.textContent = successMessage;
-          ids.status.className = 'status good';
-        } catch (err) {
-          ids.status.textContent = 'Copy did not complete automatically. You can still select and copy the text manually.';
-          ids.status.className = 'status';
-        }
-      }
-
-      const watchedIds = ['packageType', 'contactChannel', 'fullName', 'inputType', 'currentSituation', 'desiredOutcome'];
-      watchedIds.forEach((id) => {
-        const el = document.getElementById(id);
-        if (el) {
-          el.addEventListener('input', refreshMessage);
-          el.addEventListener('change', refreshMessage);
+          await navigator.clipboard.writeText(preview.value);
+          copy.textContent = 'Copied';
+          setTimeout(() => { copy.textContent = 'Copy note'; }, 1200);
+        } catch {
+          preview.select();
+          document.execCommand('copy');
+          copy.textContent = 'Copied';
+          setTimeout(() => { copy.textContent = 'Copy note'; }, 1200);
         }
       });
-
-      document.getElementById('generateMessageButton')?.addEventListener('click', function () {
-        refreshMessage();
-        ids.status.textContent = 'Message updated.';
-        ids.status.className = 'status good';
-      });
-
-      document.getElementById('copyMessageButton')?.addEventListener('click', function () {
-        refreshMessage();
-        copyText(ids.output.textContent, 'Message copied.');
-      });
-
-      function wireCopy(buttonId, text, message) {
-        const button = document.getElementById(buttonId);
-        if (!button) return;
-        button.addEventListener('click', function () {
-          copyText(text, message);
-        });
-      }
-
-      wireCopy('topCopyEmail', emailAddress, 'Email address copied.');
-      wireCopy('topCopySignal', signalHandle, 'Signal handle copied.');
-      wireCopy('footerCopyEmailButton', emailAddress, 'Email address copied.');
-      wireCopy('footerCopySignalButton', signalHandle, 'Signal handle copied.');
-      wireCopy('footerCopyDomainButton', domainName, 'Domain copied.');
-
-      refreshMessage();
     })();
   </script>
 </body>
