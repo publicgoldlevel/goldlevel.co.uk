@@ -131,7 +131,7 @@
             <p class="payment-copy">Scan the PayPal QR code to continue with payment for the full text version.</p>
             <div class="qr-frame">
               <div class="qr-box">
-                <img id="paypalQr" src="PAYPAL_QR_CODE_URL_HERE" alt="PayPal QR code for the Relationship Packet payment" />
+                <img id="paypalQr" src="https://raw.githubusercontent.com/publicgoldlevel/PUBLIC-ASSETS/main/assets/paypal-relationship-packet-qr.png" alt="PayPal QR code for the Relationship Packet payment" />
                 <div class="qr-fallback" id="qrFallback">
                   QR code preview unavailable.
                 </div>
@@ -200,7 +200,7 @@
 
     const qr = document.getElementById('paypalQr');
     const fallback = document.getElementById('qrFallback');
-    const placeholder = 'PAYPAL_QR_CODE_URL_HERE';
+    const placeholder = 'https://raw.githubusercontent.com/publicgoldlevel/PUBLIC-ASSETS/main/assets/paypal-relationship-packet-qr.png';
     const syncQrState = () => {
       const src = qr.getAttribute('src') || '';
       if (!src || src === placeholder) {
