@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Textbook Packets — GOLDLEVEL</title>
+  <meta name="description" content="Structured PDF downloads. Free preview chapters and full paid versions. Diagnostic-grade writing in packet form." />
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root{
+      --bg:#0b1118;--bg-2:#101923;--text:#eef2f8;--muted:#aeb8c8;--soft:#d9e0ea;
+      --accent:#d7b06d;--accent-2:#f0d8a3;--accent-soft:rgba(215,176,109,0.12);
+      --accent-border:rgba(215,176,109,0.28);--line:rgba(255,255,255,0.1);
+      --shadow:0 28px 80px rgba(0,0,0,0.34);--radius:24px;--container:1160px;
+      --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --sidebar-w:260px;
+      --green:rgba(72,199,116,0.9);--green-soft:rgba(72,199,116,0.10);--green-border:rgba(72,199,116,0.28);
+    }
+    *{box-sizing:border-box;}html{scroll-behavior:smooth;}
+    body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--text);line-height:1.65;
+      background:radial-gradient(circle at 0% 0%,rgba(215,176,109,0.10),transparent 28%),
+        radial-gradient(circle at 100% 10%,rgba(89,123,255,0.10),transparent 18%),
+        linear-gradient(180deg,#091018 0%,var(--bg) 34%,var(--bg-2) 100%);}
+    a{color:inherit;text-decoration:none;}.container{width:min(var(--container),calc(100% - 32px));margin:0 auto;}
+    a:focus-visible,button:focus-visible{outline:3px solid rgba(215,176,109,0.62);outline-offset:3px;}
+
+    /* topbar */
+    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(8,12,18,0.84);border-bottom:1px solid rgba(255,255,255,0.08);}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:12px;}.brand-dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,#f6d983,var(--accent));box-shadow:0 0 0 8px rgba(215,176,109,0.12);flex:none;}
+    .brand-stack{display:flex;flex-direction:column;gap:2px;}.brand-mark{color:var(--accent);text-transform:uppercase;letter-spacing:0.16em;font-size:0.76rem;font-weight:700;}
+    .brand-name{font-family:var(--serif);font-size:1.02rem;font-weight:700;}
+    .topbar-right{display:flex;align-items:center;gap:14px;}
+    .nav-cta{display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--text);font-size:0.95rem;font-weight:600;transition:background 0.18s;}
+    .nav-cta:hover{background:rgba(215,176,109,0.2);}
+    .sidebar-toggle{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:var(--soft);font-size:0.9rem;font-family:var(--sans);cursor:pointer;transition:background 0.18s,color 0.18s;white-space:nowrap;}
+    .sidebar-toggle:hover{background:rgba(255,255,255,0.08);color:var(--text);}
+    .toggle-bars{display:flex;flex-direction:column;gap:4px;width:16px;}
+    .toggle-bars span{display:block;height:1.5px;background:currentColor;border-radius:2px;transition:transform 0.28s cubic-bezier(0.4,0,0.2,1),opacity 0.2s;transform-origin:center;}
+    body.sidebar-open .toggle-bars span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
+    body.sidebar-open .toggle-bars span:nth-child(2){opacity:0;transform:scaleX(0);}
+    body.sidebar-open .toggle-bars span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
+    .sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,0);z-index:39;pointer-events:none;transition:background 0.32s ease;}
+    body.sidebar-open .sidebar-overlay{background:rgba(0,0,0,0.48);pointer-events:auto;}
+    .sidebar{position:fixed;top:0;right:0;width:var(--sidebar-w);height:100vh;z-index:60;background:linear-gradient(180deg,#0d1620 0%,#0a1219 100%);border-left:1px solid rgba(255,255,255,0.08);transform:translateX(100%);transition:transform 0.36s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;box-shadow:-24px 0 64px rgba(0,0,0,0.5);overflow-y:auto;}
+    body.sidebar-open .sidebar{transform:translateX(0);}
+    .sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 16px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .sidebar-label{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.72rem;}
+    .sidebar-close{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.15s,color 0.15s;}
+    .sidebar-close:hover{background:rgba(255,255,255,0.1);color:var(--text);}
+    .sidebar-nav{padding:12px 0;flex:1;}
+    .sidebar-section{padding:6px 22px 2px;color:var(--accent);text-transform:uppercase;letter-spacing:0.11em;font-size:0.68rem;font-weight:700;margin-top:10px;}
+    .sidebar-nav a{display:flex;align-items:center;gap:10px;padding:10px 22px;color:var(--soft);font-size:0.94rem;transition:color 0.15s,background 0.15s;position:relative;}
+    .sidebar-nav a:hover{color:var(--text);background:rgba(215,176,109,0.06);}
+    .sidebar-nav a.active{color:var(--accent-2);background:rgba(215,176,109,0.08);}
+    .sidebar-nav a.active::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:60%;background:var(--accent);border-radius:0 2px 2px 0;}
+    .sidebar-icon{font-size:1rem;opacity:0.7;flex:none;}.sidebar-divider{height:1px;background:rgba(255,255,255,0.07);margin:10px 22px;}
+    .sidebar-cta{margin:12px 22px 24px;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent-2);font-weight:600;font-size:0.94rem;transition:background 0.18s;}
+    .sidebar-cta:hover{background:rgba(215,176,109,0.2);}
+
+    main{display:block;}section{padding:84px 0;}section.tight{padding-top:42px;}
+    .page-hero{padding:72px 0 48px;}
+    .breadcrumb{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:0.9rem;margin-bottom:18px;}
+    .breadcrumb a{color:var(--accent);}.breadcrumb a:hover{text-decoration:underline;}
+    h1,h2,h3{margin:0;line-height:1.1;}
+    h1{font-family:var(--serif);font-size:clamp(2.4rem,4.5vw,4rem);max-width:14ch;}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);color:var(--accent-2);font-size:0.82rem;letter-spacing:0.10em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.08);margin-bottom:18px;}
+    .lede{margin:20px 0 0;font-size:clamp(1.05rem,2vw,1.22rem);color:var(--soft);max-width:58ch;}
+    .section-mark{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.76rem;}
+    .section-title{margin-top:10px;font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.8rem);}
+    .section-copy{margin:14px 0 0;color:var(--muted);font-size:1.05rem;max-width:64ch;}
+    .section-head{max-width:76ch;margin-bottom:32px;}
+
+    /* ── COLUMN HEADERS ── */
+    .packet-table-header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 12px;
+      padding: 0 0 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .col-head {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      color: var(--muted);
+      padding: 0 4px;
+    }
+    .col-head:last-child { text-align: center; }
+    .col-head:nth-child(2), .col-head:nth-child(3) { text-align: center; }
+
+    /* ── PACKET ROW ── */
+    .packet-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      align-items: center;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      transition: background 0.15s;
+      border-radius: 8px;
+    }
+    .packet-row:hover { background: rgba(255,255,255,0.02); }
+    .packet-row:last-child { border-bottom: none; }
+
+    .packet-info { display: flex; flex-direction: column; gap: 4px; padding: 0 4px; }
+    .packet-title { font-weight: 600; font-size: 1rem; color: var(--text); }
+    .packet-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
+    .packet-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+    .packet-tag {
+      display: inline-flex; align-items: center; padding: 3px 8px; border-radius: 999px;
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+      background: var(--accent-soft); border: 1px solid var(--accent-border); color: var(--accent-2);
+    }
+    .packet-pages { font-size: 0.78rem; color: var(--muted); }
+
+    .packet-cell { display: flex; align-items: center; justify-content: center; }
+
+    /* Download button — free */
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 7px; padding: 9px 14px;
+      border-radius: 999px; font-size: 0.86rem; font-weight: 600;
+      transition: transform 0.15s, background 0.15s; cursor: pointer;
+      text-decoration: none; white-space: nowrap;
+    }
+    .dl-btn:hover { transform: translateY(-1px); }
+    .dl-free {
+      background: var(--green-soft); border: 1px solid var(--green-border);
+      color: var(--green);
+    }
+    .dl-free:hover { background: rgba(72,199,116,0.18); }
+    .dl-free svg { width: 14px; height: 14px; flex: none; }
+
+    /* Purchase button — paid */
+    .dl-paid {
+      background: var(--accent-soft); border: 1px solid var(--accent-border);
+      color: var(--accent-2);
+    }
+    .dl-paid:hover { background: rgba(215,176,109,0.22); }
+    .dl-paid svg { width: 14px; height: 14px; flex: none; }
+
+    /* Coming soon state */
+    .dl-soon {
+      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+      color: var(--muted); cursor: default; pointer-events: none;
+    }
+
+    /* ── PACKET TABLE CARD ── */
+    .packet-table-card {
+      background: linear-gradient(180deg,rgba(22,31,45,0.96),rgba(14,21,32,0.96));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px 28px 16px;
+    }
+
+    /* ── HOW IT WORKS ── */
+    .how-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+    .how-card {
+      background: linear-gradient(180deg,rgba(22,31,45,0.96),rgba(14,21,32,0.96));
+      border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .how-num { font-size: 1.6rem; font-family: var(--serif); color: var(--accent); margin-bottom: 10px; }
+    .how-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .how-card p { margin: 0; color: var(--soft); font-size: 0.96rem; }
+
+    /* ── LEGEND ── */
+    .legend {
+      display: flex; gap: 20px; flex-wrap: wrap; margin-top: 18px;
+      padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.07);
+    }
+    .legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.86rem; color: var(--muted); }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .legend-dot.free { background: var(--green); }
+    .legend-dot.paid { background: var(--accent); }
+
+    /* ── GITHUB NOTE ── */
+    .github-note {
+      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px; padding: 16px 20px; margin-top: 22px;
+      font-size: 0.9rem; color: var(--muted); display: flex; align-items: flex-start; gap: 10px;
+    }
+    .github-note strong { color: var(--soft); }
+
+    .footer{padding:28px 0 46px;color:var(--muted);}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);}
+    .small{font-size:0.94rem;}
+
+    @media(max-width:980px){
+      .how-grid{grid-template-columns:1fr;}
+      .packet-table-header,.packet-row{grid-template-columns:1fr;}
+      .col-head:not(:first-child){display:none;}
+      .packet-cell{justify-content:flex-start;margin-top:8px;}
+      .packet-cell::before{content:attr(data-label);font-size:0.78rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-right:10px;font-weight:700;}
+    }
+    @media(max-width:720px){section{padding:70px 0;}.page-hero{padding-top:54px;}.packet-table-card{padding:18px 16px 12px;}}
+  </style>
+</head>
+<body>
+
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-label">Navigation</span>
+      <button class="sidebar-close" id="sidebarClose">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Pages</div>
+      <a href="index.html"><span class="sidebar-icon">◆</span> Home</a>
+      <a href="what-this-is.html"><span class="sidebar-icon">○</span> What This Is</a>
+      <a href="good-fit.html"><span class="sidebar-icon">○</span> Good Fit</a>
+      <a href="scope.html"><span class="sidebar-icon">○</span> Input &amp; Return</a>
+      <a href="proof.html"><span class="sidebar-icon">○</span> The Boundary</a>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">Services</div>
+      <a href="packages.html"><span class="sidebar-icon">◇</span> Packages</a>
+      <a href="textbook-packets.html" class="active"><span class="sidebar-icon">◇</span> Textbook Packets</a>
+      <div class="sidebar-divider"></div>
+    </nav>
+    <a href="book-a-read.html" class="sidebar-cta">✦ Book a Read</a>
+  </aside>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-stack">
+          <span class="brand-mark">GOLDLEVEL</span>
+          <span class="brand-name">Outside diagnostic reads</span>
+        </span>
+      </a>
+      <div class="topbar-right">
+        <a href="book-a-read.html" class="nav-cta">Book a read</a>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar">
+          <span class="toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          Sections
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Textbook Packets</span></div>
+        <div class="eyebrow">Cold Textbook Packets</div>
+        <h1>Diagnostic-grade writing in packet form.</h1>
+        <p class="lede">Structured PDF downloads covering offer clarity, trust translation, and decision-making under pressure. Free preview chapters available. Full versions unlockable through purchase.</p>
+      </div>
+    </section>
+
+    <section class="tight">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">How this works</div>
+          <h2 class="section-title">Two columns. One decision.</h2>
+          <p class="section-copy">Each packet has a free preview PDF and a full paid version. The preview gives you enough to decide. The full version gives you the complete working document.</p>
+        </div>
+
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-num">01</div>
+            <h3>Browse the list</h3>
+            <p>Each row is one packet. The title and short description tell you what the packet covers and how long it is.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-num">02</div>
+            <h3>Download the preview</h3>
+            <p>The free column links directly to a PDF preview hosted on GitHub. No sign-in required. Download and read before deciding.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-num">03</div>
+            <h3>Unlock the full version</h3>
+            <p>The paid column links to the purchase route. After payment, the full PDF is sent to your email or Signal within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <div class="section-mark">Packet library</div>
+          <h2 class="section-title">Available packets.</h2>
+          <p class="section-copy">All PDFs are hosted on GitHub. The filename structure is <code style="background:rgba(255,255,255,0.06);padding:2px 7px;border-radius:6px;font-size:0.9em;">packetname.pdf</code> — previews are free, full versions require purchase.</p>
+        </div>
+
+        <div class="packet-table-card">
+          <!-- Column headers -->
+          <div class="packet-table-header">
+            <div class="col-head">Packet</div>
+            <div class="col-head">Free Preview</div>
+            <div class="col-head">Full Version</div>
+          </div>
+
+          <!-- ── PACKET ROWS ── -->
+          <!-- Each href points to: https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/packets/filename.pdf -->
+          <!-- Replace YOUR_ORG/YOUR_REPO with your actual GitHub repo path -->
+
+          <div class="packet-row">
+            <div class="packet-info">
+              <span class="packet-title">Offer Clarity — First Pass</span>
+              <span class="packet-desc">The core questions that determine whether a buyer can classify and trust an offer in under 30 seconds.</span>
+              <div class="packet-meta">
+                <span class="packet-tag">Offer</span>
+                <span class="packet-pages">Preview: 12pp · Full: 48pp</span>
+              </div>
+            </div>
+            <div class="packet-cell" data-label="Free Preview">
+              <a class="dl-btn dl-free"
+                 href="https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/packets/offer-clarity-preview.pdf"
+                 download="offer-clarity-preview.pdf"
+                 target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
+                </svg>
+                Preview PDF
+              </a>
+            </div>
+            <div class="packet-cell" data-label="Full Version">
+              <a class="dl-btn dl-paid" href="mailto:info@goldlevel.co.uk?subject=Full%20version%3A%20Offer%20Clarity%20First%20Pass">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>
+                </svg>
+                Purchase — £8
+              </a>
+            </div>
+          </div>
+
+          <div class="packet-row">
+            <div class="packet-info">
+              <span class="packet-title">Trust Translation</span>
+              <span class="packet-desc">How proof works on a page. What buyers need to see, in what order, to move from interest to decision.</span>
+              <div class="packet-meta">
+                <span class="packet-tag">Trust</span>
+                <span class="packet-pages">Preview: 10pp · Full: 42pp</span>
+              </div>
+            </div>
+            <div class="packet-cell" data-label="Free Preview">
+              <a class="dl-btn dl-free"
+                 href="https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/packets/trust-translation-preview.pdf"
+                 download="trust-translation-preview.pdf"
+                 target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
+                </svg>
+                Preview PDF
+              </a>
+            </div>
+            <div class="packet-cell" data-label="Full Version">
+              <a class="dl-btn dl-paid" href="mailto:info@goldlevel.co.uk?subject=Full%20version%3A%20Trust%20Translation">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>
+                </svg>
+                Purchase — £8
+              </a>
+            </div>
+          </div>
+
+          <div class="packet-row">
+            <div class="packet-info">
+              <span class="packet-title">Decision Fog — Clearing the Frame</span>
+              <span class="packet-desc">A structured method for isolating the real decision from the noise around it when there are too many live options.</span>
+              <div class="packet-meta">
+                <span class="packet-tag">Decision</span>
+                <span class="packet-pages">Preview: 8pp · Full: 36pp</span>
+              </div>
+            </div>
+            <div class="packet-cell" data-label="Free Preview">
+              <a class="dl-btn dl-free"
+                 href="https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/packets/decision-fog-preview.pdf"
+                 download="decision-fog-preview.pdf"
+                 target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
+                </svg>
+                Preview PDF
+              </a>
+            </div>
+            <div class="packet-cell" data-label="Full Version">
+              <a class="dl-btn dl-paid" href="mailto:info@goldlevel.co.uk?subject=Full%20version%3A%20Decision%20Fog">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>
+                </svg>
+                Purchase — £8
+              </a>
+            </div>
+          </div>
+
+          <div class="packet-row">
+            <div class="packet-info">
+              <span class="packet-title">Category First</span>
+              <span class="packet-desc">Why category clarity is the first commercial problem to solve — and how to name what you do so a buyer can place it immediately.</span>
+              <div class="packet-meta">
+                <span class="packet-tag">Positioning</span>
+                <span class="packet-pages">Preview: 14pp · Full: 52pp</span>
+              </div>
+            </div>
+            <div class="packet-cell" data-label="Free Preview">
+              <a class="dl-btn dl-free"
+                 href="https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/packets/category-first-preview.pdf"
+                 download="category-first-preview.pdf"
+                 target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
+                </svg>
+                Preview PDF
+              </a>
+            </div>
+            <div class="packet-cell" data-label="Full Version">
+              <a class="dl-btn dl-paid" href="mailto:info@goldlevel.co.uk?subject=Full%20version%3A%20Category%20First">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>
+                </svg>
+                Purchase — £10
+              </a>
+            </div>
+          </div>
+
+          <div class="packet-row">
+            <div class="packet-info">
+              <span class="packet-title">Buyer Hesitation — Diagnostic Field Notes</span>
+              <span class="packet-desc">The seven most common reasons a genuinely interested buyer does not convert. Each with a field note on what to look for in the page.</span>
+              <div class="packet-meta">
+                <span class="packet-tag">Conversion</span>
+                <span class="packet-pages">Preview: 10pp · Full: 44pp</span>
+              </div>
+            </div>
+            <div class="packet-cell" data-label="Free Preview">
+              <a class="dl-btn dl-free"
+                 href="https://raw.githubusercontent.com/YOUR_ORG/YOUR_REPO/main/packets/buyer-hesitation-preview.pdf"
+                 download="buyer-hesitation-preview.pdf"
+                 target="_blank" rel="noopener">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
+                </svg>
+                Preview PDF
+              </a>
+            </div>
+            <div class="packet-cell" data-label="Full Version">
+              <a class="dl-btn dl-paid" href="mailto:info@goldlevel.co.uk?subject=Full%20version%3A%20Buyer%20Hesitation">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <rect x="3" y="7" width="10" height="7" rx="1.5"/>
+                  <path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/>
+                </svg>
+                Purchase — £8
+              </a>
+            </div>
+          </div>
+
+          <div class="packet-row">
+            <div class="packet-info">
+              <span class="packet-title">Bounded Scope — A Working Method</span>
+              <span class="packet-desc">Why scoping a diagnostic tightly produces better output. A working method for staying inside useful limits when reading commercial material.</span>
+              <div class="packet-meta">
+                <span class="packet-tag">Method</span>
+                <span class="packet-pages">Coming soon</span>
+              </div>
+            </div>
+            <div class="packet-cell" data-label="Free Preview">
+              <span class="dl-btn dl-soon">
+                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" style="width:14px;height:14px;">
+                  <circle cx="8" cy="8" r="6"/><path d="M8 5v3.5l2 2"/>
+                </svg>
+                Coming soon
+              </span>
+            </div>
+            <div class="packet-cell" data-label="Full Version">
+              <span class="dl-btn dl-soon">Coming soon</span>
+            </div>
+          </div>
+
+          <!-- Legend -->
+          <div class="legend">
+            <div class="legend-item"><span class="legend-dot free"></span> Free PDF — direct download from GitHub, no sign-in</div>
+            <div class="legend-item"><span class="legend-dot paid"></span> Full version — purchase by email, delivered within 24h</div>
+          </div>
+        </div>
+
+        <!-- GitHub note -->
+        <div class="github-note">
+          <span style="font-size:1.1rem;flex:none;margin-top:1px;">ⓘ</span>
+          <span>
+            <strong>PDF hosting:</strong> Free previews are served directly from a GitHub repository.
+            To wire in your own files, replace <code style="background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;">YOUR_ORG/YOUR_REPO</code> in each preview link with your actual GitHub organisation and repository name, then upload the corresponding <code style="background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;">filename.pdf</code> files to the <code style="background:rgba(255,255,255,0.06);padding:1px 6px;border-radius:4px;">/packets/</code> folder in that repo.
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="small">GOLDLEVEL — outside diagnostic reads for offers, pages, threads, and decisions that need a cleaner second view.</div>
+      <div class="small">Business route: info@goldlevel.co.uk • Signal: @goldlevel0.5</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('sidebarToggle'),closeBtn=document.getElementById('sidebarClose'),overlay=document.getElementById('sidebarOverlay');
+    const open=()=>{document.body.classList.add('sidebar-open');toggle.setAttribute('aria-expanded','true');};
+    const close=()=>{document.body.classList.remove('sidebar-open');toggle.setAttribute('aria-expanded','false');};
+    toggle.addEventListener('click',()=>document.body.classList.contains('sidebar-open')?close():open());
+    closeBtn.addEventListener('click',close);overlay.addEventListener('click',close);
+    document.addEventListener('keydown',e=>e.key==='Escape'&&close());
+  </script>
+</body>
+</html>

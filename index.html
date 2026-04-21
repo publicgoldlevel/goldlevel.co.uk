@@ -12,7 +12,6 @@
   <link rel="canonical" href="https://goldlevel.co.uk/" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="color-scheme" content="dark light" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'unsafe-inline'; script-src 'none'; connect-src 'none'; media-src 'none'; form-action 'none'; upgrade-insecure-requests" />
   <style>
     :root {
       --bg: #0b1118;
@@ -30,6 +29,7 @@
       --container: 1160px;
       --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
       --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --sidebar-w: 260px;
     }
 
     * { box-sizing: border-box; }
@@ -49,15 +49,16 @@
     a { color: inherit; text-decoration: none; }
     .container { width: min(var(--container), calc(100% - 32px)); margin: 0 auto; }
 
-    a:focus-visible, summary:focus-visible {
+    a:focus-visible, button:focus-visible {
       outline: 3px solid rgba(215,176,109,0.62);
       outline-offset: 3px;
     }
 
+    /* ── TOPBAR ── */
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 40;
+      z-index: 50;
       backdrop-filter: blur(16px);
       background: rgba(8, 12, 18, 0.84);
       border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -68,7 +69,6 @@
       align-items: center;
       justify-content: space-between;
       gap: 14px;
-      flex-wrap: wrap;
       padding: 14px 0;
     }
 
@@ -110,35 +110,219 @@
       letter-spacing: 0.01em;
     }
 
-    .nav-links {
+    .topbar-right {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
       gap: 14px;
-      flex-wrap: wrap;
     }
-
-    .nav-links a {
-      color: var(--muted);
-      font-size: 0.95rem;
-      padding: 8px 0;
-    }
-
-    .nav-links a:hover { color: var(--text); }
 
     .nav-cta {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 11px 15px;
+      padding: 11px 18px;
       border-radius: 999px;
       border: 1px solid var(--accent-border);
       background: var(--accent-soft);
-      color: var(--text) !important;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: background 0.18s, border-color 0.18s;
+    }
+    .nav-cta:hover { background: rgba(215,176,109,0.2); }
+
+    /* ── SIDEBAR TOGGLE BUTTON ── */
+    .sidebar-toggle {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: var(--soft);
+      font-size: 0.9rem;
+      font-family: var(--sans);
+      cursor: pointer;
+      transition: background 0.18s, border-color 0.18s, color 0.18s;
+      white-space: nowrap;
+    }
+    .sidebar-toggle:hover {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
     }
 
+    .toggle-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      width: 16px;
+    }
+    .toggle-bars span {
+      display: block;
+      height: 1.5px;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s;
+      transform-origin: center;
+    }
+    body.sidebar-open .toggle-bars span:nth-child(1) {
+      transform: translateY(5.5px) rotate(45deg);
+    }
+    body.sidebar-open .toggle-bars span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    body.sidebar-open .toggle-bars span:nth-child(3) {
+      transform: translateY(-5.5px) rotate(-45deg);
+    }
+
+    /* ── SIDEBAR OVERLAY ── */
+    .sidebar-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0);
+      z-index: 39;
+      pointer-events: none;
+      transition: background 0.32s ease;
+    }
+    body.sidebar-open .sidebar-overlay {
+      background: rgba(0,0,0,0.48);
+      pointer-events: auto;
+    }
+
+    /* ── SIDEBAR PANEL ── */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: var(--sidebar-w);
+      height: 100vh;
+      z-index: 60;
+      background: linear-gradient(180deg, #0d1620 0%, #0a1219 100%);
+      border-left: 1px solid rgba(255,255,255,0.08);
+      transform: translateX(100%);
+      transition: transform 0.36s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      box-shadow: -24px 0 64px rgba(0,0,0,0.5);
+      overflow-y: auto;
+    }
+    body.sidebar-open .sidebar {
+      transform: translateX(0);
+    }
+
+    .sidebar-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 22px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+
+    .sidebar-label {
+      color: var(--accent-2);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      font-size: 0.72rem;
+    }
+
+    .sidebar-close {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      line-height: 1;
+      transition: background 0.15s, color 0.15s;
+    }
+    .sidebar-close:hover { background: rgba(255,255,255,0.1); color: var(--text); }
+
+    .sidebar-nav {
+      padding: 12px 0;
+      flex: 1;
+    }
+
+    .sidebar-section {
+      padding: 6px 22px 2px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-size: 0.68rem;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    .sidebar-nav a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 22px;
+      color: var(--soft);
+      font-size: 0.94rem;
+      transition: color 0.15s, background 0.15s;
+      border-radius: 0;
+      position: relative;
+    }
+    .sidebar-nav a:hover {
+      color: var(--text);
+      background: rgba(215,176,109,0.06);
+    }
+    .sidebar-nav a.active {
+      color: var(--accent-2);
+      background: rgba(215,176,109,0.08);
+    }
+    .sidebar-nav a.active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3px;
+      height: 60%;
+      background: var(--accent);
+      border-radius: 0 2px 2px 0;
+    }
+
+    .sidebar-icon {
+      font-size: 1rem;
+      opacity: 0.7;
+      flex: none;
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.07);
+      margin: 10px 22px;
+    }
+
+    .sidebar-cta {
+      margin: 12px 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--accent-border);
+      background: var(--accent-soft);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 0.94rem;
+      transition: background 0.18s;
+    }
+    .sidebar-cta:hover { background: rgba(215,176,109,0.2); }
+
+    /* ── MAIN LAYOUT ── */
     main { display: block; }
     section { padding: 84px 0; }
     section.tight { padding-top: 42px; }
@@ -146,7 +330,7 @@
     .hero { padding: 72px 0 56px; }
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.22fr) minmax(320px, 0.78fr);
+      grid-template-columns: minmax(0, 1.22fr) minmax(300px, 0.78fr);
       gap: 28px;
       align-items: start;
     }
@@ -241,6 +425,8 @@
       font-weight: 600;
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
       cursor: pointer;
+      font-family: var(--sans);
+      font-size: 1rem;
     }
 
     .btn:hover { transform: translateY(-1px); }
@@ -310,52 +496,48 @@
       max-width: 64ch;
     }
 
-    .grid-3 {
+    /* ── SUMMARY GRID ── */
+    .summary-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
+      margin-top: 8px;
     }
 
-    .card, .contact-card, .proof-band, .priority-shell {
+    .summary-card {
+      background: linear-gradient(180deg, rgba(22, 31, 45, 0.96), rgba(14, 21, 32, 0.96));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
       padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .summary-card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-2px);
     }
 
-    .card h3, .contact-card h3 {
-      font-size: 1.22rem;
-      margin-bottom: 10px;
+    .summary-card h3 { font-size: 1.12rem; margin-bottom: 2px; }
+    .summary-card p { margin: 0; color: var(--soft); font-size: 0.97rem; }
+
+    .summary-card .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-2);
+      font-size: 0.88rem;
+      font-weight: 600;
+      margin-top: auto;
+      padding-top: 8px;
+      letter-spacing: 0.04em;
     }
+    .summary-card .card-link:hover { text-decoration: underline; }
 
-    .card p, .contact-card p { margin: 0; color: var(--soft); }
-    .card ul { margin: 14px 0 0; padding-left: 20px; color: var(--soft); }
-
-    .proof-band {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .proof-item strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text);
-      font-size: 1rem;
-    }
-
-    .proof-item p {
-      margin: 0;
-      color: var(--soft);
-    }
-
-    .priority-shell {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-      align-items: start;
-    }
-
-    .priority-shell ul { margin: 0; padding-left: 20px; color: var(--soft); }
-
-    .packages {
+    /* ── PACKAGES MINI ── */
+    .packages-mini {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
@@ -406,31 +588,7 @@
     .package-card p { margin: 0 0 10px; color: var(--soft); }
     .package-card ul { margin: 14px 0 0; padding-left: 20px; color: var(--soft); }
 
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .contact-row {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      margin-top: 14px;
-      padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .contact-row span:first-child {
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-
-    .contact-accent {
-      color: #ffe8b0;
-      word-break: break-word;
-    }
-
+    /* ── FOOTER ── */
     .footer {
       padding: 28px 0 46px;
       color: var(--muted);
@@ -447,45 +605,83 @@
 
     .small { font-size: 0.94rem; }
 
+    /* ── RESPONSIVE ── */
     @media (max-width: 980px) {
       .hero-grid,
-      .proof-band,
-      .packages,
-      .grid-3,
-      .priority-shell,
-      .contact-grid {
+      .summary-grid,
+      .packages-mini {
         grid-template-columns: 1fr;
       }
-
-      .contact-grid { gap: 14px; }
     }
 
     @media (max-width: 720px) {
       section { padding: 70px 0; }
       .hero { padding-top: 54px; }
       .topbar-inner { padding: 12px 0; }
-      .nav-links { gap: 12px; }
-      .nav-links a { font-size: 0.92rem; }
-      .section-title { max-width: 13ch; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Sidebar overlay -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- Sidebar panel -->
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation" role="navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-label">Navigation</span>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Pages</div>
+      <a href="index.html" class="active">
+        <span class="sidebar-icon">◆</span> Home
+      </a>
+      <a href="what-this-is.html">
+        <span class="sidebar-icon">○</span> What This Is
+      </a>
+      <a href="good-fit.html">
+        <span class="sidebar-icon">○</span> Good Fit
+      </a>
+      <a href="scope.html">
+        <span class="sidebar-icon">○</span> Input &amp; Return
+      </a>
+      <a href="proof.html">
+        <span class="sidebar-icon">○</span> The Boundary
+      </a>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">Services</div>
+      <a href="packages.html">
+        <span class="sidebar-icon">◇</span> Packages
+      </a>
+      <a href="textbook-packets.html">
+        <span class="sidebar-icon">◇</span> Textbook Packets
+      </a>
+      <div class="sidebar-divider"></div>
+    </nav>
+    <a href="book-a-read.html" class="sidebar-cta">
+      ✦ Book a Read
+    </a>
+  </aside>
+
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#top" aria-label="GOLDLEVEL home">
+      <a class="brand" href="index.html" aria-label="GOLDLEVEL home">
         <span class="brand-dot"></span>
         <span class="brand-stack">
           <span class="brand-mark">GOLDLEVEL</span>
           <span class="brand-name">Outside diagnostic reads</span>
         </span>
       </a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="#what">What this is</a>
-        <a href="#fit">Good fit</a>
-        <a href="#packages">Packages</a>
-        <a href="#contact" class="nav-cta">Book a read</a>
-      </nav>
+      <div class="topbar-right">
+        <a href="book-a-read.html" class="nav-cta">Book a read</a>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation">
+          <span class="toggle-bars" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </span>
+          Sections
+        </button>
+      </div>
     </div>
   </header>
 
@@ -510,8 +706,8 @@
           </div>
 
           <div class="cta-row">
-            <a class="btn btn-primary" href="#contact">Book a read</a>
-            <a class="btn btn-secondary" href="#packages">See packages</a>
+            <a class="btn btn-primary" href="book-a-read.html">Book a read</a>
+            <a class="btn btn-secondary" href="packages.html">See packages</a>
           </div>
 
           <p class="micro-note">Direct English. Bounded scope. Start by email or Signal.</p>
@@ -540,123 +736,51 @@
       </div>
     </section>
 
-    <section id="what" class="tight">
+    <!-- Summary section pointing to sub-pages -->
+    <section class="tight">
       <div class="container">
         <div class="section-head">
-          <div class="section-mark">What this is</div>
-          <p class="section-sub">Clear category first. Then method. Then next step.</p>
-          <h2 class="section-title">A bounded written diagnostic for live commercial pressure.</h2>
-          <p class="section-copy">This service is for situations where something real already exists, but the buyer or reader cannot yet classify it cleanly enough to trust the next move.</p>
+          <div class="section-mark">What's here</div>
+          <h2 class="section-title">Everything you need to decide.</h2>
+          <p class="section-copy">Each section covers a distinct part of the service. Open what's relevant.</p>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Category</h3>
-            <p>An outside diagnostic read of live material. The output is a bounded written document, not an open-ended consulting engagement.</p>
-          </article>
-
-          <article class="card">
-            <h3>What gets named</h3>
-            <p>The main pressure, what is weakening trust or clarity, and what to change first.</p>
-          </article>
-
-          <article class="card">
-            <h3>Why it lands</h3>
-            <p>The read stays close to the actual material. No invented proof. No decorative language standing in for judgment.</p>
-          </article>
+        <div class="summary-grid">
+          <a href="what-this-is.html" class="summary-card" style="text-decoration:none;">
+            <h3>What This Is</h3>
+            <p>Category, method, and what the diagnostic actually names.</p>
+            <span class="card-link">Read more →</span>
+          </a>
+          <a href="good-fit.html" class="summary-card" style="text-decoration:none;">
+            <h3>Good Fit</h3>
+            <p>Three common reasons people book and how to recognise the signal.</p>
+            <span class="card-link">Read more →</span>
+          </a>
+          <a href="scope.html" class="summary-card" style="text-decoration:none;">
+            <h3>Input &amp; Return</h3>
+            <p>What you send, what comes back, and how to keep it short and clean.</p>
+            <span class="card-link">Read more →</span>
+          </a>
+          <a href="proof.html" class="summary-card" style="text-decoration:none;">
+            <h3>The Boundary</h3>
+            <p>Why the read stays bounded and what it avoids on purpose.</p>
+            <span class="card-link">Read more →</span>
+          </a>
+          <a href="packages.html" class="summary-card" style="text-decoration:none;">
+            <h3>Packages</h3>
+            <p>Bronze, Silver, and Gold — choose by situation depth, not prestige.</p>
+            <span class="card-link">See packages →</span>
+          </a>
+          <a href="textbook-packets.html" class="summary-card" style="text-decoration:none;">
+            <h3>Textbook Packets</h3>
+            <p>Structured PDF downloads. Free preview or full paid version.</p>
+            <span class="card-link">Browse packets →</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="fit">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Good fit</div>
-          <p class="section-sub">Three common reasons people book.</p>
-          <h2 class="section-title">Use this when the work exists but the read on it is still unstable.</h2>
-          <p class="section-copy">The page does not need to be broken to need a read. Often the pressure sits in category confusion, thin proof, weak trust translation, or too much noise around a decision.</p>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Offer not landing</h3>
-            <p>The promise is real, but the buyer cannot classify it quickly enough to trust it or pay for it.</p>
-          </article>
-
-          <article class="card">
-            <h3>Buyer hesitation</h3>
-            <p>The page is calm and polished, but proof, audience fit, or method visibility are still too thin to convert cleanly.</p>
-          </article>
-
-          <article class="card">
-            <h3>Decision fog</h3>
-            <p>There is too much live material or too many interpretations to see the next move clearly.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="scope">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Input and return</div>
-          <p class="section-sub">Keep it current and close to the actual pressure.</p>
-          <h2 class="section-title">What you send. What comes back.</h2>
-          <p class="section-copy">Shorter is often better. Send the material that carries the decision most directly.</p>
-        </div>
-
-        <div class="priority-shell">
-          <div>
-            <div class="sample-label">Useful inputs</div>
-            <ul>
-              <li><strong>Page or document</strong> when the issue sits in wording, structure, or trust</li>
-              <li><strong>Offer notes</strong> when the promise exists but does not land cleanly</li>
-              <li><strong>Message thread</strong> when the pressure sits in a conversation or decision path</li>
-              <li><strong>Voice note or short brief</strong> when speaking is easier than writing</li>
-            </ul>
-          </div>
-          <div>
-            <div class="sample-label">Return shape</div>
-            <ul>
-              <li>a bounded written diagnostic in direct English</li>
-              <li>the main pressure named as clearly as possible</li>
-              <li>what seems solid versus what seems to be weakening the situation</li>
-              <li>what to change first or where to look next</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="proof">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">What the boundary does</div>
-          <h2 class="section-title">The read stays bounded on purpose.</h2>
-          <p class="section-copy">The first pass is designed to reduce confusion, not turn the issue into something heavier than it needs to be.</p>
-        </div>
-
-        <div class="proof-band">
-          <div class="proof-item">
-            <strong>Grounded in what you send</strong>
-            <p>The read stays close to the page, offer, thread, notes, or voice note in front of me.</p>
-          </div>
-          <div class="proof-item">
-            <strong>What gets named</strong>
-            <p>You get the main pressure, what is weakening trust or clarity, and what to change first.</p>
-          </div>
-          <div class="proof-item">
-            <strong>What it avoids</strong>
-            <p>No vague padding, no inflated certainty, and no forced call just to begin.</p>
-          </div>
-          <div class="proof-item">
-            <strong>Why it helps</strong>
-            <p>It keeps the work readable, useful, and tied to one clean next step rather than endless interpretation.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- Packages preview -->
     <section id="packages">
       <div class="container">
         <div class="section-head">
@@ -666,7 +790,7 @@
           <p class="section-copy">All three begin with the same core service: a bounded written diagnostic in direct English.</p>
         </div>
 
-        <div class="packages">
+        <div class="packages-mini">
           <article class="package-card">
             <div class="package-tag">Bronze</div>
             <div class="package-head">
@@ -674,13 +798,7 @@
               <span class="price">£25</span>
             </div>
             <p><strong>Best for one stuck thing</strong></p>
-            <p>Choose this when the main need is de-confusion and you want a clean first read without back-and-forth yet.</p>
-            <ul>
-              <li>One-page written read</li>
-              <li>24 to 48-hour turnaround</li>
-              <li>Email or Signal delivery</li>
-              <li>No follow-up round</li>
-            </ul>
+            <p>One-page written read. 24 to 48-hour turnaround. No follow-up round.</p>
           </article>
 
           <article class="package-card">
@@ -690,13 +808,7 @@
               <span class="price">£35</span>
             </div>
             <p><strong>Best for one likely next question</strong></p>
-            <p>Choose this when the first read will probably surface one clarification you need answered before acting.</p>
-            <ul>
-              <li>One-page written read</li>
-              <li>One written clarification round</li>
-              <li>24 to 48-hour turnaround</li>
-              <li>Useful for bounded but slightly layered situations</li>
-            </ul>
+            <p>One-page written read plus one written clarification round.</p>
           </article>
 
           <article class="package-card">
@@ -706,79 +818,12 @@
               <span class="price">£44</span>
             </div>
             <p><strong>Best for a layered decision</strong></p>
-            <p>Choose this when the first pass is likely to expose a second decision point and you want a short second read after clarification.</p>
-            <ul>
-              <li>One-page written read</li>
-              <li>One written clarification round</li>
-              <li>Second short readout after clarification</li>
-              <li>Useful when the issue has two live layers</li>
-            </ul>
+            <p>Written read, one clarification round, and a second short readout.</p>
           </article>
         </div>
-      </div>
-    </section>
 
-    <section id="contact">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Book a read</div>
-          <p class="section-sub">One booking route. Keep it clean.</p>
-          <h2 class="section-title">Book through email or Signal.</h2>
-          <p class="section-copy">Use email or Signal for first contact. This keeps business enquiries separate from personal or creative channels, reduces category confusion, and creates a cleaner written start.</p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>Email</h3>
-            <p>Primary route for new enquiries.</p>
-            <div class="contact-row">
-              <span>Address</span>
-              <a class="contact-accent" href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a>
-            </div>
-            <div class="contact-row">
-              <span>Subject line</span>
-              <span>Bronze / Silver / Gold enquiry</span>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>Signal</h3>
-            <p>Optional for a shorter first note.</p>
-            <div class="contact-row">
-              <span>Handle</span>
-              <span class="contact-accent">@goldlevel0.5</span>
-            </div>
-            <div class="contact-row">
-              <span>Best use</span>
-              <span>Short booking notes and initial routing</span>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>What to include</h3>
-            <p>The strongest first note stays concrete.</p>
-            <div class="contact-row">
-              <span>Include</span>
-              <span>What you are sending, what is stuck, and what useful outcome you want.</span>
-            </div>
-            <div class="contact-row">
-              <span>Avoid</span>
-              <span>Passwords, payment data, ID documents, access codes, and unnecessary personal data.</span>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>Security posture</h3>
-            <p>This page does not collect data through an embedded form.</p>
-            <div class="contact-row">
-              <span>Page controls</span>
-              <span>No trackers, no third-party assets, and no active form submission route.</span>
-            </div>
-            <div class="contact-row">
-              <span>Practical rule</span>
-              <span>Keep first contact high-level. Share fuller material only once the route is agreed.</span>
-            </div>
-          </article>
+        <div style="margin-top: 22px;">
+          <a class="btn btn-secondary" href="packages.html">Full package details →</a>
         </div>
       </div>
     </section>
@@ -790,5 +835,30 @@
       <div class="small">Business route: info@goldlevel.co.uk • Signal: @goldlevel0.5</div>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.getElementById('sidebarToggle');
+    const close  = document.getElementById('sidebarClose');
+    const overlay = document.getElementById('sidebarOverlay');
+
+    function openSidebar() {
+      document.body.classList.add('sidebar-open');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    function closeSidebar() {
+      document.body.classList.remove('sidebar-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+
+    toggle.addEventListener('click', () => {
+      document.body.classList.contains('sidebar-open') ? closeSidebar() : openSidebar();
+    });
+    close.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeSidebar();
+    });
+  </script>
 </body>
 </html>
