@@ -126,10 +126,13 @@
     .detail-line strong{color:var(--text);font-weight:650;}
 
     .access-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+    .access-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;}
     .dl-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:11px 16px;border-radius:999px;font-size:0.9rem;font-weight:650;transition:transform 0.15s,background 0.15s;text-decoration:none;white-space:nowrap;}
     .dl-btn:hover{transform:translateY(-1px);}
     .dl-live{background:var(--green-soft);border:1px solid var(--green-border);color:var(--green);}
     .dl-live:hover{background:rgba(72,199,116,0.18);}
+    .dl-gold{background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--text);}
+    .dl-gold:hover{background:rgba(215,176,109,0.20);}
     .dl-btn svg{width:15px;height:15px;flex:none;}
     .access-note{font-size:0.8rem;color:var(--muted);text-align:right;max-width:18ch;line-height:1.35;}
 
@@ -153,6 +156,7 @@
       .hero-grid,.how-grid,.table-head,.live-row{grid-template-columns:1fr;}
       .table-head .table-label:not(:first-child){display:none;}
       .access-wrap{align-items:flex-start;}
+      .access-actions{justify-content:flex-start;}
       .access-note{text-align:left;max-width:none;}
       .secondary-row{flex-direction:column;align-items:flex-start;}
     }
@@ -259,7 +263,7 @@
         <div class="section-head">
           <div class="section-mark">Available now</div>
           <h2 class="section-title">Current live brief.</h2>
-          <p class="section-copy">The active listing below is a three-page structural brief dated April 21, 2026, framed around the distinction between strong feeling and stable relational structure.</p>
+          <p class="section-copy">The active listing below is built around the uploaded public brief itself: a three-page structural brief dated April 21, 2026, framed around the distinction between strong feeling and stable relational structure.</p>
         </div>
 
         <div class="library-card">
@@ -288,15 +292,29 @@
             </div>
 
             <div class="access-wrap">
-              <a class="dl-btn dl-live" href="https://drive.proton.me/urls/DE14H6P8YC#j4Zf_-xWmp9G" download="relationship_packet_public_facing_3page.pdf" target="_blank" rel="noopener">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
-                  <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
-                </svg>
-                Download PDF
-              </a>
-              <div class="access-note">Direct PDF download.</div>
+              <div class="access-actions">
+                <a class="dl-btn dl-live" href="relationship_packet_public_facing_3page.pdf" download="relationship_packet_public_facing_3page.pdf" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M8 2v8M5 7l3 3 3-3M2 12h12"/>
+                  </svg>
+                  Download PDF
+                </a>
+                <a class="dl-btn dl-gold" href="mailto:info@goldlevel.co.uk?subject=Purchase%20full%20text%20version%3A%20Relationship%2C%20Structure%2C%20and%20the%20Conditions%20for%20Real%20Love">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+                    <path d="M2.5 4.5h11a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1Z"/>
+                    <path d="m3 5 5 3.8L13 5"/>
+                  </svg>
+                  Purchase full text version
+                </a>
+              </div>
+              <div class="access-note">Direct file link. No gated preview or secondary sales step.</div>
             </div>
           </div>
+        </div>
+
+        <div class="note-card">
+          <div class="note-icon">ⓘ</div>
+          <p><strong>Path note:</strong> the live button is wired to a relative file path so the page works immediately with the uploaded PDF. If you later move the file into a repository folder, only that single href needs changing.</p>
         </div>
       </div>
     </section>
