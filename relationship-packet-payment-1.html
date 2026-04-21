@@ -58,7 +58,7 @@
     .payment-title{font-family:var(--serif);font-size:clamp(1.7rem,3vw,2.4rem);} .payment-copy{margin:0;color:var(--soft);font-size:0.98rem;}
     .qr-frame{border-radius:22px;padding:18px;background:linear-gradient(180deg,rgba(215,176,109,0.18),rgba(215,176,109,0.06));border:1px solid var(--accent-border);}
     .qr-box{aspect-ratio:1/1;border-radius:18px;background:#fff;display:grid;place-items:center;overflow:hidden;position:relative;}
-    .qr-box img{width:100%;height:100%;object-fit:contain;display:none;}
+    .qr-box img{width:100%;height:100%;object-fit:cover;object-position:center bottom;display:none;}
     .qr-fallback{position:absolute;inset:0;display:grid;place-items:center;padding:24px;color:#1b2028;text-align:center;font-weight:700;line-height:1.45;background:repeating-linear-gradient(45deg,#ffffff,#ffffff 14px,#f6f1e7 14px,#f6f1e7 28px);} .qr-fallback small{display:block;font-weight:600;font-size:0.78rem;margin-top:8px;opacity:0.72;}
     .detail-block{display:grid;gap:10px;} .detail-block h2{font-family:var(--serif);font-size:1.35rem;} .detail-block p{margin:0;color:var(--soft);}
     .meta-list{display:flex;gap:8px;flex-wrap:wrap;} .meta-pill{display:inline-flex;align-items:center;padding:4px 9px;border-radius:999px;font-size:0.73rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04);color:var(--soft);} .meta-pill.accent{background:var(--accent-soft);border-color:var(--accent-border);color:var(--accent-2);}
@@ -88,7 +88,7 @@
       <div class="sidebar-divider"></div>
       <div class="sidebar-section">Services</div>
       <a href="packages.html"><span class="sidebar-icon">◇</span> Packages</a>
-      <a href="textbook-packets-5.html" class="active"><span class="sidebar-icon">◇</span> Textbook Packets</a>
+      <a href="textbook-packets.html" class="active"><span class="sidebar-icon">◇</span> Textbook Packets</a>
       <div class="sidebar-divider"></div>
     </nav>
     <a href="book-a-read.html" class="sidebar-cta">✦ Book a read</a>
@@ -116,7 +116,7 @@
   <main>
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="textbook-packets-5.html">Briefs &amp; Packets</a><span>/</span><span>Relationship Packet Payment</span></div>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="textbook-packets.html">Briefs &amp; Packets</a><span>/</span><span>Relationship Packet Payment</span></div>
         <div class="eyebrow">Relationship packet payment</div>
         <h1>Pay for the full text version using the QR code below.</h1>
       </div>
@@ -131,7 +131,7 @@
             <p class="payment-copy">Scan the PayPal QR code to continue with payment for the full text version.</p>
             <div class="qr-frame">
               <div class="qr-box">
-                <img id="paypalQr" src="https://raw.githubusercontent.com/publicgoldlevel/PUBLIC-ASSETS/main/assets/paypal-relationship-packet-qr.png" alt="PayPal QR code for the Relationship Packet payment" />
+                <img id="paypalQr" src="PAYPAL_QR_CODE_URL_HERE" alt="PayPal QR code for the Relationship Packet payment" />
                 <div class="qr-fallback" id="qrFallback">
                   QR code preview unavailable.
                 </div>
@@ -200,7 +200,7 @@
 
     const qr = document.getElementById('paypalQr');
     const fallback = document.getElementById('qrFallback');
-    const placeholder = 'https://raw.githubusercontent.com/publicgoldlevel/PUBLIC-ASSETS/main/assets/paypal-relationship-packet-qr.png';
+    const placeholder = 'PAYPAL_QR_CODE_URL_HERE';
     const syncQrState = () => {
       const src = qr.getAttribute('src') || '';
       if (!src || src === placeholder) {
