@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Relationship Packet Payment — GOLDLEVEL</title>
+  <meta name="description" content="PayPal payment page for the full text version of the relationship packet." />
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root{
+      --bg:#0b1118;--bg-2:#101923;--text:#eef2f8;--muted:#aeb8c8;--soft:#d9e0ea;
+      --accent:#d7b06d;--accent-2:#f0d8a3;--accent-soft:rgba(215,176,109,0.12);
+      --accent-border:rgba(215,176,109,0.28);--line:rgba(255,255,255,0.1);
+      --shadow:0 28px 80px rgba(0,0,0,0.34);--radius:24px;--container:1160px;
+      --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;
+      --sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --sidebar-w:260px;
+      --green:rgba(72,199,116,0.92);--green-soft:rgba(72,199,116,0.10);--green-border:rgba(72,199,116,0.28);
+    }
+    *{box-sizing:border-box;} html{scroll-behavior:smooth;}
+    body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--text);line-height:1.65;
+      background:radial-gradient(circle at 0% 0%,rgba(215,176,109,0.10),transparent 28%),
+        radial-gradient(circle at 100% 10%,rgba(89,123,255,0.10),transparent 18%),
+        linear-gradient(180deg,#091018 0%,var(--bg) 34%,var(--bg-2) 100%);}
+    a{color:inherit;text-decoration:none;}
+    .container{width:min(var(--container),calc(100% - 32px));margin:0 auto;}
+    a:focus-visible,button:focus-visible{outline:3px solid rgba(215,176,109,0.62);outline-offset:3px;}
+
+    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(8,12,18,0.84);border-bottom:1px solid rgba(255,255,255,0.08);}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
+    .brand{display:flex;align-items:center;gap:12px;}
+    .brand-dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,#f6d983,var(--accent));box-shadow:0 0 0 8px rgba(215,176,109,0.12);flex:none;}
+    .brand-stack{display:flex;flex-direction:column;gap:2px;}
+    .brand-mark{color:var(--accent);text-transform:uppercase;letter-spacing:0.16em;font-size:0.76rem;font-weight:700;}
+    .brand-name{font-family:var(--serif);font-size:1.02rem;font-weight:700;}
+    .topbar-right{display:flex;align-items:center;gap:14px;}
+    .nav-cta{display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--text);font-size:0.95rem;font-weight:600;transition:background 0.18s;}
+    .nav-cta:hover{background:rgba(215,176,109,0.2);}
+    .sidebar-toggle{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:var(--soft);font-size:0.9rem;font-family:var(--sans);cursor:pointer;transition:background 0.18s,color 0.18s;white-space:nowrap;}
+    .sidebar-toggle:hover{background:rgba(255,255,255,0.08);color:var(--text);}
+    .toggle-bars{display:flex;flex-direction:column;gap:4px;width:16px;}
+    .toggle-bars span{display:block;height:1.5px;background:currentColor;border-radius:2px;transition:transform 0.28s cubic-bezier(0.4,0,0.2,1),opacity 0.2s;transform-origin:center;}
+    body.sidebar-open .toggle-bars span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
+    body.sidebar-open .toggle-bars span:nth-child(2){opacity:0;transform:scaleX(0);}
+    body.sidebar-open .toggle-bars span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
+    .sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,0);z-index:39;pointer-events:none;transition:background 0.32s ease;}
+    body.sidebar-open .sidebar-overlay{background:rgba(0,0,0,0.48);pointer-events:auto;}
+    .sidebar{position:fixed;top:0;right:0;width:var(--sidebar-w);height:100vh;z-index:60;background:linear-gradient(180deg,#0d1620 0%,#0a1219 100%);border-left:1px solid rgba(255,255,255,0.08);transform:translateX(100%);transition:transform 0.36s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;box-shadow:-24px 0 64px rgba(0,0,0,0.5);overflow-y:auto;}
+    body.sidebar-open .sidebar{transform:translateX(0);}
+    .sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 16px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .sidebar-label{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.72rem;}
+    .sidebar-close{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.15s,color 0.15s;}
+    .sidebar-close:hover{background:rgba(255,255,255,0.1);color:var(--text);}
+    .sidebar-nav{padding:12px 0;flex:1;}
+    .sidebar-section{padding:6px 22px 2px;color:var(--accent);text-transform:uppercase;letter-spacing:0.11em;font-size:0.68rem;font-weight:700;margin-top:10px;}
+    .sidebar-nav a{display:flex;align-items:center;gap:10px;padding:10px 22px;color:var(--soft);font-size:0.94rem;transition:color 0.15s,background 0.15s;position:relative;}
+    .sidebar-nav a:hover{color:var(--text);background:rgba(215,176,109,0.06);}
+    .sidebar-nav a.active{color:var(--accent-2);background:rgba(215,176,109,0.08);}
+    .sidebar-nav a.active::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:60%;background:var(--accent);border-radius:0 2px 2px 0;}
+    .sidebar-icon{font-size:1rem;opacity:0.7;flex:none;}
+    .sidebar-divider{height:1px;background:rgba(255,255,255,0.07);margin:10px 22px;}
+    .sidebar-cta{margin:12px 22px 24px;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent-2);font-weight:600;font-size:0.94rem;transition:background 0.18s;}
+    .sidebar-cta:hover{background:rgba(215,176,109,0.2);}
+
+    main{display:block;}
+    section{padding:84px 0;}
+    .page-hero{padding:72px 0 48px;}
+    .breadcrumb{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:0.9rem;margin-bottom:18px;}
+    .breadcrumb a{color:var(--accent);} .breadcrumb a:hover{text-decoration:underline;}
+    h1,h2,h3{margin:0;line-height:1.1;}
+    h1{font-family:var(--serif);font-size:clamp(2.4rem,4.8vw,4rem);max-width:12ch;}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);color:var(--accent-2);font-size:0.82rem;letter-spacing:0.10em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.08);margin-bottom:18px;}
+    .lede{margin:20px 0 0;font-size:clamp(1.05rem,2vw,1.22rem);color:var(--soft);max-width:62ch;}
+    .section-mark{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.76rem;}
+    .section-title{margin-top:10px;font-family:var(--serif);font-size:clamp(1.8rem,3.2vw,2.8rem);}
+    .section-copy{margin:14px 0 0;color:var(--muted);font-size:1.05rem;max-width:68ch;}
+
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(300px,0.85fr);gap:24px;align-items:end;}
+    .hero-card,.payment-card,.steps-card,.note-card{
+      background:linear-gradient(180deg,rgba(22,31,45,0.96),rgba(14,21,32,0.96));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .hero-card,.steps-card,.note-card,.payment-card{padding:24px;}
+    .hero-points{display:grid;gap:12px;margin:0;padding:0;list-style:none;}
+    .hero-points li{display:flex;gap:12px;color:var(--soft);font-size:0.97rem;}
+    .hero-points strong{color:var(--text);font-weight:650;}
+    .hero-dot{width:10px;height:10px;border-radius:50%;background:var(--accent);flex:none;margin-top:0.55rem;}
+
+    .payment-grid{display:grid;grid-template-columns:minmax(320px,0.95fr) minmax(0,1.05fr);gap:24px;align-items:start;}
+    .qr-shell{padding:18px;border-radius:22px;background:linear-gradient(180deg,rgba(215,176,109,0.10),rgba(255,255,255,0.02));border:1px solid var(--accent-border);}
+    .qr-frame{width:100%;aspect-ratio:1/1;border-radius:18px;border:1px solid rgba(255,255,255,0.08);background:#fff;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.05);}
+    .qr-frame iframe{width:100%;height:100%;border:0;background:#fff;}
+    .qr-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;font-size:0.92rem;font-weight:650;transition:transform 0.15s,background 0.15s;border:1px solid transparent;white-space:nowrap;}
+    .btn:hover{transform:translateY(-1px);}
+    .btn-gold{background:var(--accent-soft);border-color:var(--accent-border);color:var(--accent-2);}
+    .btn-gold:hover{background:rgba(215,176,109,0.22);}
+    .btn-dark{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.10);color:var(--soft);}
+    .btn-dark:hover{background:rgba(255,255,255,0.08);}
+    .packet-title{font-size:1.15rem;font-weight:650;color:var(--text);display:block;}
+    .packet-copy{margin-top:8px;color:var(--muted);font-size:0.97rem;}
+    .meta-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+    .meta-pill{display:inline-flex;align-items:center;padding:5px 10px;border-radius:999px;font-size:0.73rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.04);color:var(--soft);}
+    .meta-pill.accent{background:var(--accent-soft);border-color:var(--accent-border);color:var(--accent-2);}
+    .step-list{display:grid;gap:14px;margin:18px 0 0;padding:0;list-style:none;}
+    .step-list li{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;}
+    .step-num{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);border:1px solid var(--accent-border);color:var(--accent-2);font-weight:700;font-size:0.86rem;}
+    .step-text strong{display:block;color:var(--text);margin-bottom:3px;font-weight:650;}
+    .step-text span{color:var(--soft);font-size:0.95rem;}
+    .note-card{display:flex;gap:12px;align-items:flex-start;margin-top:20px;}
+    .note-icon{font-size:1.1rem;flex:none;margin-top:1px;}
+    .note-card p{margin:0;color:var(--muted);font-size:0.92rem;}
+    .note-card strong{color:var(--soft);}
+    .footer{padding:28px 0 46px;color:var(--muted);}
+    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);}
+    .small{font-size:0.94rem;}
+
+    @media(max-width:980px){
+      .hero-grid,.payment-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:720px){
+      section{padding:70px 0;}
+      .page-hero{padding-top:54px;}
+      .hero-card,.steps-card,.payment-card,.note-card{padding:18px 16px;}
+      .qr-shell{padding:14px;}
+      .qr-actions{flex-direction:column;}
+      .qr-actions .btn{width:100%;}
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
+  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
+    <div class="sidebar-header">
+      <span class="sidebar-label">Navigation</span>
+      <button class="sidebar-close" id="sidebarClose">✕</button>
+    </div>
+    <nav class="sidebar-nav">
+      <div class="sidebar-section">Pages</div>
+      <a href="index.html"><span class="sidebar-icon">◆</span> Home</a>
+      <a href="what-this-is.html"><span class="sidebar-icon">○</span> What This Is</a>
+      <a href="good-fit.html"><span class="sidebar-icon">○</span> Good Fit</a>
+      <a href="scope.html"><span class="sidebar-icon">○</span> Input &amp; Return</a>
+      <a href="proof.html"><span class="sidebar-icon">○</span> The Boundary</a>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-section">Services</div>
+      <a href="packages.html"><span class="sidebar-icon">◇</span> Packages</a>
+      <a href="textbook-packets.html"><span class="sidebar-icon">◇</span> Textbook Packets</a>
+      <a href="relationship-packet-payment.html" class="active"><span class="sidebar-icon">◇</span> Relationship Packet Payment</a>
+      <div class="sidebar-divider"></div>
+    </nav>
+    <a href="book-a-read.html" class="sidebar-cta">✦ Book a read</a>
+  </aside>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-dot"></span>
+        <span class="brand-stack">
+          <span class="brand-mark">GOLDLEVEL</span>
+          <span class="brand-name">Outside diagnostic reads</span>
+        </span>
+      </a>
+      <div class="topbar-right">
+        <a href="textbook-packets.html" class="nav-cta">Back to briefs</a>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar">
+          <span class="toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+          Sections
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="textbook-packets.html">Briefs &amp; Packets</a><span>/</span><span>Relationship Packet Payment</span></div>
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow">Relationship packet payment</div>
+            <h1>Purchase the full text version.</h1>
+            <p class="lede">This payment page is dedicated to the full text version of the relationship packet. Use the PayPal QR route below to continue through payment, then return to your normal confirmation flow.</p>
+          </div>
+          <div class="hero-card">
+            <ul class="hero-points">
+              <li><span class="hero-dot"></span><span><strong>Single-purpose page:</strong> this page is only for the full text version of the relationship packet.</span></li>
+              <li><span class="hero-dot"></span><span><strong>QR route ready:</strong> the PayPal QR is embedded below and also available as a direct open link.</span></li>
+              <li><span class="hero-dot"></span><span><strong>Fallback included:</strong> if Proton blocks inline preview on your host, the gold action button still opens the QR directly.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container payment-grid">
+        <div class="payment-card">
+          <span class="packet-title">Relationship, Structure, and the Conditions for Real Love — Full Text Version</span>
+          <p class="packet-copy">A longer-form continuation for readers who want the expanded packet rather than only the public three-page brief.</p>
+          <div class="meta-list">
+            <span class="meta-pill accent">Payment page</span>
+            <span class="meta-pill">PayPal QR</span>
+            <span class="meta-pill">Relationship packet</span>
+          </div>
+
+          <ol class="step-list">
+            <li>
+              <div class="step-num">01</div>
+              <div class="step-text"><strong>Scan or open the QR</strong><span>Use the embedded PayPal QR below, or open it directly in a new tab if your browser blocks the preview.</span></div>
+            </li>
+            <li>
+              <div class="step-num">02</div>
+              <div class="step-text"><strong>Complete payment in PayPal</strong><span>Follow the payment flow attached to the QR code itself.</span></div>
+            </li>
+            <li>
+              <div class="step-num">03</div>
+              <div class="step-text"><strong>Return to your normal fulfilment route</strong><span>After payment, continue through your usual confirmation or delivery process.</span></div>
+            </li>
+          </ol>
+
+          <div class="note-card">
+            <div class="note-icon">ⓘ</div>
+            <p><strong>Preview note:</strong> this page embeds the Proton-hosted QR share link directly. Some hosts or browsers may refuse third-party framing. The direct-open button below remains the fallback path in that case.</p>
+          </div>
+        </div>
+
+        <div class="steps-card">
+          <div class="section-mark">PayPal QR</div>
+          <h2 class="section-title">Scan to continue.</h2>
+          <p class="section-copy">The panel below is wired to your Proton-hosted PayPal QR code.</p>
+          <div class="qr-shell">
+            <div class="qr-frame">
+              <iframe src="https://drive.proton.me/urls/VWR23ZJ9H0#frE2RoboIoXv" title="PayPal QR code for relationship packet payment" loading="lazy" referrerpolicy="no-referrer"></iframe>
+            </div>
+            <div class="qr-actions">
+              <a class="btn btn-gold" href="https://drive.proton.me/urls/VWR23ZJ9H0#frE2RoboIoXv" target="_blank" rel="noopener">Open PayPal QR</a>
+              <a class="btn btn-dark" href="textbook-packets.html">Back to packet page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="small">GOLDLEVEL — outside diagnostic reads for offers, pages, threads, and decisions that need a cleaner second view.</div>
+      <div class="small">Business route: info@goldlevel.co.uk • Signal: @goldlevel0.5</div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle=document.getElementById('sidebarToggle'),closeBtn=document.getElementById('sidebarClose'),overlay=document.getElementById('sidebarOverlay');
+    const open=()=>{document.body.classList.add('sidebar-open');toggle.setAttribute('aria-expanded','true');};
+    const close=()=>{document.body.classList.remove('sidebar-open');toggle.setAttribute('aria-expanded','false');};
+    toggle.addEventListener('click',()=>document.body.classList.contains('sidebar-open')?close():open());
+    closeBtn.addEventListener('click',close);overlay.addEventListener('click',close);
+    document.addEventListener('keydown',e=>e.key==='Escape'&&close());
+  </script>
+</body>
+</html>
