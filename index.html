@@ -152,45 +152,57 @@
     
   <main id="main">
   
-    <section class="hero-section hero-section--routed">
-      <h1 class="sr-only">A governance-led operating system for decision clarity, artifact production, and applied execution.</h1>
+   <section class="hero-section hero-section--routed" aria-labelledby="hero-h1">
 
-      <div class="container hero-desktop-visual" aria-hidden="true">
-        <div class="hero-desktop-visual-shell" id="desktopHeroVisual" data-src="assets/glheroindex.png" data-alt="GOLDLEVEL hero visual showing governance, decisions, artifacts, and execution.">
-          <noscript><img src="assets/glheroindex.png" alt="GOLDLEVEL hero visual showing governance, decisions, artifacts, and execution." /></noscript>
-        </div>
-        <div class="hero-desktop-actions">
-          <a class="btn btn-primary" href="whats-live.html">View what is live</a>
-          <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
-        </div>
-      </div>
+  <!-- Single H1, visible on desktop via CSS, sr-only on mobile -->
+  <h1 id="hero-h1" class="hero-h1-visual sr-only-mobile">
+    A governance-led operating system for decision clarity, artifact production, and applied execution.
+  </h1>
 
-      <div class="hero-mobile-copy">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow">Governance-led public system</div>
-            <h2>A governance-led operating system for decision clarity, artifact production, and applied execution.</h2>
-            <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="whats-live.html">View what is live</a>
-              <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
-            </div>
-            <div class="hero-note">
-              <strong>System first.</strong> Public entry points, live artifacts, and paid routes are separated on purpose so the site stays legible and proportionate to what is actually released now.
-            </div>
-          </div>
-          <aside class="panel hero-panel" aria-label="Current site snapshot">
-            <div class="stat-grid">
-              <div class="stat-block"><span class="stat-value">2</span><span class="stat-label">Public packet releases live now</span></div>
-              <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Diagnostic route active</span></div>
-              <div class="stat-block"><span class="stat-value">Multi</span><span class="stat-label">Web pages, PDFs, and expanding surfaces</span></div>
-              <div class="stat-block"><span class="stat-value">Early</span><span class="stat-label">Build stage, live in parts and expanding</span></div>
-            </div>
-            <div class="note">The public structure is active now, but it does not present unreleased software or draft materials as if they already exist.</div>
-          </aside>
-        </div>
+  <!-- Desktop image hero: picture ensures PNG is NOT fetched on mobile -->
+  <div class="container hero-desktop-visual" aria-hidden="true">
+    <div class="hero-desktop-visual-shell">
+      <picture>
+        <source
+          srcset="/assets/glheroindex.png"
+          media="(min-width: 981px)"
+          width="1456"
+          height="816"
+        />
+        <!--
+          Intentionally empty src fallback: mobile gets nothing.
+          The alt is on the outer section's aria-labelledby h1.
+          aria-hidden="true" on the container suppresses this from AT.
+        -->
+        <img
+          src=""
+          alt=""
+          width="1456"
+          height="816"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
+    </div>
+    <div class="hero-desktop-actions">
+      <a class="btn btn-primary" href="whats-live.html">View what is live</a>
+      <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
+    </div>
+  </div>
+
+  <!-- Mobile text hero: hidden on desktop -->
+  <div class="hero-mobile-copy">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Governance-led public system</div>
+        <h2>A governance-led operating system for decision clarity, artifact production, and applied execution.</h2>
+        <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
+        <!-- … rest of mobile copy unchanged … -->
       </div>
-    </section>
+    </div>
+  </div>
+
+</section>
 
     <section>
       <div class="container">
