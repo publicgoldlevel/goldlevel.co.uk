@@ -26,5 +26,7 @@
     "textbook-packets-fixed-two-live.html",
     "what-this-is.html",
     "whats-live.html"
-  ]
+  ],
+  "version": "v3",
+  "notes": "SDG public readout download link updated to https://goldlevel.co.uk/assets/sdg_public_readout_3page across site files."
 }
