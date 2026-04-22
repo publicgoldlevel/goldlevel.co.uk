@@ -13,8 +13,20 @@
   <meta name="page:last-updated" content="2026-04-22" />
   <meta name="page:parent" content="root" />
   <link rel="stylesheet" href="assets/css/site.css" />
+  <!--
+    Preload hero PNG on desktop only. The media attribute prevents this
+    request from firing on mobile — the browser ignores it below 981px.
+  -->
+  <link
+    rel="preload"
+    as="image"
+    href="/assets/glheroindex.png"
+    media="(min-width: 981px)"
+    fetchpriority="high"
+  />
 
   <style>
+    /* ─── Accessibility utility ─── */
     .sr-only {
       position: absolute;
       width: 1px;
@@ -27,32 +39,107 @@
       border: 0;
     }
 
+    /* ─── Hero section spacing ─── */
     .hero-section.hero-section--routed {
       padding-top: 40px;
     }
 
+    @media (max-width: 980px) {
+      .hero-section.hero-section--routed {
+        padding-top: 0;
+      }
+    }
+
+    @media (min-width: 981px) {
+      .hero-section.hero-section--routed {
+        padding-top: 28px;
+      }
+    }
+
+    /* ─── Desktop image hero: hidden on mobile, shown ≥981px ─── */
     .hero-desktop-visual {
       display: none;
     }
 
+    @media (min-width: 981px) {
+      .hero-desktop-visual {
+        display: block;
+      }
+    }
+
+    /* ─── Desktop image shell ─── */
+    /*
+      OPTION 1 (contain) is active below.
+      To switch to OPTION 2 (cover), change object-fit to cover
+      and object-position to center 30%.
+    */
     .hero-desktop-visual-shell {
       border-radius: 24px;
       overflow: hidden;
       background: #04122f;
       box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-      min-height: 280px;
+      /*
+        Fluid height using clamp():
+          - min  360px  (small desktop / 981px viewport)
+          - mid  ~40vw  (scales with viewport width)
+          - max  660px  (large monitors)
+        Adjust the ratio comment if your image dimensions differ.
+        This image is approximately 16:5 (wide banner format).
+      */
+      width: 100%;
+      height: clamp(360px, 40vw, 660px);
     }
 
+    .hero-desktop-visual-shell picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* OPTION 1: contain — full PNG always visible, no crop */
     .hero-desktop-visual-shell img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
     }
 
+    /*
+      OPTION 2 (cover): uncomment this block and comment out OPTION 1 above.
+      Cover fills the container and crops the image slightly for stronger impact.
+
+      .hero-desktop-visual-shell img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 30%;
+      }
+    */
+
+    /* Hide broken-image icon when src is empty (mobile safety net) */
+    .hero-desktop-visual-shell img:not([src]),
+    .hero-desktop-visual-shell img[src=""] {
+      visibility: hidden;
+    }
+
+    /* ─── Desktop CTA row ─── */
     .hero-desktop-actions {
       display: none;
     }
 
+    @media (min-width: 981px) {
+      .hero-desktop-actions {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+    }
+
+    /* ─── Mobile text hero ─── */
     .hero-mobile-copy {
       display: block;
     }
@@ -66,30 +153,8 @@
     }
 
     @media (min-width: 981px) {
-      .hero-section.hero-section--routed {
-        padding-top: 28px;
-      }
-
-      .hero-desktop-visual {
-        display: block;
-      }
-
-      .hero-desktop-actions {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 28px;
-        flex-wrap: wrap;
-      }
-
       .hero-mobile-copy {
         display: none;
-      }
-    }
-
-    @media (max-width: 980px) {
-      .hero-section.hero-section--routed {
-        padding-top: 0;
       }
     }
   </style>
@@ -152,57 +217,89 @@
     
   <main id="main">
   
-   <section class="hero-section hero-section--routed" aria-labelledby="hero-h1">
+    <section class="hero-section hero-section--routed" aria-labelledby="hero-h1">
+      <!--
+        Single H1 — screen-reader-only. The sr-only class hides it visually
+        on both desktop and mobile while keeping one correct H1 in the document.
+        The section is labelled by it via aria-labelledby="hero-h1".
+        The desktop image carries the visual message; the mobile h2 repeats the
+        text visually for mobile readers (and is semantically subordinate as h2).
+      -->
+      <h1 id="hero-h1" class="sr-only">A governance-led operating system for decision clarity, artifact production, and applied execution.</h1>
 
-  <!-- Single H1, visible on desktop via CSS, sr-only on mobile -->
-  <h1 id="hero-h1" class="hero-h1-visual sr-only-mobile">
-    A governance-led operating system for decision clarity, artifact production, and applied execution.
-  </h1>
+      <!--
+        Desktop image hero.
+        aria-hidden="true" suppresses the container from assistive tech —
+        the section's aria-labelledby already provides the text equivalent.
 
-  <!-- Desktop image hero: picture ensures PNG is NOT fetched on mobile -->
-  <div class="container hero-desktop-visual" aria-hidden="true">
-    <div class="hero-desktop-visual-shell">
-      <picture>
-        <source
-          srcset="/assets/glheroindex.png"
-          media="(min-width: 981px)"
-          width="1456"
-          height="816"
-        />
-        <!--
-          Intentionally empty src fallback: mobile gets nothing.
-          The alt is on the outer section's aria-labelledby h1.
-          aria-hidden="true" on the container suppresses this from AT.
-        -->
-        <img
-          src=""
-          alt=""
-          width="1456"
-          height="816"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </picture>
-    </div>
-    <div class="hero-desktop-actions">
-      <a class="btn btn-primary" href="whats-live.html">View what is live</a>
-      <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
-    </div>
-  </div>
+        The <picture> element with a media-conditional <source> ensures
+        /assets/glheroindex.png is ONLY fetched when viewport ≥ 981px.
+        No JavaScript is required. The fallback <img> has an empty src so
+        mobile browsers request nothing and see nothing.
 
-  <!-- Mobile text hero: hidden on desktop -->
-  <div class="hero-mobile-copy">
-    <div class="container hero-grid">
-      <div>
-        <div class="eyebrow">Governance-led public system</div>
-        <h2>A governance-led operating system for decision clarity, artifact production, and applied execution.</h2>
-        <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
-        <!-- … rest of mobile copy unchanged … -->
+        width/height attributes match the actual PNG dimensions and allow
+        the browser to compute aspect-ratio before the image loads,
+        preventing Cumulative Layout Shift (CLS).
+
+        If your PNG dimensions differ, update width and height here.
+        You can verify with: identify assets/glheroindex.png (ImageMagick)
+        or check via browser DevTools → Network → image response headers.
+      -->
+      <div class="container hero-desktop-visual" aria-hidden="true">
+        <div class="hero-desktop-visual-shell">
+          <picture>
+            <source
+              srcset="/assets/glheroindex.png"
+              media="(min-width: 981px)"
+              width="1456"
+              height="816"
+            />
+            <!--
+              Intentionally empty src: on mobile no request is made.
+              alt="" is correct here; the aria-hidden parent suppresses AT.
+            -->
+            <img
+              src=""
+              alt=""
+              width="1456"
+              height="816"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
+        </div>
+        <div class="hero-desktop-actions">
+          <a class="btn btn-primary" href="whats-live.html">View what is live</a>
+          <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
+        </div>
       </div>
-    </div>
-  </div>
 
-</section>
+      <div class="hero-mobile-copy">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Governance-led public system</div>
+            <h2>A governance-led operating system for decision clarity, artifact production, and applied execution.</h2>
+            <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="whats-live.html">View what is live</a>
+              <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
+            </div>
+            <div class="hero-note">
+              <strong>System first.</strong> Public entry points, live artifacts, and paid routes are separated on purpose so the site stays legible and proportionate to what is actually released now.
+            </div>
+          </div>
+          <aside class="panel hero-panel" aria-label="Current site snapshot">
+            <div class="stat-grid">
+              <div class="stat-block"><span class="stat-value">2</span><span class="stat-label">Public packet releases live now</span></div>
+              <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Diagnostic route active</span></div>
+              <div class="stat-block"><span class="stat-value">Multi</span><span class="stat-label">Web pages, PDFs, and expanding surfaces</span></div>
+              <div class="stat-block"><span class="stat-value">Early</span><span class="stat-label">Build stage, live in parts and expanding</span></div>
+            </div>
+            <div class="note">The public structure is active now, but it does not present unreleased software or draft materials as if they already exist.</div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
     <section>
       <div class="container">
@@ -563,34 +660,6 @@
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var mq = window.matchMedia("(min-width: 981px)");
-      var mount = document.getElementById("desktopHeroVisual");
-      if (!mount) return;
-
-      function loadDesktopHero() {
-        if (!mq.matches || mount.dataset.loaded === "true") return;
-
-        var img = new Image();
-        img.src = mount.dataset.src;
-        img.alt = mount.dataset.alt || "";
-        img.decoding = "async";
-        img.loading = "eager";
-        img.fetchPriority = "high";
-        mount.appendChild(img);
-        mount.dataset.loaded = "true";
-      }
-
-      loadDesktopHero();
-
-      if (typeof mq.addEventListener === "function") {
-        mq.addEventListener("change", loadDesktopHero);
-      } else if (typeof mq.addListener === "function") {
-        mq.addListener(loadDesktopHero);
-      }
-    }());
-  </script>
   <script src="assets/js/site.js"></script>
     
 </body>
