@@ -1,176 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home | GOLDLEVEL</title>
-  <meta name="description" content="GOLDLEVEL is a governance-led public system for decision clarity, public briefs, diagnostic structures, and expanding delivery surfaces." />
-  <meta name="color-scheme" content="dark light" />
-  <meta name="page:id" content="home" />
-  <meta name="page:purpose" content="Public front door, system overview, live-entry registry, and route selector." />
-  <meta name="page:audience" content="first-contact visitors, prospective clients, public readers" />
-  <meta name="page:status" content="Live" />
-  <meta name="page:last-updated" content="2026-04-22" />
-  <meta name="page:parent" content="root" />
-  <link rel="stylesheet" href="assets/css/site.css" />
-  <!--
-    Preload hero PNG on desktop only. The media attribute prevents this
-    request from firing on mobile — the browser ignores it below 981px.
-  -->
-  <link
-    rel="preload"
-    as="image"
-    href="/assets/glheroindex.png"
-    media="(min-width: 981px)"
-    fetchpriority="high"
-  />
-
-  <style>
-    /* ─── Accessibility utility ─── */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-
-    /* ─── Hero section spacing ─── */
-    .hero-section.hero-section--routed {
-      padding-top: 40px;
-    }
-
-    @media (max-width: 980px) {
-      .hero-section.hero-section--routed {
-        padding-top: 0;
-      }
-    }
-
-    @media (min-width: 981px) {
-      .hero-section.hero-section--routed {
-        padding-top: 28px;
-      }
-    }
-
-    /* ─── Desktop image hero: hidden on mobile, shown ≥981px ─── */
-    .hero-desktop-visual {
-      display: none;
-    }
-
-    @media (min-width: 981px) {
-      .hero-desktop-visual {
-        display: block;
-      }
-    }
-
-    /* ─── Desktop image shell ─── */
-    /*
-      OPTION 1 (contain) is active below.
-      To switch to OPTION 2 (cover), change object-fit to cover
-      and object-position to center 30%.
-    */
-    .hero-desktop-visual-shell {
-      border-radius: 24px;
-      overflow: hidden;
-      background: #04122f;
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
-      /*
-        Fluid height using clamp():
-          - min  360px  (small desktop / 981px viewport)
-          - mid  ~40vw  (scales with viewport width)
-          - max  660px  (large monitors)
-        Adjust the ratio comment if your image dimensions differ.
-        This image is approximately 16:5 (wide banner format).
-      */
-      width: 100%;
-      height: clamp(360px, 40vw, 660px);
-    }
-
-    .hero-desktop-visual-shell picture {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    /* OPTION 1: contain — full PNG always visible, no crop */
-    .hero-desktop-visual-shell img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      object-position: center center;
-    }
-
-    /*
-      OPTION 2 (cover): uncomment this block and comment out OPTION 1 above.
-      Cover fills the container and crops the image slightly for stronger impact.
-
-      .hero-desktop-visual-shell img {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center 30%;
-      }
-    */
-
-    /* Hide broken-image icon when src is empty (mobile safety net) */
-    .hero-desktop-visual-shell img:not([src]),
-    .hero-desktop-visual-shell img[src=""] {
-      visibility: hidden;
-    }
-
-    /* ─── Desktop CTA row ─── */
-    .hero-desktop-actions {
-      display: none;
-    }
-
-    @media (min-width: 981px) {
-      .hero-desktop-actions {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 28px;
-        flex-wrap: wrap;
-      }
-    }
-
-    /* ─── Mobile text hero ─── */
-    .hero-mobile-copy {
-      display: block;
-    }
-
-    .hero-mobile-copy .hero-grid {
-      align-items: stretch;
-    }
-
-    .hero-mobile-copy .hero-panel {
-      margin-top: 24px;
-    }
-
-    @media (min-width: 981px) {
-      .hero-mobile-copy {
-        display: none;
-      }
-    }
-  </style>
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Home | GOLDLEVEL</title>
+<meta content="GOLDLEVEL is a governance-led public system for decision clarity, public briefs, diagnostic structures, and expanding delivery surfaces." name="description"/>
+<meta content="dark light" name="color-scheme"/>
+<meta content="home" name="page:id"/>
+<meta content="Public front door, system overview, live-entry registry, and route selector." name="page:purpose"/>
+<meta content="first-contact visitors, prospective clients, public readers" name="page:audience"/>
+<meta content="Live" name="page:status"/>
+<meta content="2026-04-22" name="page:last-updated"/>
+<meta content="root" name="page:parent"/>
+<link href="assets/css/site.css" rel="stylesheet"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="#0b1118" name="theme-color"/><meta content="index,follow" name="robots"/><meta content="GOLDLEVEL" property="og:site_name"/><meta content="Home | GOLDLEVEL" property="og:title"/><meta content="GOLDLEVEL is a governance-led public system for decision clarity, public briefs, diagnostic structures, and expanding delivery surfaces." property="og:description"/><meta content="website" property="og:type"/><meta content="https://goldlevel.co.uk/index.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Home | GOLDLEVEL" name="twitter:title"/><meta content="GOLDLEVEL is a governance-led public system for decision clarity, public briefs, diagnostic structures, and expanding delivery surfaces." name="twitter:description"/><link href="https://goldlevel.co.uk/index.html" rel="canonical"/></head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
-    <div class="sidebar-header">
-      <span class="sidebar-label">Navigation</span>
-      <button class="sidebar-close" id="sidebarClose" aria-label="Close navigation">✕</button>
-    </div>
-    <nav class="sidebar-nav">
-      <div class="sidebar-section">Top-level</div>
-<a href="index.html" aria-current="page"><span class="sidebar-icon">◆</span> Home</a>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<aside aria-label="Site navigation" class="sidebar" id="sidebar">
+<div class="sidebar-header">
+<span class="sidebar-label">Navigation</span>
+<button aria-label="Close navigation" class="sidebar-close" id="sidebarClose">✕</button>
+</div>
+<nav class="sidebar-nav">
+<div class="sidebar-section">Top-level</div>
+<a aria-current="page" href="index.html"><span class="sidebar-icon">◆</span> Home</a>
 <a href="start-here.html"><span class="sidebar-icon">◆</span> Start Here</a>
 <a href="system.html"><span class="sidebar-icon">◆</span> System</a>
 <a href="library.html"><span class="sidebar-icon">◆</span> Library</a>
@@ -178,489 +33,409 @@
 <a href="whats-live.html"><span class="sidebar-icon">◆</span> What’s Live</a>
 <a href="contact.html"><span class="sidebar-icon">◆</span> Contact</a>
 <div class="sidebar-divider"></div><div class="sidebar-section">Supporting routes</div>
-<a href="briefs-packets.html"><span class="sidebar-icon">◇</span> Briefs & Packets</a>
+<a href="briefs-packets.html"><span class="sidebar-icon">◇</span> Briefs &amp; Packets</a>
 <a href="diagnostic-read.html"><span class="sidebar-icon">◇</span> Diagnostic Reads</a>
 <a href="packages.html"><span class="sidebar-icon">◇</span> Packages</a>
 <a href="method.html"><span class="sidebar-icon">◇</span> Method</a>
 <a href="boundary.html"><span class="sidebar-icon">◇</span> Boundary</a>
-    </nav>
-    <a href="diagnostic-read.html" class="sidebar-cta">Start with a diagnostic read</a>
-  </aside>
-
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="index.html" aria-label="GOLDLEVEL home">
-        <span class="brand-dot"></span>
-        <span class="brand-stack">
-          <span class="brand-mark">GOLDLEVEL</span>
-          <span class="brand-name">Governed clarity, public briefs, and diagnostic structures</span>
-        </span>
-      </a>
-      <nav class="desktop-nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Home</a>
+</nav>
+<a class="sidebar-cta" href="start-here.html">Start here</a>
+</aside>
+<header class="topbar">
+<div class="container topbar-inner">
+<a aria-label="GOLDLEVEL home" class="brand" href="index.html">
+<span class="brand-dot"></span>
+<span class="brand-stack">
+<span class="brand-mark">GOLDLEVEL</span>
+<span class="brand-name">Governed clarity, public briefs, and diagnostic structures</span>
+</span>
+</a>
+<nav aria-label="Primary" class="desktop-nav">
+<a aria-current="page" href="index.html">Home</a>
 <a href="start-here.html">Start Here</a>
 <a href="system.html">System</a>
 <a href="library.html">Library</a>
 <a href="services.html">Services</a>
 <a href="whats-live.html">What’s Live</a>
 <a href="contact.html">Contact</a>
-      </nav>
-      <div class="topbar-right">
-        <a href="diagnostic-read.html" class="nav-cta">Start with a diagnostic read</a>
-        <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar">
-          <span class="toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+</nav>
+<div class="topbar-right">
+<a class="nav-cta" href="start-here.html">Start here</a>
+<button aria-controls="sidebar" aria-expanded="false" class="sidebar-toggle" id="sidebarToggle">
+<span aria-hidden="true" class="toggle-bars"><span></span><span></span><span></span></span>
           Sections
         </button>
-      </div>
-    </div>
-  </header>
-    
-  <main id="main">
-  
-    <section class="hero-section hero-section--routed" aria-labelledby="hero-h1">
-      <!--
-        Single H1 — screen-reader-only. The sr-only class hides it visually
-        on both desktop and mobile while keeping one correct H1 in the document.
-        The section is labelled by it via aria-labelledby="hero-h1".
-        The desktop image carries the visual message; the mobile h2 repeats the
-        text visually for mobile readers (and is semantically subordinate as h2).
-      -->
-      <h1 id="hero-h1" class="sr-only">A governance-led operating system for decision clarity, artifact production, and applied execution.</h1>
-
-      <!--
-        Desktop image hero.
-        aria-hidden="true" suppresses the container from assistive tech —
-        the section's aria-labelledby already provides the text equivalent.
-
-        The <picture> element with a media-conditional <source> ensures
-        /assets/glheroindex.png is ONLY fetched when viewport ≥ 981px.
-        No JavaScript is required. The fallback <img> has an empty src so
-        mobile browsers request nothing and see nothing.
-
-        width/height attributes match the actual PNG dimensions and allow
-        the browser to compute aspect-ratio before the image loads,
-        preventing Cumulative Layout Shift (CLS).
-
-        If your PNG dimensions differ, update width and height here.
-        You can verify with: identify assets/glheroindex.png (ImageMagick)
-        or check via browser DevTools → Network → image response headers.
-      -->
-      <div class="container hero-desktop-visual" aria-hidden="true">
-        <div class="hero-desktop-visual-shell">
-          <picture>
-            <source
-              srcset="/assets/glheroindex.png"
-              media="(min-width: 981px)"
-              width="1456"
-              height="816"
-            />
-            <!--
-              Intentionally empty src: on mobile no request is made.
-              alt="" is correct here; the aria-hidden parent suppresses AT.
-            -->
-            <img
-              src=""
-              alt=""
-              width="1456"
-              height="816"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </picture>
-        </div>
-        <div class="hero-desktop-actions">
-          <a class="btn btn-primary" href="whats-live.html">View what is live</a>
-          <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
-        </div>
-      </div>
-
-      <div class="hero-mobile-copy">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow">Governance-led public system</div>
-            <h2>A governance-led operating system for decision clarity, artifact production, and applied execution.</h2>
-            <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="whats-live.html">View what is live</a>
-              <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
-            </div>
-            <div class="hero-note">
-              <strong>System first.</strong> Public entry points, live artifacts, and paid routes are separated on purpose so the site stays legible and proportionate to what is actually released now.
-            </div>
+</div>
+</div>
+</header>
+<main id="main">
+<section class="hero-section">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">Governance-led public system</div>
+<h1>A governance-led operating system for decision clarity, artifact production, and applied execution.</h1>
+<p class="lede">GOLDLEVEL is a public-facing system for turning ambiguity, decision noise, and unclear material into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="system.html">Read the system</a>
+<a class="btn btn-secondary" href="start-here.html">Choose a route</a>
+</div>
+<div class="hero-note">
+<strong>System first.</strong> Public entry points, live artifacts, and paid routes are separated on purpose so the site stays legible and proportionate to what is actually released now.
           </div>
-          <aside class="panel hero-panel" aria-label="Current site snapshot">
-            <div class="stat-grid">
-              <div class="stat-block"><span class="stat-value">2</span><span class="stat-label">Public packet releases live now</span></div>
-              <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Diagnostic route active</span></div>
-              <div class="stat-block"><span class="stat-value">Multi</span><span class="stat-label">Web pages, PDFs, and expanding surfaces</span></div>
-              <div class="stat-block"><span class="stat-value">Early</span><span class="stat-label">Build stage, live in parts and expanding</span></div>
-            </div>
-            <div class="note">The public structure is active now, but it does not present unreleased software or draft materials as if they already exist.</div>
-          </aside>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">What this system is</div>
-          <h2>A public system with distinct jobs, not one undifferentiated offer.</h2>
-          <p class="section-copy">The site introduces the system in public categories so a first-time visitor can tell what exists, what is live, and where each route fits.</p>
-        </div>
-        <div class="grid-4">
-          <article class="card">
-            <div class="icon-chip">Read</div>
-            <h3>Diagnostic Reads</h3>
-            <p>Bounded outside reads on one live situation, page, offer, thread, or decision. The purpose is clearer classification and a cleaner next move.</p>
-          </article>
-          <article class="card">
-            <div class="icon-chip">Brief</div>
-            <h3>Public Briefs</h3>
-            <p>Short public-facing releases that turn a complex subject into a readable standalone artifact.</p>
-          </article>
-          <article class="card">
-            <div class="icon-chip">Pack</div>
-            <h3>Decision Packets</h3>
-            <p>Longer artifacts for owner-level or operator-level decisions that need more structure than a short brief can carry.</p>
-          </article>
-          <article class="card">
-            <div class="icon-chip">Map</div>
-            <h3>System Architecture</h3>
-            <p>The wider logic is translated into plain public language so visitors can understand the system without exposure to internal doctrine.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Governance kernel</div>
-          <h2>The system checks legitimacy, evidence, fit, and consequence before it promises output.</h2>
-          <p class="section-copy">Public-facing language stays simple, but the differentiator is visible: the system does not begin by selling a result. It begins by checking whether the situation is real, readable, coherent, and worth advancing.</p>
-        </div>
-        <div class="grid-4">
-          <article class="card">
-            <div class="step-num">01</div>
-            <h3>Check what is real</h3>
-            <p>Separate live material from draft claims, unclear requests, and unsupported assumptions.</p>
-          </article>
-          <article class="card">
-            <div class="step-num">02</div>
-            <h3>Establish what is known</h3>
-            <p>Start from evidence, context, and fit rather than from optimistic promise language.</p>
-          </article>
-          <article class="card">
-            <div class="step-num">03</div>
-            <h3>Govern action and stopping</h3>
-            <p>Not every situation should be pushed forward. Disciplined stopping is treated as a valid outcome.</p>
-          </article>
-          <article class="card">
-            <div class="step-num">04</div>
-            <h3>The system remembers</h3>
-            <p>Error, drift, contradiction, and prior decisions matter. History is part of the operating state, not something silently erased.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Translation across contexts</div>
-          <h2>One governing logic, translated across sectors, situations, and delivery formats.</h2>
-          <p class="section-copy">The system is portable without being generic. The same logic can move across industries, client situations, artifact types, and release surfaces while staying bounded by context.</p>
-        </div>
-        <div class="grid-2">
-          <article class="card">
-            <h3>What travels</h3>
-            <ul class="list-clean">
-              <li>Reality check: is the input real, current, and allowed to participate.</li>
-              <li>Truth check: what is actually known, and what remains uncertain.</li>
-              <li>Meaning check: what it means now and over time.</li>
-              <li>Action check: what should change first in this context.</li>
-            </ul>
-          </article>
-          <article class="card">
-            <h3>What adapts</h3>
-            <ul class="list-clean">
-              <li>The audience and operating altitude.</li>
-              <li>The artifact family: brief, packet, map, dashboard, or route page.</li>
-              <li>The delivery surface: web page, PDF, slide deck, spreadsheet, or later software form.</li>
-              <li>The commercial depth: diagnostic entry point, decision product, or operating product.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Execution modes</div>
-          <h2>Different operating modes inside one governed system.</h2>
-          <p class="section-copy">These are not separate brands on the homepage. They are different jobs performed by one system.</p>
-        </div>
-        <div class="mode-grid">
-          <article class="mode-card">
-            <div class="mode-num">S</div>
-            <h3>Constitutional execution</h3>
-            <p>The wrapper that keeps decisions, scope, and outputs inside the system’s governing logic.</p>
-          </article>
-          <article class="mode-card">
-            <div class="mode-num">C</div>
-            <h3>Truth and evidence enforcement</h3>
-            <p>The spine that separates assertion from proof and keeps public claims proportionate to evidence.</p>
-          </article>
-          <article class="mode-card">
-            <div class="mode-num">L</div>
-            <h3>Commercial translation</h3>
-            <p>The layer that turns structure into usable pages, offers, and relationship entry points.</p>
-          </article>
-          <article class="mode-card">
-            <div class="mode-num">M</div>
-            <h3>Pattern and adaptation</h3>
-            <p>The layer that tracks fit, feedback, drift, and improvement over time.</p>
-          </article>
-        </div>
-        <div class="note">Publicly, this is presented as constitutional foundation, operational execution, and adaptive evolution.</div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Artifact families</div>
-          <h2>Structured outputs grouped by family, not treated as one flat content shelf.</h2>
-          <p class="section-copy">The system does not only “think” or “diagnose.” It emits governed artifacts.</p>
-        </div>
-        <div class="artifact-grid">
-          <article class="artifact-card"><div class="icon-chip">C</div><h3>Constitutional artifacts</h3><p>Method pages, boundary pages, and system explanations that frame what the site is allowed to claim and how it is meant to be read.</p></article>
-          <article class="artifact-card"><div class="icon-chip">O</div><h3>Operational artifacts</h3><p>Diagnostic routes, structured readouts, and service pages that support one live issue at a time.</p></article>
-          <article class="artifact-card"><div class="icon-chip">D</div><h3>Decision artifacts</h3><p>Public briefs and longer decision packets that help readers classify risk, structure, and action.</p></article>
-          <article class="artifact-card"><div class="icon-chip">F</div><h3>Future-facing artifacts</h3><p>Maps, dashboards, registries, and later software-facing objects as the system expands.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Delivery surfaces</div>
-          <h2>The output is governed first. The container is secondary.</h2>
-          <p class="section-copy">PDFs are one surface, not the entire identity of the site.</p>
-        </div>
-        <div class="surfaces-grid">
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Current</div><span class="pill live">Live</span></div><h3>PDF briefs</h3><p>Short public releases and decision briefs.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Current</div><span class="pill live">Live</span></div><h3>Web pages</h3><p>Route selectors, service pages, and public system explanations.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Current</div><span class="pill prep">Expanding</span></div><h3>Packet library</h3><p>A mixed public shelf for live releases and visible in-preparation families.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Next</div><span class="pill prep">In preparation</span></div><h3>Decision products</h3><p>Longer owner-level or operator-level outputs.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Next</div><span class="pill prep">In preparation</span></div><h3>Visual maps</h3><p>Infographics and mapped system views.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Future</div><span class="pill prep">Future</span></div><h3>Slides and dashboards</h3><p>Presentation and spreadsheet surfaces where they add clarity.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Future</div><span class="pill prep">Future</span></div><h3>Interactive tools</h3><p>Later software surfaces, only when genuinely released.</p></article>
-          <article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Future</div><span class="pill prep">Future</span></div><h3>Software and API layers</h3><p>Potential future embodiments, not represented as public reality yet.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">What’s live now</div>
-          <h2>Current public releases and active entry points.</h2>
-          <p class="section-copy">Live means accessible now via a working page, file, or route.</p>
-        </div>
-        
-        <div class="live-grid">
-          <article class="live-card">
-            <div class="live-top">
-              <div><h3>Relationship, Structure, and the Conditions for Real Love</h3></div>
-              <span class="pill live">Live</span>
-            </div>
-            <div class="meta-row">
-              <span class="pill">Public brief</span>
-              <span class="pill">PDF</span>
-              <span class="pill">21 Apr 2026</span>
-            </div>
-            <p class="live-summary">A concise public-facing brief on why a bond can matter deeply and still become unstable when it is made to carry work that belongs elsewhere.</p>
-            <div class="detail-list">
-              <div><strong>Read focus:</strong> overload, repetition, and healthier relational structure</div>
-              <div><strong>Use:</strong> short standalone read or appendix-ready handout</div>
-              <div><strong>Length:</strong> 3 pages</div>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-primary btn-small" href="relationship_packet_public_facing_3page.pdf" target="_blank" rel="noopener">Download PDF</a>
-              <a class="btn btn-secondary btn-small" href="relationship-packet-payment.html">Purchase full text</a>
-            </div>
-          </article>
-
-          <article class="live-card">
-            <div class="live-top">
-              <div><h3>GOLDLEVEL / SDG Decision Brief</h3></div>
-              <span class="pill live">Live</span>
-            </div>
-            <div class="meta-row">
-              <span class="pill">Owner-level decision brief</span>
-              <span class="pill">PDF</span>
-              <span class="pill">22 Apr 2026</span>
-            </div>
-            <p class="live-summary">A textbook-style owner-level brief on the 2025 SDG condition, recast for capital, governance, and institutional operators.</p>
-            <div class="detail-list">
-              <div><strong>Read focus:</strong> risk, capital allocation, governance pressure, and operating conditions</div>
-              <div><strong>Use:</strong> public-facing report brief or decision-support packet</div>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-primary btn-small" href="https://goldlevel.co.uk/assets/sdg_public_readout_3page.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
-              <a class="btn btn-secondary btn-small" href="https://drive.proton.me/urls/VWR23ZJ9H0#frE2RoboIoXv" target="_blank" rel="noopener noreferrer">Purchase full text</a>
-            </div>
-          </article>
-
-          <article class="live-card">
-            <div class="live-top">
-              <div><h3>Diagnostic Read Route</h3></div>
-              <span class="pill live">Live</span>
-            </div>
-            <div class="meta-row">
-              <span class="pill">Service route</span>
-              <span class="pill">Web page</span>
-            </div>
-            <p class="live-summary">A bounded route for one active issue, page, thread, offer, or decision that needs a cleaner outside read before the next move.</p>
-            <div class="detail-list">
-              <div><strong>Use:</strong> live situations that need clarity, classification, and a first useful next step</div>
-              <div><strong>Function:</strong> diagnostic route, not a public library release</div>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-primary btn-small" href="diagnostic-read.html">Open diagnostic reads</a>
-            </div>
-          </article>
-
-          <article class="live-card">
-            <div class="live-top">
-              <div><h3>Packages Route</h3></div>
-              <span class="pill live">Live</span>
-            </div>
-            <div class="meta-row">
-              <span class="pill">Commercial route</span>
-              <span class="pill">Web page</span>
-            </div>
-            <p class="live-summary">A simple Bronze / Silver / Gold ladder inside the wider system for people who already know they want the diagnostic route.</p>
-            <div class="detail-list">
-              <div><strong>Use:</strong> choose a level of depth for one bounded read</div>
-              <div><strong>Role:</strong> commercial entry point inside a larger public system</div>
-            </div>
-            <div class="card-actions">
-              <a class="btn btn-primary btn-small" href="packages.html">View packages</a>
-            </div>
-          </article>
-        </div>
-
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">How it works</div>
-          <h2>Diagnose. Structure. Publish. Apply.</h2>
-          <p class="section-copy">The public site keeps the process readable without dumping internal doctrine into first-contact copy.</p>
-        </div>
-        <div class="steps-grid">
-          <article class="step-card"><div class="step-num">1</div><h3>Diagnose</h3><p>Read the live material closely enough to identify the main pressure, fit, and governing constraint.</p></article>
-          <article class="step-card"><div class="step-num">2</div><h3>Structure</h3><p>Translate the situation into a bounded frame with clearer categories, hierarchy, and next-step logic.</p></article>
-          <article class="step-card"><div class="step-num">3</div><h3>Publish</h3><p>Turn the result into a usable page, brief, packet, or route with visible status and scope.</p></article>
-          <article class="step-card"><div class="step-num">4</div><h3>Apply</h3><p>Use the output to support a decision, release, revision, or a cleaner commercial move.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Pathways in</div>
-          <h2>Three clean routes into the site.</h2>
-          <p class="section-copy">Visitors arrive with different needs. These entry points keep the first move simple.</p>
-        </div>
-        <div class="path-grid">
-          <article class="path-card">
-            <div class="path-head"><div class="chip chip-accent">Route 1</div><span class="pill live">Service</span></div>
-            <h3>I need clarity on one live situation</h3>
-            <p>Use the diagnostic route if the issue is active now and needs a cleaner outside read before acting.</p>
-            <div class="inline-actions"><a class="btn btn-primary btn-small" href="diagnostic-read.html">Go to diagnostic reads</a></div>
-          </article>
-          <article class="path-card">
-            <div class="path-head"><div class="chip chip-accent">Route 2</div><span class="pill live">Library</span></div>
-            <h3>I want to read a public brief</h3>
-            <p>Use the library if you want a released artifact first: concise, public-facing, and already published.</p>
-            <div class="inline-actions"><a class="btn btn-primary btn-small" href="library.html">Open the library</a></div>
-          </article>
-          <article class="path-card">
-            <div class="path-head"><div class="chip chip-accent">Route 3</div><span class="pill live">System</span></div>
-            <h3>I want to understand the system</h3>
-            <p>Use the system page if you want the wider frame: what governs the site, how the parts connect, and where the build is heading.</p>
-            <div class="inline-actions"><a class="btn btn-primary btn-small" href="system.html">View the system overview</a></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container status-grid">
-        <div>
-          <div class="section-head">
-            <div class="section-mark">Proofs, principles, and trust</div>
-            <h2>Capability is shown through structure, status, and governed outputs.</h2>
-            <p class="section-copy">The public claim is bounded: structured clarity, readable outputs, clear statuses, and a site that remembers what is live versus what is still being prepared.</p>
-          </div>
-          <article class="status-card">
-            <h3>Constitutional principles</h3>
-            <div class="chip-row">
-              <span class="pill">Truth-first</span>
-              <span class="pill">Ethics above outcome</span>
-              <span class="pill">Consistency over speed</span>
-              <span class="pill">Transparency and auditability</span>
-              <span class="pill">Anti-gaming discipline</span>
-              <span class="pill">Value-first</span>
-              <span class="pill">Context sovereignty</span>
-              <span class="pill">Fail-fast by design</span>
-            </div>
-            <div class="note">Designed to secure legibility, contradiction detection, bounded outputs, reputational protection, and better decision quality rather than undisciplined volume.</div>
-          </article>
-        </div>
-        <div>
-          <article class="legend-card">
-            <h3>Current build status</h3>
-            <div class="kv-list">
-              <div class="kv-item"><div class="kv-key">Currently live</div><div class="kv-value">2 public packet releases, a diagnostic service route, packages, and the core page system.</div></div>
-              <div class="kv-item"><div class="kv-key">In development</div><div class="kv-value">Library expansion, broader system explanation, multi-surface publishing, and further public packet releases.</div></div>
-              <div class="kv-item"><div class="kv-key">Commercial ladder</div><div class="kv-value">Diagnostic products are live. Decision, operating, and later software forms are acknowledged without being overstated.</div></div>
-            </div>
-            <div class="status-note">Early-stage honesty is part of the public structure: live items are named directly, and unreleased work stays marked.</div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-  </main>
-  
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="section-mark">GOLDLEVEL</div>
-        <h3>A system-first public site.</h3>
-        <p class="small">GOLDLEVEL presents live artifacts, diagnostic routes, and a growing public architecture without overstating what is already released.</p>
-        <div class="footer-links"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="system.html">System</a><a href="library.html">Library</a><a href="services.html">Services</a><a href="whats-live.html">What’s Live</a><a href="contact.html">Contact</a></div>
-      </div>
-      <div>
-        <h3>Supporting routes</h3>
-        <div class="footer-links"><a href="briefs-packets.html">Briefs & Packets</a><a href="diagnostic-read.html">Diagnostic Reads</a><a href="packages.html">Packages</a><a href="what-this-is.html">What This Is</a><a href="good-fit.html">Good Fit</a><a href="input-return.html">Input & Return</a><a href="boundary.html">Boundary</a><a href="method.html">Method</a></div>
-        <p class="small" style="margin-top:16px;">Business route: <a href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a> • Signal: @goldlevel0.5</p>
-        <p class="small">Last updated: 2026-04-22 • Release: GL-SITE-2026-04-22-CMODE</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/site.js"></script>
-    
+</div>
+<aside aria-label="Current site snapshot" class="panel hero-panel">
+<div class="stat-grid">
+<div class="stat-block"><span class="stat-value">2</span><span class="stat-label">Public packet releases live now</span></div>
+<div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Diagnostic route active</span></div>
+<div class="stat-block"><span class="stat-value">Multi</span><span class="stat-label">Web pages, PDFs, and expanding surfaces</span></div>
+<div class="stat-block"><span class="stat-value">Early</span><span class="stat-label">Build stage, live in parts and expanding</span></div>
+</div>
+<div class="note">The public structure is active now, but it does not present unreleased software or draft materials as if they already exist.</div>
+</aside>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">What this system is</div>
+<h2>A public system with distinct jobs, not one undifferentiated offer.</h2>
+<p class="section-copy">The site introduces the system in public categories so a first-time visitor can tell what exists, what is live, and where each route fits.</p>
+</div>
+<div class="grid-4">
+<article class="card">
+<div class="icon-chip">Read</div>
+<h3>Diagnostic Reads</h3>
+<p>Bounded outside reads on one live situation, page, offer, thread, or decision. The purpose is clearer classification and a cleaner next move.</p>
+</article>
+<article class="card">
+<div class="icon-chip">Brief</div>
+<h3>Public Briefs</h3>
+<p>Short public-facing releases that turn a complex subject into a readable standalone artifact.</p>
+</article>
+<article class="card">
+<div class="icon-chip">Pack</div>
+<h3>Decision Packets</h3>
+<p>Longer artifacts for owner-level or operator-level decisions that need more structure than a short brief can carry.</p>
+</article>
+<article class="card">
+<div class="icon-chip">Map</div>
+<h3>System Architecture</h3>
+<p>The wider logic is translated into plain public language so visitors can understand the system without exposure to internal doctrine.</p>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">Governance kernel</div>
+<h2>The system checks legitimacy, evidence, fit, and consequence before it promises output.</h2>
+<p class="section-copy">Public-facing language stays simple, but the differentiator is visible: the system does not begin by selling a result. It begins by checking whether the situation is real, readable, coherent, and worth advancing.</p>
+</div>
+<div class="grid-4">
+<article class="card">
+<div class="step-num">01</div>
+<h3>Check what is real</h3>
+<p>Separate live material from draft claims, unclear requests, and unsupported assumptions.</p>
+</article>
+<article class="card">
+<div class="step-num">02</div>
+<h3>Establish what is known</h3>
+<p>Start from evidence, context, and fit rather than from optimistic promise language.</p>
+</article>
+<article class="card">
+<div class="step-num">03</div>
+<h3>Govern action and stopping</h3>
+<p>Not every situation should be pushed forward. Disciplined stopping is treated as a valid outcome.</p>
+</article>
+<article class="card">
+<div class="step-num">04</div>
+<h3>The system remembers</h3>
+<p>Error, drift, contradiction, and prior decisions matter. History is part of the operating state, not something silently erased.</p>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">Translation across contexts</div>
+<h2>One governing logic, translated across sectors, situations, and delivery formats.</h2>
+<p class="section-copy">The system is portable without being generic. The same logic can move across industries, client situations, artifact types, and release surfaces while staying bounded by context.</p>
+</div>
+<div class="grid-2">
+<article class="card">
+<h3>What travels</h3>
+<ul class="list-clean">
+<li>Reality check: is the input real, current, and allowed to participate.</li>
+<li>Truth check: what is actually known, and what remains uncertain.</li>
+<li>Meaning check: what it means now and over time.</li>
+<li>Action check: what should change first in this context.</li>
+</ul>
+</article>
+<article class="card">
+<h3>What adapts</h3>
+<ul class="list-clean">
+<li>The audience and operating altitude.</li>
+<li>The artifact family: brief, packet, map, dashboard, or route page.</li>
+<li>The delivery surface: web page, PDF, slide deck, spreadsheet, or later software form.</li>
+<li>The commercial depth: diagnostic entry point, decision product, or operating product.</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">Execution modes</div>
+<h2>Different operating modes inside one governed system.</h2>
+<p class="section-copy">These are not separate brands on the homepage. They are different jobs performed by one system.</p>
+</div>
+<div class="mode-grid">
+<article class="mode-card">
+<div class="mode-num">S</div>
+<h3>Constitutional execution</h3>
+<p>The wrapper that keeps decisions, scope, and outputs inside the system’s governing logic.</p>
+</article>
+<article class="mode-card">
+<div class="mode-num">C</div>
+<h3>Truth and evidence enforcement</h3>
+<p>The spine that separates assertion from proof and keeps public claims proportionate to evidence.</p>
+</article>
+<article class="mode-card">
+<div class="mode-num">L</div>
+<h3>Commercial translation</h3>
+<p>The layer that turns structure into usable pages, offers, and relationship entry points.</p>
+</article>
+<article class="mode-card">
+<div class="mode-num">M</div>
+<h3>Pattern and adaptation</h3>
+<p>The layer that tracks fit, feedback, drift, and improvement over time.</p>
+</article>
+</div>
+<div class="note">Publicly, this is presented as constitutional foundation, operational execution, and adaptive evolution.</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">Artifact families</div>
+<h2>Structured outputs grouped by family, not treated as one flat content shelf.</h2>
+<p class="section-copy">The system does not only “think” or “diagnose.” It emits governed artifacts.</p>
+</div>
+<div class="artifact-grid">
+<article class="artifact-card"><div class="icon-chip">C</div><h3>Constitutional artifacts</h3><p>Method pages, boundary pages, and system explanations that frame what the site is allowed to claim and how it is meant to be read.</p></article>
+<article class="artifact-card"><div class="icon-chip">O</div><h3>Operational artifacts</h3><p>Diagnostic routes, structured readouts, and service pages that support one live issue at a time.</p></article>
+<article class="artifact-card"><div class="icon-chip">D</div><h3>Decision artifacts</h3><p>Public briefs and longer decision packets that help readers classify risk, structure, and action.</p></article>
+<article class="artifact-card"><div class="icon-chip">F</div><h3>Future-facing artifacts</h3><p>Maps, dashboards, registries, and later software-facing objects as the system expands.</p></article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">Delivery surfaces</div>
+<h2>The output is governed first. The container is secondary.</h2>
+<p class="section-copy">PDFs are one surface, not the entire identity of the site.</p>
+</div>
+<div class="surfaces-grid">
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Current</div><span class="pill live">Live</span></div><h3>PDF briefs</h3><p>Short public releases and decision briefs.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Current</div><span class="pill live">Live</span></div><h3>Web pages</h3><p>Route selectors, service pages, and public system explanations.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Current</div><span class="pill prep">Expanding</span></div><h3>Packet library</h3><p>A mixed public shelf for live releases and visible in-preparation families.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Next</div><span class="pill prep">In preparation</span></div><h3>Decision products</h3><p>Longer owner-level or operator-level outputs.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Next</div><span class="pill prep">In preparation</span></div><h3>Visual maps</h3><p>Infographics and mapped system views.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Future</div><span class="pill prep">Future</span></div><h3>Slides and dashboards</h3><p>Presentation and spreadsheet surfaces where they add clarity.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Future</div><span class="pill prep">Future</span></div><h3>Interactive tools</h3><p>Later software surfaces, only when genuinely released.</p></article>
+<article class="surface-card"><div class="surface-head"><div class="chip chip-accent">Future</div><span class="pill prep">Future</span></div><h3>Software and API layers</h3><p>Potential future embodiments, not represented as public reality yet.</p></article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">What’s live now</div>
+<h2>Current public releases and active routes.</h2>
+<p class="section-copy">Live means accessible now via a working page, file, or route.</p>
+</div>
+<div class="live-grid">
+<article class="live-card">
+<div class="live-top">
+<div><h3>Relationship, Structure, and the Conditions for Real Love</h3></div>
+<span class="pill live">Live</span>
+</div>
+<div class="meta-row">
+<span class="pill">Public brief</span>
+<span class="pill">PDF</span>
+<span class="pill">21 Apr 2026</span>
+</div>
+<p class="live-summary">A concise public-facing brief on relational structure, role clarity, and the conditions that support durable connection.</p>
+<div class="detail-list">
+<div><strong>Read focus:</strong> relational structure, role clarity, and practical distinctions</div>
+<div><strong>Use:</strong> short standalone read or appendix-ready handout</div>
+<div><strong>Length:</strong> 3 pages</div>
+</div>
+<div class="card-actions">
+<a class="btn btn-primary btn-small" download="relationship_packet_public_facing_3page.pdf" href="relationship_packet_public_facing_3page.pdf" rel="noopener noreferrer" target="_blank" type="application/pdf">Download PDF</a>
+<a class="btn btn-secondary btn-small" href="relationship-packet-payment.html">Purchase full text</a>
+</div>
+</article>
+<article class="live-card">
+<div class="live-top">
+<div><h3>GOLDLEVEL / SDG Decision Brief</h3></div>
+<span class="pill live">Live</span>
+</div>
+<div class="meta-row">
+<span class="pill">Owner-level decision brief</span>
+<span class="pill">PDF</span>
+<span class="pill">22 Apr 2026</span>
+</div>
+<p class="live-summary">A textbook-style owner-level brief on the 2025 SDG condition, recast for capital, governance, and institutional operators.</p>
+<div class="detail-list">
+<div><strong>Read focus:</strong> risk, capital allocation, governance conditions, and operating context</div>
+<div><strong>Use:</strong> public-facing report brief or decision-support packet</div>
+</div>
+<div class="card-actions">
+<a class="btn btn-primary btn-small" href="https://goldlevel.co.uk/assets/sdg_public_readout_3page" rel="noopener noreferrer" target="_blank">Download PDF</a>
+<a class="btn btn-secondary btn-small" href="https://drive.proton.me/urls/VWR23ZJ9H0#frE2RoboIoXv" rel="noopener noreferrer" target="_blank">Purchase full text</a>
+</div>
+</article>
+<article class="live-card">
+<div class="live-top">
+<div><h3>Diagnostic Read Route</h3></div>
+<span class="pill live">Live</span>
+</div>
+<div class="meta-row">
+<span class="pill">Service route</span>
+<span class="pill">Web page</span>
+</div>
+<p class="live-summary">A bounded route for one active issue, page, thread, offer, or decision that needs a cleaner outside read before the next move.</p>
+<div class="detail-list">
+<div><strong>Use:</strong> live situations that need clarity, classification, and a first useful next step</div>
+<div><strong>Function:</strong> diagnostic route, not a public library release</div>
+</div>
+<div class="card-actions">
+<a class="btn btn-primary btn-small" href="diagnostic-read.html">Open diagnostic reads</a>
+</div>
+</article>
+<article class="live-card">
+<div class="live-top">
+<div><h3>Packages Route</h3></div>
+<span class="pill live">Live</span>
+</div>
+<div class="meta-row">
+<span class="pill">Commercial route</span>
+<span class="pill">Web page</span>
+</div>
+<p class="live-summary">A simple Bronze / Silver / Gold ladder inside the wider system for people who already know they want the diagnostic route.</p>
+<div class="detail-list">
+<div><strong>Use:</strong> choose a level of depth for one bounded read</div>
+<div><strong>Role:</strong> commercial entry point inside a larger public system</div>
+</div>
+<div class="card-actions">
+<a class="btn btn-primary btn-small" href="packages.html">View packages</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">How it works</div>
+<h2>Diagnose. Structure. Publish. Apply.</h2>
+<p class="section-copy">The public site keeps the process readable without dumping internal doctrine into first-contact copy.</p>
+</div>
+<div class="steps-grid">
+<article class="step-card"><div class="step-num">1</div><h3>Diagnose</h3><p>Read the live material closely enough to identify the main issue, fit, and governing constraint.</p></article>
+<article class="step-card"><div class="step-num">2</div><h3>Structure</h3><p>Translate the situation into a bounded frame with clearer categories, hierarchy, and next-step logic.</p></article>
+<article class="step-card"><div class="step-num">3</div><h3>Publish</h3><p>Turn the result into a usable page, brief, packet, or route with visible status and scope.</p></article>
+<article class="step-card"><div class="step-num">4</div><h3>Apply</h3><p>Use the output to support a decision, release, revision, or a cleaner commercial move.</p></article>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<div class="section-head">
+<div class="section-mark">Pathways in</div>
+<h2>Three clean routes into the site.</h2>
+<p class="section-copy">Visitors arrive with different needs. These entry points keep the first move simple.</p>
+</div>
+<div class="path-grid">
+<article class="path-card">
+<div class="path-head"><div class="chip chip-accent">Route 1</div><span class="pill live">Service</span></div>
+<h3>I need clarity on one live situation</h3>
+<p>Use the diagnostic route if the issue is active now and needs a cleaner outside read before acting.</p>
+<div class="inline-actions"><a class="btn btn-primary btn-small" href="diagnostic-read.html">Go to diagnostic reads</a></div>
+</article>
+<article class="path-card">
+<div class="path-head"><div class="chip chip-accent">Route 2</div><span class="pill live">Library</span></div>
+<h3>I want to read a public brief</h3>
+<p>Use the library if you want a released artifact first: concise, public-facing, and already published.</p>
+<div class="inline-actions"><a class="btn btn-primary btn-small" href="library.html">Open the library</a></div>
+</article>
+<article class="path-card">
+<div class="path-head"><div class="chip chip-accent">Route 3</div><span class="pill live">System</span></div>
+<h3>I want to understand the system</h3>
+<p>Use the system page if you want the wider frame: what governs the site, how the parts connect, and where the build is heading.</p>
+<div class="inline-actions"><a class="btn btn-primary btn-small" href="system.html">View the system overview</a></div>
+</article>
+</div>
+</div>
+</section>
+<section>
+<div class="container status-grid">
+<div>
+<div class="section-head">
+<div class="section-mark">Proofs, principles, and trust</div>
+<h2>Capability is shown through structure, status, and governed outputs.</h2>
+<p class="section-copy">The public claim is bounded: structured clarity, readable outputs, clear statuses, and a site that remembers what is live versus what is still being prepared.</p>
+</div>
+<article class="status-card">
+<h3>Constitutional principles</h3>
+<div class="chip-row">
+<span class="pill">Truth-first</span>
+<span class="pill">Ethics above outcome</span>
+<span class="pill">Consistency over speed</span>
+<span class="pill">Transparency and auditability</span>
+<span class="pill">Anti-gaming discipline</span>
+<span class="pill">Value-first</span>
+<span class="pill">Context sovereignty</span>
+<span class="pill">Fail-fast by design</span>
+</div>
+<div class="note">Designed to secure legibility, contradiction detection, bounded outputs, reputational protection, and better decision quality rather than undisciplined volume.</div>
+</article>
+</div>
+<div>
+<article class="legend-card">
+<h3>Current build status</h3>
+<div class="kv-list">
+<div class="kv-item"><div class="kv-key">Currently live</div><div class="kv-value">2 public packet releases, a diagnostic service route, packages, and the core page system.</div></div>
+<div class="kv-item"><div class="kv-key">In development</div><div class="kv-value">Library expansion, broader system explanation, multi-surface publishing, and further public packet releases.</div></div>
+<div class="kv-item"><div class="kv-key">Commercial ladder</div><div class="kv-value">Diagnostic products are live. Decision, operating, and later software forms are acknowledged without being overstated.</div></div>
+</div>
+<div class="status-note">Early-stage honesty is part of the public structure: live items are named directly, and unreleased work stays marked.</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<div class="section-mark">GOLDLEVEL</div>
+<h3>A system-first public site.</h3>
+<p class="small">GOLDLEVEL presents live artifacts, diagnostic routes, and a growing public architecture without overstating what is already released.</p>
+<div class="footer-links"><a href="index.html">Home</a><a href="start-here.html">Start Here</a><a href="system.html">System</a><a href="library.html">Library</a><a href="services.html">Services</a><a href="whats-live.html">What’s Live</a><a href="contact.html">Contact</a></div>
+</div>
+<div>
+<h3>Supporting routes</h3>
+<div class="footer-links"><a href="briefs-packets.html">Briefs &amp; Packets</a><a href="diagnostic-read.html">Diagnostic Reads</a><a href="packages.html">Packages</a><a href="what-this-is.html">What This Is</a><a href="good-fit.html">Good Fit</a><a href="input-return.html">Input &amp; Return</a><a href="boundary.html">Boundary</a><a href="method.html">Method</a></div>
+<p class="small" style="margin-top:16px;">Business route: <a href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a> • Signal: @goldlevel0.5</p>
+<p class="small">Last updated: 2026-04-22 • Release: GL-SITE-2026-04-22-CMODE</p>
+</div>
+</div>
+</footer>
+<script src="assets/js/site.js"></script>
 </body>
 </html>

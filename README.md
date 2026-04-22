@@ -6,7 +6,7 @@ It introduces the public system, shows what is live now, separates public artifa
 
 ## 2. Public positioning
 Public-facing position:
-GOLDLEVEL is a developing public system for turning pressure, complexity, decision-noise, and structural ambiguity into legible public briefs, bounded diagnostics, decision packets, and later multi-surface outputs.
+GOLDLEVEL is a developing public system for turning complexity, decision-noise, and structural ambiguity into legible public briefs, bounded diagnostics, decision packets, and later multi-surface outputs.
 
 System-first rule:
 The site is system-first, not package-first.
@@ -244,3 +244,27 @@ Current redirects:
 ## Known bundle note
 A local file named `relationship_packet_public_facing_3page.pdf` is included only so the download route resolves in this source bundle.
 Replace it with the production PDF asset before public deployment.
+
+
+## 19. Cybersecurity and deployment hardening
+Added in this release:
+- `_headers` for static-host header hardening
+- `_redirects` for host-level legacy route continuity
+- `.htaccess` for Apache-style deployments
+- `deploy/nginx-site.conf` as an Nginx deployment example
+- `robots.txt`, `sitemap.xml`, `security.txt`, and `.well-known/security.txt`
+- `404.html` for route misses
+
+Rule:
+These files improve deployment readiness, but they are not proof that the production host is configured correctly.
+
+## 20. Public language discipline
+- Keep public wording neutral, legible, and system-grade.
+- Avoid affectively loaded phrasing where a calmer operational term will do.
+- Do not frame public routes through highly charged language unless the page is explicitly about that subject and the wording is necessary.
+
+## 21. Release notes for this hardening pass
+- Global navigation CTA changed from diagnostic-first to start-here-first
+- Homepage hero shifted toward system overview and route choice
+- Public copy softened to remove avoidable affectively loaded wording
+- Static-host security and metadata files added

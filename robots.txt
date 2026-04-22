@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://goldlevel.co.uk/sitemap.xml
