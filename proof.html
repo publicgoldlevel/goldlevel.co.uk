@@ -1,177 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The Boundary — GOLDLEVEL</title>
-  <meta name="description" content="The read stays bounded on purpose. Why scope discipline makes the diagnostic more useful, not less." />
-  <meta name="color-scheme" content="dark light" />
-  <style>
-    :root{--bg:#0b1118;--bg-2:#101923;--text:#eef2f8;--muted:#aeb8c8;--soft:#d9e0ea;--accent:#d7b06d;--accent-2:#f0d8a3;--accent-soft:rgba(215,176,109,0.12);--accent-border:rgba(215,176,109,0.28);--line:rgba(255,255,255,0.1);--shadow:0 28px 80px rgba(0,0,0,0.34);--radius:24px;--container:1160px;--serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--sidebar-w:260px;}
-    *{box-sizing:border-box;}html{scroll-behavior:smooth;}
-    body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--text);line-height:1.65;background:radial-gradient(circle at 0% 0%,rgba(215,176,109,0.10),transparent 28%),radial-gradient(circle at 100% 10%,rgba(89,123,255,0.10),transparent 18%),linear-gradient(180deg,#091018 0%,var(--bg) 34%,var(--bg-2) 100%);}
-    a{color:inherit;text-decoration:none;}.container{width:min(var(--container),calc(100% - 32px));margin:0 auto;}
-    a:focus-visible,button:focus-visible{outline:3px solid rgba(215,176,109,0.62);outline-offset:3px;}
-    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(8,12,18,0.84);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
-    .brand{display:flex;align-items:center;gap:12px;}.brand-dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,#f6d983,var(--accent));box-shadow:0 0 0 8px rgba(215,176,109,0.12);flex:none;}
-    .brand-stack{display:flex;flex-direction:column;gap:2px;}.brand-mark{color:var(--accent);text-transform:uppercase;letter-spacing:0.16em;font-size:0.76rem;font-weight:700;}
-    .brand-name{font-family:var(--serif);font-size:1.02rem;font-weight:700;}
-    .topbar-right{display:flex;align-items:center;gap:14px;}
-    .nav-cta{display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--text);font-size:0.95rem;font-weight:600;transition:background 0.18s;}
-    .nav-cta:hover{background:rgba(215,176,109,0.2);}
-    .sidebar-toggle{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:var(--soft);font-size:0.9rem;font-family:var(--sans);cursor:pointer;transition:background 0.18s,color 0.18s;white-space:nowrap;}
-    .sidebar-toggle:hover{background:rgba(255,255,255,0.08);color:var(--text);}
-    .toggle-bars{display:flex;flex-direction:column;gap:4px;width:16px;}
-    .toggle-bars span{display:block;height:1.5px;background:currentColor;border-radius:2px;transition:transform 0.28s cubic-bezier(0.4,0,0.2,1),opacity 0.2s;transform-origin:center;}
-    body.sidebar-open .toggle-bars span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
-    body.sidebar-open .toggle-bars span:nth-child(2){opacity:0;transform:scaleX(0);}
-    body.sidebar-open .toggle-bars span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
-    .sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,0);z-index:39;pointer-events:none;transition:background 0.32s ease;}
-    body.sidebar-open .sidebar-overlay{background:rgba(0,0,0,0.48);pointer-events:auto;}
-    .sidebar{position:fixed;top:0;right:0;width:var(--sidebar-w);height:100vh;z-index:60;background:linear-gradient(180deg,#0d1620 0%,#0a1219 100%);border-left:1px solid rgba(255,255,255,0.08);transform:translateX(100%);transition:transform 0.36s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;box-shadow:-24px 0 64px rgba(0,0,0,0.5);overflow-y:auto;}
-    body.sidebar-open .sidebar{transform:translateX(0);}
-    .sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 16px;border-bottom:1px solid rgba(255,255,255,0.07);}
-    .sidebar-label{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.72rem;}
-    .sidebar-close{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.15s,color 0.15s;}
-    .sidebar-close:hover{background:rgba(255,255,255,0.1);color:var(--text);}
-    .sidebar-nav{padding:12px 0;flex:1;}
-    .sidebar-section{padding:6px 22px 2px;color:var(--accent);text-transform:uppercase;letter-spacing:0.11em;font-size:0.68rem;font-weight:700;margin-top:10px;}
-    .sidebar-nav a{display:flex;align-items:center;gap:10px;padding:10px 22px;color:var(--soft);font-size:0.94rem;transition:color 0.15s,background 0.15s;position:relative;}
-    .sidebar-nav a:hover{color:var(--text);background:rgba(215,176,109,0.06);}
-    .sidebar-nav a.active{color:var(--accent-2);background:rgba(215,176,109,0.08);}
-    .sidebar-nav a.active::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:60%;background:var(--accent);border-radius:0 2px 2px 0;}
-    .sidebar-icon{font-size:1rem;opacity:0.7;flex:none;}.sidebar-divider{height:1px;background:rgba(255,255,255,0.07);margin:10px 22px;}
-    .sidebar-cta{margin:12px 22px 24px;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent-2);font-weight:600;font-size:0.94rem;transition:background 0.18s;}
-    .sidebar-cta:hover{background:rgba(215,176,109,0.2);}
-    main{display:block;}section{padding:84px 0;}section.tight{padding-top:42px;}
-    .page-hero{padding:72px 0 48px;}
-    .breadcrumb{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:0.9rem;margin-bottom:18px;}
-    .breadcrumb a{color:var(--accent);}.breadcrumb a:hover{text-decoration:underline;}
-    h1,h2,h3{margin:0;line-height:1.1;}
-    h1{font-family:var(--serif);font-size:clamp(2.4rem,4.5vw,4rem);max-width:15ch;}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);color:var(--accent-2);font-size:0.82rem;letter-spacing:0.10em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.08);margin-bottom:18px;}
-    .lede{margin:20px 0 0;font-size:clamp(1.05rem,2vw,1.22rem);color:var(--soft);max-width:58ch;}
-    .section-mark{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.76rem;}
-    .section-title{margin-top:10px;font-family:var(--serif);font-size:clamp(2rem,3.6vw,3.2rem);}
-    .section-copy{margin:14px 0 0;color:var(--muted);font-size:1.05rem;max-width:64ch;}
-    .section-head{max-width:76ch;margin-bottom:26px;}
-    .proof-band{background:linear-gradient(180deg,rgba(22,31,45,0.96),rgba(14,21,32,0.96));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;}
-    .proof-item strong{display:block;margin-bottom:8px;color:var(--text);font-size:1rem;}
-    .proof-item p{margin:0;color:var(--soft);}
-    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:999px;border:1px solid transparent;font-weight:600;transition:transform 0.18s,background 0.18s;cursor:pointer;font-family:var(--sans);font-size:1rem;}
-    .btn:hover{transform:translateY(-1px);}
-    .btn-primary{color:#11151b;background:linear-gradient(135deg,#f6ddb0,var(--accent));box-shadow:0 16px 36px rgba(215,176,109,0.22);}
-    .btn-secondary{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.12);color:var(--text);}
-    .page-nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.08);}
-    .footer{padding:28px 0 46px;color:var(--muted);}
-    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);}
-    .small{font-size:0.94rem;}
-    @media(max-width:980px){.proof-band{grid-template-columns:1fr;}}
-    @media(max-width:720px){section{padding:70px 0;}.page-hero{padding-top:54px;}}
-  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=boundary.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Proof / Boundary | GOLDLEVEL</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <link rel="canonical" href="boundary.html" />
 </head>
 <body>
-
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
-    <div class="sidebar-header">
-      <span class="sidebar-label">Navigation</span>
-      <button class="sidebar-close" id="sidebarClose">✕</button>
-    </div>
-    <nav class="sidebar-nav">
-      <div class="sidebar-section">Pages</div>
-      <a href="index.html"><span class="sidebar-icon">◆</span> Home</a>
-      <a href="what-this-is.html"><span class="sidebar-icon">○</span> What This Is</a>
-      <a href="good-fit.html"><span class="sidebar-icon">○</span> Good Fit</a>
-      <a href="scope.html"><span class="sidebar-icon">○</span> Input &amp; Return</a>
-      <a href="proof.html" class="active"><span class="sidebar-icon">○</span> The Boundary</a>
-      <div class="sidebar-divider"></div>
-      <div class="sidebar-section">Services</div>
-      <a href="packages.html"><span class="sidebar-icon">◇</span> Packages</a>
-      <a href="textbook-packets.html"><span class="sidebar-icon">◇</span> Textbook Packets</a>
-      <div class="sidebar-divider"></div>
-    </nav>
-    <a href="book-a-read.html" class="sidebar-cta">✦ Book a Read</a>
-  </aside>
-
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-dot"></span>
-        <span class="brand-stack">
-          <span class="brand-mark">GOLDLEVEL</span>
-          <span class="brand-name">Outside diagnostic reads</span>
-        </span>
-      </a>
-      <div class="topbar-right">
-        <a href="book-a-read.html" class="nav-cta">Book a read</a>
-        <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar">
-          <span class="toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-          Sections
-        </button>
-      </div>
-    </div>
-  </header>
-
   <main>
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>The Boundary</span></div>
-        <div class="eyebrow">What the boundary does</div>
-        <h1>The read stays bounded on purpose.</h1>
-        <p class="lede">The first pass is designed to reduce confusion, not turn the issue into something heavier than it needs to be. Scope discipline is what makes the output usable.</p>
-      </div>
-    </section>
-
-    <section class="tight">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">What the boundary does</div>
-          <h2 class="section-title">Why bounded is better.</h2>
-          <p class="section-copy">A read that stays within its scope is more useful than one that expands to fill the available space. Useful output comes from constraint, not from comprehensiveness.</p>
-        </div>
-
-        <div class="proof-band">
-          <div class="proof-item">
-            <strong>Grounded in what you send</strong>
-            <p>The read stays close to the page, offer, thread, notes, or voice note in front of me. It does not extrapolate into territory not visible in the material.</p>
-          </div>
-          <div class="proof-item">
-            <strong>What gets named</strong>
-            <p>You get the main pressure, what is weakening trust or clarity, and what to change first. One clean output, not a sprawling document of possibilities.</p>
-          </div>
-          <div class="proof-item">
-            <strong>What it avoids</strong>
-            <p>No vague padding, no inflated certainty, and no forced call just to begin. The diagnostic does not create dependency or encourage further engagement beyond what is useful.</p>
-          </div>
-          <div class="proof-item">
-            <strong>Why it helps</strong>
-            <p>It keeps the work readable, useful, and tied to one clean next step rather than endless interpretation. The boundary is the service, not a limitation of it.</p>
-          </div>
-        </div>
-
-        <div class="page-nav">
-          <a class="btn btn-primary" href="packages.html">See packages →</a>
-          <a class="btn btn-secondary" href="book-a-read.html">Book a read</a>
-        </div>
+        <div class="eyebrow">Redirecting</div>
+        <h1>Proof / Boundary</h1>
+        <p class="lede">This legacy route now points to the Boundary page.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="boundary.html">Continue</a></div>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="small">GOLDLEVEL — outside diagnostic reads for offers, pages, threads, and decisions that need a cleaner second view.</div>
-      <div class="small">Business route: info@goldlevel.co.uk • Signal: @goldlevel0.5</div>
-    </div>
-  </footer>
-
-  <script>
-    const toggle=document.getElementById('sidebarToggle'),closeBtn=document.getElementById('sidebarClose'),overlay=document.getElementById('sidebarOverlay');
-    const open=()=>{document.body.classList.add('sidebar-open');toggle.setAttribute('aria-expanded','true');};
-    const close=()=>{document.body.classList.remove('sidebar-open');toggle.setAttribute('aria-expanded','false');};
-    toggle.addEventListener('click',()=>document.body.classList.contains('sidebar-open')?close():open());
-    closeBtn.addEventListener('click',close);overlay.addEventListener('click',close);
-    document.addEventListener('keydown',e=>e.key==='Escape'&&close());
-  </script>
 </body>
 </html>

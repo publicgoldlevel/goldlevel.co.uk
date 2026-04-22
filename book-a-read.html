@@ -1,207 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book a Read — GOLDLEVEL</title>
-  <meta name="description" content="Book a GOLDLEVEL diagnostic read through email or Signal. One booking route. Keep it clean." />
-  <meta name="color-scheme" content="dark light" />
-  <style>
-    :root{--bg:#0b1118;--bg-2:#101923;--text:#eef2f8;--muted:#aeb8c8;--soft:#d9e0ea;--accent:#d7b06d;--accent-2:#f0d8a3;--accent-soft:rgba(215,176,109,0.12);--accent-border:rgba(215,176,109,0.28);--line:rgba(255,255,255,0.1);--shadow:0 28px 80px rgba(0,0,0,0.34);--radius:24px;--container:1160px;--serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Georgia,serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--sidebar-w:260px;}
-    *{box-sizing:border-box;}html{scroll-behavior:smooth;}
-    body{margin:0;min-height:100vh;font-family:var(--sans);color:var(--text);line-height:1.65;background:radial-gradient(circle at 0% 0%,rgba(215,176,109,0.10),transparent 28%),radial-gradient(circle at 100% 10%,rgba(89,123,255,0.10),transparent 18%),linear-gradient(180deg,#091018 0%,var(--bg) 34%,var(--bg-2) 100%);}
-    a{color:inherit;text-decoration:none;}.container{width:min(var(--container),calc(100% - 32px));margin:0 auto;}
-    a:focus-visible,button:focus-visible{outline:3px solid rgba(215,176,109,0.62);outline-offset:3px;}
-    .topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(8,12,18,0.84);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;}
-    .brand{display:flex;align-items:center;gap:12px;}.brand-dot{width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,#f6d983,var(--accent));box-shadow:0 0 0 8px rgba(215,176,109,0.12);flex:none;}
-    .brand-stack{display:flex;flex-direction:column;gap:2px;}.brand-mark{color:var(--accent);text-transform:uppercase;letter-spacing:0.16em;font-size:0.76rem;font-weight:700;}
-    .brand-name{font-family:var(--serif);font-size:1.02rem;font-weight:700;}
-    .topbar-right{display:flex;align-items:center;gap:14px;}
-    .nav-cta{display:inline-flex;align-items:center;padding:11px 18px;border-radius:999px;border:1px solid var(--accent-border);background:linear-gradient(135deg,rgba(246,221,176,0.18),rgba(215,176,109,0.18));color:var(--accent-2);font-size:0.95rem;font-weight:600;}
-    .sidebar-toggle{display:flex;align-items:center;gap:8px;padding:9px 14px;border-radius:999px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.04);color:var(--soft);font-size:0.9rem;font-family:var(--sans);cursor:pointer;transition:background 0.18s,color 0.18s;white-space:nowrap;}
-    .sidebar-toggle:hover{background:rgba(255,255,255,0.08);color:var(--text);}
-    .toggle-bars{display:flex;flex-direction:column;gap:4px;width:16px;}
-    .toggle-bars span{display:block;height:1.5px;background:currentColor;border-radius:2px;transition:transform 0.28s cubic-bezier(0.4,0,0.2,1),opacity 0.2s;transform-origin:center;}
-    body.sidebar-open .toggle-bars span:nth-child(1){transform:translateY(5.5px) rotate(45deg);}
-    body.sidebar-open .toggle-bars span:nth-child(2){opacity:0;transform:scaleX(0);}
-    body.sidebar-open .toggle-bars span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg);}
-    .sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,0);z-index:39;pointer-events:none;transition:background 0.32s ease;}
-    body.sidebar-open .sidebar-overlay{background:rgba(0,0,0,0.48);pointer-events:auto;}
-    .sidebar{position:fixed;top:0;right:0;width:var(--sidebar-w);height:100vh;z-index:60;background:linear-gradient(180deg,#0d1620 0%,#0a1219 100%);border-left:1px solid rgba(255,255,255,0.08);transform:translateX(100%);transition:transform 0.36s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;box-shadow:-24px 0 64px rgba(0,0,0,0.5);overflow-y:auto;}
-    body.sidebar-open .sidebar{transform:translateX(0);}
-    .sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:20px 22px 16px;border-bottom:1px solid rgba(255,255,255,0.07);}
-    .sidebar-label{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.72rem;}
-    .sidebar-close{width:28px;height:28px;border-radius:50%;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.04);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:background 0.15s,color 0.15s;}
-    .sidebar-close:hover{background:rgba(255,255,255,0.1);color:var(--text);}
-    .sidebar-nav{padding:12px 0;flex:1;}
-    .sidebar-section{padding:6px 22px 2px;color:var(--accent);text-transform:uppercase;letter-spacing:0.11em;font-size:0.68rem;font-weight:700;margin-top:10px;}
-    .sidebar-nav a{display:flex;align-items:center;gap:10px;padding:10px 22px;color:var(--soft);font-size:0.94rem;transition:color 0.15s,background 0.15s;position:relative;}
-    .sidebar-nav a:hover{color:var(--text);background:rgba(215,176,109,0.06);}
-    .sidebar-nav a.active{color:var(--accent-2);background:rgba(215,176,109,0.08);}
-    .sidebar-nav a.active::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:3px;height:60%;background:var(--accent);border-radius:0 2px 2px 0;}
-    .sidebar-icon{font-size:1rem;opacity:0.7;flex:none;}.sidebar-divider{height:1px;background:rgba(255,255,255,0.07);margin:10px 22px;}
-    .sidebar-cta{margin:12px 22px 24px;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 18px;border-radius:999px;border:1px solid var(--accent-border);background:var(--accent-soft);color:var(--accent-2);font-weight:600;font-size:0.94rem;transition:background 0.18s;}
-    .sidebar-cta:hover{background:rgba(215,176,109,0.2);}
-    main{display:block;}section{padding:84px 0;}section.tight{padding-top:42px;}
-    .page-hero{padding:72px 0 48px;}
-    .breadcrumb{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:0.9rem;margin-bottom:18px;}
-    .breadcrumb a{color:var(--accent);}.breadcrumb a:hover{text-decoration:underline;}
-    h1,h2,h3{margin:0;line-height:1.1;}
-    h1{font-family:var(--serif);font-size:clamp(2.4rem,4.5vw,4rem);max-width:14ch;}
-    .eyebrow{display:inline-flex;align-items:center;gap:10px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.05);color:var(--accent-2);font-size:0.82rem;letter-spacing:0.10em;text-transform:uppercase;border:1px solid rgba(255,255,255,0.08);margin-bottom:18px;}
-    .lede{margin:20px 0 0;font-size:clamp(1.05rem,2vw,1.22rem);color:var(--soft);max-width:58ch;}
-    .section-mark{color:var(--accent-2);text-transform:uppercase;letter-spacing:0.12em;font-weight:700;font-size:0.76rem;}
-    .section-sub{margin:10px 0 0;color:var(--accent-2);font-size:0.98rem;}
-    .section-title{margin-top:10px;font-family:var(--serif);font-size:clamp(2rem,3.6vw,3.2rem);}
-    .section-copy{margin:14px 0 0;color:var(--muted);font-size:1.05rem;max-width:64ch;}
-    .section-head{max-width:76ch;margin-bottom:26px;}
-    .contact-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
-    .contact-card{background:linear-gradient(180deg,rgba(22,31,45,0.96),rgba(14,21,32,0.96));border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;}
-    .contact-card h3{font-size:1.22rem;margin-bottom:10px;}
-    .contact-card p{margin:0;color:var(--soft);}
-    .contact-row{display:flex;flex-direction:column;gap:4px;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.08);}
-    .contact-row span:first-child{color:var(--muted);font-size:0.9rem;}
-    .contact-accent{color:#ffe8b0;word-break:break-word;}
-    .footer{padding:28px 0 46px;color:var(--muted);}
-    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);}
-    .small{font-size:0.94rem;}
-    @media(max-width:980px){.contact-grid{grid-template-columns:1fr;}}
-    @media(max-width:720px){section{padding:70px 0;}.page-hero{padding-top:54px;}}
-  </style>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=contact.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Read | GOLDLEVEL</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <link rel="canonical" href="contact.html" />
 </head>
 <body>
-
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
-  <aside class="sidebar" id="sidebar" aria-label="Site navigation">
-    <div class="sidebar-header">
-      <span class="sidebar-label">Navigation</span>
-      <button class="sidebar-close" id="sidebarClose">✕</button>
-    </div>
-    <nav class="sidebar-nav">
-      <div class="sidebar-section">Pages</div>
-      <a href="index.html"><span class="sidebar-icon">◆</span> Home</a>
-      <a href="what-this-is.html"><span class="sidebar-icon">○</span> What This Is</a>
-      <a href="good-fit.html"><span class="sidebar-icon">○</span> Good Fit</a>
-      <a href="scope.html"><span class="sidebar-icon">○</span> Input &amp; Return</a>
-      <a href="proof.html"><span class="sidebar-icon">○</span> The Boundary</a>
-      <div class="sidebar-divider"></div>
-      <div class="sidebar-section">Services</div>
-      <a href="packages.html"><span class="sidebar-icon">◇</span> Packages</a>
-      <a href="textbook-packets.html"><span class="sidebar-icon">◇</span> Textbook Packets</a>
-      <div class="sidebar-divider"></div>
-    </nav>
-    <a href="book-a-read.html" class="sidebar-cta active">✦ Book a Read</a>
-  </aside>
-
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="index.html">
-        <span class="brand-dot"></span>
-        <span class="brand-stack">
-          <span class="brand-mark">GOLDLEVEL</span>
-          <span class="brand-name">Outside diagnostic reads</span>
-        </span>
-      </a>
-      <div class="topbar-right">
-        <span class="nav-cta">✦ Book a Read</span>
-        <button class="sidebar-toggle" id="sidebarToggle" aria-expanded="false" aria-controls="sidebar">
-          <span class="toggle-bars" aria-hidden="true"><span></span><span></span><span></span></span>
-          Sections
-        </button>
-      </div>
-    </div>
-  </header>
-
   <main>
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Book a Read</span></div>
-        <div class="eyebrow">Book a read</div>
-        <h1>Book through email or Signal.</h1>
-        <p class="lede">One booking route. Keep it clean. Use email or Signal for first contact. This keeps business enquiries separate from personal or creative channels, reduces category confusion, and creates a cleaner written start.</p>
-      </div>
-    </section>
-
-    <section class="tight">
-      <div class="container">
-        <div class="section-head">
-          <div class="section-mark">Book a read</div>
-          <p class="section-sub">One booking route. Keep it clean.</p>
-          <h2 class="section-title">How to start.</h2>
-          <p class="section-copy">Use email or Signal for first contact. This keeps business enquiries separate from personal or creative channels.</p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>Email</h3>
-            <p>Primary route for new enquiries.</p>
-            <div class="contact-row">
-              <span>Address</span>
-              <a class="contact-accent" href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a>
-            </div>
-            <div class="contact-row">
-              <span>Subject line</span>
-              <span>Bronze / Silver / Gold enquiry</span>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>Signal</h3>
-            <p>Optional for a shorter first note.</p>
-            <div class="contact-row">
-              <span>Handle</span>
-              <span class="contact-accent">@goldlevel0.5</span>
-            </div>
-            <div class="contact-row">
-              <span>Best use</span>
-              <span>Short booking notes and initial routing</span>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>What to include</h3>
-            <p>The strongest first note stays concrete.</p>
-            <div class="contact-row">
-              <span>Include</span>
-              <span>What you are sending, what is stuck, and what useful outcome you want.</span>
-            </div>
-            <div class="contact-row">
-              <span>Avoid</span>
-              <span>Passwords, payment data, ID documents, access codes, and unnecessary personal data.</span>
-            </div>
-          </article>
-
-          <article class="contact-card">
-            <h3>Security posture</h3>
-            <p>This page does not collect data through an embedded form.</p>
-            <div class="contact-row">
-              <span>Page controls</span>
-              <span>No trackers, no third-party assets, and no active form submission route.</span>
-            </div>
-            <div class="contact-row">
-              <span>Practical rule</span>
-              <span>Keep first contact high-level. Share fuller material only once the route is agreed.</span>
-            </div>
-          </article>
-        </div>
+        <div class="eyebrow">Redirecting</div>
+        <h1>Book a Read</h1>
+        <p class="lede">This legacy route now points to the contact page, where booking starts through email or Signal.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="contact.html">Continue</a></div>
       </div>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="small">GOLDLEVEL — outside diagnostic reads for offers, pages, threads, and decisions that need a cleaner second view.</div>
-      <div class="small">Business route: info@goldlevel.co.uk • Signal: @goldlevel0.5</div>
-    </div>
-  </footer>
-
-  <script>
-    const toggle=document.getElementById('sidebarToggle'),closeBtn=document.getElementById('sidebarClose'),overlay=document.getElementById('sidebarOverlay');
-    const open=()=>{document.body.classList.add('sidebar-open');toggle.setAttribute('aria-expanded','true');};
-    const close=()=>{document.body.classList.remove('sidebar-open');toggle.setAttribute('aria-expanded','false');};
-    toggle.addEventListener('click',()=>document.body.classList.contains('sidebar-open')?close():open());
-    closeBtn.addEventListener('click',close);overlay.addEventListener('click',close);
-    document.addEventListener('keydown',e=>e.key==='Escape'&&close());
-  </script>
 </body>
 </html>
