@@ -13,6 +13,86 @@
   <meta name="page:last-updated" content="2026-04-22" />
   <meta name="page:parent" content="root" />
   <link rel="stylesheet" href="assets/css/site.css" />
+
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .hero-section.hero-section--routed {
+      padding-top: 40px;
+    }
+
+    .hero-desktop-visual {
+      display: none;
+    }
+
+    .hero-desktop-visual-shell {
+      border-radius: 24px;
+      overflow: hidden;
+      background: #04122f;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+      min-height: 280px;
+    }
+
+    .hero-desktop-visual-shell img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-desktop-actions {
+      display: none;
+    }
+
+    .hero-mobile-copy {
+      display: block;
+    }
+
+    .hero-mobile-copy .hero-grid {
+      align-items: stretch;
+    }
+
+    .hero-mobile-copy .hero-panel {
+      margin-top: 24px;
+    }
+
+    @media (min-width: 981px) {
+      .hero-section.hero-section--routed {
+        padding-top: 28px;
+      }
+
+      .hero-desktop-visual {
+        display: block;
+      }
+
+      .hero-desktop-actions {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 28px;
+        flex-wrap: wrap;
+      }
+
+      .hero-mobile-copy {
+        display: none;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero-section.hero-section--routed {
+        padding-top: 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -72,29 +152,43 @@
     
   <main id="main">
   
-    <section class="hero-section">
-      <div class="container hero-grid">
-        <div>
-          <div class="eyebrow">Governance-led public system</div>
-          <h1>A governance-led operating system for decision clarity, artifact production, and applied execution.</h1>
-          <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="whats-live.html">View what is live</a>
-            <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
-          </div>
-          <div class="hero-note">
-            <strong>System first.</strong> Public entry points, live artifacts, and paid routes are separated on purpose so the site stays legible and proportionate to what is actually released now.
-          </div>
+    <section class="hero-section hero-section--routed">
+      <h1 class="sr-only">A governance-led operating system for decision clarity, artifact production, and applied execution.</h1>
+
+      <div class="container hero-desktop-visual" aria-hidden="true">
+        <div class="hero-desktop-visual-shell" id="desktopHeroVisual" data-src="assets/glheroindex.png" data-alt="GOLDLEVEL hero visual showing governance, decisions, artifacts, and execution.">
+          <noscript><img src="assets/glheroindex.png" alt="GOLDLEVEL hero visual showing governance, decisions, artifacts, and execution." /></noscript>
         </div>
-        <aside class="panel hero-panel" aria-label="Current site snapshot">
-          <div class="stat-grid">
-            <div class="stat-block"><span class="stat-value">2</span><span class="stat-label">Public packet releases live now</span></div>
-            <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Diagnostic route active</span></div>
-            <div class="stat-block"><span class="stat-value">Multi</span><span class="stat-label">Web pages, PDFs, and expanding surfaces</span></div>
-            <div class="stat-block"><span class="stat-value">Early</span><span class="stat-label">Build stage, live in parts and expanding</span></div>
+        <div class="hero-desktop-actions">
+          <a class="btn btn-primary" href="whats-live.html">View what is live</a>
+          <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
+        </div>
+      </div>
+
+      <div class="hero-mobile-copy">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Governance-led public system</div>
+            <h2>A governance-led operating system for decision clarity, artifact production, and applied execution.</h2>
+            <p class="lede">GOLDLEVEL is a public-facing system for turning pressure, ambiguity, and decision noise into legible briefs, bounded diagnostics, and structured outputs. It begins with legitimacy, evidence, fit, and context before moving into action.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="whats-live.html">View what is live</a>
+              <a class="btn btn-secondary" href="diagnostic-read.html">Start with a diagnostic read</a>
+            </div>
+            <div class="hero-note">
+              <strong>System first.</strong> Public entry points, live artifacts, and paid routes are separated on purpose so the site stays legible and proportionate to what is actually released now.
+            </div>
           </div>
-          <div class="note">The public structure is active now, but it does not present unreleased software or draft materials as if they already exist.</div>
-        </aside>
+          <aside class="panel hero-panel" aria-label="Current site snapshot">
+            <div class="stat-grid">
+              <div class="stat-block"><span class="stat-value">2</span><span class="stat-label">Public packet releases live now</span></div>
+              <div class="stat-block"><span class="stat-value">1</span><span class="stat-label">Diagnostic route active</span></div>
+              <div class="stat-block"><span class="stat-value">Multi</span><span class="stat-label">Web pages, PDFs, and expanding surfaces</span></div>
+              <div class="stat-block"><span class="stat-value">Early</span><span class="stat-label">Build stage, live in parts and expanding</span></div>
+            </div>
+            <div class="note">The public structure is active now, but it does not present unreleased software or draft materials as if they already exist.</div>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -308,7 +402,7 @@
               <div><strong>Use:</strong> public-facing report brief or decision-support packet</div>
             </div>
             <div class="card-actions">
-              <a class="btn btn-primary btn-small" href="https://goldlevel.co.uk/assets/sdg_public_readout_3page.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a>
+              <a class="btn btn-primary btn-small" href="https://goldlevel.co.uk/assets/sdg_public_readout_3page" target="_blank" rel="noopener noreferrer">Download PDF</a>
               <a class="btn btn-secondary btn-small" href="https://drive.proton.me/urls/VWR23ZJ9H0#frE2RoboIoXv" target="_blank" rel="noopener noreferrer">Purchase full text</a>
             </div>
           </article>
@@ -456,6 +550,35 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var mq = window.matchMedia("(min-width: 981px)");
+      var mount = document.getElementById("desktopHeroVisual");
+      if (!mount) return;
+
+      function loadDesktopHero() {
+        if (!mq.matches || mount.dataset.loaded === "true") return;
+
+        var img = new Image();
+        img.src = mount.dataset.src;
+        img.alt = mount.dataset.alt || "";
+        img.decoding = "async";
+        img.loading = "eager";
+        img.fetchPriority = "high";
+        mount.appendChild(img);
+        mount.dataset.loaded = "true";
+      }
+
+      loadDesktopHero();
+
+      if (typeof mq.addEventListener === "function") {
+        mq.addEventListener("change", loadDesktopHero);
+      } else if (typeof mq.addListener === "function") {
+        mq.addListener(loadDesktopHero);
+      }
+    }());
+  </script>
   <script src="assets/js/site.js"></script>
     
 </body>
