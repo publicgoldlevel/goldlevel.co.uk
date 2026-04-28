@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Moment & Matter mark">
+  <rect width="120" height="120" rx="28" fill="#2b241d"/>
+  <circle cx="60" cy="60" r="31" fill="none" stroke="#d7b46a" stroke-width="3"/>
+  <path d="M35 64c11-20 39-20 50 0" fill="none" stroke="#f6efe4" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="48" r="4" fill="#d7b46a"/>
+</svg>
