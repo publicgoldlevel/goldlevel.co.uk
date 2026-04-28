@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/moment-matter/">
+  <title>Moment & Matter image path test</title>
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
+    .path-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:28px 0}
+    .path-test-card{border:1px solid rgba(21,19,15,.12);border-radius:18px;padding:14px;background:#fff}
+    .path-test-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#eee}
+    code{word-break:break-all}
+  </style>
+</head>
+<body>
+  <main class="container section">
+    <p><a href="index.html">← Back to Moment & Matter</a></p>
+    <h1>Image path test</h1>
+    <p>This page confirms whether the main product-artifact paths resolve from <code>/moment-matter/</code>.</p>
+    <div class="path-test-grid">
+      <div class="path-test-card"><img src="assets/img/product-artifacts/custom_moment_card_digital.png" alt=""><p><code>assets/img/product-artifacts/custom_moment_card_digital.png</code></p></div>
+      <div class="path-test-card"><img src="assets/img/product-artifacts/custom_moment_map_digital.png" alt=""><p><code>assets/img/product-artifacts/custom_moment_map_digital.png</code></p></div>
+      <div class="path-test-card"><img src="assets/img/product-artifacts/CLARITY_MAP_Print_edition.png" alt=""><p><code>assets/img/product-artifacts/CLARITY_MAP_Print_edition.png</code></p></div>
+      <div class="path-test-card"><img src="assets/img/artwork/art-01.jpg" alt=""><p><code>assets/img/artwork/art-01.jpg</code></p></div>
+    </div>
+  </main>
+</body>
+</html>
