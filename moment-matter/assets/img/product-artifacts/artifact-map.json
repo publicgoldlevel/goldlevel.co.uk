@@ -1,0 +1,20 @@
+{
+  "folder": "assets/img/product-artifacts/",
+  "files": [
+    "custom_moment_card_digital.png",
+    "custom_moment_card_physical.png",
+    "custom_moment_map_digital.png",
+    "custom_moment_map_digital_example.png",
+    "Custom_Moment_Map_printed.png",
+    "clarity_map_digital.png",
+    "CLARITY_MAP_Print_edition.png"
+  ],
+  "wired_products": {
+    "custom-moment-card-digital": "custom_moment_card_digital.png",
+    "custom-moment-card-physical": "custom_moment_card_physical.png",
+    "custom-moment-map-digital": "custom_moment_map_digital.png",
+    "custom-moment-map-physical": "Custom_Moment_Map_printed.png",
+    "clarity-map-digital": "clarity_map_digital.png",
+    "clarity-map-print": "CLARITY_MAP_Print_edition.png"
+  }
+}
