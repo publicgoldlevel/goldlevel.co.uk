@@ -4,7 +4,11 @@
   const getCart=()=>JSON.parse(localStorage.getItem('mm_cart_v3')||'[]');
   const setCart=c=>{localStorage.setItem('mm_cart_v3',JSON.stringify(c));updateCartCount();};
   const findProduct=id=>(window.PRODUCTS||[]).find(p=>p.id===id);
-  const imageUrl=p=>p.imagePath||`assets/img/artwork/${p.image}`;
+  const imageUrl=p=>{
+    const path = p.imagePath || `assets/img/artwork/${p.image}`;
+    try { return new URL(path, document.baseURI).pathname + (new URL(path, document.baseURI).search || ''); }
+    catch(e) { return path; }
+  };
   function toast(msg){let t=$('#toast'); if(!t){t=document.createElement('div');t.id='toast';t.className='toast';document.body.appendChild(t)} t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
   function updateCartCount(){const count=getCart().reduce((a,i)=>a+i.qty,0);$$('.cart-count').forEach(x=>x.textContent=count)}
   function addToCart(id,qty=1){const p=findProduct(id); if(!p)return; const c=getCart(); const ex=c.find(i=>i.id===id); if(ex)ex.qty+=qty; else c.push({id,qty}); setCart(c); toast('Added to basket')}
