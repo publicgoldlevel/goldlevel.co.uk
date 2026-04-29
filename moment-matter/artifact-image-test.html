@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/moment-matter/">
+<title>Artifact Image Wiring Test | Moment &amp; Matter</title>
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.artifact-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:30px 0}
+.artifact-test-card{border:1px solid var(--line);background:#fffaf4;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.artifact-test-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#e9dfcf}
+.artifact-test-card h2{font-size:18px;margin:14px 0 6px;word-break:break-word}
+.artifact-test-card code{font-size:12px;word-break:break-all}
+.notice{border:1px solid var(--line);background:#fffaf4;border-radius:18px;padding:18px;margin:20px 0}
+.image-load-failed{outline:3px solid #b94a48}
+</style>
+<script src="assets/data/artifact-image-manifest.js"></script>
+<script src="assets/js/artifact-image-loader.js"></script>
+</head>
+<body>
+<main class="container section">
+<p><a href="index.html">← Back to Moment &amp; Matter</a></p>
+<h1>Artifact image wiring test</h1>
+<div class="notice">
+<p><strong>Current Proton folder:</strong><br><a href="https://drive.proton.me/urls/XXM7WH999R#nJ9jGXCvYOQO" target="_blank" rel="noopener">https://drive.proton.me/urls/XXM7WH999R#nJ9jGXCvYOQO</a></p>
+<p>This page tests whether the website can render each image from the configured image manifest. Local repo files are the fallback. Proton loading requires direct public image URLs per file, not only the shared folder viewer URL.</p>
+</div>
+<div class="artifact-test-grid">
+
+      <article class="artifact-test-card">
+        <img data-artifact-image="custom_moment_card_digital" src="assets/img/product-artifacts/custom_moment_card_digital.png" alt="Custom Moment Card — Digital product and hero image">
+        <h2>custom_moment_card_digital.png</h2>
+        <p>Custom Moment Card — Digital product and hero image</p>
+        <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_card_digital.png</code></p>
+        <p><strong>External direct URL:</strong><br><code>not set yet</code></p>
+      </article>
+    
+      <article class="artifact-test-card">
+        <img data-artifact-image="custom_moment_card_physical" src="assets/img/product-artifacts/custom_moment_card_physical.png" alt="Custom Moment Card — Printed product image">
+        <h2>custom_moment_card_physical.png</h2>
+        <p>Custom Moment Card — Printed product image</p>
+        <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_card_physical.png</code></p>
+        <p><strong>External direct URL:</strong><br><code>not set yet</code></p>
+      </article>
+    
+      <article class="artifact-test-card">
+        <img data-artifact-image="custom_moment_map_digital" src="assets/img/product-artifacts/custom_moment_map_digital.png" alt="Custom Moment Map — Digital product image">
+        <h2>custom_moment_map_digital.png</h2>
+        <p>Custom Moment Map — Digital product image</p>
+        <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_map_digital.png</code></p>
+        <p><strong>External direct URL:</strong><br><code>not set yet</code></p>
+      </article>
+    
+      <article class="artifact-test-card">
+        <img data-artifact-image="custom_moment_map_digital_example" src="assets/img/product-artifacts/custom_moment_map_digital_example.png" alt="Moment Map example / optional supporting image">
+        <h2>custom_moment_map_digital_example.png</h2>
+        <p>Moment Map example / optional supporting image</p>
+        <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_map_digital_example.png</code></p>
+        <p><strong>External direct URL:</strong><br><code>not set yet</code></p>
+      </article>
+    
+      <article class="artifact-test-card">
+        <img data-artifact-image="Custom_Moment_Map_printed" src="assets/img/product-artifacts/Custom_Moment_Map_printed.png" alt="Custom Moment Map — Printed product image">
+        <h2>Custom_Moment_Map_printed.png</h2>
+        <p>Custom Moment Map — Printed product image</p>
+        <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/Custom_Moment_Map_printed.png</code></p>
+        <p><strong>External direct URL:</strong><br><code>not set yet</code></p>
+      </article>
+    
+      <article class="artifact-test-card">
+        <img data-artifact-image="CLARITY_MAP_Print_edition" src="assets/img/product-artifacts/CLARITY_MAP_Print_edition.png" alt="Paused premium/clarity visual fallback, not in active 2x2 shop">
+        <h2>CLARITY_MAP_Print_edition.png</h2>
+        <p>Paused premium/clarity visual fallback, not in active 2x2 shop</p>
+        <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/CLARITY_MAP_Print_edition.png</code></p>
+        <p><strong>External direct URL:</strong><br><code>not set yet</code></p>
+      </article>
+    
+</div>
+</main>
+</body>
+</html>
