@@ -1,24 +1,14 @@
-/*
-  Moment & Matter PayPal Placeholder Wiring — Pass 10
-
-  Static-site rule:
-  - This file does not collect customer information.
-  - It does not load PayPal automatically.
-  - Replace each placeholder with a live PayPal Hosted Button or PayPal JS SDK container when ready.
-
-  Placeholder IDs:
-  - PAYPAL_BUTTON_CUSTOM_MOMENT_CARD_DIGITAL
-  - PAYPAL_BUTTON_CUSTOM_MOMENT_CARD_PRINTED
-  - PAYPAL_BUTTON_CUSTOM_MOMENT_MAP_DIGITAL
-  - PAYPAL_BUTTON_CUSTOM_MOMENT_MAP_PRINTED
-*/
+/* Moment & Matter PayPal Placeholder Wiring — V11
+   Static-site rule: no payment or customer information is collected by this website.
+   Replace each placeholder container with the matching live PayPal button embed when ready. */
 (function(){
   function decorate(){
-    document.querySelectorAll('[data-paypal-placeholder-id]').forEach(zone => {
-      const id = zone.getAttribute('data-paypal-placeholder-id');
-      const container = zone.querySelector('.paypal-button-placeholder');
-      if(!container || !id) return;
-      container.setAttribute('data-live-paypal-button-goes-here', id);
+    document.querySelectorAll('[data-paypal-placeholder-id], [data-paypal-placeholder]').forEach(function(zone){
+      var id = zone.getAttribute('data-paypal-placeholder-id') || zone.getAttribute('data-paypal-placeholder');
+      if(!id) return;
+      zone.setAttribute('data-live-paypal-button-goes-here', id);
+      zone.setAttribute('data-paypal-placeholder-id', id);
+      if(!zone.textContent.trim()){ zone.textContent = 'PayPal button'; }
     });
   }
   if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', decorate);
