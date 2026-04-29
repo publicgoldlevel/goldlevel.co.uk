@@ -19,3 +19,46 @@ a{color:inherit;text-decoration:none} img{max-width:100%;display:block} .contain
 /* Shopify checkout wiring */
 .shopify-checkout-enabled .cart-count{display:none}.cart-pill{white-space:nowrap}.product-foot-shopify{align-items:flex-start}.shopify-buy-slot{display:flex;flex-direction:column;gap:6px;align-items:flex-start;min-width:160px}.shopify-slot-card{align-items:flex-end;text-align:right}.shopify-slot-card .btn{padding:10px 14px;min-height:40px;font-size:13px}.shopify-slot-detail{width:100%;max-width:340px}.shopify-slot-detail .btn,.shopify-slot-detail .shopify-buy__btn,.shopify-slot-detail button{width:100%;min-height:50px}.shopify-secure-note{display:block;color:var(--muted);font-size:11px;line-height:1.25;max-width:220px}.detail-panel .shopify-secure-note{font-size:12px}.shopify-detail-actions{align-items:flex-start}.checkout-note{margin-top:10px}.checkout-directory{margin-top:24px}.checkout-directory .section-head{margin-bottom:18px}.shopify-buy-frame iframe{max-width:100%}.shopify-direct-link{text-align:center}.shopify-config-warning{background:#fff7e5;border:1px solid #e0c98b;border-radius:18px;padding:16px;margin:18px 0;color:#4d3818}
 @media (max-width:620px){.product-foot-shopify{flex-direction:column;align-items:stretch}.shopify-buy-slot,.shopify-slot-card{align-items:stretch;text-align:left;width:100%}.shopify-slot-card .btn{width:100%}}
+
+
+/* All-pass governance uplift: accessibility, proof-boundary notes, and reduced motion */
+button,input,select,textarea{font:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:3px solid rgba(185,141,68,.55);
+  outline-offset:3px;
+}
+.notice-card{
+  background:#fff8ec;
+  border-color:#dcc79c;
+}
+.compact-boundary{
+  padding:24px 0;
+  background:linear-gradient(180deg,#efe3d5,var(--paper));
+}
+.public-boundary-note{
+  margin-top:18px;
+  color:#f3e6d5;
+}
+.fit-boundary-card{
+  background:#fff8ec;
+}
+.visually-hidden{
+  position:absolute!important;
+  width:1px!important;
+  height:1px!important;
+  padding:0!important;
+  margin:-1px!important;
+  overflow:hidden!important;
+  clip:rect(0,0,0,0)!important;
+  white-space:nowrap!important;
+  border:0!important;
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+  }
+  .btn:hover,.product-card:hover .product-media img{transform:none}
+}
