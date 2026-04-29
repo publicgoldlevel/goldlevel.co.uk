@@ -4,137 +4,423 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="/moment-matter/">
-<title>Shop the four offers | Moment &amp; Matter</title>
-<meta name="description" content="Choose one of four custom offers: digital card, printed card, digital Moment Map, or printed Moment Map.">
+<title>Shop custom cards and Moment Maps | Moment &amp; Matter</title>
+<meta name="description" content="Choose from four focused Moment & Matter offers: digital and printed custom cards, and digital and printed custom Moment Maps.">
 <meta name="color-scheme" content="light">
-<meta property="og:title" content="Shop the four offers | Moment &amp; Matter">
-<meta property="og:description" content="Choose one of four custom offers: digital card, printed card, digital Moment Map, or printed Moment Map.">
+<meta property="og:title" content="Shop custom cards and Moment Maps | Moment &amp; Matter">
+<meta property="og:description" content="Choose from four focused custom cards and Moment Maps in digital or printed formats.">
 <meta property="og:type" content="website">
 <link rel="icon" href="assets/img/brand-mark.svg">
 <link rel="stylesheet" href="assets/css/site.css">
+<style>
+:root{
+  --mm-space-1:clamp(.5rem,.45rem + .25vw,.75rem);
+  --mm-space-2:clamp(.75rem,.65rem + .45vw,1rem);
+  --mm-space-3:clamp(1rem,.85rem + .8vw,1.5rem);
+  --mm-space-4:clamp(1.5rem,1.15rem + 1.6vw,2.5rem);
+  --mm-space-5:clamp(2.25rem,1.55rem + 3vw,4rem);
+  --mm-space-6:clamp(3rem,2rem + 4.8vw,6rem);
+  --mm-h1:clamp(2.65rem,1.85rem + 5vw,5.55rem);
+  --mm-h2:clamp(2rem,1.5rem + 2.5vw,3.45rem);
+  --mm-h3:clamp(1.35rem,1.15rem + 1vw,1.85rem);
+  --mm-body:clamp(1rem,.95rem + .28vw,1.125rem);
+  --mm-lede:clamp(1.1rem,1rem + .75vw,1.45rem);
+  --mm-card-radius:clamp(1.1rem,.9rem + 1vw,1.75rem);
+  --mm-image-gap:clamp(.875rem,.65rem + 1vw,1.5rem);
+}
+body{font-size:var(--mm-body);}
+.mm-shop-main{overflow:hidden;}
+.mm-shop-hero{padding:clamp(3rem,7.5vw,6.4rem) 0 clamp(2.4rem,5vw,4.8rem);background:radial-gradient(circle at 18% 18%,rgba(214,185,112,.28),transparent 34%),linear-gradient(180deg,#f7efe5 0%,#efe3d5 100%);}
+.mm-shop-hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(320px,.82fr);gap:clamp(2rem,5vw,5rem);align-items:center;}
+.mm-kicker{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;}
+.mm-kicker span{border:1px solid rgba(185,141,68,.35);background:rgba(255,250,244,.72);border-radius:999px;padding:.38rem .72rem;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;color:#70532b;}
+.mm-shop-hero h1{font-family:Georgia,'Times New Roman',serif;font-size:var(--mm-h1);line-height:.96;letter-spacing:-.055em;margin:.2rem 0 1.15rem;max-width:12ch;}
+.mm-shop-hero .lede{font-size:var(--mm-lede);max-width:63ch;color:#51463d;}
+.mm-action-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.5rem;}
+.mm-assurance-row{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.2rem;color:#6a5e53;font-size:.9rem;}
+.mm-assurance-row span{display:inline-flex;align-items:center;gap:.35rem;}
+.mm-assurance-row span:before{content:"";width:.42rem;height:.42rem;border-radius:999px;background:#b98d44;box-shadow:0 0 0 3px rgba(185,141,68,.14);}
+.mm-shop-visual{border-radius:34px;background:linear-gradient(135deg,rgba(255,250,244,.9),rgba(238,224,205,.78));border:1px solid rgba(217,204,189,.85);box-shadow:var(--shadow);padding:clamp(.75rem,2vw,1.25rem);}
+.mm-shop-visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.65rem,1.6vw,1rem);}
+.mm-shop-visual figure{margin:0;position:relative;border-radius:clamp(1.1rem,2vw,1.6rem);overflow:hidden;min-height:250px;background:#eaded0;box-shadow:0 18px 44px rgba(47,35,23,.13);}
+.mm-shop-visual figure:first-child{transform:translateY(1.25rem);}
+.mm-shop-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+.mm-shop-visual figcaption{position:absolute;left:.7rem;bottom:.7rem;background:rgba(255,250,244,.88);border:1px solid rgba(217,204,189,.75);border-radius:999px;padding:.4rem .65rem;font-weight:900;font-size:.76rem;color:#4f3921;}
+.mm-shop-note{margin-top:1.75rem;border:1px solid rgba(217,204,189,.82);border-radius:22px;background:rgba(255,250,244,.86);padding:1rem 1.05rem;}
+.mm-shop-note strong{display:block;margin-bottom:.25rem;}
+.mm-shop-note p{margin:0;color:#675a50;}
+.mm-section{padding:var(--mm-space-6) 0;}
+.mm-section-soft{background:linear-gradient(180deg,#f8f1e8 0%,#f1e7d9 48%,#f5efe7 100%);}
+.mm-section-head{max-width:780px;margin-bottom:var(--mm-space-4);}
+.mm-section-head h2{font-family:Georgia,'Times New Roman',serif;font-size:var(--mm-h2);line-height:1.03;letter-spacing:-.04em;margin:.35rem 0 .8rem;}
+.mm-section-head p{font-size:1.06rem;color:#5f554c;margin:0;}
+.mm-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--mm-image-gap);}
+.mm-choice-card{background:rgba(255,250,244,.88);border:1px solid var(--line);border-radius:var(--mm-card-radius);padding:clamp(1.2rem,2vw,1.65rem);box-shadow:0 14px 36px rgba(47,35,23,.07);}
+.mm-choice-card h3{font-family:Georgia,'Times New Roman',serif;font-size:var(--mm-h3);line-height:1.08;margin:.8rem 0 .55rem;}
+.mm-choice-card p{margin:0;color:#61564d;}
+.mm-offer-matrix{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1rem,1.8vw,1.45rem);align-items:stretch;}
+.mm-offer-card{background:#fffaf4;border:1px solid rgba(217,204,189,.96);border-radius:clamp(1.2rem,2vw,1.8rem);overflow:hidden;box-shadow:0 18px 45px rgba(47,35,23,.08);display:flex;flex-direction:column;min-height:100%;}
+.mm-offer-card:focus-within{outline:3px solid rgba(185,141,68,.35);outline-offset:3px;}
+.mm-offer-media{display:block;aspect-ratio:4/5;background:#eaded0;overflow:hidden;}
+.mm-offer-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .28s ease;}
+.mm-offer-card:hover .mm-offer-media img{transform:scale(1.035);}
+.mm-offer-body{padding:clamp(1rem,1.8vw,1.25rem);display:flex;flex-direction:column;gap:.75rem;flex:1;}
+.mm-offer-meta{display:flex;align-items:center;justify-content:space-between;gap:.65rem;}
+.mm-price{font-weight:950;font-size:1.05rem;color:#2f241c;white-space:nowrap;}
+.mm-offer-body h3{font-family:Georgia,'Times New Roman',serif;font-size:clamp(1.35rem,1.1rem + .9vw,1.7rem);line-height:1.08;margin:0;letter-spacing:-.02em;}
+.mm-offer-body p{margin:0;color:#61564d;}
+.mm-detail-list{display:grid;gap:.45rem;margin:.2rem 0 0;padding:0;list-style:none;}
+.mm-detail-list li{display:flex;gap:.45rem;color:#594d43;font-size:.93rem;line-height:1.35;}
+.mm-detail-list li:before{content:"•";color:#b98d44;font-weight:950;}
+.mm-delivery{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:auto;}
+.mm-delivery span{border:1px solid rgba(217,204,189,.9);background:#fff7ee;border-radius:999px;padding:.36rem .55rem;font-size:.77rem;font-weight:850;color:#5b4633;}
+.mm-offer-actions{display:grid;gap:.65rem;margin-top:.2rem;}
+.mm-offer-actions .btn{width:100%;min-height:44px;}
+.mm-paypal-placeholder{border:1px dashed rgba(185,141,68,.78);background:linear-gradient(180deg,#fff9ed,#f7ead6);border-radius:999px;min-height:46px;display:flex;align-items:center;justify-content:center;text-align:center;padding:.65rem .85rem;font-weight:950;color:#624419;font-size:.86rem;letter-spacing:.02em;}
+.mm-path{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(1.2rem,3vw,2.4rem);align-items:start;}
+.mm-path-panel{background:#2f261f;color:#fff;border-radius:32px;padding:clamp(1.35rem,3vw,2.35rem);box-shadow:0 24px 62px rgba(47,35,23,.16);}
+.mm-path-panel h2{font-family:Georgia,'Times New Roman',serif;font-size:var(--mm-h2);line-height:1.02;letter-spacing:-.04em;margin:.3rem 0 1rem;}
+.mm-path-panel p{color:#eadcc8;margin:0;}
+.mm-path-steps{display:grid;gap:.9rem;}
+.mm-path-step{display:grid;grid-template-columns:auto 1fr;gap:.85rem;align-items:start;background:rgba(255,250,244,.82);border:1px solid rgba(217,204,189,.92);border-radius:24px;padding:1rem;}
+.mm-path-step span{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:999px;background:#2f261f;color:#fff;font-weight:950;}
+.mm-path-step h3{font-family:Georgia,'Times New Roman',serif;font-size:1.25rem;margin:.1rem 0 .25rem;}
+.mm-path-step p{margin:0;color:#5f554c;}
+.mm-compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--mm-image-gap);}
+.mm-compare-card{background:#fffaf4;border:1px solid var(--line);border-radius:var(--mm-card-radius);padding:clamp(1.15rem,2vw,1.7rem);}
+.mm-compare-card h3{font-family:Georgia,'Times New Roman',serif;font-size:var(--mm-h3);line-height:1.08;margin:.35rem 0 .65rem;}
+.mm-compare-card ul{margin:.8rem 0 0;padding-left:1.2rem;color:#5f554c;}
+.mm-compare-card li{margin:.35rem 0;}
+.mm-final-cta{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:center;background:linear-gradient(135deg,#342a22,#73532f);color:#fff;border-radius:34px;padding:clamp(1.5rem,3vw,2.5rem);}
+.mm-final-cta h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2rem,1.45rem + 2.5vw,3.5rem);line-height:1.02;letter-spacing:-.04em;margin:0 0 .45rem;}
+.mm-final-cta p{color:#eadcc8;margin:0;max-width:64ch;}
+.mm-final-actions{display:flex;gap:.7rem;flex-wrap:wrap;justify-content:flex-end;}
+.mm-final-actions .btn-secondary{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3);color:#fff;}
+@media (max-width:1180px){
+  .mm-offer-matrix{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .mm-shop-hero-grid{grid-template-columns:1fr;}
+  .mm-shop-visual{max-width:720px;}
+}
+@media (max-width:940px){
+  .mm-choice-grid,.mm-compare-grid{grid-template-columns:1fr;}
+  .mm-path{grid-template-columns:1fr;}
+  .mm-final-cta{grid-template-columns:1fr;}
+  .mm-final-actions{justify-content:flex-start;}
+}
+@media (max-width:620px){
+  .mm-shop-hero{padding-top:2.2rem;}
+  .mm-kicker span:nth-child(n+3){display:none;}
+  .mm-action-row .btn,.mm-final-actions .btn{width:100%;}
+  .mm-assurance-row{display:grid;gap:.45rem;}
+  .mm-shop-visual{border-radius:24px;padding:.62rem;}
+  .mm-shop-visual-grid{gap:.55rem;}
+  .mm-shop-visual figure{border-radius:18px;min-height:190px;}
+  .mm-shop-visual figure:first-child{transform:translateY(1rem);}
+  .mm-shop-visual figcaption{font-size:.68rem;padding:.35rem .5rem;}
+  .mm-shop-note{border-radius:18px;margin-top:1.2rem;}
+  .mm-offer-matrix{grid-template-columns:1fr;}
+  .mm-offer-card{border-radius:22px;}
+  .mm-offer-media{aspect-ratio:16/11;}
+  .mm-section-head h2{letter-spacing:-.035em;}
+  .mm-path-panel,.mm-path-step,.mm-compare-card,.mm-final-cta{border-radius:24px;}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important;}
+}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <header class="topbar">
-<div class="container topbar-inner">
-<a class="brand" href="index.html" aria-label="Moment &amp; Matter home">
-<img src="assets/img/brand-mark.svg" alt="">
-<span><span class="brand-name">Moment &amp; Matter</span><span class="brand-tag">Custom cards and Moment Maps.</span></span>
-</a>
-<nav class="desktop-nav" aria-label="Primary">
-<a href="index.html">Home</a>
-<a href="shop.html" aria-current="page">Shop</a>
-<a href="gift-guide.html">Gift guide</a>
-<a href="shipping.html">Delivery</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
-<a href="../">Main selector</a>
-</nav>
-<div class="header-actions">
-<a class="cart-pill" href="shop.html">4 offers</a>
-<button class="menu-btn" id="menuBtn" aria-controls="mobilePanel" type="button" aria-expanded="false">Menu</button>
-</div>
-</div>
-<nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
-<a href="index.html">Home</a>
-<a href="shop.html" aria-current="page">Shop</a>
-<a href="gift-guide.html">Gift guide</a>
-<a href="shipping.html">Delivery</a>
-<a href="faq.html">FAQ</a>
-<a href="contact.html">Contact</a>
-<a href="../">Main selector</a>
-</nav>
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html" aria-label="Moment &amp; Matter home">
+      <img src="assets/img/brand-mark.svg" alt="">
+      <span><span class="brand-name">Moment &amp; Matter</span><span class="brand-tag">Custom cards and Moment Maps.</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="shop.html" aria-current="page">Shop</a>
+      <a href="gift-guide.html">Gift guide</a>
+      <a href="shipping.html">Delivery</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="../">Main selector</a>
+    </nav>
+    <div class="header-actions">
+      <a class="cart-pill" href="shop.html">4 offers</a>
+      <button class="menu-btn" id="menuBtn" aria-controls="mobilePanel" type="button" aria-expanded="false">Menu</button>
+    </div>
+  </div>
+  <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation">
+    <a href="index.html">Home</a>
+    <a href="shop.html" aria-current="page">Shop</a>
+    <a href="gift-guide.html">Gift guide</a>
+    <a href="shipping.html">Delivery</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+    <a href="../">Main selector</a>
+  </nav>
 </header>
 
-<main id="main">
-<section class="hero-flat hero compact-hero">
-<div class="container">
-  <div class="eyebrow">Shop</div>
-  <h1>Choose one of four offers.</h1>
-  <p class="lede">No extended catalogue. Start with the piece you need.</p>
-</div>
-</section>
-<section>
-<div class="container">
-  <div class="product-grid foundation-products">
-    <article class="product-card core-offer-card">
-<a class="product-link" href="product.html?id=custom-moment-card-digital">
-<div class="product-image"><img data-artifact-image="custom_moment_card_digital" src="https://beeimg.com/images/f76518928634.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 760px) 92vw, (max-width: 1180px) 44vw, 520px" alt="Custom Moment Card — Digital" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_card_digital.png';"></div>
-<div class="product-body">
-<div class="badge">Digital</div>
-<h3>Custom Moment Card — Digital</h3>
-<p>A personalised card design for a specific person, message, or moment.</p>
-<div class="product-meta"><span>£35</span><span>Digital file</span></div>
-</div>
-</a>
-<div class="product-actions">
-<a class="btn btn-gold btn-small" href="product.html?id=custom-moment-card-digital">View offer</a>
-</div>
-</article>
-<article class="product-card core-offer-card">
-<a class="product-link" href="product.html?id=custom-moment-card-physical">
-<div class="product-image"><img data-artifact-image="custom_moment_card_physical" src="https://beeimg.com/images/l31712163883.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 760px) 92vw, (max-width: 1180px) 44vw, 520px" alt="Custom Moment Card — Printed" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_card_physical.png';"></div>
-<div class="product-body">
-<div class="badge">Printed</div>
-<h3>Custom Moment Card — Printed</h3>
-<p>A custom card produced as a physical piece and delivered with the digital file.</p>
-<div class="product-meta"><span>£52</span><span>Printed card + digital file</span></div>
-</div>
-</a>
-<div class="product-actions">
-<a class="btn btn-gold btn-small" href="product.html?id=custom-moment-card-physical">View offer</a>
-</div>
-</article>
-<article class="product-card core-offer-card">
-<a class="product-link" href="product.html?id=custom-moment-map-digital">
-<div class="product-image"><img data-artifact-image="custom_moment_map_digital" src="https://beeimg.com/images/r54846688841.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 760px) 92vw, (max-width: 1180px) 44vw, 520px" alt="Custom Moment Map — Digital" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_map_digital.png';"></div>
-<div class="product-body">
-<div class="badge">Digital</div>
-<h3>Custom Moment Map — Digital</h3>
-<p>A visual-and-word piece for a life moment, relationship, decision, or transition.</p>
-<div class="product-meta"><span>£95</span><span>Digital artwork + written note</span></div>
-</div>
-</a>
-<div class="product-actions">
-<a class="btn btn-gold btn-small" href="product.html?id=custom-moment-map-digital">View offer</a>
-</div>
-</article>
-<article class="product-card core-offer-card">
-<a class="product-link" href="product.html?id=custom-moment-map-physical">
-<div class="product-image"><img data-artifact-image="Custom_Moment_Map_printed" src="https://beeimg.com/images/u45115817232.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 760px) 92vw, (max-width: 1180px) 44vw, 520px" alt="Custom Moment Map — Printed" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/Custom_Moment_Map_printed.png';"></div>
-<div class="product-body">
-<div class="badge">Printed</div>
-<h3>Custom Moment Map — Printed</h3>
-<p>A custom visual piece delivered digitally and as a physical print.</p>
-<div class="product-meta"><span>£135</span><span>A4 print + digital files</span></div>
-</div>
-</a>
-<div class="product-actions">
-<a class="btn btn-gold btn-small" href="product.html?id=custom-moment-map-physical">View offer</a>
-</div>
-</article>
-  </div>
-</div>
-</section>
+<main id="main" class="mm-shop-main">
+  <section class="mm-shop-hero" aria-labelledby="shop-title">
+    <div class="container mm-shop-hero-grid">
+      <div>
+        <div class="mm-kicker" aria-label="Shop summary">
+          <span>Four offers</span>
+          <span>Digital or printed</span>
+          <span>Card or map</span>
+          <span>PayPal checkout</span>
+        </div>
+        <h1 id="shop-title">Choose the piece and format.</h1>
+        <p class="lede">A focused shop for custom Moment Cards and custom Moment Maps. Choose the job, choose digital or printed, then order through the matching PayPal button.</p>
+        <div class="mm-action-row">
+          <a class="btn btn-gold" href="#offers">View the four offers</a>
+          <a class="btn btn-secondary" href="gift-guide.html">Help me choose</a>
+        </div>
+        <div class="mm-assurance-row" aria-label="Ordering notes">
+          <span>No form submission on this page</span>
+          <span>No payment details collected here</span>
+          <span>Digital and printed options</span>
+        </div>
+      </div>
+
+      <aside class="mm-shop-visual" aria-label="Shop visual examples">
+        <div class="mm-shop-visual-grid">
+          <figure>
+            <img data-artifact-image="custom_moment_card_digital" src="https://beeimg.com/images/f76518928634.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=360&amp;output=webp&amp;q=78&amp;n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=540&amp;output=webp&amp;q=78&amp;n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=720&amp;output=webp&amp;q=78&amp;n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=960&amp;output=webp&amp;q=78&amp;n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=1280&amp;output=webp&amp;q=78&amp;n=-1 1280w" sizes="(max-width: 620px) 44vw, (max-width: 1020px) 40vw, 260px" alt="Custom digital Moment Card example" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_card_digital.png';">
+            <figcaption>Card</figcaption>
+          </figure>
+          <figure>
+            <img data-artifact-image="custom_moment_map_digital" src="https://beeimg.com/images/r54846688841.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=360&amp;output=webp&amp;q=78&amp;n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=540&amp;output=webp&amp;q=78&amp;n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=720&amp;output=webp&amp;q=78&amp;n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=960&amp;output=webp&amp;q=78&amp;n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=1280&amp;output=webp&amp;q=78&amp;n=-1 1280w" sizes="(max-width: 620px) 44vw, (max-width: 1020px) 40vw, 320px" alt="Custom digital Moment Map example" loading="eager" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_map_digital.png';">
+            <figcaption>Map</figcaption>
+          </figure>
+        </div>
+        <div class="mm-shop-note">
+          <strong>Card or map. Digital or printed.</strong>
+          <p>The shop stays intentionally narrow so the buying decision is clear.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="mm-section" aria-labelledby="shop-choice-title">
+    <div class="container">
+      <div class="mm-section-head">
+        <div class="section-mark">Choose by purpose</div>
+        <h2 id="shop-choice-title">Start with what the piece needs to do.</h2>
+        <p>Cards are for messages. Maps are for meaningful situations. Digital is the fastest format. Printed is the keepsake format.</p>
+      </div>
+      <div class="mm-choice-grid">
+        <article class="mm-choice-card">
+          <span class="icon-chip">Message</span>
+          <h3>Use a card when words are hard.</h3>
+          <p>For grief, thanks, apology, encouragement, care, or a message that needs to land gently.</p>
+        </article>
+        <article class="mm-choice-card">
+          <span class="icon-chip">Moment</span>
+          <h3>Use a map when the situation needs shape.</h3>
+          <p>For life changes, shared chapters, relationship moments, transitions, or a visual keepsake.</p>
+        </article>
+        <article class="mm-choice-card">
+          <span class="icon-chip">Format</span>
+          <h3>Choose digital for speed or printed for presence.</h3>
+          <p>Digital files are easiest to send and keep. Printed pieces are made for gifting, framing, desks, and physical memory.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mm-section mm-section-soft" id="offers" aria-labelledby="offers-title">
+    <div class="container">
+      <div class="mm-section-head">
+        <div class="section-mark">The four offers</div>
+        <h2 id="offers-title">One shop grid. Four ways to order.</h2>
+        <p>Choose the format that fits the message, gift, transition, or keepsake.</p>
+      </div>
+
+      <div class="mm-offer-matrix">
+        <article class="mm-offer-card">
+          <a class="mm-offer-media" href="product.html?id=custom-moment-card-digital" aria-label="View Custom Moment Card Digital">
+            <img data-artifact-image="custom_moment_card_digital" src="https://beeimg.com/images/f76518928634.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=360&amp;output=webp&amp;q=78&amp;n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=540&amp;output=webp&amp;q=78&amp;n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=720&amp;output=webp&amp;q=78&amp;n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=960&amp;output=webp&amp;q=78&amp;n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&amp;w=1280&amp;output=webp&amp;q=78&amp;n=-1 1280w" sizes="(max-width: 620px) 92vw, (max-width: 1020px) 44vw, 280px" alt="Custom Moment Card Digital preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_card_digital.png';">
+          </a>
+          <div class="mm-offer-body">
+            <div class="mm-offer-meta"><span class="badge">Digital card</span><span class="mm-price">£35</span></div>
+            <h3>Custom Moment Card — Digital</h3>
+            <p>A personalised card design for a specific person, message, or meaningful moment.</p>
+            <ul class="mm-detail-list">
+              <li>Best for fast gifts and messages.</li>
+              <li>Digital file for personal use.</li>
+            </ul>
+            <div class="mm-delivery"><span>Digital file</span><span>No postage</span><span>Fastest format</span></div>
+            <div class="mm-offer-actions">
+              <a class="btn btn-secondary" href="product.html?id=custom-moment-card-digital">View details</a>
+              <div class="mm-paypal-placeholder" id="paypal-button-custom-moment-card-digital" data-paypal-placeholder="PAYPAL_BUTTON_CUSTOM_MOMENT_CARD_DIGITAL" aria-label="PayPal checkout button"><!-- PAYPAL_BUTTON_CUSTOM_MOMENT_CARD_DIGITAL --></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mm-offer-card">
+          <a class="mm-offer-media" href="product.html?id=custom-moment-card-physical" aria-label="View Custom Moment Card Printed">
+            <img data-artifact-image="custom_moment_card_physical" src="https://beeimg.com/images/l31712163883.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&amp;w=360&amp;output=webp&amp;q=78&amp;n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&amp;w=540&amp;output=webp&amp;q=78&amp;n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&amp;w=720&amp;output=webp&amp;q=78&amp;n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&amp;w=960&amp;output=webp&amp;q=78&amp;n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&amp;w=1280&amp;output=webp&amp;q=78&amp;n=-1 1280w" sizes="(max-width: 620px) 92vw, (max-width: 1020px) 44vw, 280px" alt="Custom Moment Card Printed preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_card_physical.png';">
+          </a>
+          <div class="mm-offer-body">
+            <div class="mm-offer-meta"><span class="badge">Printed card</span><span class="mm-price">£52</span></div>
+            <h3>Custom Moment Card — Printed</h3>
+            <p>A custom card produced as a physical piece and delivered with the digital file.</p>
+            <ul class="mm-detail-list">
+              <li>Best for keepsake messages.</li>
+              <li>Printed card plus digital file.</li>
+            </ul>
+            <div class="mm-delivery"><span>Printed</span><span>Digital included</span><span>Giftable</span></div>
+            <div class="mm-offer-actions">
+              <a class="btn btn-secondary" href="product.html?id=custom-moment-card-physical">View details</a>
+              <div class="mm-paypal-placeholder" id="paypal-button-custom-moment-card-printed" data-paypal-placeholder="PAYPAL_BUTTON_CUSTOM_MOMENT_CARD_PRINTED" aria-label="PayPal checkout button"><!-- PAYPAL_BUTTON_CUSTOM_MOMENT_CARD_PRINTED --></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mm-offer-card">
+          <a class="mm-offer-media" href="product.html?id=custom-moment-map-digital" aria-label="View Custom Moment Map Digital">
+            <img data-artifact-image="custom_moment_map_digital" src="https://beeimg.com/images/r54846688841.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=360&amp;output=webp&amp;q=78&amp;n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=540&amp;output=webp&amp;q=78&amp;n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=720&amp;output=webp&amp;q=78&amp;n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=960&amp;output=webp&amp;q=78&amp;n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&amp;w=1280&amp;output=webp&amp;q=78&amp;n=-1 1280w" sizes="(max-width: 620px) 92vw, (max-width: 1020px) 44vw, 280px" alt="Custom Moment Map Digital preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/custom_moment_map_digital.png';">
+          </a>
+          <div class="mm-offer-body">
+            <div class="mm-offer-meta"><span class="badge">Digital map</span><span class="mm-price">£95</span></div>
+            <h3>Custom Moment Map — Digital</h3>
+            <p>A visual-and-word piece for a life moment, relationship, decision, or transition.</p>
+            <ul class="mm-detail-list">
+              <li>Best for meaning, memory, and pattern.</li>
+              <li>Digital artwork plus written note.</li>
+            </ul>
+            <div class="mm-delivery"><span>Digital artwork</span><span>Written note</span><span>No postage</span></div>
+            <div class="mm-offer-actions">
+              <a class="btn btn-secondary" href="product.html?id=custom-moment-map-digital">View details</a>
+              <div class="mm-paypal-placeholder" id="paypal-button-custom-moment-map-digital" data-paypal-placeholder="PAYPAL_BUTTON_CUSTOM_MOMENT_MAP_DIGITAL" aria-label="PayPal checkout button"><!-- PAYPAL_BUTTON_CUSTOM_MOMENT_MAP_DIGITAL --></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="mm-offer-card">
+          <a class="mm-offer-media" href="product.html?id=custom-moment-map-physical" aria-label="View Custom Moment Map Printed">
+            <img data-artifact-image="Custom_Moment_Map_printed" src="https://beeimg.com/images/u45115817232.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&amp;w=360&amp;output=webp&amp;q=78&amp;n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&amp;w=540&amp;output=webp&amp;q=78&amp;n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&amp;w=720&amp;output=webp&amp;q=78&amp;n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&amp;w=960&amp;output=webp&amp;q=78&amp;n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&amp;w=1280&amp;output=webp&amp;q=78&amp;n=-1 1280w" sizes="(max-width: 620px) 92vw, (max-width: 1020px) 44vw, 280px" alt="Custom Moment Map Printed preview" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.removeAttribute('srcset');this.src='assets/img/product-artifacts/Custom_Moment_Map_printed.png';">
+          </a>
+          <div class="mm-offer-body">
+            <div class="mm-offer-meta"><span class="badge">Printed map</span><span class="mm-price">£135</span></div>
+            <h3>Custom Moment Map — Printed</h3>
+            <p>A custom visual piece delivered digitally and as a physical print.</p>
+            <ul class="mm-detail-list">
+              <li>Best for framed keepsakes and physical gifts.</li>
+              <li>A4 print plus digital files.</li>
+            </ul>
+            <div class="mm-delivery"><span>A4 print</span><span>Digital included</span><span>Frameable</span></div>
+            <div class="mm-offer-actions">
+              <a class="btn btn-secondary" href="product.html?id=custom-moment-map-physical">View details</a>
+              <div class="mm-paypal-placeholder" id="paypal-button-custom-moment-map-printed" data-paypal-placeholder="PAYPAL_BUTTON_CUSTOM_MOMENT_MAP_PRINTED" aria-label="PayPal checkout button"><!-- PAYPAL_BUTTON_CUSTOM_MOMENT_MAP_PRINTED --></div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mm-section" aria-labelledby="path-title">
+    <div class="container mm-path">
+      <div class="mm-path-panel">
+        <div class="section-mark">Buying path</div>
+        <h2 id="path-title">A simple path from choice to brief.</h2>
+        <p>The shop is built for one clear decision at a time: choose the type, choose the format, order, then send the brief material needed to create the piece.</p>
+      </div>
+      <div class="mm-path-steps" aria-label="Ordering steps">
+        <article class="mm-path-step"><span>1</span><div><h3>Choose the job</h3><p>Message, gift, keepsake, transition, relationship moment, or decision support.</p></div></article>
+        <article class="mm-path-step"><span>2</span><div><h3>Choose the format</h3><p>Digital for speed and simple delivery. Printed for presence and gifting.</p></div></article>
+        <article class="mm-path-step"><span>3</span><div><h3>Order through PayPal</h3><p>Payment is handled by PayPal. This static page does not collect payment details.</p></div></article>
+        <article class="mm-path-step"><span>4</span><div><h3>Send the brief</h3><p>Share the message, person, tone, moment, and anything that should be avoided.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mm-section mm-section-soft" aria-labelledby="compare-title">
+    <div class="container">
+      <div class="mm-section-head">
+        <div class="section-mark">Compare quickly</div>
+        <h2 id="compare-title">The difference is scope and format.</h2>
+      </div>
+      <div class="mm-compare-grid">
+        <article class="mm-compare-card">
+          <span class="icon-chip">Cards</span>
+          <h3>Custom Moment Cards</h3>
+          <p>Best when the main need is a message that feels personal, careful, and visually held.</p>
+          <ul>
+            <li>Smaller scope</li>
+            <li>Message-first</li>
+            <li>Digital or printed</li>
+          </ul>
+        </article>
+        <article class="mm-compare-card">
+          <span class="icon-chip">Maps</span>
+          <h3>Custom Moment Maps</h3>
+          <p>Best when the moment, transition, relationship, or decision needs more shape than a card can carry.</p>
+          <ul>
+            <li>Deeper scope</li>
+            <li>Visual-and-word structure</li>
+            <li>Digital or printed</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="mm-section" aria-labelledby="final-title">
+    <div class="container">
+      <div class="mm-final-cta">
+        <div>
+          <h2 id="final-title">Still unsure which format fits?</h2>
+          <p>Use the gift guide for a faster decision, or ask before ordering if the moment is sensitive, layered, or difficult to frame.</p>
+        </div>
+        <div class="mm-final-actions">
+          <a class="btn btn-light" href="gift-guide.html">Use the gift guide</a>
+          <a class="btn btn-secondary" href="contact.html">Ask before ordering</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
 <footer class="footer">
-<div class="container footer-grid">
-<div>
-<h3>Moment &amp; Matter</h3>
-<p>Custom cards and Moment Maps for meaningful messages, gifts, life changes, and decisions.</p>
-</div>
-<div><h3>Start</h3><div class="footer-links"><a href="shop.html">View the four offers</a><a href="gift-guide.html">Gift guide</a><a href="contact.html">Ask before ordering</a></div></div>
-<div><h3>Offers</h3><div class="footer-links"><a href="product.html?id=custom-moment-card-digital">Digital card</a><a href="product.html?id=custom-moment-card-physical">Printed card</a><a href="product.html?id=custom-moment-map-digital">Digital map</a><a href="product.html?id=custom-moment-map-physical">Printed map</a></div></div>
-<div><h3>Help</h3><div class="footer-links"><a href="shipping.html">Delivery</a><a href="faq.html">FAQ</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div>
-</div>
-<div class="container copyright">&copy; 2026 Moment &amp; Matter. Four focused custom offers.</div>
+  <div class="container footer-grid">
+    <div>
+      <h3>Moment &amp; Matter</h3>
+      <p>Custom cards and Moment Maps for meaningful messages, gifts, life changes, and decisions.</p>
+    </div>
+    <div><h3>Start</h3><div class="footer-links"><a href="shop.html">View the four offers</a><a href="gift-guide.html">Gift guide</a><a href="contact.html">Ask before ordering</a></div></div>
+    <div><h3>Offers</h3><div class="footer-links"><a href="product.html?id=custom-moment-card-digital">Digital card</a><a href="product.html?id=custom-moment-card-physical">Printed card</a><a href="product.html?id=custom-moment-map-digital">Digital map</a><a href="product.html?id=custom-moment-map-physical">Printed map</a></div></div>
+    <div><h3>Help</h3><div class="footer-links"><a href="shipping.html">Delivery</a><a href="faq.html">FAQ</a><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div>
+  </div>
+  <div class="container copyright">&copy; 2026 Moment &amp; Matter. Four focused custom offers.</div>
 </footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/data/artifact-image-manifest.js"></script>
 <script src="assets/js/artifact-image-loader.js"></script>
-<script src="assets/data/products.js"></script>
 <script src="assets/js/site.js"></script>
 <script src="assets/js/paypal-placeholders.js"></script>
 <script src="assets/js/page-enhancements.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn');
+  var panel=document.getElementById('mobilePanel');
+  if(!btn||!panel)return;
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&panel.classList.contains('open')){
+      panel.classList.remove('open');
+      btn.setAttribute('aria-expanded','false');
+      btn.focus();
+    }
+  });
+})();
+</script>
 </body>
 </html>
