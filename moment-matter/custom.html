@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/moment-matter/">
 <title>Create a custom piece | Moment &amp; Matter</title>
 <meta name="description" content="Create a custom Moment Card or Moment Map. Use the brief builder to share the moment and receive a personalised piece.">
 <meta name="color-scheme" content="light">
@@ -26,9 +27,10 @@
 <a href="archive.html">Artwork</a>
 <a href="shipping.html">Shipping</a>
 <a href="contact.html">Contact</a>
+<a href="../">Main selector</a>
 </nav>
 <div class="header-actions">
-<a class="cart-pill" href="cart.html">Basket <span class="cart-count">0</span></a>
+<a class="cart-pill" href="checkout.html">Checkout</a>
 <button class="menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
 </div>
 </div>
@@ -41,6 +43,7 @@
 <a href="archive.html">Artwork</a>
 <a href="shipping.html">Shipping</a>
 <a href="contact.html">Contact</a>
+<a href="../">Main selector</a>
 </nav>
 </header>
 
@@ -54,7 +57,7 @@
   <h1>Made for the moment you're in.</h1>
   <p class="lede">A custom card, print, or Moment Map created from your specific situation. You share what's happening. We translate it into a clear, beautiful piece you can send, keep, frame, or gift.</p>
   <div class="hero-actions">
-    <a class="btn btn-gold" href="#brief">Use the brief builder</a>
+    <a class="btn btn-gold" href="custom.html#brief">Use the brief builder</a>
     <a class="btn btn-secondary" href="shop.html?category=custom">View custom formats</a>
   </div>
 </div>
@@ -137,7 +140,7 @@
 <div class="brief-section">
   <div class="eyebrow">Brief builder</div>
   <h2>Tell us about the moment.</h2>
-  <p class="lede">Answer a few short questions. The brief builder will reflect back what you've shared and suggest a direction for the piece.</p>
+  <p class="lede">Answer a few short questions. The brief builder reflects back what you've shared and suggests a direction for the piece.</p>
 
   <form id="briefForm" style="margin-top:36px">
     <div class="form-grid">
@@ -186,7 +189,7 @@
       </div>
     </div>
     <button class="btn btn-gold" type="submit" style="margin-top:8px">Create my brief</button>
-    <p class="small" style="color:rgba(255,255,255,.5);margin-top:14px">Your brief is processed by AI and will reflect back the moment before we begin. No payment is taken here.</p>
+    <p class="small" style="color:rgba(255,255,255,.5);margin-top:14px">This tool prepares a clean request brief in your browser. No payment is taken here.</p>
   </form>
 
   <!-- Loading state -->
@@ -200,10 +203,11 @@
     <h3>Your brief reflection</h3>
     <div id="briefResponseText" class="ai-response-text"></div>
     <div class="hero-actions" style="margin-top:24px">
-      <a class="btn btn-gold" href="checkout.html">Prepare order request</a>
+      <a class="btn btn-gold" id="briefProductLink" href="shop.html?category=custom">Continue to the right product</a>
+      <button class="btn btn-light" type="button" id="copyBriefText">Copy brief</button>
       <a class="btn btn-light" href="contact.html">Email us instead</a>
     </div>
-    <p class="small" style="color:rgba(255,255,255,.4);margin-top:14px">This brief will be used as the starting point for your custom piece. We'll confirm within one working day.</p>
+    <p class="small" style="color:rgba(255,255,255,.4);margin-top:14px">Use this as your starting brief. Continue to the matching product when you are ready to order, or copy it and email it to us.</p>
   </div>
 </div>
 </div>
@@ -245,6 +249,9 @@
 </footer>
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/data/products.js"></script>
+<script src="assets/js/shopify-config.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="assets/js/shopify-buy-buttons.js"></script>
+<script src="assets/js/page-enhancements.js"></script>
 </body>
 </html>
