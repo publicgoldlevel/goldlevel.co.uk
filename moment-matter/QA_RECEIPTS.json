@@ -1,0 +1,27 @@
+{
+  "manifest_file_count": 20,
+  "html_file_count": 18,
+  "css_file_count": 1,
+  "js_file_count": 1,
+  "internal_html_broken_links": [],
+  "asset_path_mirroring": [
+    "site.css copied to assets/css/site.css",
+    "site.js copied to assets/js/site.js"
+  ],
+  "not_verified": [
+    "Image files under assets/img/* were not uploaded, so image existence could not be locally verified.",
+    "assets/data/products.js, assets/js/shopify-config.js, and assets/js/shopify-buy-buttons.js were not uploaded, so product-data and Shopify live behavior could not be locally verified.",
+    "No browser render screenshot was available in this run."
+  ],
+  "checks_performed": [
+    "All 20 uploaded files were loaded from /mnt/data and included in the revised package.",
+    "All 18 HTML files parsed with BeautifulSoup after edits.",
+    "Internal .html href targets were checked against the uploaded HTML manifest.",
+    "Menu button accessibility attributes were added.",
+    "Custom form labels were associated with controls.",
+    "Claim-safety reductions were applied to Shopify and worldwide-shipping language.",
+    "No-script fallbacks were added for dynamic product/archive/order areas.",
+    "CSS focus-visible and reduced-motion support were added.",
+    "site.js menu aria-expanded behavior and Escape close behavior were added."
+  ]
+}
