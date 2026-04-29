@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/moment-matter/">
+<title>Responsive Direct Image Test | Moment &amp; Matter</title>
+<link rel="stylesheet" href="assets/css/site.css">
+<style>
+.artifact-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:30px 0}
+.artifact-test-card{border:1px solid var(--line);background:#fffaf4;border-radius:18px;padding:16px;box-shadow:var(--shadow)}
+.artifact-test-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#e9dfcf}
+.artifact-test-card h2{font-size:18px;margin:14px 0 6px;word-break:break-word}
+.artifact-test-card code{font-size:12px;word-break:break-all}
+.notice{border:1px solid var(--line);background:#fffaf4;border-radius:18px;padding:18px;margin:20px 0}
+.image-load-failed{outline:3px solid #b94a48}
+</style>
+<script src="assets/data/artifact-image-manifest.js"></script>
+<script src="assets/js/artifact-image-loader.js"></script>
+</head>
+<body>
+<main class="container section">
+<p><a href="index.html">← Back to Moment &amp; Matter</a></p>
+<h1>Responsive direct image test</h1>
+<div class="notice">
+<p>This page tests BeeIMG direct image links with responsive <code>srcset</code>, dynamic <code>sizes</code>, lazy loading, async decoding, and local fallback.</p>
+<p>The browser should choose a smaller transformed image on mobile and a larger one on desktop where the proxy is available. If the proxy fails, the direct BeeIMG image and then the local fallback remain available.</p>
+</div>
+<div class="artifact-test-grid">
+
+    <article class="artifact-test-card">
+      <img data-artifact-image="custom_moment_card_digital" src="https://beeimg.com/images/f76518928634.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 360px" alt="Custom Moment Card — Digital product and hero image" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <h2>custom_moment_card_digital.png</h2>
+      <p>Custom Moment Card — Digital product and hero image</p>
+      <p><strong>Direct:</strong><br><code>https://beeimg.com/images/f76518928634.jpg</code></p>
+      <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_card_digital.png</code></p>
+    </article>
+    
+    <article class="artifact-test-card">
+      <img data-artifact-image="custom_moment_map_digital_example" src="https://beeimg.com/images/g61282561611.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fg61282561611.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fg61282561611.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fg61282561611.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fg61282561611.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fg61282561611.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 360px" alt="Moment Map example / optional supporting image" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <h2>custom_moment_map_digital_example.png</h2>
+      <p>Moment Map example / optional supporting image</p>
+      <p><strong>Direct:</strong><br><code>https://beeimg.com/images/g61282561611.jpg</code></p>
+      <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_map_digital_example.png</code></p>
+    </article>
+    
+    <article class="artifact-test-card">
+      <img data-artifact-image="custom_moment_card_physical" src="https://beeimg.com/images/l31712163883.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 360px" alt="Custom Moment Card — Printed product image" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <h2>custom_moment_card_physical.png</h2>
+      <p>Custom Moment Card — Printed product image</p>
+      <p><strong>Direct:</strong><br><code>https://beeimg.com/images/l31712163883.jpg</code></p>
+      <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_card_physical.png</code></p>
+    </article>
+    
+    <article class="artifact-test-card">
+      <img data-artifact-image="CLARITY_MAP_Print_edition" src="https://beeimg.com/images/m43309933361.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fm43309933361.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fm43309933361.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fm43309933361.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fm43309933361.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fm43309933361.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 360px" alt="Paused premium/clarity visual fallback, not in active 2x2 shop" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <h2>CLARITY_MAP_Print_edition.png</h2>
+      <p>Paused premium/clarity visual fallback, not in active 2x2 shop</p>
+      <p><strong>Direct:</strong><br><code>https://beeimg.com/images/m43309933361.jpg</code></p>
+      <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/CLARITY_MAP_Print_edition.png</code></p>
+    </article>
+    
+    <article class="artifact-test-card">
+      <img data-artifact-image="custom_moment_map_digital" src="https://beeimg.com/images/r54846688841.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 360px" alt="Custom Moment Map — Digital product image" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <h2>custom_moment_map_digital.png</h2>
+      <p>Custom Moment Map — Digital product image</p>
+      <p><strong>Direct:</strong><br><code>https://beeimg.com/images/r54846688841.jpg</code></p>
+      <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/custom_moment_map_digital.png</code></p>
+    </article>
+    
+    <article class="artifact-test-card">
+      <img data-artifact-image="Custom_Moment_Map_printed" src="https://beeimg.com/images/u45115817232.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, (max-width: 900px) 46vw, 360px" alt="Custom Moment Map — Printed product image" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <h2>Custom_Moment_Map_printed.png</h2>
+      <p>Custom Moment Map — Printed product image</p>
+      <p><strong>Direct:</strong><br><code>https://beeimg.com/images/u45115817232.jpg</code></p>
+      <p><strong>Local fallback:</strong><br><code>assets/img/product-artifacts/Custom_Moment_Map_printed.png</code></p>
+    </article>
+    
+</div>
+</main>
+</body>
+</html>
