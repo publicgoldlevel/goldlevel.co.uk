@@ -1,30 +1,47 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<base href="/moment-matter/"/>
-<title>Moment &amp; Matter image path test</title>
-<link href="assets/css/site.css" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/moment-matter/">
+  <title>Moment & Matter remote image path test</title>
+  <link rel="icon" href="assets/img/brand-mark.svg">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <style>
     .path-test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:28px 0}
     .path-test-card{border:1px solid rgba(21,19,15,.12);border-radius:18px;padding:14px;background:#fff}
     .path-test-card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;background:#eee}
     code{word-break:break-all}
   </style>
-<meta content="Internal image path test page for Moment &amp; Matter asset paths." name="description"/></head>
+</head>
 <body>
-<main class="container section">
-<p><a href="index.html">← Back to Moment &amp; Matter</a></p>
-<h1>Image path test</h1>
-<p>This page confirms whether the main product-artifact paths resolve from <code>/moment-matter/</code>.</p>
-<div class="path-test-grid">
-<div class="path-test-card"><img alt="Custom Moment Card Digital preview path test" src="assets/img/product-artifacts/custom_moment_card_digital.png"/><p><code>assets/img/product-artifacts/custom_moment_card_digital.png</code></p></div>
-<div class="path-test-card"><img alt="Custom Moment Map Digital preview path test" src="assets/img/product-artifacts/custom_moment_map_digital.png"/><p><code>assets/img/product-artifacts/custom_moment_map_digital.png</code></p></div>
-<div class="path-test-card"><img alt="Clarity Map Print Edition preview path test" src="assets/img/product-artifacts/CLARITY_MAP_Print_edition.png"/><p><code>assets/img/product-artifacts/CLARITY_MAP_Print_edition.png</code></p></div>
-<div class="path-test-card"><img alt="Artwork archive image path test" src="assets/img/artwork/art-01.jpg"/><p><code>assets/img/artwork/art-01.jpg</code></p></div>
+  <main class="container section">
+    <p><a href="index.html">← Back to Moment & Matter</a></p>
+    <h1>Remote image path test</h1>
+    <p>This page confirms the V8 remote image links and responsive srcsets that should remain working in the V9/Pass10 pack.</p>
+    <div class="path-test-grid">
+      <div class="path-test-card">
+  <img src="https://beeimg.com/images/f76518928634.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Ff76518928634.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, 360px" alt="Custom Moment Card — Digital" referrerpolicy="no-referrer">
+  <h2>Moment Card — Digital</h2>
+  <p><code>custom_moment_card_digital</code></p>
+  <p class="small muted">Remote source preserved from V8: <code>https://beeimg.com/images/f76518928634.jpg</code></p>
+</div><div class="path-test-card">
+  <img src="https://beeimg.com/images/l31712163883.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fl31712163883.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, 360px" alt="Custom Moment Card — Printed" referrerpolicy="no-referrer">
+  <h2>Moment Card — Printed</h2>
+  <p><code>custom_moment_card_physical</code></p>
+  <p class="small muted">Remote source preserved from V8: <code>https://beeimg.com/images/l31712163883.jpg</code></p>
+</div><div class="path-test-card">
+  <img src="https://beeimg.com/images/r54846688841.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fr54846688841.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, 360px" alt="Custom Moment Map — Digital" referrerpolicy="no-referrer">
+  <h2>Moment Map — Digital</h2>
+  <p><code>custom_moment_map_digital</code></p>
+  <p class="small muted">Remote source preserved from V8: <code>https://beeimg.com/images/r54846688841.jpg</code></p>
+</div><div class="path-test-card">
+  <img src="https://beeimg.com/images/u45115817232.jpg" srcset="https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=360&output=webp&q=78&n=-1 360w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=540&output=webp&q=78&n=-1 540w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=720&output=webp&q=78&n=-1 720w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=960&output=webp&q=78&n=-1 960w, https://wsrv.nl/?url=beeimg.com%2Fimages%2Fu45115817232.jpg&w=1280&output=webp&q=78&n=-1 1280w" sizes="(max-width: 560px) 92vw, 360px" alt="Custom Moment Map — Printed" referrerpolicy="no-referrer">
+  <h2>Moment Map — Printed</h2>
+  <p><code>Custom_Moment_Map_printed</code></p>
+  <p class="small muted">Remote source preserved from V8: <code>https://beeimg.com/images/u45115817232.jpg</code></p>
 </div>
-</main>
+    </div>
+  </main>
 </body>
 </html>
