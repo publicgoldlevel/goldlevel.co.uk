@@ -1,0 +1,135 @@
+{
+  "meta": {
+    "name": "LIFE_COACH_SITE_SECTION_REGISTRY",
+    "version": "0.1.0",
+    "created_utc": "2026-04-30T10:09:16.690130+00:00",
+    "style_family": "cream_sage_gold_editorial",
+    "source_archive": "life_coach_website_element_asset_pack_v0_1_0.zip",
+    "rule": "The registry binds section text, design intent, image role, asset mode, and QA requirements."
+  },
+  "style_dna": {
+    "name": "cream_sage_gold_editorial",
+    "version": "0.1.0",
+    "palette": {
+      "cream": "#f7efe3",
+      "cream_2": "#f1e4d1",
+      "white": "#fffaf2",
+      "charcoal": "#11191c",
+      "gold": "#a9863d",
+      "sage": "#69745b",
+      "sage_dark": "#4e5843",
+      "clay": "#b87661"
+    },
+    "typography": {
+      "headline": "Georgia / serif",
+      "body": "Inter / system sans-serif"
+    },
+    "image_rules": {
+      "essential_text_baked_into_image": false,
+      "image_text_policy": "Images support meaning; HTML carries all essential copy.",
+      "overlay_policy": "Only optional transparent labels; no required offer/pricing/CTA text as image-only.",
+      "desktop_key_mode": "16x10_matte",
+      "mobile_mode": "4x5_contain"
+    }
+  },
+  "sections": {
+    "hero": {
+      "section_id": "top",
+      "html_selector": "#top",
+      "headline": "Your coaching work may already have depth. Your website should help people feel it clearly.",
+      "body": "Clean static landing pages for coaches who need their message, offer, trust cues, and next step to feel clear online.",
+      "image_role": "hero",
+      "image_intent": "Calm laptop workspace showing a coaching website concept.",
+      "asset_mode": "wide_matte_desktop_4x5_mobile",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial",
+      "cta": "Request a page mockup"
+    },
+    "problem": {
+      "section_id": "problem",
+      "html_selector": "#problem",
+      "headline": "Meaningful coaching can still look unclear online.",
+      "body": "The page may be unfinished, the offer may be scattered, and the next step may not be obvious.",
+      "image_role": "problem",
+      "image_intent": "Unclear material becoming a clearer website structure.",
+      "asset_mode": "4x5_contain",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial"
+    },
+    "pathway": {
+      "section_id": "pathway",
+      "html_selector": "#pathway",
+      "headline": "A landing page turns your message into a calm client pathway.",
+      "body": "It shows who you help, what you offer, why it matters, and what someone should do next \u2014 without pressure or confusion.",
+      "image_role": "pathway",
+      "image_intent": "Message to offer to trust to booking pathway.",
+      "asset_mode": "wide_matte_desktop_4x5_mobile",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial"
+    },
+    "includes": {
+      "section_id": "includes",
+      "html_selector": "#includes",
+      "headline": "The core sections needed to understand and act.",
+      "body": "Hero, about, offer, process, CTA, and responsive layout.",
+      "image_role": "includes",
+      "image_intent": "Layered website section panels suggesting the page sections.",
+      "asset_mode": "4x5_contain",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial"
+    },
+    "tiers": {
+      "section_id": "tiers",
+      "html_selector": "#tiers",
+      "headline": "Start with the level that matches your stage.",
+      "body": "Begin with a clean static page. Expand only when the core pathway is clear.",
+      "image_role": "tiers",
+      "image_intent": "Three calm offer cards without readable pricing or package text.",
+      "asset_mode": "4x5_contain",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial"
+    },
+    "process": {
+      "section_id": "process",
+      "html_selector": "#process",
+      "headline": "From rough page idea to usable website direction.",
+      "body": "Send, clarify, structure, refine, and expand later.",
+      "image_role": "process",
+      "image_intent": "Creative workflow from idea to page build.",
+      "asset_mode": "wide_matte_desktop_4x5_mobile",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial"
+    },
+    "trust": {
+      "section_id": "trust",
+      "html_selector": "#trust",
+      "headline": "Calm design helps people continue without pressure.",
+      "body": "People do not only read a coaching website. They feel whether it is safe to continue.",
+      "image_role": "trust",
+      "image_intent": "Calm professional coaching trust scene.",
+      "asset_mode": "4x5_contain",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial"
+    },
+    "contact": {
+      "section_id": "contact",
+      "html_selector": "#contact",
+      "headline": "Want a mockup of your page direction?",
+      "body": "Send your current page, notes, or coaching offer idea.",
+      "image_role": "contact",
+      "image_intent": "Inviting contact scene with laptop, notebook, and next-step request.",
+      "asset_mode": "wide_matte_desktop_4x5_mobile",
+      "text_overlay_allowed": false,
+      "essential_text_location": "html",
+      "style_family": "cream_sage_gold_editorial",
+      "cta": "Prepare email request"
+    }
+  }
+}

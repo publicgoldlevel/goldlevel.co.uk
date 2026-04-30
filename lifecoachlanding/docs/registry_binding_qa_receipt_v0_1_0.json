@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-04-30T10:09:16.690130+00:00",
+  "name": "LIFE_COACH_REGISTRY_BOUND_ASSET_QA",
+  "version": "0.1.0",
+  "source_archive": "life_coach_website_element_asset_pack_v0_1_0.zip",
+  "state": "BUILT_DRAFT_QA_PASS",
+  "pass": true,
+  "errors": [],
+  "checks": {
+    "registry_written": true,
+    "manifest_written": true,
+    "all_registry_roles_in_manifest": true,
+    "all_manifest_roles_registered": true,
+    "html_section_roles_present": true,
+    "html_asset_roles_present": true,
+    "no_random_webp_refs": true,
+    "all_manifest_webps_exist": true,
+    "4x5_mobile_variants_present": true,
+    "wide_matte_variants_present_where_required": true,
+    "css_object_fit_contain": true,
+    "contact_email_present": true,
+    "no_legacy_placeholder": true,
+    "essential_text_policy_html": true
+  }
+}

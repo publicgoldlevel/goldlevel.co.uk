@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-04-30T10:03:32.700492+00:00",
+  "asset_pack_version": "0.1.0",
+  "site_build_version": "0.1.2",
+  "source_site_archive": "life_coach_static_landing_page_v0_1_1_design_qa.zip",
+  "selected_sources": {
+    "hero": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/hero.jpg",
+    "problem": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/problem.jpg",
+    "pathway": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/pathway.jpg",
+    "includes": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/includes.jpg",
+    "tiers": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/tiers.jpg",
+    "process": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/process.jpg",
+    "trust": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/trust.jpg",
+    "contact": "/mnt/data/life_coach_website_element_asset_pack_v0_1_0/raw_assets/contact.jpg"
+  },
+  "checks": {
+    "all_roles_present": true,
+    "all_raw_sources_present": true,
+    "all_variants_generated": true,
+    "desktop_matte_variants_present_for_key_roles": true,
+    "manifest_written": true,
+    "html_references_generated_assets": true,
+    "css_contains_media_frame": true,
+    "script_contact_email_present": true,
+    "no_legacy_placeholder": true,
+    "missing_generated_assets_count": 0,
+    "dimension_errors_count": 0,
+    "root_index_present": true,
+    "root_styles_present": true,
+    "root_script_present": true
+  },
+  "missing_generated_assets": [],
+  "dimension_errors": [],
+  "state": "BUILT_DRAFT_QA_PASS",
+  "pass": true
+}
