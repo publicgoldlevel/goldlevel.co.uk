@@ -1,0 +1,51 @@
+GOLDLEVEL / ChatRMD Life Coach Full Diagnostic v0.1.2
+UTC: 2026-04-30T12:01:41.342135+00:00
+Repo: /data/data/com.termux/files/home/goldlevel.co.uk
+Branch: main
+Errors: 0
+Warnings: 0
+
+ERRORS:
+
+
+WARNINGS:
+
+
+PASSES:
+Git repo exists
+Current branch is main
+Git SSH remote is correct
+Found lifecoachlanding/index.html
+Found lifecoachlanding/styles.css
+Found lifecoachlanding/script.js
+index.html references styles.css
+index.html references script.js
+script.js contains info@goldlevel.co.uk
+Legacy placeholder absent: YOUR_EMAIL_HERE
+Legacy placeholder absent: Email placeholder still active
+Legacy placeholder absent: Replace YOUR_EMAIL_HERE
+No old/wrong path pattern: lifecoachlanding/assets/
+No old/wrong path pattern: /assets/generated/
+No old/wrong path pattern: public/assets/
+No old/wrong path pattern: ../assets/
+No old/wrong path pattern: assets/images/generated/
+All referenced local assets exist: 51 refs checked
+#problem section found
+Clarity gap diagnostic component installed
+Clarity Gap v0.1.1 CSS installed
+Old Clarity Gap v0.1.0 CSS absent
+Problem section does not use <ol>
+Legacy problem card grid absent
+No Markdown heading markers inside problem section
+Problem WebP exists
+Image manifest found: lifecoachlanding/assets/image_manifest.json
+Section registry found: lifecoachlanding/site_section_registry.json
+All registry image roles exist in manifest
+Manifest roles match registry roles
+HTML WebP references are listed in manifest
+All manifest WebP files exist: 56 files
+CSS contains .diagnostic-panel
+CSS contains .symptom-list
+CSS contains .symptom-item
+CSS contains .diagnostic-media
+CSS contains object-fit: contain
