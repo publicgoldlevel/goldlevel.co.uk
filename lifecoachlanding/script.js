@@ -1,5 +1,5 @@
 const CONTACT_EMAIL = "info@goldlevel.co.uk";
-const BUILD_VERSION = "life-coach-static-v0.1.1-design-qa";
+const BUILD_VERSION = "life-coach-static-v0.1.2-asset-pack";
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");

@@ -1,27 +1,29 @@
-# Life Coach Static Landing Page v0.1.1
+# Life Coach Website Element Asset Pack v0.1.0
 
-Generated: 2026-04-30T09:36:44.150319+00:00
+Generated: 2026-04-30T10:03:32.700492+00:00
 
-## Design QA Changes
+## What this archive does
 
-- Slide images now use `object-fit: contain` to prevent cropping.
-- Hero image no longer has text overlaying the image.
-- Three-slide section rebuilt as swipeable carousel.
-- Side buttons are attached beside the slide area, not over the image.
-- Slide text is outside the image area.
-- Page copy tightened for faster reading.
-- Email provider choices reduced to Mail app, Gmail, Outlook, plus copy request fallback.
-- Form placeholders corrected and kept concise.
+This archive converts the generated 4:5 image artifacts into a responsive website asset system.
 
-## Files
+It includes:
 
-- `index.html`
-- `styles.css`
-- `script.js`
-- `assets/slide-01-awareness.jpg`
-- `assets/slide-02-pathway.jpg`
-- `assets/slide-03-invitation.jpg`
+- original deployment filenames: `index.html`, `styles.css`, `script.js`;
+- generated section assets under `assets/generated/`;
+- `assets/image_manifest.json`;
+- QA receipt;
+- execution loop record.
 
-## Deployment
+## Main implementation
 
-Upload the contents of this archive to GitHub Pages with `index.html` at repository root.
+- 4:5 responsive WebP variants for all section assets.
+- 16:10 matte wide variants for hero, pathway, process, and contact sections.
+- HTML `<picture>` routing with `srcset`.
+- CSS display-mode classes using `object-fit: contain`.
+- No uncontrolled image cropping for key assets.
+
+## Current state
+
+`BUILT_DRAFT_QA_PASS`
+
+Live promotion still requires browser verification after upload.
