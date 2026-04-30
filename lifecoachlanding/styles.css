@@ -813,3 +813,102 @@ textarea { resize: vertical; }
     margin-bottom: 28px;
   }
 }
+
+/* Clarity Gap Diagnostic Panel v0.1.0 */
+
+.diagnostic-panel {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+  padding: clamp(18px, 3vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: clamp(28px, 4vw, 44px);
+  background: rgba(255, 250, 242, 0.72);
+  box-shadow: var(--shadow);
+}
+
+.diagnostic-media {
+  margin: 0;
+  aspect-ratio: 4 / 5;
+  padding: clamp(8px, 1.5vw, 14px);
+}
+
+.diagnostic-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: clamp(18px, 3vw, 30px);
+}
+
+.diagnostic-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.panel-label {
+  margin: 0;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.symptom-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.symptom-list li {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 16px;
+  border: 1px solid rgba(169, 134, 61, 0.22);
+  border-radius: 20px;
+  background: rgba(247, 239, 227, 0.62);
+}
+
+.symptom-list span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--white);
+  font-weight: 850;
+  font-size: 0.84rem;
+}
+
+.symptom-list h3 {
+  margin: 0 0 4px;
+}
+
+.symptom-list p {
+  margin: 0;
+}
+
+.panel-bridge {
+  margin: 4px 0 0;
+  font-family: var(--serif);
+  color: var(--gold);
+  font-size: clamp(1.25rem, 2.4vw, 1.7rem);
+  font-style: italic;
+}
+
+@media (max-width: 860px) {
+  .diagnostic-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostic-media {
+    max-width: 520px;
+    margin-inline: auto;
+  }
+}
