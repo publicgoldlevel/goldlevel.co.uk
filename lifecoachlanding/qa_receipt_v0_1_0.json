@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-04-30T09:21:48.678696+00:00",
+  "site_dir": "/mnt/data/life_coach_static_landing_page_v0_1_0",
+  "files_exist": {
+    "index.html": true,
+    "styles.css": true,
+    "script.js": true,
+    "README.md": true,
+    "slide_01": true,
+    "slide_02": true,
+    "slide_03": true
+  },
+  "checks": {
+    "index_links_css": true,
+    "index_links_script": true,
+    "script_has_contact_email": true,
+    "no_your_email_placeholder": true,
+    "three_slide_assets_referenced": true,
+    "consent_checkbox_present": true,
+    "provider_handoff_present": true
+  },
+  "pass": true
+}
