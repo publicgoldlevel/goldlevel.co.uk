@@ -1,4 +1,4 @@
-const CONTACT_EMAIL = "YOUR_EMAIL_HERE"; // Replace with your email address.
+const CONTACT_EMAIL = "info@goldlevel.co.uk"; 
 
 const tierButtons = document.querySelectorAll("[data-tier-buttons] .price-card button");
 const tierSelect = document.querySelector("[data-tier-select]");
