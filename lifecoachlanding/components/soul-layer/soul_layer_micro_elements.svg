@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="180" viewBox="0 0 640 180" fill="none">
+  <title>Anti-stock soul layer micro elements</title>
+  <defs>
+    <linearGradient id="goldSage" x1="0" x2="640" y1="0" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B08A3B" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#B08A3B" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#68775E" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 90 C 120 24, 212 156, 320 90 S 520 24, 616 90" stroke="url(#goldSage)" stroke-width="2"/>
+  <circle cx="320" cy="90" r="38" stroke="#B08A3B" stroke-opacity="0.35"/>
+  <circle cx="320" cy="90" r="7" fill="#68775E" fill-opacity="0.65"/>
+  <path d="M300 90 H340" stroke="#B08A3B" stroke-opacity="0.75"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "name": "ANTI_STOCK_SOUL_LAYER_SYSTEM",
+  "version": "0.1.0",
+  "route": "CHATRMD_LEVEL_ROUTE_v0_2_2",
+  "created_utc": "2026-04-30T12:59:34.062119+00:00",
+  "target": "lifecoachlanding",
+  "cache_bust_target": "0.2.2",
+  "files": [
+    "lifecoachlanding/components/soul-layer/soul_layer_micro_elements.svg",
+    "lifecoachlanding/components/soul-layer/soul_layer_tokens.css",
+    "lifecoachlanding/design/anti-stock-soul-layer/soul_layer_design_system.md",
+    "lifecoachlanding/design/anti-stock-soul-layer/soul_layer_image_treatment_spec.md",
+    "lifecoachlanding/design/anti-stock-soul-layer/soul_layer_typography_map.md",
+    "lifecoachlanding/docs/CHATRMD_LEVEL_ROUTE_v0_2_2_EXECUTION_LEDGER.md",
+    "lifecoachlanding/docs/soul_layer_deployment_sequence_v0_1_0.md",
+    "lifecoachlanding/docs/soul_layer_receipt_v0_1_0.md",
+    "lifecoachlanding/scripts/apply_soul_layer_v010.py",
+    "lifecoachlanding/scripts/diagnose_soul_layer_v010.py"
+  ]
+}
