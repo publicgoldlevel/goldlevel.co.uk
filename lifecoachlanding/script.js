@@ -1,5 +1,5 @@
 const CONTACT_EMAIL = "info@goldlevel.co.uk";
-const BUILD_VERSION = "life-coach-static-v0.1.0";
+const BUILD_VERSION = "life-coach-static-v0.1.1-design-qa";
 
 const navToggle = document.querySelector("[data-nav-toggle]");
 const navLinks = document.querySelector("[data-nav-links]");
@@ -8,34 +8,30 @@ const header = document.querySelector("[data-header]");
 const slides = [
   {
     count: "1 of 3",
-    image: "assets/slide-01-awareness.jpg",
-    alt: "Slide 1 of 3: Awareness",
     title: "Your coaching work may already have depth.",
     text: "Your website should help people feel that clearly. Many coaches do meaningful work, but their online presence still feels unclear, rushed, or generic."
   },
   {
     count: "2 of 3",
-    image: "assets/slide-02-pathway.jpg",
-    alt: "Slide 2 of 3: Pathway",
     title: "Turn your message into a calm client pathway.",
     text: "A good landing page shows who you help, what you offer, and the next step — without feeling pushy or confusing."
   },
   {
     count: "3 of 3",
-    image: "assets/slide-03-invitation.jpg",
-    alt: "Slide 3 of 3: Invitation",
     title: "Trust-led landing pages built for coaches.",
-    text: "From a clean static page to a fuller coaching presence, the offer can start simple and expand as your client pathway grows."
+    text: "Start with a clean static page, expand into a fuller coaching presence, and roadmap deeper features later."
   }
 ];
 
-const slideImage = document.querySelector("[data-slide-image]");
+const carousel = document.querySelector("[data-carousel]");
+const viewport = document.querySelector("[data-carousel-viewport]");
+const track = document.querySelector("[data-carousel-track]");
 const slideCount = document.querySelector("[data-slide-count]");
 const slideTitle = document.querySelector("[data-slide-title]");
 const slideText = document.querySelector("[data-slide-text]");
 const prevSlide = document.querySelector("[data-prev-slide]");
 const nextSlide = document.querySelector("[data-next-slide]");
-const slideThumbs = document.querySelectorAll("[data-slide-index]");
+const slideDots = document.querySelectorAll("[data-slide-index]");
 
 const tierButtons = document.querySelectorAll("[data-tier-buttons] .tier-card button");
 const tierSelect = document.querySelector("[data-tier-select]");
@@ -46,62 +42,40 @@ const emailHandoff = document.querySelector("[data-email-handoff]");
 const handoffSummary = document.querySelector("[data-handoff-summary]");
 const providerList = document.querySelector("[data-email-provider-list]");
 const copyNote = document.querySelector("[data-copy-note]");
-const copyRecipientButton = document.querySelector("[data-copy-recipient]");
-const copySubjectButton = document.querySelector("[data-copy-subject]");
-const copyBodyButton = document.querySelector("[data-copy-body]");
 const copyFullRequestButton = document.querySelector("[data-copy-full-request]");
 
 let currentSlide = 0;
 let preparedEmail = null;
+let pointerStartX = 0;
+let pointerStartY = 0;
+let isPointerDown = false;
 
 console.info(`Goldlevel script loaded: ${BUILD_VERSION}`);
 
 const emailProviders = [
   {
     id: "default-mail",
-    name: "Default mail app",
-    support: "Apple Mail, Windows Mail, Thunderbird, or any browser-registered mail app.",
+    name: "Mail app",
+    support: "Default email app.",
     mode: "direct",
     buildUrl: ({ to, subject, body }) =>
       `mailto:${to}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   },
   {
     id: "gmail",
-    name: "Gmail / Google Workspace",
-    support: "Opens Gmail compose with recipient, subject, and body.",
+    name: "Gmail",
+    support: "Google compose.",
     mode: "direct",
     buildUrl: ({ to, subject, body }) =>
       `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(to)}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
   },
   {
     id: "outlook",
-    name: "Outlook / Hotmail / Live",
-    support: "Opens Outlook web compose where supported.",
+    name: "Outlook",
+    support: "Microsoft compose.",
     mode: "direct",
     buildUrl: ({ to, subject, body }) =>
       `https://outlook.live.com/mail/0/deeplink/compose?to=${encodeURIComponent(to)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  },
-  {
-    id: "yahoo",
-    name: "Yahoo Mail",
-    support: "Opens Yahoo compose where supported.",
-    mode: "direct",
-    buildUrl: ({ to, subject, body }) =>
-      `https://compose.mail.yahoo.com/?to=${encodeURIComponent(to)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-  },
-  {
-    id: "proton",
-    name: "Proton Mail",
-    support: "Copies the request, then opens Proton Mail.",
-    mode: "copy-open",
-    buildUrl: () => "https://mail.proton.me/"
-  },
-  {
-    id: "icloud",
-    name: "iCloud Mail",
-    support: "Copies the request, then opens iCloud Mail.",
-    mode: "copy-open",
-    buildUrl: () => "https://www.icloud.com/mail/"
   }
 ];
 
@@ -129,17 +103,18 @@ function renderSlide(index) {
   currentSlide = (index + slides.length) % slides.length;
   const slide = slides[currentSlide];
 
-  if (slideImage) {
-    slideImage.src = slide.image;
-    slideImage.alt = slide.alt;
+  if (track) {
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
   }
 
   if (slideCount) slideCount.textContent = slide.count;
   if (slideTitle) slideTitle.textContent = slide.title;
   if (slideText) slideText.textContent = slide.text;
 
-  slideThumbs.forEach((thumb) => {
-    thumb.classList.toggle("active", Number(thumb.dataset.slideIndex) === currentSlide);
+  slideDots.forEach((dot) => {
+    const active = Number(dot.dataset.slideIndex) === currentSlide;
+    dot.classList.toggle("active", active);
+    dot.setAttribute("aria-current", active ? "true" : "false");
   });
 }
 
@@ -183,39 +158,24 @@ async function copyText(text, successMessage) {
     await navigator.clipboard.writeText(text);
     if (copyNote) copyNote.textContent = successMessage;
   } catch (error) {
-    if (copyNote) copyNote.textContent = "Copy did not complete. Select and copy the visible email details manually.";
+    if (copyNote) copyNote.textContent = "Copy did not complete. Select and copy the request manually.";
   }
 }
 
 function renderEmailProviders(payload) {
   if (!providerList) return;
-
   providerList.innerHTML = "";
 
   emailProviders.forEach((provider) => {
-    const url = provider.buildUrl(payload);
-    const card = document.createElement(provider.mode === "direct" ? "a" : "button");
-
+    const card = document.createElement("a");
     card.className = "email-provider-card";
-    card.dataset.providerId = provider.id;
-
-    if (provider.mode === "direct") {
-      card.href = url;
-      card.target = "_blank";
-      card.rel = "noopener";
-    } else {
-      card.type = "button";
-      card.addEventListener("click", async () => {
-        await copyText(payload.fullRequest, `Copied the full request. Opened ${provider.name}; paste it into a new email.`);
-        window.open(url, "_blank", "noopener");
-      });
-    }
-
+    card.href = provider.buildUrl(payload);
+    card.target = "_blank";
+    card.rel = "noopener";
     card.innerHTML = `
       <strong>${escapeHtml(provider.name)}</strong>
       <small>${escapeHtml(provider.support)}</small>
     `;
-
     providerList.appendChild(card);
   });
 }
@@ -224,18 +184,18 @@ function showEmailHandoff(payload) {
   preparedEmail = payload;
 
   if (handoffSummary) {
-    handoffSummary.innerHTML = `Email options are prepared for <strong>${escapeHtml(payload.to)}</strong>.`;
+    handoffSummary.innerHTML = `Email prepared for <strong>${escapeHtml(payload.to)}</strong>.`;
   }
 
   renderEmailProviders(payload);
 
   if (emailHandoff) {
     emailHandoff.hidden = false;
-    emailHandoff.scrollIntoView({ behavior: "smooth", block: "start" });
+    emailHandoff.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }
 
   if (note) {
-    note.textContent = "Email options prepared. Choose your email client below.";
+    note.textContent = "Email options prepared.";
   }
 }
 
@@ -276,44 +236,42 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 8);
 });
 
-if (prevSlide) {
-  prevSlide.addEventListener("click", () => renderSlide(currentSlide - 1));
-}
+if (prevSlide) prevSlide.addEventListener("click", () => renderSlide(currentSlide - 1));
+if (nextSlide) nextSlide.addEventListener("click", () => renderSlide(currentSlide + 1));
 
-if (nextSlide) {
-  nextSlide.addEventListener("click", () => renderSlide(currentSlide + 1));
-}
-
-slideThumbs.forEach((thumb) => {
-  thumb.addEventListener("click", () => renderSlide(Number(thumb.dataset.slideIndex)));
+slideDots.forEach((dot) => {
+  dot.addEventListener("click", () => renderSlide(Number(dot.dataset.slideIndex)));
 });
+
+if (viewport) {
+  viewport.addEventListener("pointerdown", (event) => {
+    isPointerDown = true;
+    pointerStartX = event.clientX;
+    pointerStartY = event.clientY;
+  });
+
+  viewport.addEventListener("pointerup", (event) => {
+    if (!isPointerDown) return;
+    isPointerDown = false;
+
+    const deltaX = event.clientX - pointerStartX;
+    const deltaY = event.clientY - pointerStartY;
+
+    if (Math.abs(deltaX) > 48 && Math.abs(deltaX) > Math.abs(deltaY)) {
+      renderSlide(currentSlide + (deltaX < 0 ? 1 : -1));
+    }
+  });
+
+  viewport.addEventListener("pointercancel", () => {
+    isPointerDown = false;
+  });
+}
 
 tierButtons.forEach((button) => {
   button.addEventListener("click", (event) => {
     selectTier(event.currentTarget.closest(".tier-card"));
   });
 });
-
-if (copyRecipientButton) {
-  copyRecipientButton.addEventListener("click", () => {
-    if (!preparedEmail) return;
-    copyText(preparedEmail.to, `Copied recipient: ${preparedEmail.to}`);
-  });
-}
-
-if (copySubjectButton) {
-  copySubjectButton.addEventListener("click", () => {
-    if (!preparedEmail) return;
-    copyText(preparedEmail.subject, "Copied subject.");
-  });
-}
-
-if (copyBodyButton) {
-  copyBodyButton.addEventListener("click", () => {
-    if (!preparedEmail) return;
-    copyText(preparedEmail.body, "Copied body.");
-  });
-}
 
 if (copyFullRequestButton) {
   copyFullRequestButton.addEventListener("click", () => {

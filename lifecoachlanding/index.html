@@ -21,20 +21,19 @@
         <span class="brand-mark" aria-hidden="true">G</span>
         <span>
           <strong>Goldlevel</strong>
-          <small>Trust-led website creation</small>
+          <small>Websites for coaches</small>
         </span>
       </a>
 
       <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
-        <span>Menu</span>
+        Menu
       </button>
 
       <nav id="site-nav" class="nav-links" data-nav-links aria-label="Primary navigation">
-        <a href="#slides">Visual set</a>
+        <a href="#slides">Slides</a>
         <a href="#pathway">Pathway</a>
-        <a href="#includes">Includes</a>
         <a href="#tiers">Tiers</a>
-        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <a class="button button-small nav-cta" href="#contact">Request a mockup</a>
@@ -45,9 +44,9 @@
     <section id="top" class="hero section-pad">
       <div class="shell hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Website creation for coaches</p>
+          <p class="eyebrow"><span></span> Trust-led website creation</p>
           <h1>Your coaching work may already have depth. Your website should help people feel it clearly.</h1>
-          <p class="lead">I create clean, professional landing pages for coaches who need a simple place to explain their work, present their offer, and invite the right people to take the next step.</p>
+          <p class="lead">Clean static landing pages for coaches who need their message, offer, trust cues, and next step to feel clear online.</p>
 
           <div class="hero-actions">
             <a class="button" href="#contact">Request a page mockup</a>
@@ -59,11 +58,11 @@
           </div>
         </div>
 
-        <aside class="hero-visual" aria-label="Website mockup preview">
-          <div class="hero-arch">
-            <img src="assets/slide-01-awareness.jpg" alt="Awareness slide for trust-led website creation for coaches" />
-          </div>
-          <div class="floating-note">
+        <aside class="hero-visual" aria-label="Slide preview">
+          <figure class="hero-slide-frame">
+            <img src="assets/slide-01-awareness.jpg" alt="Awareness slide showing the depth of coaching work and the need for a clear website." />
+          </figure>
+          <div class="hero-note" aria-label="Hero support note">
             <strong>A clear message builds trust.</strong>
             <span>Trust creates movement.</span>
           </div>
@@ -73,41 +72,46 @@
 
     <section id="slides" class="section-pad slides-section" aria-labelledby="slides-title">
       <div class="shell">
-        <div class="section-heading">
+        <div class="section-heading compact">
           <p class="eyebrow"><span></span> Visual funnel burst</p>
-          <h2 id="slides-title">The three-slide concept that anchors the page.</h2>
-          <p>The visual set introduces the full client path: awareness of the gap, the calm pathway, and the offer invitation.</p>
+          <h2 id="slides-title">Three slides. One simple pathway.</h2>
+          <p>Swipe or use the side buttons. The images are shown uncropped so the full design remains visible.</p>
         </div>
 
-        <div class="slide-viewer" data-slide-viewer>
-          <div class="slide-stage">
-            <img data-slide-image src="assets/slide-01-awareness.jpg" alt="Slide 1 of 3: Awareness" />
-          </div>
-          <div class="slide-copy">
+        <section class="slide-carousel" data-carousel aria-roledescription="carousel" aria-label="Three-slide website creation pathway">
+          <div class="carousel-header">
             <p class="slide-count" data-slide-count>1 of 3</p>
             <h3 data-slide-title>Your coaching work may already have depth.</h3>
-            <p data-slide-text>Your website should help people feel that clearly. Many coaches do meaningful work, but their online presence still feels unclear, rushed, or generic.</p>
-            <div class="slide-controls" aria-label="Slide controls">
-              <button class="button button-ghost" type="button" data-prev-slide>Previous</button>
-              <button class="button" type="button" data-next-slide>Next</button>
-            </div>
           </div>
-        </div>
 
-        <div class="slide-thumbs" aria-label="Slide thumbnails">
-          <button class="slide-thumb active" type="button" data-slide-index="0">
-            <img src="assets/slide-01-awareness.jpg" alt="" />
-            <span>01 Awareness</span>
-          </button>
-          <button class="slide-thumb" type="button" data-slide-index="1">
-            <img src="assets/slide-02-pathway.jpg" alt="" />
-            <span>02 Pathway</span>
-          </button>
-          <button class="slide-thumb" type="button" data-slide-index="2">
-            <img src="assets/slide-03-invitation.jpg" alt="" />
-            <span>03 Invitation</span>
-          </button>
-        </div>
+          <div class="carousel-row">
+            <button class="carousel-arrow prev" type="button" data-prev-slide aria-label="Previous slide">‹</button>
+
+            <div class="carousel-viewport" data-carousel-viewport>
+              <div class="carousel-track" data-carousel-track>
+                <figure class="carousel-slide" aria-label="Slide 1 of 3">
+                  <img src="assets/slide-01-awareness.jpg" alt="Awareness slide for trust-led website creation for coaches." />
+                </figure>
+                <figure class="carousel-slide" aria-label="Slide 2 of 3">
+                  <img src="assets/slide-02-pathway.jpg" alt="Pathway slide showing message to offer to trust to booking." />
+                </figure>
+                <figure class="carousel-slide" aria-label="Slide 3 of 3">
+                  <img src="assets/slide-03-invitation.jpg" alt="Invitation slide showing starter, expanded, and growth options." />
+                </figure>
+              </div>
+            </div>
+
+            <button class="carousel-arrow next" type="button" data-next-slide aria-label="Next slide">›</button>
+          </div>
+
+          <p class="slide-text" data-slide-text>Your website should help people feel that clearly. Many coaches do meaningful work, but their online presence still feels unclear, rushed, or generic.</p>
+
+          <div class="slide-dots" aria-label="Slide selection">
+            <button class="slide-dot active" type="button" data-slide-index="0" aria-label="Show slide 1"></button>
+            <button class="slide-dot" type="button" data-slide-index="1" aria-label="Show slide 2"></button>
+            <button class="slide-dot" type="button" data-slide-index="2" aria-label="Show slide 3"></button>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -116,24 +120,24 @@
         <div class="section-heading">
           <p class="eyebrow"><span></span> The gap</p>
           <h2 id="problem-title">Meaningful coaching can still look unclear online.</h2>
-          <p>Many coaches do strong, human, transformative work. But when someone visits their website or social page, the value can feel difficult to understand.</p>
+          <p>The page may be unfinished, the offer may be scattered, and the next step may not be obvious.</p>
         </div>
 
         <div class="card-grid four">
           <article class="info-card">
             <span class="card-icon">01</span>
             <h3>Message unclear</h3>
-            <p>You know what you do, but visitors may not immediately understand who you help or why it matters.</p>
+            <p>Visitors may not quickly understand who you help or why it matters.</p>
           </article>
           <article class="info-card">
             <span class="card-icon clay">02</span>
             <h3>Offer hidden</h3>
-            <p>Your sessions, packages, or pathways may exist, but they are not presented in a way that feels easy to choose.</p>
+            <p>Sessions or packages exist, but they are not easy to choose.</p>
           </article>
           <article class="info-card">
             <span class="card-icon">03</span>
             <h3>Trust not visible</h3>
-            <p>Your presence, tone, and credibility may come through in conversation but not yet through the page.</p>
+            <p>Your presence comes through in conversation but not yet through the page.</p>
           </article>
           <article class="info-card">
             <span class="card-icon gold">04</span>
@@ -148,8 +152,8 @@
       <div class="shell pathway-grid">
         <div>
           <p class="eyebrow"><span></span> The pathway</p>
-          <h2 id="pathway-title">A good landing page turns your message into a calm client pathway.</h2>
-          <p>It should show the visitor where they are, what you help with, what you offer, and what they should do next — without pressure, confusion, or over-explaining.</p>
+          <h2 id="pathway-title">A landing page turns your message into a calm client pathway.</h2>
+          <p>It shows who you help, what you offer, why it matters, and what someone should do next — without pressure or confusion.</p>
           <p class="script-line">Clarity leads people forward.</p>
         </div>
 
@@ -169,16 +173,16 @@
       <div class="shell">
         <div class="section-heading">
           <p class="eyebrow"><span></span> What the page includes</p>
-          <h2 id="includes-title">A simple page with the pieces your client needs to understand and act.</h2>
+          <h2 id="includes-title">The core sections needed to understand and act.</h2>
         </div>
 
         <div class="card-grid six">
-          <article class="info-card"><h3>Hero section</h3><p>A strong opening message that explains the coaching direction in plain language.</p></article>
-          <article class="info-card"><h3>About section</h3><p>A short human introduction that builds trust without becoming a long biography.</p></article>
-          <article class="info-card"><h3>Offer section</h3><p>A clear summary of what the coach provides and who it is for.</p></article>
-          <article class="info-card"><h3>Process section</h3><p>A simple explanation of what happens after someone reaches out.</p></article>
-          <article class="info-card"><h3>CTA section</h3><p>A clear action pathway: book a call, send a message, or request details.</p></article>
-          <article class="info-card"><h3>Responsive layout</h3><p>A page that is structured for mobile and desktop use.</p></article>
+          <article class="info-card"><h3>Hero</h3><p>Clear opening message.</p></article>
+          <article class="info-card"><h3>About</h3><p>Short trust-building introduction.</p></article>
+          <article class="info-card"><h3>Offer</h3><p>Simple offer summary.</p></article>
+          <article class="info-card"><h3>Process</h3><p>What happens next.</p></article>
+          <article class="info-card"><h3>CTA</h3><p>One clear action.</p></article>
+          <article class="info-card"><h3>Responsive layout</h3><p>Readable on mobile and desktop.</p></article>
         </div>
       </div>
     </section>
@@ -187,35 +191,33 @@
       <div class="shell">
         <div class="section-heading">
           <p class="eyebrow"><span></span> Website creation options</p>
-          <h2 id="tiers-title">Start with the level that matches your current stage.</h2>
-          <p>The page can begin as a simple static build and expand later into a fuller coaching presence.</p>
+          <h2 id="tiers-title">Start with the level that matches your stage.</h2>
+          <p>Begin with a clean static page. Expand only when the core pathway is clear.</p>
         </div>
 
         <div class="tier-grid" data-tier-buttons>
           <article class="tier-card" data-tier="Starter Static Page" data-price="Entry scope">
             <span class="tier-status">Current capability</span>
             <h3>Starter Static Page</h3>
-            <p>Best for a coach who needs a clean, professional page to share now.</p>
+            <p>For a coach who needs a professional page to share now.</p>
             <ul>
               <li>One static landing page</li>
               <li>Hero, about, offer, process, CTA</li>
               <li>Basic responsive layout</li>
-              <li>Light copy refinement</li>
               <li>One revision pass</li>
             </ul>
             <button class="button button-full" type="button">Ask about Starter</button>
           </article>
 
           <article class="tier-card featured" data-tier="Expanded Coaching Presence" data-price="Expanded scope">
-            <span class="tier-status">Most complete first build</span>
+            <span class="tier-status">Best first build</span>
             <h3>Expanded Coaching Presence</h3>
-            <p>Best for a coach who wants a fuller page that explains their work and builds trust.</p>
+            <p>For a fuller page that explains the work and builds trust.</p>
             <ul>
               <li>Everything in Starter</li>
-              <li>Fuller landing-page copy structure</li>
+              <li>Fuller copy structure</li>
               <li>FAQ and trust section</li>
               <li>Improved mobile spacing</li>
-              <li>Two revision passes</li>
             </ul>
             <button class="button button-full" type="button">Ask about Expanded</button>
           </article>
@@ -223,19 +225,18 @@
           <article class="tier-card" data-tier="Growth Roadmap Page" data-price="Roadmap scope">
             <span class="tier-status">Future expansion</span>
             <h3>Growth Roadmap Page</h3>
-            <p>Best for a coach who wants the page to become the base of a larger client pathway.</p>
+            <p>For planning deeper features after the page foundation exists.</p>
             <ul>
               <li>Brand direction expansion</li>
-              <li>Lead magnet section planning</li>
-              <li>Booking integration planning</li>
-              <li>Email capture concept</li>
-              <li>Analytics and resources roadmap</li>
+              <li>Booking/email planning</li>
+              <li>Analytics concept</li>
+              <li>Resource roadmap</li>
             </ul>
             <button class="button button-full" type="button">Discuss Growth</button>
           </article>
         </div>
 
-        <p class="scope-note">Advanced integrations are planned separately and only included when agreed and tested.</p>
+        <p class="scope-note">Advanced integrations are separate and only included when agreed and tested.</p>
       </div>
     </section>
 
@@ -243,15 +244,15 @@
       <div class="shell">
         <div class="section-heading">
           <p class="eyebrow"><span></span> How it works</p>
-          <h2 id="process-title">From unclear page idea to first usable website direction.</h2>
+          <h2 id="process-title">From rough page idea to usable website direction.</h2>
         </div>
 
         <ol class="timeline">
-          <li><strong>Send</strong><span>Current page, notes, offer idea, or coaching description.</span></li>
-          <li><strong>Clarify</strong><span>Identify the strongest message, offer path, and required sections.</span></li>
-          <li><strong>Structure</strong><span>Draft the page around message, offer, trust cues, and next step.</span></li>
-          <li><strong>Refine</strong><span>Check clarity, adjust layout, and prepare delivery.</span></li>
-          <li><strong>Expand</strong><span>Plan deeper features after the core page is clear.</span></li>
+          <li><strong>Send</strong><span>Current page, notes, or offer idea.</span></li>
+          <li><strong>Clarify</strong><span>Find the strongest message and page path.</span></li>
+          <li><strong>Structure</strong><span>Build the page around trust and action.</span></li>
+          <li><strong>Refine</strong><span>Check clarity and spacing.</span></li>
+          <li><strong>Expand</strong><span>Add deeper features later.</span></li>
         </ol>
       </div>
     </section>
@@ -264,43 +265,13 @@
         </div>
         <div>
           <p class="eyebrow"><span></span> Why trust-led design</p>
-          <h2 id="trust-title">Calm design helps the visitor continue without pressure.</h2>
+          <h2 id="trust-title">Calm design helps people continue without pressure.</h2>
           <ul class="principles">
             <li>Clarity before cleverness</li>
             <li>Trust before pressure</li>
             <li>Structure before decoration</li>
             <li>One next step before too many options</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="fit" class="section-pad fit-section" aria-labelledby="fit-title">
-      <div class="shell">
-        <div class="section-heading">
-          <p class="eyebrow"><span></span> Fit / not fit</p>
-          <h2 id="fit-title">Bounded first build, clear expectations.</h2>
-        </div>
-
-        <div class="fit-grid">
-          <article class="fit-card good">
-            <h3>Good fit</h3>
-            <ul>
-              <li>Coach, mentor, guide, or purpose-led practitioner</li>
-              <li>Needs a simple page before a large website</li>
-              <li>Wants calm, professional design</li>
-              <li>Prefers a bounded first build</li>
-            </ul>
-          </article>
-          <article class="fit-card not">
-            <h3>Not a good fit</h3>
-            <ul>
-              <li>Complex backend functionality</li>
-              <li>Full e-commerce or secure payment systems</li>
-              <li>Guaranteed SEO ranking</li>
-              <li>Guaranteed client conversion</li>
-            </ul>
-          </article>
         </div>
       </div>
     </section>
@@ -314,27 +285,19 @@
         <div class="faq-list">
           <details>
             <summary>Do I need a full website?</summary>
-            <p>Not necessarily. If you are still clarifying your offer, a focused landing page may be the better first step.</p>
+            <p>Not necessarily. A focused landing page may be the better first step.</p>
           </details>
           <details>
             <summary>Can this replace a designer or agency?</summary>
-            <p>No. This is a bounded page build and message-structure service, not a full agency engagement.</p>
-          </details>
-          <details>
-            <summary>What if my offer is not clear yet?</summary>
-            <p>That can be part of the first pass. The page can help clarify your message, but the offer still needs enough substance to structure.</p>
+            <p>No. This is a bounded page build and message-structure service.</p>
           </details>
           <details>
             <summary>Can you add booking or email capture?</summary>
-            <p>Simple links can be included now. More advanced booking, email, analytics, or automation should be treated as an expansion stage unless separately agreed and tested.</p>
+            <p>Simple links can be included now. Advanced features are separate expansion work.</p>
           </details>
           <details>
             <summary>Will this get me clients?</summary>
-            <p>No result can be guaranteed. The purpose is to make your online presence clearer, more credible, and easier to act on.</p>
-          </details>
-          <details>
-            <summary>What should I send first?</summary>
-            <p>Send your current page if you have one, your coaching description, your offer notes, and the action you want visitors to take.</p>
+            <p>No result can be guaranteed. The purpose is clarity, credibility, and a simpler next step.</p>
           </details>
         </div>
       </div>
@@ -345,18 +308,18 @@
         <div>
           <p class="eyebrow eyebrow-dark"><span></span> Ready endpoint</p>
           <h2 id="contact-title">Want a mockup of your page direction?</h2>
-          <p>Send your current page, notes, or coaching offer idea. I’ll use it to shape a calm first-page direction that shows your message, offer, trust cues, and next step.</p>
+          <p>Send your current page, notes, or coaching offer idea. I’ll shape a calm first-page direction around message, offer, trust cues, and next step.</p>
           <p class="script-line light">A clear message builds trust. Trust creates movement.</p>
         </div>
 
         <form class="contact-form" data-contact-form>
           <label>
             Your name
-            <input name="name" type="text" autocomplete="name" required />
+            <input name="name" type="text" autocomplete="name" placeholder="Your name" required />
           </label>
           <label>
             Email
-            <input name="email" type="email" autocomplete="email" required />
+            <input name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
           </label>
           <label>
             Interest
@@ -367,7 +330,7 @@
             </select>
           </label>
           <label>
-            What are you sending?
+            Material type
             <select name="materialType" required>
               <option>Current website</option>
               <option>Social profile</option>
@@ -378,28 +341,24 @@
           </label>
           <label class="wide">
             Short description
-            <textarea name="description" rows="5" required></textarea>
+            <textarea name="description" rows="4" placeholder="Briefly describe the page, offer, or client pathway you want clarified." required></textarea>
           </label>
           <label class="wide consent-row">
             <input name="consent" type="checkbox" required />
-            <span>I consent to Goldlevel using the submitted details to review and respond to this website mockup request. I understand this form opens an email request and no file is uploaded through the page.</span>
+            <span>I consent to Goldlevel using these details to review and respond to this website mockup request.</span>
           </label>
+
           <div class="form-actions wide">
             <button class="button button-light" type="submit">Prepare email request</button>
-            <p data-form-note class="form-note" aria-live="polite">Complete the form, confirm consent, then prepare your email.</p>
+            <p data-form-note class="form-note" aria-live="polite">Complete the form, confirm consent, then choose an email option.</p>
           </div>
 
           <section class="email-handoff wide" data-email-handoff hidden aria-labelledby="email-handoff-title">
-            <h3 id="email-handoff-title">Choose your email client</h3>
-            <p data-handoff-summary>Email options are prepared for <strong>info@goldlevel.co.uk</strong>.</p>
-            <div class="email-provider-grid" data-email-provider-list aria-label="Email client options"></div>
-            <div class="email-copy-actions">
-              <button class="button button-small button-ghost-light" type="button" data-copy-recipient>Copy recipient</button>
-              <button class="button button-small button-ghost-light" type="button" data-copy-subject>Copy subject</button>
-              <button class="button button-small button-ghost-light" type="button" data-copy-body>Copy body</button>
-              <button class="button button-small button-ghost-light" type="button" data-copy-full-request>Copy full request</button>
-            </div>
-            <p class="form-note" data-copy-note aria-live="polite">Direct compose links are provided where supported.</p>
+            <h3 id="email-handoff-title">Send request</h3>
+            <p data-handoff-summary>Email prepared for <strong>info@goldlevel.co.uk</strong>.</p>
+            <div class="email-provider-grid" data-email-provider-list aria-label="Email options"></div>
+            <button class="button button-small button-ghost-light" type="button" data-copy-full-request>Copy full request</button>
+            <p class="form-note" data-copy-note aria-live="polite">Use copy if your email client does not prefill.</p>
           </section>
         </form>
       </div>
@@ -408,12 +367,12 @@
 
   <footer class="site-footer">
     <div class="shell footer-grid">
-      <p>Goldlevel · Trust-led website creation for coaches</p>
+      <p>Goldlevel · Websites for coaches</p>
       <p><a href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a></p>
       <p>Message → Offer → Trust → Booking</p>
     </div>
   </footer>
 
-  <script src="script.js?v=0.1.0" defer></script>
+  <script src="script.js?v=0.1.1" defer></script>
 </body>
 </html>
