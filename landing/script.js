@@ -1,4 +1,5 @@
 const CONTACT_EMAIL = "info@goldlevel.co.uk";
+const BUILD_VERSION = "0.1.6-email-handoff-cachebust";
 
 const tierButtons = document.querySelectorAll("[data-tier-buttons] .price-card button");
 const tierSelect = document.querySelector("[data-tier-select]");
@@ -15,6 +16,8 @@ const copyBodyButton = document.querySelector("[data-copy-body]");
 const copyFullRequestButton = document.querySelector("[data-copy-full-request]");
 
 let preparedEmail = null;
+
+console.info(`Goldlevel landing page script loaded: ${BUILD_VERSION}`);
 
 const emailProviders = [
   {
@@ -121,7 +124,7 @@ function getRecipientEmail() {
 
 function buildRequestPayload() {
   const data = new FormData(intakeForm);
-
+  const to = getRecipientEmail();
   const subject = "Governed Artifact Clarity Read request";
 
   const body = `Governed Artifact Clarity Read request
@@ -140,10 +143,10 @@ I will attach or link the material after this email opens.
 `;
 
   return {
-    to: getRecipientEmail(),
+    to,
     subject,
     body,
-    fullRequest: `To: ${getRecipientEmail()}
+    fullRequest: `To: ${to}
 Subject: ${subject}
 
 ${body}`
@@ -155,7 +158,7 @@ async function copyText(text, successMessage) {
     await navigator.clipboard.writeText(text);
     if (copyNote) copyNote.textContent = successMessage;
   } catch (error) {
-    if (copyNote) copyNote.textContent = "Copy failed. Select and copy the visible email details manually.";
+    if (copyNote) copyNote.textContent = "Copy did not complete. Select and copy the visible email details manually.";
   }
 }
 
