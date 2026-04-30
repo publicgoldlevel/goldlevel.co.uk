@@ -11,10 +11,18 @@ index_path = PROJECT / "index.html"
 styles_path = PROJECT / "styles.css"
 component_html_path = PROJECT / "components" / "clarity-gap-diagnostic-panel" / "problem_section.html"
 component_css_path = PROJECT / "components" / "clarity-gap-diagnostic-panel" / "problem_section.css"
+expected_asset = PROJECT / "assets" / "generated" / "problem" / "problem-4x5-768.webp"
 
 for required in [index_path, styles_path, component_html_path, component_css_path]:
     if not required.exists():
         raise SystemExit(f"Missing required file: {required}")
+
+if not expected_asset.exists():
+    raise SystemExit(
+        "Missing required problem WebP asset: "
+        f"{expected_asset}\n"
+        "This is why the browser may show the alt text instead of the image."
+    )
 
 index = index_path.read_text(encoding="utf-8")
 styles = styles_path.read_text(encoding="utf-8")
@@ -22,7 +30,7 @@ new_section = component_html_path.read_text(encoding="utf-8").strip()
 new_css = component_css_path.read_text(encoding="utf-8").strip()
 
 pattern = re.compile(
-    r'<section id="problem"[\s\S]*?</section>\s*(?=<section id="pathway"|<section id="includes"|<section)',
+    r'<section\s+id=["\']problem["\'][\s\S]*?</section>\s*(?=<section\s+id=["\']pathway["\']|<section\s+id=["\']includes["\']|<section\s)',
     re.MULTILINE
 )
 
@@ -31,10 +39,22 @@ if not pattern.search(index):
 
 index = pattern.sub(new_section + "\n\n", index, count=1)
 
-if "Clarity Gap Diagnostic Panel v0.1.0" not in styles:
-    styles = styles.rstrip() + "\n\n" + new_css + "\n"
+# Remove previous clarity-gap CSS blocks before appending the clean v0.1.1 block.
+styles = re.sub(
+    r'/\* Clarity Gap Diagnostic Panel v0\.1\.0 \*/[\s\S]*?(?=/\*|\Z)',
+    '',
+    styles,
+    flags=re.MULTILINE
+)
+styles = re.sub(
+    r'/\* Clarity Gap Diagnostic Panel v0\.1\.1 \*/[\s\S]*?(?=/\*|\Z)',
+    '',
+    styles,
+    flags=re.MULTILINE
+)
+styles = styles.rstrip() + "\n\n" + new_css + "\n"
 
-index = re.sub(r'script\.js\?v=[^"]+', 'script.js?v=0.1.4', index)
+index = re.sub(r'script\.js\?v=[^"]+', 'script.js?v=0.1.5', index)
 
 index_path.write_text(index, encoding="utf-8", newline="\n")
 styles_path.write_text(styles, encoding="utf-8", newline="\n")
@@ -49,16 +69,20 @@ checks = {
     "one_problem_section": patched_index.count('id="problem"') == 1,
     "section_role_present": 'data-section-role="problem"' in patched_index,
     "asset_role_present": 'data-asset-role="problem"' in patched_index,
-    "diagnostic_panel_present": "diagnostic-panel" in patched_index,
-    "diagnostic_css_present": "Clarity Gap Diagnostic Panel v0.1.0" in patched_styles,
-    "legacy_problem_card_grid_removed": "card-grid four" not in problem_slice,
+    "diagnostic_panel_present": 'data-component="clarity-gap-diagnostic-panel"' in patched_index,
+    "diagnostic_css_present": "Clarity Gap Diagnostic Panel v0.1.1" in patched_styles,
+    "legacy_card_grid_removed": "card-grid four" not in problem_slice,
+    "ordered_list_removed": "<ol" not in problem_slice and "</ol>" not in problem_slice,
+    "markdown_markers_absent": "###" not in problem_slice and "## Meaningful" not in problem_slice,
+    "problem_asset_exists": expected_asset.exists(),
+    "script_cache_busted": "script.js?v=0.1.5" in patched_index,
 }
 
 receipt_dir = PROJECT / "docs"
 receipt_dir.mkdir(parents=True, exist_ok=True)
-receipt = receipt_dir / "clarity_gap_patch_receipt_v0_1_0.md"
+receipt = receipt_dir / "clarity_gap_patch_receipt_v0_1_1.md"
 receipt.write_text(
-    "# Clarity Gap Patch Receipt\n\n"
+    "# Clarity Gap Patch Receipt v0.1.1\n\n"
     f"Patched UTC: {datetime.now(timezone.utc).isoformat()}\n\n"
     f"Status: {'PASS' if all(checks.values()) else 'FAIL'}\n\n"
     "Checks:\n" +

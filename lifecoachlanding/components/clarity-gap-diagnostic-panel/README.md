@@ -1,37 +1,23 @@
-# Clarity Gap Diagnostic Panel Pack v0.1.0
+# Clarity Gap Diagnostic Panel Pack v0.1.1
 
-Generated: 2026-04-30T11:44:27.592446+00:00
+Generated: 2026-04-30T11:50:10.954513+00:00
 
 ## Purpose
 
-This pack fixes the chopped “The gap” section by replacing it with a single integrated diagnostic panel.
+Fix the non-functioning v0.1.0 output where the section displays as chopped text, visible numbering, visible image alt text, and broken component styling.
 
 ## Files
 
 - `lifecoachlanding/components/clarity-gap-diagnostic-panel/problem_section.html`
 - `lifecoachlanding/components/clarity-gap-diagnostic-panel/problem_section.css`
-- `lifecoachlanding/components/clarity-gap-diagnostic-panel/CLARITY_GAP_DIAGNOSTIC_PANEL_v0_1_0.md`
+- `lifecoachlanding/components/clarity-gap-diagnostic-panel/CLARITY_GAP_DIAGNOSTIC_PANEL_v0_1_1.md`
 - `lifecoachlanding/scripts/apply_clarity_gap_patch.py`
-- `lifecoachlanding/docs/clarity_gap_diagnostic_panel_receipt_v0_1_0.md`
+- `lifecoachlanding/scripts/diagnose_clarity_gap.py`
 
-## Local patch command
-
-From repo root:
+## Commands from repo root
 
 ```bash
+python lifecoachlanding/scripts/diagnose_clarity_gap.py
 python lifecoachlanding/scripts/apply_clarity_gap_patch.py
-```
-
-## Asset expectation
-
-The live site should already contain:
-
-```text
-lifecoachlanding/assets/generated/problem/problem-4x5-768.webp
-```
-
-The component references that WebP path relative to `lifecoachlanding/index.html`:
-
-```text
-assets/generated/problem/problem-4x5-768.webp
+python lifecoachlanding/scripts/diagnose_clarity_gap.py
 ```

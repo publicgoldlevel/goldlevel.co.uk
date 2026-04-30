@@ -1,4 +1,4 @@
-<section id="problem" data-section-role="problem" class="section-pad problem-section" aria-labelledby="problem-title">
+<section id="problem" data-section-role="problem" class="section-pad problem-section clarity-gap-section" aria-labelledby="problem-title">
   <div class="shell">
     <div class="section-heading compact">
       <p class="eyebrow"><span></span> The gap</p>
@@ -6,56 +6,61 @@
       <p>A coach can have real depth, but the page still fails to show the message, offer, trust, and next step clearly.</p>
     </div>
 
-    <div class="diagnostic-panel">
-      <picture class="diagnostic-media media-frame media-contain" data-asset-role="problem" data-style-family="cream_sage_gold_editorial">
-        <img
-          src="assets/generated/problem/problem-4x5-768.webp"
-          srcset="
-            assets/generated/problem/problem-4x5-480.webp 480w,
-            assets/generated/problem/problem-4x5-768.webp 768w,
-            assets/generated/problem/problem-4x5-1120.webp 1120w,
-            assets/generated/problem/problem-4x5-1440.webp 1440w
-          "
-          sizes="(max-width: 860px) 92vw, 40vw"
-          alt="Unclear material becoming a clearer website structure."
-          loading="lazy"
-          decoding="async"
-        />
-      </picture>
+    <div class="diagnostic-panel" data-component="clarity-gap-diagnostic-panel">
+      <figure class="diagnostic-media-wrap">
+        <picture class="diagnostic-media media-frame media-contain" data-asset-role="problem" data-style-family="cream_sage_gold_editorial">
+          <img
+            src="assets/generated/problem/problem-4x5-768.webp"
+            srcset="
+              assets/generated/problem/problem-4x5-480.webp 480w,
+              assets/generated/problem/problem-4x5-768.webp 768w,
+              assets/generated/problem/problem-4x5-1120.webp 1120w,
+              assets/generated/problem/problem-4x5-1440.webp 1440w
+            "
+            sizes="(max-width: 860px) 92vw, 40vw"
+            alt="Unclear material becoming a clearer website structure."
+            loading="lazy"
+            decoding="async"
+          />
+        </picture>
+      </figure>
 
       <div class="diagnostic-copy">
         <p class="panel-label">Four symptoms of an unclear page</p>
 
-        <ol class="symptom-list">
-          <li>
-            <span>01</span>
+        <div class="symptom-list" role="list">
+          <article class="symptom-item" role="listitem">
+            <span class="symptom-number" aria-hidden="true">01</span>
             <div>
               <h3>Message unclear</h3>
               <p>People do not immediately understand who you help.</p>
             </div>
-          </li>
-          <li>
-            <span>02</span>
+          </article>
+
+          <article class="symptom-item" role="listitem">
+            <span class="symptom-number" aria-hidden="true">02</span>
             <div>
               <h3>Offer hidden</h3>
               <p>Sessions or packages are not easy to choose.</p>
             </div>
-          </li>
-          <li>
-            <span>03</span>
+          </article>
+
+          <article class="symptom-item" role="listitem">
+            <span class="symptom-number" aria-hidden="true">03</span>
             <div>
               <h3>Trust not visible</h3>
               <p>Your presence is stronger in conversation than on the page.</p>
             </div>
-          </li>
-          <li>
-            <span>04</span>
+          </article>
+
+          <article class="symptom-item" role="listitem">
+            <span class="symptom-number" aria-hidden="true">04</span>
             <div>
               <h3>Next step missing</h3>
               <p>Visitors do not know whether to book, enquire, or message.</p>
             </div>
-          </li>
-        </ol>
+          </article>
+        </div>
 
         <p class="panel-bridge">The fix is not more decoration. It is a clearer pathway.</p>
       </div>
