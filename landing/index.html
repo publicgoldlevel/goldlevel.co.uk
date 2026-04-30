@@ -264,21 +264,21 @@
         <div>
           <p class="eyebrow"><span></span> Intake</p>
           <h2 id="intake-title">Send the material. I’ll tell you what it is, what it is not, what it can become, and the next useful artifact to build from it.</h2>
-          <p class="muted">This static form prepares a request email. Replace the placeholder email in <code>script.js</code> or connect it to your chosen form/payment provider when ready.</p>
+          <p class="muted">This static form prepares a request email to <a href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a>. No files upload here yet. Attach or link the material after your email opens.</p>
         </div>
 
         <form class="intake-form" data-intake-form>
           <label>
             Your name
-            <input name="name" type="text" placeholder="Name" autocomplete="name" />
+            <input name="name" type="text" placeholder="Name" autocomplete="name" required />
           </label>
           <label>
             Email
-            <input name="email" type="email" placeholder="you@example.com" autocomplete="email" />
+            <input name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
           </label>
           <label>
             Selected tier
-            <select name="tier" data-tier-select>
+            <select name="tier" data-tier-select required>
               <option>Bronze — £35</option>
               <option selected>Silver — £75</option>
               <option>Gold — £150</option>
@@ -286,7 +286,7 @@
           </label>
           <label>
             What are you sending?
-            <select name="materialType">
+            <select name="materialType" required>
               <option>Messy notes</option>
               <option>Rough draft</option>
               <option>Voice transcript</option>
@@ -300,7 +300,11 @@
           </label>
           <label class="wide">
             Short description
-            <textarea name="description" rows="5" placeholder="Briefly describe what the material is and what you want it to become."></textarea>
+            <textarea name="description" rows="5" placeholder="Briefly describe what the material is and what you want it to become." required></textarea>
+          </label>
+          <label class="wide consent-row">
+            <input name="consent" type="checkbox" required />
+            <span>I consent to Goldlevel using the submitted details to review and respond to this request. I understand no files upload through this form and I should avoid sending highly sensitive legal, medical, financial, or third-party private data unless separately agreed.</span>
           </label>
           <div class="form-actions wide">
             <button class="button" type="submit">Prepare request email</button>
@@ -367,7 +371,8 @@
 
   <footer class="site-footer">
     <div class="shell footer-grid">
-      <p>Governed Artifact Clarity Read · Pilot landing page v0.1.2</p>
+      <p>Governed Artifact Clarity Read · Pilot landing page v0.1.3</p>
+      <p><a href="mailto:info@goldlevel.co.uk">info@goldlevel.co.uk</a></p>
       <p>Input → Structure → Evidence split → Release map → Next artifact</p>
     </div>
   </footer>
