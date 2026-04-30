@@ -1,0 +1,711 @@
+{
+  "asset_pack": "LIFE_COACH_WEBSITE_ELEMENT_ASSET_PACK",
+  "version": "0.1.0",
+  "created_utc": "2026-04-30T10:03:32.700492+00:00",
+  "roles": {
+    "hero": {
+      "section": "hero",
+      "title": "Hero",
+      "alt": "Calm laptop workspace showing a coaching website concept.",
+      "source": "raw_assets/hero.jpg",
+      "source_sha256": "6397724538e150d038f7c8c67aa3301567fa66b2431c3df06b681bbc7d4d7e2f",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/hero/hero-4x5-480.webp",
+            "sha256": "b421b23ca54ef349f75995b31d695e44e0cc1e50f5b3800c2923fbf035c30ce0",
+            "size_bytes": 33590,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/hero/hero-4x5-768.webp",
+            "sha256": "16871c94ff0650984e8cb041d17363117e54fd349a83d8e93f23a0d8d3b61685",
+            "size_bytes": 66890,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/hero/hero-4x5-1120.webp",
+            "sha256": "b2f1470f3a3e286f77439113f37fb190f4d2515057ea4ef1d7c0e1cfde878011",
+            "size_bytes": 116770,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/hero/hero-4x5-1440.webp",
+            "sha256": "ce2d0813712c813e0623e46c9b26f82c4a17b485695a79cd90672d9a344514a6",
+            "size_bytes": 158560,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/hero/hero-thumb-64.webp",
+            "sha256": "199f990daf96a45f540c93b974414ff0c45a66367f576551929fe2a7814973c4",
+            "size_bytes": 786,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ],
+        "16x10_matte": [
+          {
+            "width": 768,
+            "path": "assets/generated/hero/hero-16x10_matte-768.webp",
+            "sha256": "95e75022909adb7b6dca5698ce47b624ce3126e6e48542b738990bd6446cf9f5",
+            "size_bytes": 20180,
+            "dimensions": [
+              768,
+              480
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/hero/hero-16x10_matte-1120.webp",
+            "sha256": "7e4764827d4b48c01d040424464c8cbac30380156bcd252953f85b35528db06c",
+            "size_bytes": 35184,
+            "dimensions": [
+              1120,
+              700
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/hero/hero-16x10_matte-1440.webp",
+            "sha256": "cbc6ee1a963d9c1c117b3ae6bebf1eeaa9515b8c5d3b4ff8d37c80c526d7f05d",
+            "size_bytes": 51826,
+            "dimensions": [
+              1440,
+              900
+            ]
+          },
+          {
+            "width": 1920,
+            "path": "assets/generated/hero/hero-16x10_matte-1920.webp",
+            "sha256": "2e654c40cf4d491c918cd5296c567ee27282179fe1acd65b2c340a9fc1d17460",
+            "size_bytes": 79810,
+            "dimensions": [
+              1920,
+              1200
+            ]
+          }
+        ]
+      }
+    },
+    "problem": {
+      "section": "problem",
+      "title": "Clarity gap",
+      "alt": "Desk scene showing unclear material becoming a clear website structure.",
+      "source": "raw_assets/problem.jpg",
+      "source_sha256": "c537bb0e443d6f3d160715b6fa84c1640074b62f52d8e3628b321a24403cf2e4",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/problem/problem-4x5-480.webp",
+            "sha256": "3e3ac7297186477a1db8a4e559177ec00f4773295ba3d0072e0313be401deaf5",
+            "size_bytes": 21312,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/problem/problem-4x5-768.webp",
+            "sha256": "afd3ec3585a6e0dd71fe0aab7fc5e5e57896d46b406db1fdc6fec69efdd7e710",
+            "size_bytes": 43906,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/problem/problem-4x5-1120.webp",
+            "sha256": "a2a2c9b2025faf584f35113cfe0faf69cd99b83841c2a4aaf46a43e239bd70d1",
+            "size_bytes": 73206,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/problem/problem-4x5-1440.webp",
+            "sha256": "8f27ade5be2fb6e500ffa013dcbde93715ae934d36825f2430d7e20fb37b96af",
+            "size_bytes": 103562,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/problem/problem-thumb-64.webp",
+            "sha256": "15b83e3ee60cb13849ea7cf938839d57f560406b1466a7a2818bfe4d80619e38",
+            "size_bytes": 612,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ]
+      }
+    },
+    "pathway": {
+      "section": "pathway",
+      "title": "Pathway",
+      "alt": "Visual pathway from message to offer to trust to booking.",
+      "source": "raw_assets/pathway.jpg",
+      "source_sha256": "0599ded6c2a4bc135f372879ddf3f1b158b183f6bd5794279aa4fcd49c806a9e",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/pathway/pathway-4x5-480.webp",
+            "sha256": "d60dc8cc9d79e67753079db44a437ace004c5c1bf6b0c8aba745004ab8220d0a",
+            "size_bytes": 31614,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/pathway/pathway-4x5-768.webp",
+            "sha256": "fb16eebffc481c2cc13275c92229797e908edec877ef13bee22e437f14b96112",
+            "size_bytes": 59042,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/pathway/pathway-4x5-1120.webp",
+            "sha256": "ea6d7f9ea2cfcb081a099ee067a598704eaac14c696eb585ab5e858e3c747bbb",
+            "size_bytes": 96968,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/pathway/pathway-4x5-1440.webp",
+            "sha256": "2e4549c3e0efe9a382fa6786ec5e220cf24977fb140dfb62526520ee01a88d38",
+            "size_bytes": 128328,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/pathway/pathway-thumb-64.webp",
+            "sha256": "63126383a7147e1988fda628a4f7dd4e39feae742cdf26cab138c8b3498a3b4a",
+            "size_bytes": 920,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ],
+        "16x10_matte": [
+          {
+            "width": 768,
+            "path": "assets/generated/pathway/pathway-16x10_matte-768.webp",
+            "sha256": "5029ec48e728fa46c6f1ae11c2628436388d5405f6799e6647a003a7e3054657",
+            "size_bytes": 20428,
+            "dimensions": [
+              768,
+              480
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/pathway/pathway-16x10_matte-1120.webp",
+            "sha256": "78202406110fd4e78c80d6444b0cc022d3ca87efa966c71f700a5055232997af",
+            "size_bytes": 34054,
+            "dimensions": [
+              1120,
+              700
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/pathway/pathway-16x10_matte-1440.webp",
+            "sha256": "5219db4f03ce23bea902288ab8f7d7360acc8e9c76df66b68836231d3dbbf483",
+            "size_bytes": 48368,
+            "dimensions": [
+              1440,
+              900
+            ]
+          },
+          {
+            "width": 1920,
+            "path": "assets/generated/pathway/pathway-16x10_matte-1920.webp",
+            "sha256": "fd15a833b35b27c72f40f6a3b0b46178e24954967ea646aaba0b5ca9b60b316f",
+            "size_bytes": 70136,
+            "dimensions": [
+              1920,
+              1200
+            ]
+          }
+        ]
+      }
+    },
+    "includes": {
+      "section": "includes",
+      "title": "Included sections",
+      "alt": "Layered website section panels suggesting hero, about, offer, process, FAQ, and contact.",
+      "source": "raw_assets/includes.jpg",
+      "source_sha256": "305d0d72efa77ae6c3ccd1eeaf12b8e43a93bd18c7aab0ba32b24f1d1ca4d055",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/includes/includes-4x5-480.webp",
+            "sha256": "49d490a434188e2840595a185ff96119a30195a5d898a8291a38ce98d9289dcc",
+            "size_bytes": 31538,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/includes/includes-4x5-768.webp",
+            "sha256": "61e945356f1143076249129825a7554362b1ebbb74ef80165e875aeeb7c053d0",
+            "size_bytes": 59432,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/includes/includes-4x5-1120.webp",
+            "sha256": "6b186266e460f371222f990b3401aa86bf7a5f46ea1d99f39acda4bd8f0ddcb0",
+            "size_bytes": 94822,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/includes/includes-4x5-1440.webp",
+            "sha256": "681431f93d1d2599c96ab424e291085fc6d3b49c86693ab8fde3a61c48244ad7",
+            "size_bytes": 130034,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/includes/includes-thumb-64.webp",
+            "sha256": "4c649979f5500c0011da4525aa6255eb9a3fe57a78b4f0f6ff1d5a7e26290cec",
+            "size_bytes": 950,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ]
+      }
+    },
+    "tiers": {
+      "section": "tiers",
+      "title": "Offer tiers",
+      "alt": "Three service-level cards showing a simple offer structure.",
+      "source": "raw_assets/tiers.jpg",
+      "source_sha256": "0599ded6c2a4bc135f372879ddf3f1b158b183f6bd5794279aa4fcd49c806a9e",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/tiers/tiers-4x5-480.webp",
+            "sha256": "d60dc8cc9d79e67753079db44a437ace004c5c1bf6b0c8aba745004ab8220d0a",
+            "size_bytes": 31614,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/tiers/tiers-4x5-768.webp",
+            "sha256": "fb16eebffc481c2cc13275c92229797e908edec877ef13bee22e437f14b96112",
+            "size_bytes": 59042,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/tiers/tiers-4x5-1120.webp",
+            "sha256": "ea6d7f9ea2cfcb081a099ee067a598704eaac14c696eb585ab5e858e3c747bbb",
+            "size_bytes": 96968,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/tiers/tiers-4x5-1440.webp",
+            "sha256": "2e4549c3e0efe9a382fa6786ec5e220cf24977fb140dfb62526520ee01a88d38",
+            "size_bytes": 128328,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/tiers/tiers-thumb-64.webp",
+            "sha256": "63126383a7147e1988fda628a4f7dd4e39feae742cdf26cab138c8b3498a3b4a",
+            "size_bytes": 920,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ]
+      }
+    },
+    "process": {
+      "section": "process",
+      "title": "Process",
+      "alt": "Creative workflow scene showing idea to page build.",
+      "source": "raw_assets/process.jpg",
+      "source_sha256": "74f2c2e478319e9ad32931c6fcf6aa74d604b1c2542f675662e15019f84a7eff",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/process/process-4x5-480.webp",
+            "sha256": "7d121079adea5ec4916b6632fddb7519ce944021dad485947d5546d0ddbb6c64",
+            "size_bytes": 25524,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/process/process-4x5-768.webp",
+            "sha256": "d79bf4a59738b1e141f1cc18cd1a2daf287771b8401bcbdd4b10c50907301c96",
+            "size_bytes": 48836,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/process/process-4x5-1120.webp",
+            "sha256": "1d78311c75ee202e390e3d37e4526b6c8d5f4ee3c34e896bde03d7e952a52811",
+            "size_bytes": 79074,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/process/process-4x5-1440.webp",
+            "sha256": "0aa3dd28d8a781c23e8fc0f232109273399533513fd757f791cefa70b2fa8d89",
+            "size_bytes": 110156,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/process/process-thumb-64.webp",
+            "sha256": "c0d144606fa18afd2433e654f31e2136a061936dd80009cab555d3f3deec1cfe",
+            "size_bytes": 796,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ],
+        "16x10_matte": [
+          {
+            "width": 768,
+            "path": "assets/generated/process/process-16x10_matte-768.webp",
+            "sha256": "b26ffcef887c89f4d58b64bae2acd4c67b876e903300d65617f9f831446d3265",
+            "size_bytes": 16956,
+            "dimensions": [
+              768,
+              480
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/process/process-16x10_matte-1120.webp",
+            "sha256": "95ad0db618f1d777c4327924de8e5390119dd97e33b0cc0082b4eba3184dce8f",
+            "size_bytes": 29742,
+            "dimensions": [
+              1120,
+              700
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/process/process-16x10_matte-1440.webp",
+            "sha256": "2cfc23660a223d6d3d8b24cf48105867834769de4fe3a5f6f194159892423eba",
+            "size_bytes": 41038,
+            "dimensions": [
+              1440,
+              900
+            ]
+          },
+          {
+            "width": 1920,
+            "path": "assets/generated/process/process-16x10_matte-1920.webp",
+            "sha256": "1739c724a3cd143007c9f48c1916a085f2f1287a55434cd4f1bbe1250638971f",
+            "size_bytes": 59414,
+            "dimensions": [
+              1920,
+              1200
+            ]
+          }
+        ]
+      }
+    },
+    "trust": {
+      "section": "trust",
+      "title": "Trust",
+      "alt": "Calm professional coaching trust scene.",
+      "source": "raw_assets/trust.jpg",
+      "source_sha256": "fa217e6b7f861c084245dd0f4252faf30dcbb8f0513ab4243b65078584b596e0",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/trust/trust-4x5-480.webp",
+            "sha256": "a2a2c7b32da778dcb7b11e108be5e44bc219b55c11cb5c6a34bcbf5e57a1e396",
+            "size_bytes": 24820,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/trust/trust-4x5-768.webp",
+            "sha256": "69140cb54ddfc61ae7e409522ccf6f01f83bfe601c5168ad31999847d41b2bc7",
+            "size_bytes": 47138,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/trust/trust-4x5-1120.webp",
+            "sha256": "929822e92f6c3baa12d55d6c2920456779ad78233eef3087a9b009bea553bc24",
+            "size_bytes": 77848,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/trust/trust-4x5-1440.webp",
+            "sha256": "aadaf256bf6b9f0b74fb22760c4dd6d9dfd377dac4342bed7a1db7b0b5a1fdae",
+            "size_bytes": 103798,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/trust/trust-thumb-64.webp",
+            "sha256": "bc1e865e0c98bdc4f0066fd982c4339c556c619412cdf45db4573826092c092d",
+            "size_bytes": 720,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ]
+      }
+    },
+    "contact": {
+      "section": "contact",
+      "title": "Contact",
+      "alt": "Inviting contact scene with laptop, notebook, and next-step request.",
+      "source": "raw_assets/contact.jpg",
+      "source_sha256": "90605460b996a52d186934a1c8acfd7f6c1bf71af660714fd23165ce6bc9dab4",
+      "source_dimensions": [
+        1122,
+        1402
+      ],
+      "variants": {
+        "4x5": [
+          {
+            "width": 480,
+            "path": "assets/generated/contact/contact-4x5-480.webp",
+            "sha256": "4ef324fe116e2380157eca49eeef2aacc0826184aeec2c5ecfd70807a1c107a0",
+            "size_bytes": 18654,
+            "dimensions": [
+              480,
+              600
+            ]
+          },
+          {
+            "width": 768,
+            "path": "assets/generated/contact/contact-4x5-768.webp",
+            "sha256": "71083ba2395738962b8f968617a79a4dba8ff4ace71c8dc367d750331210c4ec",
+            "size_bytes": 34750,
+            "dimensions": [
+              768,
+              960
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/contact/contact-4x5-1120.webp",
+            "sha256": "c1e58ca361a019047b370970fab74b1cedcd0ea1baf5e6bcbd3b95e8e44de570",
+            "size_bytes": 59482,
+            "dimensions": [
+              1120,
+              1400
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/contact/contact-4x5-1440.webp",
+            "sha256": "3e4b179e0031135bcb011febbe9fd88421db5b868da52e349ee8df2d2d3a7826",
+            "size_bytes": 83308,
+            "dimensions": [
+              1440,
+              1799
+            ]
+          }
+        ],
+        "thumb": [
+          {
+            "width": 64,
+            "path": "assets/generated/contact/contact-thumb-64.webp",
+            "sha256": "4739e48a376f498e580b97884602556e6b9132e4bc53afda2e2ca9382090e07d",
+            "size_bytes": 662,
+            "dimensions": [
+              64,
+              80
+            ]
+          }
+        ],
+        "16x10_matte": [
+          {
+            "width": 768,
+            "path": "assets/generated/contact/contact-16x10_matte-768.webp",
+            "sha256": "92f5eaa4d131ffdb0413516e116991cd171365bda0e799fbad3bf2ce18b8c45c",
+            "size_bytes": 13148,
+            "dimensions": [
+              768,
+              480
+            ]
+          },
+          {
+            "width": 1120,
+            "path": "assets/generated/contact/contact-16x10_matte-1120.webp",
+            "sha256": "e305ff5c2f569cea8a7c5d5e3bc48aa64aa8375c37e97e4bb111cdac05b0efb4",
+            "size_bytes": 22562,
+            "dimensions": [
+              1120,
+              700
+            ]
+          },
+          {
+            "width": 1440,
+            "path": "assets/generated/contact/contact-16x10_matte-1440.webp",
+            "sha256": "f32def45b1b9206ff69be3e9af96d1c97369d6325b2cc34ff63241a874303cc0",
+            "size_bytes": 31272,
+            "dimensions": [
+              1440,
+              900
+            ]
+          },
+          {
+            "width": 1920,
+            "path": "assets/generated/contact/contact-16x10_matte-1920.webp",
+            "sha256": "58a10c32505f107630451819b67dd1a5a846c7ee03c57e820cfe2d0bf31ed46b",
+            "size_bytes": 47178,
+            "dimensions": [
+              1920,
+              1200
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
