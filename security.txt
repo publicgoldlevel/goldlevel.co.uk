@@ -1,5 +1,0 @@
-Contact: mailto:info@goldlevel.co.uk
-Preferred-Languages: en
-Canonical: https://goldlevel.co.uk/.well-known/security.txt
-Policy: https://goldlevel.co.uk/system.html
-Expires: 2027-04-22T00:00:00Z
