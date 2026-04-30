@@ -924,3 +924,120 @@ textarea { resize: vertical; }
     width: 100%;
   }
 }
+
+/* Clarity Gap Visual Strength Pass v0.1.2 */
+
+.clarity-gap-section {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(169, 134, 61, 0.14), transparent 26rem),
+    linear-gradient(180deg, rgba(255, 250, 242, 0.78), rgba(241, 228, 209, 0.62));
+}
+
+.clarity-gap-section .section-heading {
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.clarity-gap-section .eyebrow {
+  justify-content: center;
+}
+
+.clarity-gap-section .diagnostic-panel {
+  position: relative;
+  isolation: isolate;
+  grid-template-columns: minmax(300px, 0.92fr) minmax(360px, 1.08fr);
+  max-width: 1060px;
+  margin-inline: auto;
+  padding: clamp(22px, 4vw, 44px);
+  border: 1px solid rgba(169, 134, 61, 0.42);
+  border-radius: clamp(32px, 5vw, 56px);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.96), rgba(247, 239, 227, 0.86));
+  box-shadow:
+    0 32px 80px rgba(17, 25, 28, 0.13),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62);
+}
+
+.clarity-gap-section .diagnostic-panel::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  z-index: -1;
+  border-radius: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(169, 134, 61, 0.16);
+  pointer-events: none;
+}
+
+.clarity-gap-section .diagnostic-media-wrap {
+  margin: 0;
+}
+
+.clarity-gap-section .diagnostic-media {
+  aspect-ratio: 4 / 5;
+  padding: clamp(10px, 1.8vw, 18px);
+  border-radius: clamp(26px, 4vw, 42px);
+  background:
+    linear-gradient(180deg, rgba(247, 239, 227, 0.96), rgba(255, 250, 242, 0.82));
+  box-shadow: 0 22px 52px rgba(17, 25, 28, 0.10);
+}
+
+.clarity-gap-section .diagnostic-copy {
+  align-content: center;
+  gap: 20px;
+}
+
+.clarity-gap-section .panel-label {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid rgba(169, 134, 61, 0.32);
+  border-radius: 999px;
+  background: rgba(247, 239, 227, 0.72);
+  color: var(--gold);
+}
+
+.clarity-gap-section .symptom-list {
+  gap: 14px;
+}
+
+.clarity-gap-section .symptom-item {
+  grid-template-columns: 54px 1fr;
+  gap: 16px;
+  padding: 18px 18px;
+  border: 1px solid rgba(169, 134, 61, 0.30);
+  border-radius: 24px;
+  background: rgba(255, 250, 242, 0.92);
+  box-shadow: 0 12px 28px rgba(17, 25, 28, 0.055);
+}
+
+.clarity-gap-section .symptom-number {
+  width: 46px;
+  height: 46px;
+  background: linear-gradient(135deg, var(--sage), var(--sage-dark));
+  box-shadow: 0 10px 20px rgba(17, 25, 28, 0.12);
+}
+
+.clarity-gap-section .symptom-item h3 {
+  font-size: clamp(1.08rem, 2vw, 1.26rem);
+}
+
+.clarity-gap-section .panel-bridge {
+  padding-top: 6px;
+  border-top: 1px solid rgba(169, 134, 61, 0.22);
+}
+
+@media (max-width: 860px) {
+  .clarity-gap-section .section-heading {
+    text-align: left;
+    margin-inline: 0;
+  }
+
+  .clarity-gap-section .eyebrow {
+    justify-content: flex-start;
+  }
+
+  .clarity-gap-section .diagnostic-panel {
+    grid-template-columns: 1fr;
+  }
+}
