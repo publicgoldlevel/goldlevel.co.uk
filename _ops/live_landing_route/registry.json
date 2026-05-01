@@ -1,0 +1,7 @@
+{
+  "lane": "live_landing_route",
+  "purpose": "Ensure Offer Clarity landing page is served under the actual live site root.",
+  "created_utc": "20260501T184608Z",
+  "selector_file": "index.html",
+  "site_root": "."
+}

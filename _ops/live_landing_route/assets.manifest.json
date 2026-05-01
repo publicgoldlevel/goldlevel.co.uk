@@ -1,0 +1,8 @@
+{
+  "required": [
+    "index.html",
+    "./landing/index.html",
+    "./landing/assets/css/goldlevel-landing.css",
+    "./landing/assets/js/goldlevel-landing.js"
+  ]
+}
