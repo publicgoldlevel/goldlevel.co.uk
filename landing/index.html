@@ -13,6 +13,108 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="assets/css/goldlevel-landing.css" />
+
+<style id="gl-fast-close-css">
+/* GOLDLEVEL fast-close conversion patch v1 */
+.gl-fast-close {
+  margin: clamp(22px, 5vw, 44px) 0;
+  display: grid;
+  gap: 18px;
+}
+.gl-fast-close-chips {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.gl-fast-chip {
+  border: 1px solid rgba(255, 207, 77, .32);
+  border-radius: 999px;
+  padding: 11px 14px;
+  background: rgba(255, 207, 77, .08);
+  color: #fff7df;
+  font-weight: 800;
+  letter-spacing: .02em;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+}
+.gl-fast-offer,
+.gl-example-read {
+  border: 1px solid rgba(255, 207, 77, .34);
+  border-radius: 28px;
+  padding: clamp(22px, 5vw, 38px);
+  background:
+    radial-gradient(circle at top right, rgba(255, 207, 77, .18), transparent 42%),
+    linear-gradient(135deg, rgba(21, 24, 33, .94), rgba(6, 9, 16, .96));
+  box-shadow: 0 22px 80px rgba(0,0,0,.36);
+}
+.gl-fast-kicker {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 8px 13px;
+  background: linear-gradient(135deg, #ffd54f, #f3a91e);
+  color: #090909;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: .78rem;
+  margin-bottom: 16px;
+}
+.gl-fast-offer h2,
+.gl-example-read h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 8vw, 4.4rem);
+  line-height: .94;
+  color: #f8f4e8;
+}
+.gl-fast-price {
+  font-size: clamp(3.2rem, 18vw, 7rem);
+  line-height: .9;
+  color: #ffcc38;
+  font-weight: 950;
+  letter-spacing: -.06em;
+  margin: 18px 0 4px;
+}
+.gl-fast-muted {
+  color: rgba(245, 240, 225, .72);
+  font-size: clamp(1.05rem, 4vw, 1.32rem);
+  line-height: 1.55;
+}
+.gl-fast-primary {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 62px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff0a8, #ffc12f);
+  color: #080808 !important;
+  font-weight: 950;
+  text-decoration: none;
+  font-size: 1.05rem;
+  box-shadow: 0 18px 42px rgba(255,193,47,.22);
+}
+.gl-example-grid {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+.gl-example-item {
+  border-top: 1px solid rgba(255,207,77,.22);
+  padding-top: 14px;
+}
+.gl-example-item strong {
+  display: block;
+  color: #ffcc38;
+  margin-bottom: 4px;
+}
+@media (max-width: 520px) {
+  .gl-fast-close-chips {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,12 +136,12 @@
     <main id="main">
       <section id="top" class="hero section-grid" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">PUBLIC OFFER · 24H DIAGNOSTIC</p>
+          <p class="eyebrow">PUBLIC OFFER · £35 · 24–48H WRITTEN READ</p>
           <h1 id="hero-title">Your page is live. <span>Your buyer is not moving.</span></h1>
-          <p class="hero-lede">Get a written clarity read on the page, post, pitch or offer that should be creating traction but is not landing clearly.</p>
+          <p class="hero-lede">Send one live page, post, pitch, profile or offer. I’ll return a written diagnosis showing what the buyer is not understanding, where trust is leaking, and what to change first.</p>
           <div class="hero-actions" role="group" aria-label="Primary actions">
-            <a class="button button-primary" href="#start">Get the read</a>
-            <a class="button button-secondary" href="#includes">See what you receive</a>
+            <a class="button button-primary" href="#start">DM “READ” — £35</a>
+            <a class="button button-secondary" href="#includes">See example read</a>
           </div>
           <dl class="signal-strip" aria-label="Quick facts">
             <div><dt>Delivery</dt><dd>24–48h</dd></div>
@@ -59,7 +161,54 @@
             <li>The first useful change to test</li>
           </ul>
         </aside>
-      </section>
+      
+<!-- GL_PATCH_OFFER_CLARITY_FAST_CLOSE_V1 -->
+<div class="gl-fast-close" id="example-read">
+  <div class="gl-fast-close-chips" aria-label="Offer summary">
+    <div class="gl-fast-chip">£35 founding read</div>
+    <div class="gl-fast-chip">One live asset</div>
+    <div class="gl-fast-chip">24–48h delivery</div>
+    <div class="gl-fast-chip">Written diagnostic</div>
+  </div>
+
+  <section class="gl-fast-offer" aria-labelledby="gl-fast-offer-title">
+    <div class="gl-fast-kicker">Pilot offer</div>
+    <h2 id="gl-fast-offer-title">Live-But-Not-Landing Read</h2>
+    <div class="gl-fast-price">£35</div>
+    <p class="gl-fast-muted">
+      Send one live page, post, pitch, profile or offer.
+      Receive a written diagnostic showing what the buyer is not understanding,
+      where trust is leaking, and what to change first.
+    </p>
+    <a class="gl-fast-primary" href="#start">DM “READ” — £35</a>
+  </section>
+
+  <section class="gl-example-read" aria-labelledby="gl-example-read-title">
+    <div class="gl-fast-kicker">Example mini-read</div>
+    <h2 id="gl-example-read-title">What the read names.</h2>
+    <div class="gl-example-grid">
+      <div class="gl-example-item">
+        <strong>Signal</strong>
+        The page looks serious, but the buyer cannot tell what to buy first.
+      </div>
+      <div class="gl-example-item">
+        <strong>Trust leak</strong>
+        The offer explains the system before it shows the result.
+      </div>
+      <div class="gl-example-item">
+        <strong>Priority fix</strong>
+        Move price, output, delivery and CTA into the first screen.
+      </div>
+      <div class="gl-example-item">
+        <strong>Next action</strong>
+        Send the page to 10 people with one specific observation, not a generic link.
+      </div>
+    </div>
+  </section>
+</div>
+<!-- /GL_PATCH_OFFER_CLARITY_FAST_CLOSE_V1 -->
+
+</section>
 
       <section class="problem-band" aria-label="Problem recognition">
         <div class="ticker">PAGE UP · POST OUT · OFFER EXISTS · SILENCE CONTINUES · SIGNAL UNCLEAR · TRUST LEAKING · BUYER HESITATES</div>
@@ -71,7 +220,7 @@
           <h2 id="read-title">The buyer does not need more noise. They need one clear reason to act.</h2>
         </div>
         <div class="copy-block">
-          <p>If your front page is not attracting the buyer, the issue is usually not effort. It is usually transmission: the offer may exist, but the buyer cannot instantly read the pain, trust, outcome, price, next step, or reason to move now.</p>
+          <p>The issue is usually not effort. The offer may exist, but the buyer cannot instantly read: pain, trust, outcome, price, next step, or reason to act now.</p>
           <p>GOLDLEVEL turns that live material into a bounded written diagnostic, so the next change is not guessed. It is named.</p>
         </div>
       </section>
@@ -107,7 +256,7 @@
           <h2 id="pricing-title">Live-But-Not-Landing Read</h2>
           <p class="price">£35 <span>founding read</span></p>
           <p>Send one live page, post, pitch, profile or offer. Receive a written diagnostic naming the real pressure, the trust break and the first useful change.</p>
-          <a class="button button-primary wide" href="#start">Start the read</a>
+          <a class="button button-primary wide" href="#start">DM “READ” — £35</a>
         </div>
         <div class="price-notes">
           <h3>Boundaries</h3>
