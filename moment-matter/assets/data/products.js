@@ -54,7 +54,6 @@ window.PRODUCTS = [
       "Phone-friendly image file",
       "Delivered by email"
     ],
-    "imagePath": "assets/img/product-artifacts/custom_moment_card_digital.png",
     "imageAspect": "portrait"
   },
   {
@@ -85,7 +84,6 @@ window.PRODUCTS = [
       "Optional gift note",
       "Worldwide shipping available"
     ],
-    "imagePath": "assets/img/product-artifacts/custom_moment_card_physical.png",
     "imageAspect": "portrait"
   },
   {
@@ -116,7 +114,6 @@ window.PRODUCTS = [
       "Web/social image",
       "Delivered by email"
     ],
-    "imagePath": "assets/img/product-artifacts/custom_moment_map_digital.png",
     "imageAspect": "portrait"
   },
   {
@@ -147,7 +144,6 @@ window.PRODUCTS = [
       "Protective packaging",
       "Worldwide shipping available"
     ],
-    "imagePath": "assets/img/product-artifacts/Custom_Moment_Map_printed.png",
     "imageAspect": "portrait"
   },
   {
@@ -178,7 +174,6 @@ window.PRODUCTS = [
       "Digital delivery",
       "Optional follow-up route"
     ],
-    "imagePath": "assets/img/product-artifacts/clarity_map_digital.png",
     "imageAspect": "portrait"
   },
   {
@@ -209,7 +204,6 @@ window.PRODUCTS = [
       "High-resolution files for safekeeping",
       "Protective packaging and worldwide shipping available"
     ],
-    "imagePath": "assets/img/product-artifacts/CLARITY_MAP_Print_edition.png",
     "imageAspect": "wide"
   },
   {
