@@ -3,7 +3,11 @@
   const money=n=>'£'+Number(n||0).toFixed(0);
   const getCart=()=>JSON.parse(localStorage.getItem('mm_cart_v3')||'[]');
   const setCart=c=>{localStorage.setItem('mm_cart_v3',JSON.stringify(c));updateCartCount();};
-  const findProduct=id=>(window.PRODUCTS||[]).find(p=>p.id===id);
+  const PRODUCT_ALIASES = {
+    'clarity-map-print': 'clarity-map-print-edition',
+    'custom-moment-map-physical': 'custom-moment-map-printed'
+  };
+  const findProduct=id=>{const key=PRODUCT_ALIASES[id]||id; return (window.PRODUCTS||[]).find(p=>p.id===key||p.id===id);};
   const mmAssetUrl = raw => {
     raw = String(raw || '').trim();
     if (!raw) return 'assets/img/brand-mark.svg';

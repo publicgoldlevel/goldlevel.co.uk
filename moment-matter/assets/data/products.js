@@ -147,7 +147,8 @@ window.PRODUCTS = [
       "Protective packaging",
       "Worldwide shipping available"
     ],
-    "imageAspect": "portrait"
+    "imageAspect": "portrait",
+    "imagePath": "assets/img/artwork/custom-moment-map-printed.jpg"
   },
   {
     "id": "clarity-map-digital",
@@ -208,7 +209,8 @@ window.PRODUCTS = [
       "High-resolution files for safekeeping",
       "Protective packaging and worldwide shipping available"
     ],
-    "imageAspect": "wide"
+    "imageAspect": "wide",
+    "imagePath": "assets/img/artwork/clarity-map-print-edition.jpg"
   },
   {
     "id": "digital-card-pack",
