@@ -1,0 +1,134 @@
+[
+  {
+    "slot": "art-01",
+    "site_image": "assets/img/artwork/art-01.jpg",
+    "thumbnail": "assets/img/artwork/art-01-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-01.png",
+    "source_file": "0a072750-8718-4aea-ab9d-49f17b9d7759.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-02",
+    "site_image": "assets/img/artwork/art-02.jpg",
+    "thumbnail": "assets/img/artwork/art-02-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-02.png",
+    "source_file": "3510241b-75e1-4cd7-8efe-bf86360f3de2.png",
+    "source_size": [
+      2048,
+      1236
+    ]
+  },
+  {
+    "slot": "art-03",
+    "site_image": "assets/img/artwork/art-03.jpg",
+    "thumbnail": "assets/img/artwork/art-03-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-03.png",
+    "source_file": "495d01b3-df1d-4de7-a545-e9bc0860d269.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-04",
+    "site_image": "assets/img/artwork/art-04.jpg",
+    "thumbnail": "assets/img/artwork/art-04-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-04.png",
+    "source_file": "551720da-2bd3-433c-ae40-7b4aeff69262.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-05",
+    "site_image": "assets/img/artwork/art-05.jpg",
+    "thumbnail": "assets/img/artwork/art-05-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-05.png",
+    "source_file": "576cdffd-4d33-45df-b3f5-79f91e2203cd.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-06",
+    "site_image": "assets/img/artwork/art-06.jpg",
+    "thumbnail": "assets/img/artwork/art-06-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-06.png",
+    "source_file": "8cbbfc16-d3c7-47a0-b232-513669c43520.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-07",
+    "site_image": "assets/img/artwork/art-07.jpg",
+    "thumbnail": "assets/img/artwork/art-07-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-07.png",
+    "source_file": "9226fb22-627a-4a5d-a998-be8d2ff100b3.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-08",
+    "site_image": "assets/img/artwork/art-08.jpg",
+    "thumbnail": "assets/img/artwork/art-08-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-08.png",
+    "source_file": "dfb04c90-7c51-4fc2-88d6-1e585231b066.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-09",
+    "site_image": "assets/img/artwork/art-09.jpg",
+    "thumbnail": "assets/img/artwork/art-09-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-09.png",
+    "source_file": "ed95c825-7798-433c-9149-1d891a5262db.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-10",
+    "site_image": "assets/img/artwork/art-10.jpg",
+    "thumbnail": "assets/img/artwork/art-10-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-10.png",
+    "source_file": "0a072750-8718-4aea-ab9d-49f17b9d7759.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  },
+  {
+    "slot": "art-11",
+    "site_image": "assets/img/artwork/art-11.jpg",
+    "thumbnail": "assets/img/artwork/art-11-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-11.png",
+    "source_file": "3510241b-75e1-4cd7-8efe-bf86360f3de2.png",
+    "source_size": [
+      2048,
+      1236
+    ]
+  },
+  {
+    "slot": "art-12",
+    "site_image": "assets/img/artwork/art-12.jpg",
+    "thumbnail": "assets/img/artwork/art-12-thumb.jpg",
+    "original_embedded": "assets/img/originals/original-project-art-12.png",
+    "source_file": "495d01b3-df1d-4de7-a545-e9bc0860d269.png",
+    "source_size": [
+      2048,
+      1365
+    ]
+  }
+]
