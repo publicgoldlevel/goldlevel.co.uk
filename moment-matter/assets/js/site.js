@@ -4,7 +4,16 @@
   const getCart=()=>JSON.parse(localStorage.getItem('mm_cart_v3')||'[]');
   const setCart=c=>{localStorage.setItem('mm_cart_v3',JSON.stringify(c));updateCartCount();};
   const findProduct=id=>(window.PRODUCTS||[]).find(p=>p.id===id);
-  const imageUrl=p=>p.imagePath||`assets/img/artwork/${p.image}`;
+  const mmAssetUrl = raw => {
+    raw = String(raw || '').trim();
+    if (!raw) return 'assets/img/brand-mark.svg';
+    if (/^(https?:|data:|\/)/i.test(raw)) return raw;
+    if (raw.indexOf('assets/') === 0) return raw;
+    if (/^art-\d{2}(?:-thumb)?\.jpe?g$/i.test(raw)) return 'assets/img/artwork/' + raw;
+    if (/^[A-Za-z0-9._-]+\.(png|jpe?g|webp|svg|gif)$/i.test(raw)) return 'assets/img/product-artifacts/' + raw;
+    return raw;
+  };
+  const imageUrl = p => mmAssetUrl(p?.imagePath || p?.image || p?.imageUrl || p?.src || p?.thumb || p?.thumbnail || '');
   function toast(msg){let t=$('#toast'); if(!t){t=document.createElement('div');t.id='toast';t.className='toast';document.body.appendChild(t)} t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1800)}
   function updateCartCount(){const count=getCart().reduce((a,i)=>a+i.qty,0);$$('.cart-count').forEach(x=>x.textContent=count)}
   function addToCart(id,qty=1){const p=findProduct(id); if(!p)return; const c=getCart(); const ex=c.find(i=>i.id===id); if(ex)ex.qty+=qty; else c.push({id,qty}); setCart(c); toast('Added to basket')}
