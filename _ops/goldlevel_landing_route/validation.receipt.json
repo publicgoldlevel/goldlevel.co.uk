@@ -1,5 +1,5 @@
 {
-  "validated_utc": "20260501T183606Z",
+  "validated_utc": "20260501T183640Z",
   "rule": "Selector may link to Offer Clarity, but full Offer Clarity landing page must remain under /landing/.",
   "blocked_takeover_markers": [
     "landing page title in docs/index.html",
