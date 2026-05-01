@@ -1,0 +1,393 @@
+{
+  "schema": "GOLDLEVEL.routes.manifest.v0.2",
+  "generated_utc": "20260501T130529Z",
+  "routes": [
+    {
+      "path": "404.html",
+      "title": "GoldLevel.co.uk",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/404.html"
+    },
+    {
+      "path": "goldlevel/book-a-read.html",
+      "title": "Book a Read | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/goldlevel/book-a-read.html"
+    },
+    {
+      "path": "goldlevel/boundary.html",
+      "title": "Boundary | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/boundary.html"
+    },
+    {
+      "path": "goldlevel/briefs-packets.html",
+      "title": "Briefs & Packets | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/briefs-packets.html"
+    },
+    {
+      "path": "goldlevel/contact.html",
+      "title": "Contact | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/contact.html"
+    },
+    {
+      "path": "goldlevel/diagnostic-read.html",
+      "title": "Diagnostic Read moved | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/diagnostic-read.html"
+    },
+    {
+      "path": "goldlevel/good-fit.html",
+      "title": "Good Fit | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/good-fit.html"
+    },
+    {
+      "path": "goldlevel/index.html",
+      "title": "GOLDLEVEL Clarity Read | One Hybrid Commercial Homepage",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/index.html"
+    },
+    {
+      "path": "goldlevel/input-return.html",
+      "title": "Input & Return | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/input-return.html"
+    },
+    {
+      "path": "goldlevel/library.html",
+      "title": "Library | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/library.html"
+    },
+    {
+      "path": "goldlevel/method.html",
+      "title": "Method | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/method.html"
+    },
+    {
+      "path": "goldlevel/offer-clarity-read.html",
+      "title": "Offer Clarity | GOLDLEVEL Clarity Read",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/offer-clarity-read.html"
+    },
+    {
+      "path": "goldlevel/packages.html",
+      "title": "Packages | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/packages.html"
+    },
+    {
+      "path": "goldlevel/proof.html",
+      "title": "Proof / Boundary | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/goldlevel/proof.html"
+    },
+    {
+      "path": "goldlevel/relationship-packet-payment.html",
+      "title": "Relationship Packet Full Text | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/relationship-packet-payment.html"
+    },
+    {
+      "path": "goldlevel/scope.html",
+      "title": "Scope | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/goldlevel/scope.html"
+    },
+    {
+      "path": "goldlevel/services.html",
+      "title": "Services | GOLDLEVEL Clarity Read",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/services.html"
+    },
+    {
+      "path": "goldlevel/start-here.html",
+      "title": "Start Here | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/start-here.html"
+    },
+    {
+      "path": "goldlevel/system.html",
+      "title": "System | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/system.html"
+    },
+    {
+      "path": "goldlevel/textbook-packets-fixed-two-live.html",
+      "title": "Textbook Packets | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/goldlevel/textbook-packets-fixed-two-live.html"
+    },
+    {
+      "path": "goldlevel/what-this-is.html",
+      "title": "What This Is | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/what-this-is.html"
+    },
+    {
+      "path": "goldlevel/whats-live.html",
+      "title": "What’s Live | GOLDLEVEL",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/goldlevel/whats-live.html"
+    },
+    {
+      "path": "index.html",
+      "title": "GOLDLEVEL · Moment & Matter | Choose your route",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/"
+    },
+    {
+      "path": "lifecoachlanding/components/clarity-gap-diagnostic-panel/problem_section.html",
+      "title": "",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/lifecoachlanding/components/clarity-gap-diagnostic-panel/problem_section.html"
+    },
+    {
+      "path": "lifecoachlanding/components/clarity-gap-scene/problem_scene.html",
+      "title": "",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/lifecoachlanding/components/clarity-gap-scene/problem_scene.html"
+    },
+    {
+      "path": "lifecoachlanding/index.html",
+      "title": "Trust-Led Website Creation for Coaches | Goldlevel",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": false,
+      "contains_site_js": false,
+      "public_url": "https://goldlevel.co.uk/lifecoachlanding/index.html"
+    },
+    {
+      "path": "moment-matter/about.html",
+      "title": "About Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/about.html"
+    },
+    {
+      "path": "moment-matter/archive.html",
+      "title": "Artwork archive | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/archive.html"
+    },
+    {
+      "path": "moment-matter/cart.html",
+      "title": "Checkout | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/cart.html"
+    },
+    {
+      "path": "moment-matter/checkout.html",
+      "title": "Secure Shopify checkout | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/checkout.html"
+    },
+    {
+      "path": "moment-matter/clarity-maps.html",
+      "title": "Clarity maps for decisions and pivots | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/clarity-maps.html"
+    },
+    {
+      "path": "moment-matter/contact.html",
+      "title": "Contact | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/contact.html"
+    },
+    {
+      "path": "moment-matter/custom.html",
+      "title": "Create a custom visual piece | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/custom.html"
+    },
+    {
+      "path": "moment-matter/faq.html",
+      "title": "FAQ | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/faq.html"
+    },
+    {
+      "path": "moment-matter/gift-guide.html",
+      "title": "Gift guide | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/gift-guide.html"
+    },
+    {
+      "path": "moment-matter/index.html",
+      "title": "Custom visual pieces for moments that are hard to explain | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/index.html"
+    },
+    {
+      "path": "moment-matter/privacy.html",
+      "title": "Privacy | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/privacy.html"
+    },
+    {
+      "path": "moment-matter/product.html",
+      "title": "Product | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/product.html"
+    },
+    {
+      "path": "moment-matter/shipping.html",
+      "title": "Digital and physical delivery | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/shipping.html"
+    },
+    {
+      "path": "moment-matter/shop.html",
+      "title": "Shop digital and physical pieces | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/shop.html"
+    },
+    {
+      "path": "moment-matter/spaces.html",
+      "title": "Art for professional spaces | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/spaces.html"
+    },
+    {
+      "path": "moment-matter/terms.html",
+      "title": "Terms | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/terms.html"
+    },
+    {
+      "path": "moment-matter/thank-you.html",
+      "title": "Order request ready | Moment & Matter",
+      "status": "online",
+      "contains_offline_text": false,
+      "contains_products_js": true,
+      "contains_site_js": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/thank-you.html"
+    }
+  ]
+}

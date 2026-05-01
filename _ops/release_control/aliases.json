@@ -1,0 +1,8 @@
+{
+  "schema": "GOLDLEVEL.aliases.v0.2",
+  "generated_utc": "20260501T130529Z",
+  "aliases": {
+    "clarity-map-print": "clarity-map-print-edition",
+    "custom-moment-map-physical": "custom-moment-map-printed"
+  }
+}

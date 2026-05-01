@@ -1,0 +1,16 @@
+{
+  "schema": "GOLDLEVEL.validation.receipt.v0.2",
+  "generated_utc": "20260501T130529Z",
+  "status": "DIAGNOSTIC_GENERATED_NOT_VALIDATED",
+  "summary": {
+    "generated_utc": "20260501T130529Z",
+    "product_count": 6,
+    "available_product_count": 6,
+    "unavailable_product_count": 0,
+    "product_image_missing_local": [],
+    "product_image_not_git_tracked": [],
+    "route_count": 43,
+    "offline_route_count": 0,
+    "source_or_original_asset_count": 0
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "schema": "GOLDLEVEL.release.status.v0.2",
+  "generated_utc": "20260501T130529Z",
+  "goldlevel_status": "online",
+  "moment_matter_status": "online",
+  "release_mode": "diagnostic",
+  "proof_boundary": "Generated manifests are diagnostic until validators pass."
+}

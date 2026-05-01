@@ -1,0 +1,7 @@
+== Live route validation: https://goldlevel.co.uk ==
+/ HTTP 200
+/goldlevel/ HTTP 200
+/goldlevel/index.html HTTP 200
+/moment-matter/ HTTP 200
+/moment-matter/shop.html HTTP 200
+/moment-matter/product.html HTTP 200

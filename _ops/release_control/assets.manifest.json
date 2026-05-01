@@ -1,0 +1,457 @@
+{
+  "schema": "GOLDLEVEL.assets.manifest.v0.2",
+  "generated_utc": "20260501T130529Z",
+  "public_image_rule": "Product images should use moment-matter/assets/img/artwork/<canonical-descriptive-name>.jpg unless a different lane has live proof.",
+  "assets": [
+    {
+      "path": "moment-matter/assets/img/artwork/art-01-thumb.jpg",
+      "size_bytes": 148113,
+      "mime_guess": "image/jpeg",
+      "sha256": "78455b0cb1108eb8cc71743031a211cf7395aa0a4468ec3a026ee737d4f867f6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-01-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-01.jpg",
+      "size_bytes": 483641,
+      "mime_guess": "image/jpeg",
+      "sha256": "d0b5c0953af4ac7ec9a3cc3a159551980976b5c841400869d7508d96e59f2373",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-01.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-02-thumb.jpg",
+      "size_bytes": 133157,
+      "mime_guess": "image/jpeg",
+      "sha256": "742d6fd04edec31b3f419cc112098f8d3608988c460b825c98d6eb7c816ed290",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-02-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-02.jpg",
+      "size_bytes": 441840,
+      "mime_guess": "image/jpeg",
+      "sha256": "0e7986eb731afdd6deffa12324de8c62d693998cbe0a9cc9c27741ecb1a3cbc8",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-02.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-03-thumb.jpg",
+      "size_bytes": 112904,
+      "mime_guess": "image/jpeg",
+      "sha256": "ac1243258863dc7bafe68703126d17bb64edb5c0cd70b5844bd4aec0a7760951",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-03-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-03.jpg",
+      "size_bytes": 376318,
+      "mime_guess": "image/jpeg",
+      "sha256": "ca413a888011453e6f951dbb9a56901390d32019dff8c5680f615c1854d290a9",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-03.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-04-thumb.jpg",
+      "size_bytes": 129386,
+      "mime_guess": "image/jpeg",
+      "sha256": "34e2c4c3e8a06029a58e7ce70020178fd654df893760c995e4b7e0b63ffd712d",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-04-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-04.jpg",
+      "size_bytes": 429668,
+      "mime_guess": "image/jpeg",
+      "sha256": "dfe71361c084b88e57e4e123491a252c67d284ef96682dd54ddd0f3661747a4d",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-04.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-05-thumb.jpg",
+      "size_bytes": 127630,
+      "mime_guess": "image/jpeg",
+      "sha256": "ec2db732dfcc7e04666902312a330fe7730bb77f2fc7cb7123ec96acf214a12a",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-05-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-05.jpg",
+      "size_bytes": 431373,
+      "mime_guess": "image/jpeg",
+      "sha256": "4e856b74d0ff9b522ce5b6a571d9009b4eb9a7b8b3a26c1ec1f0a4253a0994a2",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-05.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-06-thumb.jpg",
+      "size_bytes": 122190,
+      "mime_guess": "image/jpeg",
+      "sha256": "261ee0c3b5f7a66e22ebf0b60594a49d053c14a8e1aecd1cf9f139fa5af869b6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-06-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-06.jpg",
+      "size_bytes": 400083,
+      "mime_guess": "image/jpeg",
+      "sha256": "4ee448f7a8766736bb2a04bb5a28eda972857e42b4cdf7a387226220009d752e",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-06.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-07-thumb.jpg",
+      "size_bytes": 122124,
+      "mime_guess": "image/jpeg",
+      "sha256": "292852b8c0d4b5bc19b1fafef962582d5b775fe09a43010b24e08a4f962e7cef",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-07-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-07.jpg",
+      "size_bytes": 405064,
+      "mime_guess": "image/jpeg",
+      "sha256": "df25f974eb48276d2d87e6356042fb19aaaa05c57200809ed50bfd2e67751d08",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-07.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-08-thumb.jpg",
+      "size_bytes": 117187,
+      "mime_guess": "image/jpeg",
+      "sha256": "370d8df84c7ce1c409345e31f431e30a6ab2a652c9f694289aaf8fc12ffe71db",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-08-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-08.jpg",
+      "size_bytes": 384058,
+      "mime_guess": "image/jpeg",
+      "sha256": "1f7209f3f7649d017473acb751e1c8e9a3424a18bdf498984abc19be5942b7b4",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-08.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-09-thumb.jpg",
+      "size_bytes": 133333,
+      "mime_guess": "image/jpeg",
+      "sha256": "963fd18e9000185957543dac96a5259867d1ee6d7dd0b900c5d0e834caf3affc",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-09-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-09.jpg",
+      "size_bytes": 442943,
+      "mime_guess": "image/jpeg",
+      "sha256": "47ba7a568023496c598eb73f85b7ea7a3b5e45ccc355047b6d3c0f3a4d2c3f53",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-09.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-10-thumb.jpg",
+      "size_bytes": 148113,
+      "mime_guess": "image/jpeg",
+      "sha256": "78455b0cb1108eb8cc71743031a211cf7395aa0a4468ec3a026ee737d4f867f6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-10-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-10.jpg",
+      "size_bytes": 483641,
+      "mime_guess": "image/jpeg",
+      "sha256": "d0b5c0953af4ac7ec9a3cc3a159551980976b5c841400869d7508d96e59f2373",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-10.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-11-thumb.jpg",
+      "size_bytes": 133157,
+      "mime_guess": "image/jpeg",
+      "sha256": "742d6fd04edec31b3f419cc112098f8d3608988c460b825c98d6eb7c816ed290",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-11-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-11.jpg",
+      "size_bytes": 441840,
+      "mime_guess": "image/jpeg",
+      "sha256": "0e7986eb731afdd6deffa12324de8c62d693998cbe0a9cc9c27741ecb1a3cbc8",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-11.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-12-thumb.jpg",
+      "size_bytes": 112904,
+      "mime_guess": "image/jpeg",
+      "sha256": "ac1243258863dc7bafe68703126d17bb64edb5c0cd70b5844bd4aec0a7760951",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-12-thumb.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/art-12.jpg",
+      "size_bytes": 376318,
+      "mime_guess": "image/jpeg",
+      "sha256": "ca413a888011453e6f951dbb9a56901390d32019dff8c5680f615c1854d290a9",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/art-12.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/clarity-map-digital.jpg",
+      "size_bytes": 263806,
+      "mime_guess": "image/jpeg",
+      "sha256": "e0146b91aea521a01138b641b7689b16028e90ef34f84cf6f9531c6eae6a4112",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/clarity-map-digital.jpg",
+      "is_product_image_ref": true,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/clarity-map-digital.png",
+      "size_bytes": 2023382,
+      "mime_guess": "image/png",
+      "sha256": "561e52890cafb1779d4a29004ee64777868181d639751a0e1d4aff4719e5d9c6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/clarity-map-digital.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/clarity-map-print-edition.jpg",
+      "size_bytes": 268187,
+      "mime_guess": "image/jpeg",
+      "sha256": "24e1260f60b3fcaf2b58498429fbb58b8bf820d34c310cc8cb41e6bb1e137a6b",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/clarity-map-print-edition.jpg",
+      "is_product_image_ref": true,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-card-digital.jpg",
+      "size_bytes": 235624,
+      "mime_guess": "image/jpeg",
+      "sha256": "96f1007437a7e7853b1c8314f997d2d91dfae2e9513902c8c70f4071bb60dab6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-card-digital.jpg",
+      "is_product_image_ref": true,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-card-digital.png",
+      "size_bytes": 1832679,
+      "mime_guess": "image/png",
+      "sha256": "b0541500bfb03ffff55a6c6fcd559e3a9776f2fd1cfebd96602fdaa3887e1fd6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-card-digital.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-card-printed-posted.jpg",
+      "size_bytes": 277160,
+      "mime_guess": "image/jpeg",
+      "sha256": "5d755b21b095150822356eb318a393cbd0485540b24d395fe3744ace505542fa",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-card-printed-posted.jpg",
+      "is_product_image_ref": true,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-card-printed-posted.png",
+      "size_bytes": 2178307,
+      "mime_guess": "image/png",
+      "sha256": "3fdb6212924be02a958af4d7aa53b8cd88e974b7805f4373501b9b3af8e9bd13",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-card-printed-posted.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-map-digital.jpg",
+      "size_bytes": 283622,
+      "mime_guess": "image/jpeg",
+      "sha256": "c48d48debd78800ca0a47ac3e2872810a8c80b9247afbb7f62af3899c55c54a8",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-map-digital.jpg",
+      "is_product_image_ref": true,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-map-digital.png",
+      "size_bytes": 2112056,
+      "mime_guess": "image/png",
+      "sha256": "85ffff6b8b8f31b9da5b9f789ac141137b91ccf09dbf1b1795e4721734ad6ccd",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-map-digital.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-map-example.jpg",
+      "size_bytes": 342822,
+      "mime_guess": "image/jpeg",
+      "sha256": "55c94d4c4b6ecff8ba2ff3d6ffdbc6bc252031611b7584bd499b524aff6b9341",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-map-example.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-map-example.png",
+      "size_bytes": 2468139,
+      "mime_guess": "image/png",
+      "sha256": "33d3491f02a8ad7dd08bbaf5270d5546d13a44316d303789a2309cf667652e26",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-map-example.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/artwork/custom-moment-map-printed.jpg",
+      "size_bytes": 305895,
+      "mime_guess": "image/jpeg",
+      "sha256": "9caa7655e0679829d6db78987b99f049b1ebc37127c86cb7f7d6d67ca180d575",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/artwork/custom-moment-map-printed.jpg",
+      "is_product_image_ref": true,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/brand-mark.svg",
+      "size_bytes": 409,
+      "mime_guess": "image/svg+xml",
+      "sha256": "4d819c6141b4bfdb3a68fac38a86cb19f994534f3de03d6744be7bc4c2519788",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/brand-mark.svg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/CLARITY_MAP_Print_edition.png",
+      "size_bytes": 2241560,
+      "mime_guess": "image/png",
+      "sha256": "e05766d944fad841a78a606a2c3e9d97d83d49ef068da0b62ff50aa4bb86697c",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/CLARITY_MAP_Print_edition.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/Custom_Moment_Map_printed.png",
+      "size_bytes": 2279712,
+      "mime_guess": "image/png",
+      "sha256": "709b07cbd1a857922e7e001e2139b18aafdc80a9425b9b44d4a4ee2458a8b297",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/Custom_Moment_Map_printed.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/clarity_map_digital.png",
+      "size_bytes": 2023382,
+      "mime_guess": "image/png",
+      "sha256": "561e52890cafb1779d4a29004ee64777868181d639751a0e1d4aff4719e5d9c6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/clarity_map_digital.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/custom_moment_card_digital.png",
+      "size_bytes": 1832679,
+      "mime_guess": "image/png",
+      "sha256": "b0541500bfb03ffff55a6c6fcd559e3a9776f2fd1cfebd96602fdaa3887e1fd6",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/custom_moment_card_digital.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/custom_moment_card_physical.png",
+      "size_bytes": 2178307,
+      "mime_guess": "image/png",
+      "sha256": "3fdb6212924be02a958af4d7aa53b8cd88e974b7805f4373501b9b3af8e9bd13",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/custom_moment_card_physical.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/custom_moment_map_digital.png",
+      "size_bytes": 2112056,
+      "mime_guess": "image/png",
+      "sha256": "85ffff6b8b8f31b9da5b9f789ac141137b91ccf09dbf1b1795e4721734ad6ccd",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/custom_moment_map_digital.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/product-artifacts/custom_moment_map_digital_example.png",
+      "size_bytes": 2468139,
+      "mime_guess": "image/png",
+      "sha256": "33d3491f02a8ad7dd08bbaf5270d5546d13a44316d303789a2309cf667652e26",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/product-artifacts/custom_moment_map_digital_example.png",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    },
+    {
+      "path": "moment-matter/assets/img/system/project-art-contact-sheet.jpg",
+      "size_bytes": 1683803,
+      "mime_guess": "image/jpeg",
+      "sha256": "57d8de4c7ee882874e3cc61760c4bc954dc7c8a740ee3646b6ebd0f2c4fd2588",
+      "git_tracked": true,
+      "public_url": "https://goldlevel.co.uk/moment-matter/assets/img/system/project-art-contact-sheet.jpg",
+      "is_product_image_ref": false,
+      "is_source_or_original_lane": false
+    }
+  ]
+}
