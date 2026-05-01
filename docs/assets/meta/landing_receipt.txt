@@ -1,0 +1,9 @@
+GOLDLEVEL Landing Page Install Receipt
+Generated: 20260501_191538
+Target: docs
+Files:
+- index.html
+- assets/css/goldlevel-landing.css
+- assets/js/goldlevel-landing.js
+- README_LANDING.md
+- .nojekyll

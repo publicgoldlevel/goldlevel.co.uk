@@ -1,0 +1,7 @@
+Install GOLDLEVEL Offer Clarity landing page
+
+- Add GitHub Pages-ready static landing page
+- Add dark/gold ad-set visual system
+- Lock primary CTA to Live-But-Not-Landing Read
+- Add bounded diagnostic scope and safe claim boundaries
+- Add mobile sticky CTA and DM text generator
