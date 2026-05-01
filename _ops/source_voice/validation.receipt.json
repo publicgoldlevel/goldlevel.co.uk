@@ -1,0 +1,6 @@
+{
+  "schema": "GOLDLEVEL.source_voice.validation.receipt.v0.1",
+  "lane": "source_voice",
+  "status": "not_validated",
+  "checks": []
+}

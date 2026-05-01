@@ -1,0 +1,6 @@
+{
+  "schema": "GOLDLEVEL.goldlevel_homepage.validation.receipt.v0.1",
+  "lane": "goldlevel_homepage",
+  "status": "not_validated",
+  "checks": []
+}

@@ -1,0 +1,6 @@
+{
+  "schema": "GOLDLEVEL.goldlevel_homepage.release.status.v0.1",
+  "lane": "goldlevel_homepage",
+  "status": "draft",
+  "allowed_statuses": ["draft", "review", "available", "deployed", "archived", "offline"]
+}

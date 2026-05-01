@@ -1,0 +1,6 @@
+{
+  "schema": "GOLDLEVEL.moment_matter.validation.receipt.v0.1",
+  "lane": "moment_matter",
+  "status": "not_validated",
+  "checks": []
+}
