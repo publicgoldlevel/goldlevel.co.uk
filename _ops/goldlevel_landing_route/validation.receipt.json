@@ -1,0 +1,10 @@
+{
+  "validated_utc": "20260501T183606Z",
+  "rule": "Selector may link to Offer Clarity, but full Offer Clarity landing page must remain under /landing/.",
+  "blocked_takeover_markers": [
+    "landing page title in docs/index.html",
+    "landing hero marker in docs/index.html",
+    "landing hero copy in docs/index.html",
+    "landing CSS reference in docs/index.html"
+  ]
+}

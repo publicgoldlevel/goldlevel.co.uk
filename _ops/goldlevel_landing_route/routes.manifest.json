@@ -1,0 +1,5 @@
+{
+  "selector": "docs/index.html",
+  "landing": "docs/landing/index.html",
+  "public_landing_route": "/landing/"
+}
