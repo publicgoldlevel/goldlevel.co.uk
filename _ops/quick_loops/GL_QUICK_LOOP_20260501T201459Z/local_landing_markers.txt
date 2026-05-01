@@ -1,0 +1,30 @@
+landing/index.html:139:          <p class="eyebrow">PUBLIC OFFER · £35 · 24–48H WRITTEN READ</p>
+landing/index.html:140:          <h1 id="hero-title">Your page is live. <span>Your buyer is not moving.</span></h1>
+landing/index.html:143:            <a class="button button-primary" href="#start">DM “READ” — £35</a>
+landing/index.html:147:            <div><dt>Delivery</dt><dd>24–48h</dd></div>
+landing/index.html:168:    <div class="gl-fast-chip">£35 founding read</div>
+landing/index.html:170:    <div class="gl-fast-chip">24–48h delivery</div>
+landing/index.html:177:    <div class="gl-fast-price">£35</div>
+landing/index.html:183:    <a class="gl-fast-primary" href="#start">DM “READ” — £35</a>
+landing/index.html:187:    <div class="gl-fast-kicker">Example mini-read</div>
+landing/index.html:257:          <p class="price">£35 <span>founding read</span></p>
+landing/index.html:259:          <a class="button button-primary wide" href="#start">DM “READ” — £35</a>
+landing/index.html:288:          <h2 id="start-title">DM “READ” and send the live material.</h2>
+landing/index.html:344:    <a href="#start">DM “READ”</a>
+landing/assets/js/goldlevel-landing.js:10:    return `DM READ — I want a Live-But-Not-Landing Read.\n\nMaterial type: ${type}\nMaterial: ${note}\nDesired buyer action: ${action}\nCurrent response: [what is happening now]\n\nPlease confirm the payment route and the 24–48h delivery window.`;
+landing/README_LANDING.md:11:- One primary action: DM “READ”.
+docs/landing/index.html:139:          <p class="eyebrow">PUBLIC OFFER · £35 · 24–48H WRITTEN READ</p>
+docs/landing/index.html:140:          <h1 id="hero-title">Your page is live. <span>Your buyer is not moving.</span></h1>
+docs/landing/index.html:143:            <a class="button button-primary" href="#start">DM “READ” — £35</a>
+docs/landing/index.html:147:            <div><dt>Delivery</dt><dd>24–48h</dd></div>
+docs/landing/index.html:168:    <div class="gl-fast-chip">£35 founding read</div>
+docs/landing/index.html:170:    <div class="gl-fast-chip">24–48h delivery</div>
+docs/landing/index.html:177:    <div class="gl-fast-price">£35</div>
+docs/landing/index.html:183:    <a class="gl-fast-primary" href="#start">DM “READ” — £35</a>
+docs/landing/index.html:187:    <div class="gl-fast-kicker">Example mini-read</div>
+docs/landing/index.html:257:          <p class="price">£35 <span>founding read</span></p>
+docs/landing/index.html:259:          <a class="button button-primary wide" href="#start">DM “READ” — £35</a>
+docs/landing/index.html:288:          <h2 id="start-title">DM “READ” and send the live material.</h2>
+docs/landing/index.html:344:    <a href="#start">DM “READ”</a>
+docs/landing/assets/js/goldlevel-landing.js:10:    return `DM READ — I want a Live-But-Not-Landing Read.\n\nMaterial type: ${type}\nMaterial: ${note}\nDesired buyer action: ${action}\nCurrent response: [what is happening now]\n\nPlease confirm the payment route and the 24–48h delivery window.`;
+docs/landing/README_LANDING.md:11:- One primary action: DM “READ”.

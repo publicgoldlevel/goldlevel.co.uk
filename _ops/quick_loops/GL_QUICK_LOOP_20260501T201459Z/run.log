@@ -1,0 +1,106 @@
+== 1. Git state ==
+## main...origin/main
+?? _ops/quick_loops/
+153f9c0 Resolve full git diagnosis findings
+05131af Classify full git diagnosis findings
+2bfdce1 Add Offer Clarity fast-close execution receipt
+== 2. Root helper scripts ==
+== 3. Live landing markers ==
+== 4. Local landing markers ==
+-- _ops/goldlevel_homepage/gl_pre_push_gate.sh
+== LANE PRE-PUSH GATE ==
+Lane dir: _ops/goldlevel_homepage
+PASS: registry.json exists
+PASS: assets.manifest.json exists
+PASS: routes.manifest.json exists
+PASS: release.status.json exists
+PASS: validation.receipt.json exists
+LANE PRE-PUSH GATE: PASS
+-- _ops/goldlevel_landing_route/gl_pre_push_gate.sh
+== GOLDLEVEL LANDING ROUTE GUARD ==
+Rule: selector may link to /landing/, but landing page must not replace docs/index.html
+PASS: docs/index.html exists
+PASS: docs/landing/index.html exists
+PASS: selector does not use landing page title
+PASS: selector does not contain landing hero marker
+PASS: selector does not contain landing hero copy
+PASS: selector does not reference landing CSS
+PASS: selector links to /landing/
+PASS: Offer Clarity landing copy found under /landing/
+PASS: landing CSS exists
+PASS: landing JS exists
+GOLDLEVEL LANDING ROUTE GUARD: PASS
+-- _ops/live_landing_route/gl_pre_push_gate.sh
+== GOLDLEVEL LIVE LANDING ROUTE GUARD ==
+PASS: selector source exists: index.html
+PASS: live-root landing index exists
+PASS: Offer Clarity copy found under live-root /landing/
+PASS: selector not overwritten by landing page
+PASS: landing CSS exists
+PASS: landing JS exists
+GOLDLEVEL LIVE LANDING ROUTE GUARD: PASS
+-- _ops/moment_matter/gl_pre_push_gate.sh
+== LANE PRE-PUSH GATE ==
+Lane dir: _ops/moment_matter
+PASS: registry.json exists
+PASS: assets.manifest.json exists
+PASS: routes.manifest.json exists
+PASS: release.status.json exists
+PASS: validation.receipt.json exists
+LANE PRE-PUSH GATE: PASS
+-- _ops/offer_clarity_fast_close/gl_pre_push_gate.sh
+== GOLDLEVEL OFFER CLARITY FAST-CLOSE GUARD ==
+-- checking ./docs/landing/index.html
+PASS: fast-close patch marker present
+PASS: £35 price present
+PASS: delivery window present
+PASS: one live asset scope present
+PASS: example mini-read present
+PASS: direct DM READ price CTA present
+-- checking ./landing/index.html
+PASS: fast-close patch marker present
+PASS: £35 price present
+PASS: delivery window present
+PASS: one live asset scope present
+PASS: example mini-read present
+PASS: direct DM READ price CTA present
+PASS: selector not overwritten: ./index.html
+PASS: selector not overwritten: ./docs/index.html
+PASS: selector not overwritten: ./goldlevel/index.html
+PASS: no root helper scripts
+GOLDLEVEL OFFER CLARITY FAST-CLOSE GUARD: PASS
+-- _ops/release_control/gl_pre_push_gate.sh
+== GOLDLEVEL PRE-PUSH GATE ==
+
+== Git state ==
+?? _ops/quick_loops/
+
+== Block helper scripts in repo root ==
+PASS: no root helper scripts
+
+== Products validation ==
+PRODUCT VALIDATION: PASS
+
+== Site JS resolver checks ==
+PASS: mmAssetUrl present
+PASS: imagePath priority present
+
+== Offline text guard ==
+PASS: no offline text
+
+== Unavailable product IDs guard ==
+PASS: unavailable product IDs absent from products.js
+
+== Source/private public lane guard ==
+PASS: no public originals folder
+
+PRE-PUSH GATE: PASS
+-- _ops/source_voice/gl_pre_push_gate.sh
+== LANE PRE-PUSH GATE ==
+Lane dir: _ops/source_voice
+PASS: registry.json exists
+PASS: assets.manifest.json exists
+PASS: routes.manifest.json exists
+PASS: release.status.json exists
+PASS: validation.receipt.json exists
+LANE PRE-PUSH GATE: PASS
