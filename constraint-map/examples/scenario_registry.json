@@ -1,0 +1,34 @@
+[
+  {
+    "set": "Clarity Map / Meaning",
+    "person": "John Doe",
+    "business": "SignalNest AI",
+    "nature": "B2B SaaS homepage value/trust break",
+    "trigger_bucket": "Website / landing-page clarity",
+    "image": "clarity_map_meaning_professional_example.jpg"
+  },
+  {
+    "set": "Custom Moment Map / Coherence",
+    "person": "John Doe",
+    "business": "Studio Cartographer",
+    "nature": "Creator monetization and offer-sequence incoherence",
+    "trigger_bucket": "Creator monetization",
+    "image": "custom_moment_map_coherence_professional_example.jpg"
+  },
+  {
+    "set": "Custom Moment Card / Method",
+    "person": "John Doe",
+    "business": "Northline Labs",
+    "nature": "Operator execution bottleneck and repeatable method failure",
+    "trigger_bucket": "Execution bottleneck",
+    "image": "custom_moment_card_method_professional_example.jpg"
+  },
+  {
+    "set": "Visual API Ledger / Seven Language Skills",
+    "person": "John Doe",
+    "business": "LedgerBridge Advisory",
+    "nature": "Proof-loop and signal interpretation failure",
+    "trigger_bucket": "Differentiation / positioning",
+    "image": "visual_api_ledger_language_skills_professional_example.jpg"
+  }
+]

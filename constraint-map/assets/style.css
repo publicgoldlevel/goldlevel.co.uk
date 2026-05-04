@@ -176,3 +176,14 @@ legend{padding:0 .5rem;color:var(--accent-2)}
 .receipt-state .mini-card{min-height:160px}
 @media(max-width:900px){.artifact-grid,.receipt-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:620px){.artifact-grid,.receipt-grid{grid-template-columns:1fr}}
+
+
+/* professional asset-set image polish */
+.artifact-card img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: top center;
+}
+.artifact-card p strong {
+  color: var(--accent-2);
+}
