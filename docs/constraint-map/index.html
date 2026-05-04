@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="description" content="48-Hour Constraint Map: a one-page diagnostic for one live offer, project, page, or decision that is not converting cleanly.">
+  <title>48-Hour Constraint Map</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#fit-check">Skip to fit check</a>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="48-Hour Constraint Map home">
+        <span class="brand-mark">CM</span>
+        <span>48-Hour Constraint Map</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#fit-check">Fit check</a>
+        <a href="#what-you-get">What you get</a>
+        <a href="#process">Process</a>
+        <a href="#intake">Intake</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">One live bottleneck. One-page map. 48-hour turnaround.</p>
+          <h1>Find the constraint before you make the next move.</h1>
+          <p class="lead">
+            For founders, creators, operators, consultants, and independent experts with one offer,
+            project, page, or decision that has pressure behind it but is not converting cleanly.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#fit-check">Send the stuck point</a>
+            <a class="button secondary" href="#what-you-get">See what you get</a>
+          </div>
+          <p class="fine">
+            Send one sentence about what feels stuck. I’ll tell you whether it sounds like a diagnostic problem.
+            If it does, the paid 48-Hour Constraint Map is <strong>$300</strong>.
+          </p>
+        </div>
+
+        <aside class="hero-card" aria-label="Offer summary">
+          <div class="card-topline">Diagnostic artifact</div>
+          <h2>48-Hour Constraint Map</h2>
+          <ul class="check-list">
+            <li>Likely hidden constraint</li>
+            <li>What not to do next</li>
+            <li>Smallest testable move</li>
+            <li>Proof to look for</li>
+          </ul>
+          <div class="price">$300</div>
+          <p class="muted">Early market-test price. Delivery clock starts after payment + completed intake.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section problem">
+      <div class="wrap two-col">
+        <div>
+          <p class="eyebrow">The stuck pattern</p>
+          <h2>Something is moving, but it is not converting cleanly.</h2>
+        </div>
+        <div class="copy-block">
+          <p>
+            This is for situations where there is already pressure, motion, attention, effort, or a live decision,
+            but the next move is unclear or the offer/page/project is not landing with the people it needs to reach.
+          </p>
+          <p>
+            The goal is not to explain a whole system. The goal is to map one concrete bottleneck so you can stop
+            compensating with more content, more redesign, more explanation, more waiting, or more complexity.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="fit-check" class="section fit-section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Step 1</p>
+          <h2>See if this is a fit.</h2>
+          <p>
+            Answer the micro-fit questions. This does not start the paid diagnostic. It only checks whether the problem
+            is concrete enough to map.
+          </p>
+        </div>
+
+        <form id="microFitForm" class="panel form-panel">
+          <label>
+            <span>1. What are you trying to move forward?</span>
+            <textarea name="moveForward" rows="3" required placeholder="Example: a service offer, homepage, launch, sales page, creator product, buyer conversation..."></textarea>
+          </label>
+
+          <label>
+            <span>2. Where is it not converting, deciding, sequencing, or landing cleanly?</span>
+            <textarea name="notClean" rows="3" required></textarea>
+          </label>
+
+          <label>
+            <span>3. What made this important now?</span>
+            <textarea name="importantNow" rows="3" required></textarea>
+          </label>
+
+          <label>
+            <span>4. Is there a live offer, project, page, decision, buyer conversation, launch, deadline, or opportunity attached?</span>
+            <select name="liveAttached" required>
+              <option value="">Choose one</option>
+              <option>Yes — live offer/project/page/decision attached</option>
+              <option>Partly — there is pressure but it is vague</option>
+              <option>No — no concrete object yet</option>
+            </select>
+          </label>
+
+          <label>
+            <span>5. What link, page, post, pitch, message, or artifact should be looked at first?</span>
+            <input name="firstArtifact" type="text" placeholder="Paste a URL or describe the artifact">
+          </label>
+
+          <div class="form-actions">
+            <button class="button primary" type="submit">Classify fit</button>
+            <button class="button secondary" type="button" id="copyFitEmail">Copy fit-check email</button>
+          </div>
+        </form>
+
+        <div id="fitResult" class="result-box" hidden></div>
+      </div>
+    </section>
+
+    <section id="what-you-get" class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Step 2</p>
+          <h2>What you get</h2>
+          <p>A one-page map built around one live bottleneck.</p>
+        </div>
+
+        <div class="cards">
+          <article class="mini-card">
+            <h3>Situation named</h3>
+            <p>One sentence naming the live object and pressure.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Visible symptoms</h3>
+            <p>What appears to be happening at the surface.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Likely hidden constraint</h3>
+            <p>The most likely drag point underneath the visible problem.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Compensation pattern</h3>
+            <p>Where effort is being spent to work around the constraint.</p>
+          </article>
+          <article class="mini-card">
+            <h3>What not to do next</h3>
+            <p>The tempting move that would probably add more drag.</p>
+          </article>
+          <article class="mini-card">
+            <h3>Smallest testable move</h3>
+            <p>One bounded action and the proof to look for.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">How it works</p>
+          <h2>Fit-gated before payment. Structured after payment.</h2>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <h3>Send the stuck point</h3>
+            <p>Use the micro-fit form or email one sentence about the live offer, project, page, or decision.</p>
+          </li>
+          <li>
+            <h3>Fit check</h3>
+            <p>If it is concrete and diagnostic, you receive the payment + intake path. If not, I say no before taking money.</p>
+          </li>
+          <li>
+            <h3>Pay + complete intake</h3>
+            <p>The 48-hour delivery clock starts only after payment and completed intake.</p>
+          </li>
+          <li>
+            <h3>Receive the one-page map</h3>
+            <p>You get the likely constraint, what not to do next, and the smallest testable move.</p>
+          </li>
+        </ol>
+
+        <div class="guarantee">
+          <strong>Delivery guarantee:</strong>
+          If I accept the diagnostic and do not deliver the one-page map within 48 hours of completed intake, I refund the fee.
+        </div>
+      </div>
+    </section>
+
+    <section class="section not-fit">
+      <div class="wrap two-col">
+        <div>
+          <p class="eyebrow">Boundaries</p>
+          <h2>What this is not</h2>
+        </div>
+        <div class="copy-block">
+          <ul class="x-list">
+            <li>Not guaranteed revenue, conversion, or transformation.</li>
+            <li>Not ongoing coaching, therapy, rescue, or spiritual confirmation.</li>
+            <li>Not broad system work or implementation labor.</li>
+            <li>Not for abstract reflection without a live project, page, offer, or decision.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="intake" class="section intake-section">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Step 3</p>
+          <h2>Paid diagnostic intake</h2>
+          <p>
+            Use this only after fit and payment, or immediately before accepting payment if fit is uncertain.
+            Your answers can be exported locally as JSON or copied into email.
+          </p>
+        </div>
+
+        <form id="intakeForm" class="panel form-panel">
+          <fieldset>
+            <legend>Buyer details</legend>
+            <label><span>Name</span><input name="name" type="text"></label>
+            <label><span>Email</span><input name="email" type="email"></label>
+            <label><span>Business / project name</span><input name="projectName" type="text"></label>
+            <label><span>Website, offer page, profile, or relevant link</span><input name="link" type="text"></label>
+            <label><span>Preferred deadline or urgency</span><input name="urgency" type="text"></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>A. The live object</legend>
+            <label><span>What is the one offer, project, page, or decision you want mapped?</span><textarea name="liveObject" rows="3"></textarea></label>
+            <label><span>Who is it for?</span><textarea name="whoFor" rows="2"></textarea></label>
+            <label><span>What outcome are you trying to create?</span><textarea name="outcome" rows="2"></textarea></label>
+            <label><span>What is currently moving, if anything?</span><textarea name="currentlyMoving" rows="2"></textarea></label>
+            <label><span>Where is it not converting, deciding, sequencing, or landing cleanly?</span><textarea name="whereStuck" rows="3"></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>B. Trigger and timing</legend>
+            <label><span>What made this important now?</span><textarea name="whyNow" rows="2"></textarea></label>
+            <label><span>Is there a launch, deadline, opportunity, buyer conversation, stalled offer, repeated failure, or public post attached?</span><textarea name="attachedEvent" rows="2"></textarea></label>
+            <label><span>What happens if this remains unresolved for another 30 days?</span><textarea name="thirtyDays" rows="2"></textarea></label>
+            <label><span>What would clarity allow you to do that you cannot currently do?</span><textarea name="clarityAllows" rows="2"></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>C. Evidence and attempts</legend>
+            <label><span>What have you already tried?</span><textarea name="attempts" rows="3"></textarea></label>
+            <label><span>What did those attempts fail to resolve?</span><textarea name="failedResolve" rows="2"></textarea></label>
+            <label><span>What feedback, objections, silence, sales data, audience response, or traction signal have you received?</span><textarea name="signals" rows="3"></textarea></label>
+            <label><span>Paste the relevant page, pitch, offer, DM, post, deck, notes, or links.</span><textarea name="artifactPaste" rows="4"></textarea></label>
+            <label><span>What do you suspect the problem is?</span><textarea name="suspect" rows="2"></textarea></label>
+            <label><span>What are you worried I might miss?</span><textarea name="miss" rows="2"></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>D. Constraint field</legend>
+            <label>
+              <span>Which feels closest?</span>
+              <select name="closestConstraint">
+                <option value="">Choose one</option>
+                <option>Offer is unclear</option>
+                <option>Buyer does not understand the value</option>
+                <option>People show interest but do not buy</option>
+                <option>Execution is scattered</option>
+                <option>The next move is unclear</option>
+                <option>The page / pitch is too abstract</option>
+                <option>There is a timing problem</option>
+                <option>There is a trust problem</option>
+                <option>There is a mismatch between what you make and what buyers want</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label><span>Where do you feel the most drag?</span><textarea name="drag" rows="2"></textarea></label>
+            <label><span>What are you currently compensating with?</span><textarea name="compensating" rows="2" placeholder="more content, more explanation, more redesign, more research, more outreach, more waiting, more complexity..."></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>E. Decision use</legend>
+            <label><span>What decision do you want to be able to make after receiving the map?</span><textarea name="decisionAfter" rows="2"></textarea></label>
+            <label><span>What would make this diagnostic worth the $300?</span><textarea name="worth" rows="2"></textarea></label>
+            <label><span>What would make it not worth doing?</span><textarea name="notWorth" rows="2"></textarea></label>
+            <label><span>Any hard constraints I should not violate?</span><textarea name="hardConstraints" rows="2"></textarea></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>F. Permission and boundaries</legend>
+            <label>
+              <span>May I quote or anonymize any part of this later as proof if useful?</span>
+              <select name="quotePermission">
+                <option value="">Choose one</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Ask first</option>
+              </select>
+            </label>
+            <label><span>Is anything confidential or not for future use, even anonymously?</span><textarea name="confidential" rows="2"></textarea></label>
+            <label class="checkbox">
+              <input name="understandsNoGuarantee" type="checkbox">
+              <span>I understand this is a diagnostic artifact, not a guarantee of revenue, conversion, transformation, or business outcome.</span>
+            </label>
+          </fieldset>
+
+          <div class="form-actions">
+            <button class="button primary" type="button" id="downloadIntake">Download intake JSON</button>
+            <button class="button secondary" type="button" id="copyIntake">Copy intake email</button>
+            <button class="button ghost" type="reset">Clear</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section toolkit">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow">Local toolkit</p>
+          <h2>Offline files included in this zip</h2>
+        </div>
+
+        <div class="tool-grid">
+          <a href="templates/diagnostic-template.md" download>Diagnostic template</a>
+          <a href="templates/intake-form.md" download>Intake markdown</a>
+          <a href="logs/laps-receipt-log-schema.csv" download>LAPS receipt CSV</a>
+          <a href="logs/self-learning-update-table.csv" download>Self-learning CSV</a>
+          <a href="README_TERMUX.md" download>Termux README</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>48-Hour Constraint Map — bounded diagnostic, not a guarantee of outcome.</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

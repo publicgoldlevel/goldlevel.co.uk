@@ -1,0 +1,9 @@
+{
+  "name": "48-Hour Constraint Map",
+  "short_name": "Constraint Map",
+  "description": "Static landing page and intake workflow for the 48-Hour Constraint Map.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#11100d",
+  "theme_color": "#d4a83f"
+}
