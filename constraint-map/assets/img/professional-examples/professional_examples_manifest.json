@@ -1,0 +1,99 @@
+{
+  "stamp": "20260504T155519Z",
+  "zip_in": "/storage/emulated/0/Pictures/4 image upload.zip",
+  "zip_sha256": "090acc47f1ade97dc8e51b117a97949dec3c625553e444d522d8ee50219e124d",
+  "route": "constraint-map",
+  "asset_dir": "/data/data/com.termux/files/home/goldlevel.co.uk/constraint-map/assets/img/professional-examples",
+  "sets": {
+    "set_01": {
+      "title": "Clarity Map",
+      "scenario": "SignalNest AI",
+      "tag": "Website / landing-page clarity",
+      "summary": "Traffic and curiosity exist, but the first screen does not make the buyer role, risk, or next action clear.",
+      "keywords": [
+        "signalnest",
+        "signal",
+        "clarity",
+        "revops",
+        "set01",
+        "set-01",
+        "set_01",
+        "01"
+      ],
+      "source_name": "RevOpssignalnest.png",
+      "file_name": "set_01.png",
+      "src_abs": "/constraint-map/assets/img/professional-examples/set_01.png?v=20260504T155519Z",
+      "src_rel": "assets/img/professional-examples/set_01.png?v=20260504T155519Z",
+      "sha256": "ccd3a8b4a3f948f27e3fa659779e43ab83456b74d03e293675b89b95f4f9e477",
+      "size_bytes": 1971552
+    },
+    "set_02": {
+      "title": "Custom Moment Map",
+      "scenario": "Studio Cartographer",
+      "tag": "Creator monetization",
+      "summary": "Creative attention exists, but the buying path has too many service doors and no obvious first route.",
+      "keywords": [
+        "studio",
+        "cartographer",
+        "custom-moment-map",
+        "moment-map",
+        "set02",
+        "set-02",
+        "set_02",
+        "02"
+      ],
+      "source_name": "aiimplementationstudio.png",
+      "file_name": "set_02.png",
+      "src_abs": "/constraint-map/assets/img/professional-examples/set_02.png?v=20260504T155519Z",
+      "src_rel": "assets/img/professional-examples/set_02.png?v=20260504T155519Z",
+      "sha256": "417188d0d19c2c67573a87769d3f089bcb1ee072c52116852bbd37d035dcca9c",
+      "size_bytes": 1890097
+    },
+    "set_03": {
+      "title": "Custom Moment Card",
+      "scenario": "Northline Labs",
+      "tag": "Execution bottleneck",
+      "summary": "AI implementation demand exists, but kickoff becomes custom sprawl before the first week begins.",
+      "keywords": [
+        "northline",
+        "labs",
+        "custom-moment-card",
+        "moment-card",
+        "set03",
+        "set-03",
+        "set_03",
+        "03"
+      ],
+      "source_name": "studiocartographer.png",
+      "file_name": "set_03.png",
+      "src_abs": "/constraint-map/assets/img/professional-examples/set_03.png?v=20260504T155519Z",
+      "src_rel": "assets/img/professional-examples/set_03.png?v=20260504T155519Z",
+      "sha256": "c3d57709d0d23febcc705b2b56c2356a9df8605b90f1f7c6ad11fce232c1e8fc",
+      "size_bytes": 1906905
+    },
+    "set_04": {
+      "title": "Visual API Ledger",
+      "scenario": "LedgerBridge Advisory",
+      "tag": "Proof loop clarity",
+      "summary": "Campaign attention exists, but visibility, reply quality, buyer fit, and proof are being read as one signal.",
+      "keywords": [
+        "ledgerbridge",
+        "ledger",
+        "visual-api",
+        "api-ledger",
+        "proof",
+        "set04",
+        "set-04",
+        "set_04",
+        "04"
+      ],
+      "source_name": "visualapiledger.png",
+      "file_name": "set_04.png",
+      "src_abs": "/constraint-map/assets/img/professional-examples/set_04.png?v=20260504T155519Z",
+      "src_rel": "assets/img/professional-examples/set_04.png?v=20260504T155519Z",
+      "sha256": "c48c2af3e3b5ce273b92d91f6fbefb0ef59f5b7e7dbd2d42a006ad5a4694bdad",
+      "size_bytes": 1933196
+    }
+  },
+  "assignment_note": "Keyword mapping was used first. If filenames were generic, remaining files were assigned by sorted order."
+}

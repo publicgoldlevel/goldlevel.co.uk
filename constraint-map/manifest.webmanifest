@@ -1,0 +1,9 @@
+{
+  "name": "GOLDLEVEL 48-Hour Constraint Map",
+  "short_name": "Constraint Map",
+  "description": "GOLDLEVEL / Constraint Map campaign route for one stuck offer, page, project, or decision.",
+  "start_url": "constraint-map.html",
+  "display": "standalone",
+  "background_color": "#11100d",
+  "theme_color": "#d4a83f"
+}

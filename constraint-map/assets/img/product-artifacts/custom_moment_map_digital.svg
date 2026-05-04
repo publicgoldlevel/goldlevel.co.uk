@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="Custom Moment Map">
+  <defs><radialGradient id="g" cx="50%" cy="20%" r="80%"><stop offset="0" stop-color="#2d3342"/><stop offset="0.45" stop-color="#151923"/><stop offset="1" stop-color="#0e1014"/></radialGradient></defs>
+  <rect width="1200" height="1500" fill="url(#g)"/>
+  <rect x="70" y="70" width="1060" height="1360" rx="44" fill="none" stroke="#d4a83f" stroke-opacity=".62" stroke-width="3"/>
+  <circle cx="600" cy="330" r="118" fill="none" stroke="#d4a83f" stroke-width="7" opacity=".88"/>
+  <circle cx="600" cy="330" r="52" fill="#d4a83f" opacity=".18"/>
+  <path d="M300 620 H900 M300 708 H810 M300 796 H865 M300 884 H745" stroke="#f4efe4" stroke-width="24" stroke-linecap="round" opacity=".88"/>
+  <path d="M300 1034 H900 M300 1104 H710" stroke="#8da2c0" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+  <text x="600" y="1230" text-anchor="middle" fill="#f4efe4" font-family="Arial, sans-serif" font-size="60" font-weight="700">Custom Moment Map</text>
+  <text x="600" y="1302" text-anchor="middle" fill="#d4a83f" font-family="Arial, sans-serif" font-size="32" font-weight="700">Map the stuck moment</text>
+  <text x="600" y="1362" text-anchor="middle" fill="#b9b1a4" font-family="Arial, sans-serif" font-size="28">Pressure • sequence • choice • proof</text>
+  <text x="600" y="1412" text-anchor="middle" fill="#918879" font-family="Arial, sans-serif" font-size="22">Visual reference - not client result</text>
+</svg>
