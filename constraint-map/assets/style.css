@@ -187,3 +187,36 @@ legend{padding:0 .5rem;color:var(--accent-2)}
 .artifact-card p strong {
   color: var(--accent-2);
 }
+
+/* Story-first example cards */
+.story-grid {
+  align-items: start;
+}
+.story-card details {
+  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 14px;
+  background: rgba(255,255,255,.025);
+}
+.story-card summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--accent-2);
+}
+.story-detail {
+  margin-top: 12px;
+}
+.story-detail h4 {
+  margin: 16px 0 6px;
+  font-size: .95rem;
+  color: var(--text);
+}
+.story-detail p {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+.story-card .button {
+  margin-top: 16px;
+  width: 100%;
+}
