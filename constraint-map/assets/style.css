@@ -364,3 +364,35 @@ legend{padding:0 .5rem;color:var(--accent-2)}
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* Inline case visuals v7 */
+.case-inline-visual {
+  margin: 18px 0 24px;
+  border: 1px solid rgba(214,162,74,.32);
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(7,17,26,.88);
+  box-shadow: 0 20px 60px rgba(0,0,0,.22);
+}
+
+.case-inline-visual a {
+  display: block;
+  background: #07111a;
+}
+
+.case-inline-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #07111a;
+}
+
+.case-inline-visual figcaption {
+  padding: 11px 15px 15px;
+  color: rgba(244,236,221,.72);
+  font-size: .9rem;
+  line-height: 1.45;
+  border-top: 1px solid rgba(214,162,74,.22);
+}
