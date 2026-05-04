@@ -1,0 +1,1 @@
+20260504T182343Z inline-image solution installed; images embedded in existing live JS/HTML routes; no new PNG route required
