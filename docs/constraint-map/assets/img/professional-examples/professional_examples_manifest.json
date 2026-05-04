@@ -1,0 +1,48 @@
+{
+  "stamp": "20260504T162945Z",
+  "route": "constraint-map",
+  "zip_in": "/storage/emulated/0/Pictures/4 image upload.zip",
+  "asset_dir": "/data/data/com.termux/files/home/goldlevel.co.uk/constraint-map/assets/img/professional-examples",
+  "sets": {
+    "set_01": {
+      "title": "Clarity Map",
+      "scenario": "SignalNest AI",
+      "source_name": "set_01.png",
+      "file_name": "set_01.png",
+      "src_rel": "assets/img/professional-examples/set_01.png?v=20260504T162945Z",
+      "src_abs_local": "/constraint-map/assets/img/professional-examples/set_01.png?v=20260504T162945Z",
+      "size_bytes": 1971552,
+      "sha256": "ccd3a8b4a3f948f27e3fa659779e43ab83456b74d03e293675b89b95f4f9e477"
+    },
+    "set_02": {
+      "title": "Custom Moment Map",
+      "scenario": "Studio Cartographer",
+      "source_name": "set_02.png",
+      "file_name": "set_02.png",
+      "src_rel": "assets/img/professional-examples/set_02.png?v=20260504T162945Z",
+      "src_abs_local": "/constraint-map/assets/img/professional-examples/set_02.png?v=20260504T162945Z",
+      "size_bytes": 1890097,
+      "sha256": "417188d0d19c2c67573a87769d3f089bcb1ee072c52116852bbd37d035dcca9c"
+    },
+    "set_03": {
+      "title": "Custom Moment Card",
+      "scenario": "Northline Labs",
+      "source_name": "set_03.png",
+      "file_name": "set_03.png",
+      "src_rel": "assets/img/professional-examples/set_03.png?v=20260504T162945Z",
+      "src_abs_local": "/constraint-map/assets/img/professional-examples/set_03.png?v=20260504T162945Z",
+      "size_bytes": 1906905,
+      "sha256": "c3d57709d0d23febcc705b2b56c2356a9df8605b90f1f7c6ad11fce232c1e8fc"
+    },
+    "set_04": {
+      "title": "Visual API Ledger",
+      "scenario": "LedgerBridge Advisory",
+      "source_name": "set_04.png",
+      "file_name": "set_04.png",
+      "src_rel": "assets/img/professional-examples/set_04.png?v=20260504T162945Z",
+      "src_abs_local": "/constraint-map/assets/img/professional-examples/set_04.png?v=20260504T162945Z",
+      "size_bytes": 1933196,
+      "sha256": "c48c2af3e3b5ce273b92d91f6fbefb0ef59f5b7e7dbd2d42a006ad5a4694bdad"
+    }
+  }
+}
