@@ -44,7 +44,7 @@ function classifyFit(data) {
   const hasNow = (data.importantNow || "").trim().length > 8;
 
   const noFitSignals = [
-    "therapy", "rescue", "guarantee", "guaranteed", "manifest", "spiritual confirmation",
+    "regulated", "professional advice", "guarantee", "guaranteed",
     "no project", "no offer", "no decision", "just validation"
   ].some(x => combined.includes(x));
 
@@ -99,17 +99,37 @@ $("#microFitForm")?.addEventListener("submit", (e) => {
   const box = $("#fitResult");
   box.hidden = false;
   box.className = `result-box ${result.klass}`;
-  box.innerHTML = `
-    <p class="eyebrow">Classification: ${result.status}</p>
-    <h3>${result.message}</h3>
-    <p class="muted">Use this as a guide, not an automatic acceptance. Fit still requires judgment before taking payment.</p>
-    <div class="form-actions">
-      <button class="button primary" id="copyFitResult" type="button">Copy fit-check summary</button>
-      <button class="button secondary" id="downloadFitResult" type="button">Download fit-check JSON</button>
-    </div>
-  `;
-  $("#copyFitResult").addEventListener("click", () => copyText(fitEmail(data, result)));
-  $("#downloadFitResult").addEventListener("click", () => downloadText("constraint-map-fit-check.json", JSON.stringify({ createdAt: new Date().toISOString(), data, result }, null, 2)));
+  const statusLine = document.createElement("p");
+  statusLine.className = "eyebrow";
+  statusLine.textContent = `Classification: ${result.status}`;
+
+  const message = document.createElement("h3");
+  message.textContent = result.message;
+
+  const note = document.createElement("p");
+  note.className = "muted";
+  note.textContent = "Use this as a guide, not an automatic acceptance. Fit still requires judgment before taking payment.";
+
+  const actions = document.createElement("div");
+  actions.className = "form-actions";
+
+  const copyButton = document.createElement("button");
+  copyButton.className = "button primary";
+  copyButton.id = "copyFitResult";
+  copyButton.type = "button";
+  copyButton.textContent = "Copy fit-check summary";
+
+  const downloadButton = document.createElement("button");
+  downloadButton.className = "button secondary";
+  downloadButton.id = "downloadFitResult";
+  downloadButton.type = "button";
+  downloadButton.textContent = "Download fit-check JSON";
+
+  actions.append(copyButton, downloadButton);
+  box.replaceChildren(statusLine, message, note, actions);
+
+  copyButton.addEventListener("click", () => copyText(fitEmail(data, result)));
+  downloadButton.addEventListener("click", () => downloadText("constraint-map-fit-check.json", JSON.stringify({ createdAt: new Date().toISOString(), data, result }, null, 2)));
 });
 
 $("#copyFitEmail")?.addEventListener("click", () => {
@@ -135,4 +155,30 @@ $("#downloadIntake")?.addEventListener("click", () => {
 $("#copyIntake")?.addEventListener("click", () => {
   const data = serializeForm($("#intakeForm"));
   copyText(intakeEmail(data));
+});
+
+
+function getSiteConfig() {
+  return window.SITE_CONFIG || {};
+}
+function isPlaceholder(value) {
+  return !value || String(value).includes("YOUR_") || String(value).trim() === "";
+}
+function openConfiguredLink(kind) {
+  const cfg = getSiteConfig();
+  const map = {
+    payment: cfg.paymentLink,
+    kit: cfg.kitPaymentLink || cfg.paymentLink,
+    intake: cfg.intakeLink,
+    contact: cfg.contactEmail ? `mailto:${cfg.contactEmail}?subject=${encodeURIComponent("48-Hour Constraint Map fit check")}` : ""
+  };
+  const value = map[kind];
+  if (isPlaceholder(value)) {
+    alert(`Configure ${kind} in assets/site-config.js before using this public route commercially.`);
+    return;
+  }
+  window.location.href = value;
+}
+document.querySelectorAll("[data-config-action]")?.forEach((button) => {
+  button.addEventListener("click", () => openConfiguredLink(button.dataset.configAction));
 });

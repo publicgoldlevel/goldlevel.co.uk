@@ -156,3 +156,23 @@ legend{padding:0 .5rem;color:var(--accent-2)}
   .panel{padding:16px}
   h1{font-size:3.05rem}
 }
+
+.privacy-note {
+  border: 1px solid rgba(212, 168, 63, 0.24);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  background: rgba(212, 168, 63, 0.08);
+  color: var(--muted);
+}
+
+
+/* v0.3 SUPERCHARGED visual/site integration */
+.artifact-grid,.receipt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.receipt-grid{grid-template-columns:repeat(3,1fr)}
+.artifact-card{border:1px solid var(--line);background:var(--panel);border-radius:22px;padding:16px}
+.artifact-card img{width:100%;border-radius:16px;border:1px solid rgba(255,255,255,.08);background:#0e1014;margin-bottom:14px}
+.artifact-card h3{margin-bottom:8px}.artifact-card p{color:var(--muted);margin-bottom:0}
+.wiring code{background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:8px;padding:2px 6px}
+.receipt-state .mini-card{min-height:160px}
+@media(max-width:900px){.artifact-grid,.receipt-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.artifact-grid,.receipt-grid{grid-template-columns:1fr}}
