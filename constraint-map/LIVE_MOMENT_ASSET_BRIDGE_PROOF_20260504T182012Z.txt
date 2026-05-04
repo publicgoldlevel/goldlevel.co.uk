@@ -1,0 +1,1 @@
+20260504T182012Z moment-asset-bridge installed; constraint-map images served from /moment-matter/assets/img/artwork/constraint-map-pro-01.png..04.png

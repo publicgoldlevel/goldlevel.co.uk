@@ -1,0 +1,10 @@
+{
+  "timestamp_utc": "20260504T182012Z",
+  "purpose": "Constraint Map professional images served through known-good Moment Matter public image lane",
+  "images": [
+    "/moment-matter/assets/img/artwork/constraint-map-pro-01.png",
+    "/moment-matter/assets/img/artwork/constraint-map-pro-02.png",
+    "/moment-matter/assets/img/artwork/constraint-map-pro-03.png",
+    "/moment-matter/assets/img/artwork/constraint-map-pro-04.png"
+  ]
+}

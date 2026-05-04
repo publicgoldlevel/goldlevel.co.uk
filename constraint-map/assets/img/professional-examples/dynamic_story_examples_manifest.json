@@ -7,8 +7,8 @@
       "id": "set_01",
       "title": "Clarity Map",
       "scenario": "SignalNest AI",
-      "cleanPath": "assets/img/professional-examples/set_01.png",
-      "file": "set_01.png",
+      "cleanPath": "/moment-matter/assets/img/artwork/constraint-map-pro-01.png?v=20260504T182012Z",
+      "file": "/moment-matter/assets/img/artwork/constraint-map-pro-01.png?v=20260504T182012Z",
       "size_bytes": 1971552,
       "sha256": "ccd3a8b4a3f948f27e3fa659779e43ab83456b74d03e293675b89b95f4f9e477"
     },
@@ -16,8 +16,8 @@
       "id": "set_02",
       "title": "Custom Moment Map",
       "scenario": "Studio Cartographer",
-      "cleanPath": "assets/img/professional-examples/set_02.png",
-      "file": "set_02.png",
+      "cleanPath": "/moment-matter/assets/img/artwork/constraint-map-pro-02.png?v=20260504T182012Z",
+      "file": "/moment-matter/assets/img/artwork/constraint-map-pro-02.png?v=20260504T182012Z",
       "size_bytes": 1890097,
       "sha256": "417188d0d19c2c67573a87769d3f089bcb1ee072c52116852bbd37d035dcca9c"
     },
@@ -25,8 +25,8 @@
       "id": "set_03",
       "title": "Custom Moment Card",
       "scenario": "Northline Labs",
-      "cleanPath": "assets/img/professional-examples/set_03.png",
-      "file": "set_03.png",
+      "cleanPath": "/moment-matter/assets/img/artwork/constraint-map-pro-03.png?v=20260504T182012Z",
+      "file": "/moment-matter/assets/img/artwork/constraint-map-pro-03.png?v=20260504T182012Z",
       "size_bytes": 1906905,
       "sha256": "c3d57709d0d23febcc705b2b56c2356a9df8605b90f1f7c6ad11fce232c1e8fc"
     },
@@ -34,8 +34,8 @@
       "id": "set_04",
       "title": "Visual API Ledger",
       "scenario": "LedgerBridge Advisory",
-      "cleanPath": "assets/img/professional-examples/set_04.png",
-      "file": "set_04.png",
+      "cleanPath": "/moment-matter/assets/img/artwork/constraint-map-pro-04.png?v=20260504T182012Z",
+      "file": "/moment-matter/assets/img/artwork/constraint-map-pro-04.png?v=20260504T182012Z",
       "size_bytes": 1933196,
       "sha256": "c48c2af3e3b5ce273b92d91f6fbefb0ef59f5b7e7dbd2d42a006ad5a4694bdad"
     }
