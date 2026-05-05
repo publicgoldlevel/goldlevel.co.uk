@@ -458,5 +458,643 @@
   <script src="assets/app.js"></script>
 <script defer src="/constraint-map/assets/story-examples-loader.js?v=20260504T163806Z"></script>
 <script defer src="assets/story-examples-loader.js?v=20260504T163806Z"></script>
+
+<!-- GL_CONSTRAINT_MAP_FIT_CHECK_APP_BEGIN 20260505T101256Z -->
+<section id="constraint-map-fit-check" class="cm-fit-check" data-app="constraint-map-fit-check-v0.3">
+  <div class="cm-fit-check__inner">
+    <div class="cm-fit-check__head">
+      <p class="eyebrow">Free self-check</p>
+      <h2>Try the Constraint Map Fit Check</h2>
+      <p>
+        Not ready to book a full map? Use this quick self-read to name the tension behind one stuck offer,
+        project, or decision, then find the smallest integrated move that could produce signal.
+      </p>
+      <p class="cm-fit-check__micro">
+        Most stuck points are a split, not a lack of effort. Browser-only. No login, tracking, database, payment redirect, or AI API.
+      </p>
+    </div>
+
+    <form id="cmFitCheckForm" class="cm-fit-check__form" novalidate>
+      <div class="cm-fit-check__field">
+        <label for="cmSituationType">What kind of situation is this?</label>
+        <select id="cmSituationType" name="situationType" required>
+          <option value="">Choose one</option>
+          <option>Offer / sales / conversion</option>
+          <option>Project / execution</option>
+          <option>Decision / direction</option>
+          <option>Creative / public material</option>
+          <option>Audience / positioning</option>
+          <option>Work / institution</option>
+          <option>Relationship / communication</option>
+          <option>Money / income</option>
+          <option>Unknown / mixed</option>
+        </select>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmActiveTension">Which tension feels most present?</label>
+        <select id="cmActiveTension" name="activeTension" required>
+          <option value="">Choose one</option>
+          <option>Attention but not commitment</option>
+          <option>Depth but not clear entry</option>
+          <option>Many options but no sequence</option>
+          <option>Strong idea but weak proof</option>
+          <option>Pressure but no next move</option>
+          <option>Demand but delivery sprawl</option>
+          <option>Expression but no buyer action</option>
+          <option>Effort but no visible result</option>
+          <option>Not sure</option>
+        </select>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmTryingToMove">What are you trying to move forward?</label>
+        <textarea id="cmTryingToMove" name="tryingToMove" rows="3" required></textarea>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmWhereStuck">Where is it stuck?</label>
+        <textarea id="cmWhereStuck" name="whereStuck" rows="3" required></textarea>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmImportantNow">What made this important now, and what keeps happening if nothing changes?</label>
+        <textarea id="cmImportantNow" name="importantNow" rows="3" required></textarea>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmAlreadyTried">What have you already tried?</label>
+        <textarea id="cmAlreadyTried" name="alreadyTried" rows="3" required></textarea>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmTemptedNext">What are you tempted to do next?</label>
+        <textarea id="cmTemptedNext" name="temptedNext" rows="3" required></textarea>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmProofSignal">What proof would show movement?</label>
+        <textarea id="cmProofSignal" name="proofSignal" rows="3" required></textarea>
+      </div>
+
+      <div class="cm-fit-check__field">
+        <label for="cmNotWorthDoing">Optional: what would make this not worth doing?</label>
+        <textarea id="cmNotWorthDoing" name="notWorthDoing" rows="2"></textarea>
+      </div>
+
+      <div class="cm-fit-check__actions">
+        <button id="cmFitCheckGenerate" type="submit" class="button primary">Generate my fit check</button>
+        <button id="cmFitCheckReset" type="button" class="button secondary">Reset</button>
+        <button id="cmFitCheckCopy" type="button" class="button ghost" hidden>Copy result</button>
+      </div>
+    </form>
+
+    <div id="cmFitCheckResult" class="cm-fit-check__result" aria-live="polite" hidden></div>
+  </div>
+</section>
+
+<style>
+.cm-fit-check {
+  scroll-margin-top: 96px;
+  padding: clamp(52px, 7vw, 92px) 20px;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(214,162,74,.13), transparent 32%),
+    radial-gradient(circle at 90% 10%, rgba(255,255,255,.06), transparent 30%),
+    #07111a;
+  color: #f4ecdd;
+}
+
+.cm-fit-check__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  border: 1px solid rgba(214,162,74,.38);
+  border-radius: 30px;
+  padding: clamp(20px, 4vw, 40px);
+  background: rgba(255,255,255,.035);
+  box-shadow: 0 28px 80px rgba(0,0,0,.28);
+}
+
+.cm-fit-check__head {
+  max-width: 860px;
+  margin-bottom: 26px;
+}
+
+.cm-fit-check__head h2 {
+  margin: 6px 0 12px;
+}
+
+.cm-fit-check__head p {
+  color: rgba(244,236,221,.80);
+  line-height: 1.6;
+}
+
+.cm-fit-check__micro {
+  font-size: .92rem;
+  color: rgba(244,236,221,.62) !important;
+}
+
+.cm-fit-check__form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.cm-fit-check__field {
+  display: grid;
+  gap: 8px;
+}
+
+.cm-fit-check__field label {
+  color: #f4ecdd;
+  font-weight: 700;
+  font-size: .95rem;
+}
+
+.cm-fit-check__field textarea,
+.cm-fit-check__field select {
+  width: 100%;
+  border: 1px solid rgba(214,162,74,.32);
+  border-radius: 16px;
+  padding: 13px 14px;
+  background: rgba(0,0,0,.24);
+  color: #f4ecdd;
+  font: inherit;
+  line-height: 1.45;
+}
+
+.cm-fit-check__field textarea:focus,
+.cm-fit-check__field select:focus {
+  outline: 2px solid rgba(214,162,74,.62);
+  outline-offset: 2px;
+}
+
+.cm-fit-check__actions {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cm-fit-check__result {
+  margin-top: 26px;
+  border: 1px solid rgba(214,162,74,.42);
+  border-radius: 24px;
+  padding: clamp(18px, 3vw, 28px);
+  background: rgba(7,17,26,.88);
+}
+
+.cm-fit-check__result h3 {
+  margin-top: 0;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+}
+
+.cm-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.cm-result-item {
+  border: 1px solid rgba(214,162,74,.25);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255,255,255,.035);
+}
+
+.cm-result-item strong {
+  display: block;
+  color: #d6a24a;
+  margin-bottom: 6px;
+}
+
+.cm-result-item p {
+  margin: 0;
+  color: rgba(244,236,221,.82);
+  line-height: 1.5;
+}
+
+.cm-fit-status {
+  border: 1px solid rgba(214,162,74,.45);
+  border-radius: 18px;
+  padding: 16px;
+  margin-top: 16px;
+  background: rgba(214,162,74,.08);
+}
+
+.cm-fit-status strong {
+  color: #d6a24a;
+}
+
+.cm-paid-cta {
+  margin-top: 16px;
+  border: 1px solid rgba(214,162,74,.40);
+  border-radius: 18px;
+  padding: 16px;
+  background: rgba(255,255,255,.04);
+}
+
+.cm-paid-cta h4 {
+  margin: 0 0 8px;
+}
+
+.cm-paid-cta p {
+  margin: 0 0 12px;
+}
+
+.cm-guardrail {
+  margin-top: 14px;
+  color: rgba(244,236,221,.66);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 820px) {
+  .cm-fit-check__form,
+  .cm-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cm-fit-check__actions .button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  const form = document.getElementById("cmFitCheckForm");
+  const resultEl = document.getElementById("cmFitCheckResult");
+  const copyBtn = document.getElementById("cmFitCheckCopy");
+  const resetBtn = document.getElementById("cmFitCheckReset");
+
+  if (!form || !resultEl) return;
+
+  const wordSets = {
+    live: ["launch", "deadline", "client", "buyer", "booking", "payment", "decision", "repeated", "30 days", "revenue", "opportunity", "public", "stalled", "conversation", "cost", "keeps happening"],
+    stuck: ["interest but not", "not converting", "unclear", "stuck", "too many", "no reply", "no buyer", "not landing", "slow", "blocked", "leaky"],
+    proof: ["reply", "payment", "booking", "decision", "published", "sent", "accepted", "metric", "call", "order", "feedback", "signal"],
+    unsafe: ["desperate", "crisis", "can't afford", "cannot afford", "rent", "debt", "panic", "emergency", "last money"],
+    relationshipRisk: ["boundary", "blocked", "unsafe", "confront", "force", "persuade", "chase", "pressure", "prove"],
+    implementation: ["build it for me", "done for me", "accountability", "manage", "execute for me", "design it", "admin", "implementation support"]
+  };
+
+  function val(name) {
+    const field = form.elements[name];
+    return field ? String(field.value || "").trim() : "";
+  }
+
+  function lower(value) {
+    return String(value || "").toLowerCase();
+  }
+
+  function containsAny(text, words) {
+    const t = lower(text);
+    return words.some(w => t.indexOf(w) >= 0);
+  }
+
+  function clampText(text, fallback) {
+    text = String(text || "").trim();
+    return text || fallback;
+  }
+
+  function activeTensionCopy(tension) {
+    const map = {
+      "Attention but not commitment": "Attention exists, but the next decision is not clear enough for commitment.",
+      "Depth but not clear entry": "The work has depth, but the buyer or receiver may not have a clean first step.",
+      "Many options but no sequence": "Several moves may be valid, but there is no clear order of operation.",
+      "Strong idea but weak proof": "The idea may be strong, but it has not yet met enough external evidence.",
+      "Pressure but no next move": "The pressure is real, but it has not been converted into one bounded action.",
+      "Demand but delivery sprawl": "Demand exists, but the start of delivery may be too variable or custom.",
+      "Expression but no buyer action": "The expression is visible, but it is not yet producing a buyer action.",
+      "Effort but no visible result": "Effort is present, but the proof loop is not yet clear enough.",
+      "Not sure": "The split is not yet named. The first move is to identify the tension before changing the surface."
+    };
+    return map[tension] || map["Not sure"];
+  }
+
+  function detectConstraint(all, situationType, activeTension) {
+    const t = lower(all + " " + activeTension);
+
+    if (/depth but not clear entry|unclear|hard to explain|don't get|do not get|too abstract|not landing|confusing/.test(t)) return "Legibility constraint";
+    if (/wrong audience|no buyers|nobody responds|target unclear|audience/.test(t)) return "Buyer / audience constraint";
+    if (/price|value|worth|what do i get|commodity|comparison/.test(t)) return "Offer / value constraint";
+    if (/many options but no sequence|too many|which first|what first|sequence|next step|next move|options/.test(t)) return "Sequence constraint";
+    if (/strong idea but weak proof|effort but no visible result|no data|no test|no feedback|no metric|don't know if it works|just thinking|proof/.test(t)) return "Proof constraint";
+    if (/everything|entire business|whole life|many projects|all of it|too broad/.test(t)) return "Scope constraint";
+    if (/pressure but no next move|no time|overwhelmed|bandwidth|deadline|capacity|too much/.test(t)) return "Timing / capacity constraint";
+    if (/trust|permission|follow up|no reply|relationship|communication|boundary/.test(t) || /relationship/i.test(situationType)) return "Trust / permission constraint";
+    if (/panic|desperate|scared|urgent|exposed|pressure|anxious/.test(t)) return "Emotional pressure constraint";
+    if (/can't decide|cannot decide|need to think|not sure|criteria|yes or no|not now/.test(t)) return "Decision criteria constraint";
+    if (/demand but delivery sprawl|know what to do|not doing it|can't execute|cannot execute|execution|implementation|accountability/.test(t)) return "Implementation constraint";
+
+    return "Unknown / insufficient data";
+  }
+
+  function detectTrigger(all, activeTension) {
+    const t = lower(all + " " + activeTension);
+
+    if (/keep fixing|changed everything|visibility|branding|algorithm|motivation|confidence|actual issue/.test(t)) {
+      return ["wrong problem risk", "The risk is that you may be fixing the visible symptom rather than the constraint."];
+    }
+    if (/many options but no sequence|too many options|don't know what to do|what next|which move|should i build|should i post|should i send|relaunch|discount/.test(t)) {
+      return ["wrong next move risk", "The risk is choosing a move that creates activity but not proof."];
+    }
+    if (/attention but not commitment|people like|interest|nice feedback|no buyers|no bookings|no replies|no commitment/.test(t)) {
+      return ["interest without commitment", "Attention may exist, but the decision path is not clear enough."];
+    }
+    if (/depth but not clear entry|expression but no buyer action|not landing|hard to explain|people don't get|too abstract|wrong audience|can't describe/.test(t)) {
+      return ["unclear offer / unclear audience", "The value is not yet easy enough for the receiver to enter."];
+    }
+    if (/demand but delivery sprawl|know what to do but|not doing it|repeat failure|can't execute|avoid|no structure/.test(t)) {
+      return ["execution bottleneck", "The constraint may be the execution sequence or proof loop."];
+    }
+    if (/strong idea but weak proof|effort but no visible result|no data|don't know if it works|haven't tested|no feedback|no metric|just thinking/.test(t)) {
+      return ["missing proof loop", "The situation needs a proof signal before another strategy pass."];
+    }
+
+    return ["not enough active trigger", "This may need one clearer live object, consequence, or decision before it is worth mapping."];
+  }
+
+  function compensationPattern(all) {
+    const t = lower(all);
+
+    if (/build|bigger|more features|full system|new product/.test(t)) return "overbuilding";
+    if (/rewrite|edit|polish|redesign|tweak/.test(t)) return "polishing or rewriting before testing";
+    if (/explain|clarify|more content|more examples/.test(t)) return "adding more explanation";
+    if (/chase|follow up|dm again|message again/.test(t)) return "chasing interest that has not shown commitment";
+    if (/discount|lower price|cheaper/.test(t)) return "lowering price before clarifying value";
+    if (/wait|thinking|pause|nothing/.test(t)) return "waiting for confidence instead of defining proof";
+    if (/research|study|course|buy/.test(t)) return "seeking more inputs before naming the constraint";
+
+    return "working around the constraint with more activity";
+  }
+
+  function whatNotToDo(tempted, category) {
+    const t = lower(tempted);
+
+    if (/build|bigger|full|system/.test(t)) return "Do not build a larger version yet.";
+    if (/rewrite|redesign|polish/.test(t)) return "Do not rewrite the whole page yet.";
+    if (/chase|follow up|dm|message/.test(t)) return "Do not chase interest that has not shown commitment.";
+    if (/discount|lower price/.test(t)) return "Do not lower the price before clarifying value.";
+    if (/explain|more content/.test(t)) return "Do not add more explanation before clarifying the first decision.";
+    if (/audience|everyone|broaden/.test(t)) return "Do not expand the audience until one buyer type understands it.";
+    if (/launch|publish/.test(t)) return "Do not launch the full thing before testing the first signal.";
+    if (/confront|force|persuade/.test(t)) return "Do not force a conversation while facts and permission are unclear.";
+    if (/buy|course|tool|software/.test(t)) return "Do not spend money on a solution while the constraint is unnamed.";
+    if (/quit|delete|stop/.test(t)) return "Do not stop the whole project from one unclear signal.";
+    if (category === "Scope constraint") return "Do not map the whole system yet.";
+
+    return "Do not make the larger move yet. It may create more activity without producing proof.";
+  }
+
+  function integratedNextMove(category, activeTension) {
+    const moves = {
+      "Legibility constraint": "Turn the tension into one clear entry point: write a one-sentence version that says who it is for, what changes, and what to do next. Send it to one target person and ask what they think it means.",
+      "Buyer / audience constraint": "Pick one buyer group for this cycle. Rewrite the stuck point using their words, then test whether they recognize the problem.",
+      "Offer / value constraint": "Create a four-line offer: result, deliverable, timeline, and honest downside. This integrates value with buyer risk.",
+      "Sequence constraint": "Choose one reversible move that can be completed today and can produce a reply, booking, payment, or clear no.",
+      "Proof constraint": "Before changing anything, define the signal that would prove this is working. Then run only the smallest action needed to observe that signal.",
+      "Scope constraint": "Narrow the map to one object: one page, one offer, one project, one decision, one message, or one conversation.",
+      "Timing / capacity constraint": "Choose a 30-minute action that reduces uncertainty without requiring a rebuild.",
+      "Trust / permission constraint": "Pause escalation. Write the cleanest permission-based question, or do nothing if permission is absent.",
+      "Emotional pressure constraint": "Separate facts, assumptions, and feared outcomes before acting. Do not make an irreversible move from pressure.",
+      "Decision criteria constraint": "Define what would make this a yes, no, or not now. Let one criterion become decisive.",
+      "Implementation constraint": "Create one execution atom with a timestamp, deliverable, and receipt.",
+      "Unknown / insufficient data": "Name one live object, one tension, one next action, and one proof signal before changing anything else."
+    };
+
+    if (activeTension === "Demand but delivery sprawl") {
+      return "Create one repeatable first diagnostic move that every new engagement starts with before customization begins.";
+    }
+    if (activeTension === "Attention but not commitment") {
+      return "Turn one high-attention message into one direct next-step prompt and watch whether it produces qualified movement, not just reaction.";
+    }
+    if (activeTension === "Depth but not clear entry") {
+      return "Create one visible first door into the work. Do not explain the full depth until the buyer knows how to enter.";
+    }
+
+    return moves[category] || moves["Unknown / insufficient data"];
+  }
+
+  function fitStatusLabel(code) {
+    const copy = {
+      "map-worthy": "Map-worthy",
+      "use-free-result-first": "Use the free result first",
+      "too-broad": "Too broad; narrow to one object",
+      "not-live-enough": "Not enough live trigger yet",
+      "implementation-support": "Better suited to implementation support",
+      "unsafe-to-pay": "Not safe to pay right now",
+      "relationship-caution": "Relationship / communication caution",
+      "evidence-needed": "Needs more evidence before diagnosis"
+    };
+    return copy[code] || "Use the free result first";
+  }
+
+  function classify(input, scores, category) {
+    const all = Object.values(input).join(" ");
+    const type = input.situationType;
+
+    if (containsAny(all, wordSets.unsafe)) return "unsafe-to-pay";
+    if (/relationship/i.test(type) && containsAny(all, wordSets.relationshipRisk)) return "relationship-caution";
+    if (containsAny(all, wordSets.implementation) || category === "Implementation constraint") return "implementation-support";
+    if (scores.scopeRisk >= 2 || scores.specificity <= -1) return "too-broad";
+    if (scores.urgency <= 0) return "not-live-enough";
+    if (scores.proof <= 0) return "evidence-needed";
+
+    if (scores.specificity >= 1 && scores.fit >= 2 && scores.proof >= 1 && scores.risk <= 3 && scores.urgency >= 1) return "map-worthy";
+
+    return "use-free-result-first";
+  }
+
+  function guardrail(status, type) {
+    if (status === "unsafe-to-pay") return "Do not spend money on a diagnostic if the fee creates strain. Use the free result and look for a no-cost proof signal first.";
+    if (status === "relationship-caution" || /relationship/i.test(type)) return "Do not use this result to pressure, chase, confront, or bypass someone’s boundary.";
+    if (/offer|sales|conversion|audience|positioning/i.test(type)) return "Do not change the whole offer from this alone. Test the smallest move first.";
+    return "This is a structured self-read, not legal, medical, financial, therapeutic, or crisis advice. It separates the visible symptom, active tension, likely constraint, integrated next move, and proof signal. Use judgment before acting.";
+  }
+
+  function score(input) {
+    let scores = { fit: 0, risk: 0, urgency: 0, specificity: 0, commercial: 0, proof: 0, scopeRisk: 0 };
+    const all = Object.values(input).join(" ");
+    const type = input.situationType;
+
+    if (/Offer|Audience/.test(type)) scores.commercial += 2;
+    if (/Project/.test(type)) scores.commercial += 1;
+    if (/Decision|Creative/.test(type)) scores.fit += 1;
+    if (/Work|institution/.test(type)) scores.risk += 1;
+    if (/Relationship/.test(type)) scores.risk += 2;
+    if (/Money/.test(type)) scores.risk += 1;
+    if (/Unknown/.test(type)) scores.specificity -= 1;
+
+    if (input.activeTension && input.activeTension !== "Not sure") scores.fit += 1;
+    if (input.tryingToMove.length < 20) scores.specificity -= 2; else scores.specificity += 2;
+    if (/ and also |,.*,.*,|everything|all of it|whole business|whole life/i.test(input.tryingToMove)) scores.scopeRisk += 2;
+    if (containsAny(input.whereStuck, wordSets.stuck)) scores.fit += 2;
+    if (containsAny(input.importantNow, wordSets.live)) scores.urgency += 2; else scores.urgency -= 1;
+    if (input.alreadyTried.length > 5) scores.fit += 1;
+    if (input.temptedNext.length > 3) scores.risk += 1;
+    if (containsAny(input.importantNow, ["revenue", "opportunity", "launch", "buyer", "time", "anxiety", "delay", "confusion", "cost", "keeps happening"])) scores.urgency += 1;
+    if (containsAny(input.proofSignal, wordSets.proof)) scores.proof += 2; else scores.proof -= 2;
+    if (containsAny(all, wordSets.unsafe)) scores.risk += 4;
+
+    return scores;
+  }
+
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function renderItem(title, body) {
+    return '<div class="cm-result-item"><strong>' + escapeHtml(title) + '</strong><p>' + escapeHtml(body) + '</p></div>';
+  }
+
+  function resultText(output) {
+    return [
+      "Your Constraint Map Fit Check",
+      "Based only on what you entered, this looks like: " + output.constraintCategory + ".",
+      "Situation: " + output.situation,
+      "Visible symptom: " + output.visibleSymptom,
+      "Active tension: " + output.activeTension,
+      "Active trigger: " + output.activeTrigger,
+      "Compensation pattern: " + output.compensationPattern,
+      "Status quo cost: " + output.statusQuoCost,
+      "What not to do next: " + output.whatNotToDoNext,
+      "Integrated next move: " + output.nextBoundedMove,
+      "Proof signal: " + output.proofSignal,
+      "Fit status: " + fitStatusLabel(output.fitStatus),
+      "Evidence grade: E1_USER_INPUT_ONLY",
+      output.disclaimer
+    ].join("\\n");
+  }
+
+  function generate(input) {
+    const all = Object.values(input).join(" ");
+    const scores = score(input);
+    const trigger = detectTrigger(all, input.activeTension);
+    const category = detectConstraint(all, input.situationType, input.activeTension);
+    const status = classify(input, scores, category);
+
+    return {
+      fitStatus: status,
+      situation: "You are trying to move: " + clampText(input.tryingToMove, "one live object that needs to be named more clearly"),
+      visibleSymptom: clampText(input.whereStuck, "the visible stuck point was not specific enough"),
+      activeTension: activeTensionCopy(input.activeTension),
+      activeTrigger: trigger[0] + " — " + trigger[1],
+      constraintCategory: category,
+      compensationPattern: "Your current compensation pattern may be: " + compensationPattern(all) + ". This means you may be working around the tension instead of integrating it into a testable move.",
+      statusQuoCost: "If nothing changes, the likely cost is: " + clampText(input.importantNow, "continued ambiguity, delayed movement, and no clean proof signal"),
+      whatNotToDoNext: whatNotToDo(input.temptedNext, category),
+      nextBoundedMove: integratedNextMove(category, input.activeTension),
+      proofSignal: "Watch for: " + clampText(input.proofSignal, "one observable reply, decision, booking, payment, completion, or external feedback signal") + ". If that signal does not appear, the map should be revised.",
+      ctaMode: status === "map-worthy" ? "paid-diagnostic" : "free-result-first",
+      disclaimer: guardrail(status, input.situationType),
+      evidenceGrade: "E1_USER_INPUT_ONLY"
+    };
+  }
+
+  function render(output) {
+    const paid = output.ctaMode === "paid-diagnostic";
+    const cta = paid
+      ? '<div class="cm-paid-cta"><h4>Want this mapped properly?</h4><p>Send one stuck offer, project, or decision. I’ll return a one-page Constraint Map within 24–48 hours: active tension, likely hidden constraint, compensation pattern, what not to do next, integrated next move, and proof signal.</p><a class="button primary" href="#intake">Request a 24–48h Constraint Map</a></div>'
+      : '<div class="cm-paid-cta"><h4>Use this free result first.</h4><p>This does not look paid-diagnostic-ready yet. Run the smallest test, then come back with what happened.</p></div>';
+
+    resultEl.innerHTML =
+      '<h3>Your Constraint Map Fit Check</h3>' +
+      '<p>Based only on what you entered, this is a structured self-read, not a certainty claim.</p>' +
+      '<div class="cm-result-grid">' +
+      renderItem("Situation", output.situation) +
+      renderItem("Visible symptom", output.visibleSymptom) +
+      renderItem("Active tension", output.activeTension) +
+      renderItem("Active trigger", output.activeTrigger) +
+      renderItem("Likely constraint category", output.constraintCategory) +
+      renderItem("Compensation pattern", output.compensationPattern) +
+      renderItem("Status quo cost", output.statusQuoCost) +
+      renderItem("What not to do next", output.whatNotToDoNext) +
+      renderItem("Integrated next move", output.nextBoundedMove) +
+      renderItem("Proof signal", output.proofSignal) +
+      '</div>' +
+      '<div class="cm-fit-status"><strong>Fit status: ' + escapeHtml(fitStatusLabel(output.fitStatus)) + '</strong><p>' + escapeHtml(output.disclaimer) + '</p><p>Evidence grade: E1_USER_INPUT_ONLY.</p></div>' +
+      cta +
+      '<p class="cm-guardrail">This is a structured self-read, not legal, medical, financial, therapeutic, or crisis advice. Use judgment before acting.</p>';
+
+    resultEl.hidden = false;
+    copyBtn.hidden = false;
+    copyBtn.dataset.resultText = resultText(output);
+    resultEl.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function val(name) {
+    const field = form.elements[name];
+    return field ? String(field.value || "").trim() : "";
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const input = {
+      situationType: val("situationType"),
+      activeTension: val("activeTension"),
+      tryingToMove: val("tryingToMove"),
+      whereStuck: val("whereStuck"),
+      importantNow: val("importantNow"),
+      alreadyTried: val("alreadyTried"),
+      temptedNext: val("temptedNext"),
+      proofSignal: val("proofSignal"),
+      notWorthDoing: val("notWorthDoing"),
+      createdAt: new Date().toISOString(),
+      source: "constraint-map-fit-check-v0.3"
+    };
+
+    const requiredMissing = ["situationType", "activeTension", "tryingToMove", "whereStuck", "importantNow", "alreadyTried", "temptedNext", "proofSignal"]
+      .filter(key => !input[key]);
+
+    if (requiredMissing.length) {
+      resultEl.hidden = false;
+      resultEl.innerHTML = '<h3>One thing is missing</h3><p>Please complete the required fields before generating the fit check.</p>';
+      copyBtn.hidden = true;
+      return;
+    }
+
+    render(generate(input));
+  });
+
+  resetBtn.addEventListener("click", function () {
+    form.reset();
+    resultEl.hidden = true;
+    resultEl.innerHTML = "";
+    copyBtn.hidden = true;
+  });
+
+  copyBtn.addEventListener("click", function () {
+    const text = copyBtn.dataset.resultText || resultEl.innerText || "";
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () {
+        copyBtn.textContent = "Copied";
+        setTimeout(function () { copyBtn.textContent = "Copy result"; }, 1400);
+      });
+    } else {
+      const box = document.createElement("textarea");
+      box.value = text;
+      document.body.appendChild(box);
+      box.select();
+      document.execCommand("copy");
+      document.body.removeChild(box);
+      copyBtn.textContent = "Copied";
+      setTimeout(function () { copyBtn.textContent = "Copy result"; }, 1400);
+    }
+  });
+})();
+</script>
+<!-- GL_CONSTRAINT_MAP_FIT_CHECK_APP_END 20260505T101256Z -->
+
 </body>
 </html>
