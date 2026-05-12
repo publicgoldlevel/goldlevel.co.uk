@@ -1,0 +1,134 @@
+/*
+CANON_HEADER v1.0.0
+TITLE=v0.4.0 Interface Selection Repair
+TYPE=METHOD
+STATUS=PUBLIC_PROVISIONAL
+VERSION=0.1.0
+SCOPE=Scoped navigation/CTA/card/interface repair for /goldlevel-v0-4-0/
+CLAIM_LEVEL=CONCEPTUAL
+PUBLIC_BOUNDARY=Visual/interface CSS only. No claim expansion.
+*/
+
+/* RMD adjacent repair:
+   Surface collapse → Selection grouping → Attention gate spacing → Proof-visible interface.
+*/
+
+body.v040-rmd-field {
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Hard repair for collapsed top navigation and CTA links */
+body.v040-rmd-field header {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  gap: 10px 16px !important;
+  padding-top: 22px !important;
+  padding-bottom: 22px !important;
+}
+
+body.v040-rmd-field header a,
+body.v040-rmd-field nav a,
+body.v040-rmd-field .nav a,
+body.v040-rmd-field .top-nav a,
+body.v040-rmd-field .footer-links a,
+body.v040-rmd-field main a {
+  display: inline-flex !important;
+  align-items: center !important;
+  width: fit-content !important;
+  margin: 0 12px 10px 0 !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
+}
+
+/* Prevent brand / adjacent links from fusing visually */
+body.v040-rmd-field header > a:first-child,
+body.v040-rmd-field .brand,
+body.v040-rmd-field .site-title {
+  margin-right: 18px !important;
+  color: #ffe7a3 !important;
+}
+
+body.v040-rmd-field header > a:first-child::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+}
+
+/* CTA row repair */
+body.v040-rmd-field .hero-actions,
+body.v040-rmd-field .route-actions,
+body.v040-rmd-field main > p:has(a),
+body.v040-rmd-field main > div:has(a) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px 12px !important;
+  align-items: center !important;
+}
+
+/* Any standalone sequence of links becomes button-like enough to separate */
+body.v040-rmd-field main > p a,
+body.v040-rmd-field main > div > a,
+body.v040-rmd-field section > a,
+body.v040-rmd-field article > a {
+  padding: 0.32rem 0.46rem !important;
+  border-radius: 10px !important;
+  background: rgba(86, 214, 255, 0.055) !important;
+  border: 1px solid rgba(86, 214, 255, 0.14) !important;
+}
+
+/* Hero CTA refinement */
+body.v040-rmd-field main > p a[href*="contact"],
+body.v040-rmd-field main > p a[href*="method"],
+body.v040-rmd-field main > p a[href*="archive"],
+body.v040-rmd-field main > div a[href*="contact"],
+body.v040-rmd-field main > div a[href*="method"],
+body.v040-rmd-field main > div a[href*="archive"] {
+  padding: 0.72rem 0.92rem !important;
+  border-radius: 999px !important;
+}
+
+/* Reassert card/panel depth */
+body.v040-rmd-field section,
+body.v040-rmd-field article,
+body.v040-rmd-field main > div:not(.v040-rmd-geometry) {
+  margin-block: 26px !important;
+}
+
+/* Headings that fell into plain document flow */
+body.v040-rmd-field main > h2,
+body.v040-rmd-field main > h3 {
+  margin-top: 44px !important;
+  padding-top: 16px !important;
+  border-top: 1px solid rgba(242,197,107,0.18) !important;
+}
+
+/* Publication architecture / route lists */
+body.v040-rmd-field ul,
+body.v040-rmd-field ol {
+  display: grid;
+  gap: 8px;
+}
+
+body.v040-rmd-field li::marker {
+  color: #f2c56b;
+}
+
+/* Mobile: links become readable chips */
+@media (max-width: 760px) {
+  body.v040-rmd-field header {
+    display: block !important;
+  }
+
+  body.v040-rmd-field header a,
+  body.v040-rmd-field nav a,
+  body.v040-rmd-field main a {
+    margin: 0 8px 10px 0 !important;
+  }
+
+  body.v040-rmd-field main > p:has(a),
+  body.v040-rmd-field main > div:has(a) {
+    gap: 8px !important;
+  }
+}
