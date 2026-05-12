@@ -1,112 +1,115 @@
-<!doctype html>
-<html lang="en-GB">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>GOLDLEVEL</title>
-  <meta name="description" content="GOLDLEVEL page selector.">
-  <style>
-    :root {
-      --bg: #07070b;
-      --panel: #11131d;
-      --gold: #f5c451;
-      --text: #f7f3e8;
-      --muted: #b9b0a0;
-      --line: rgba(245,196,81,.28);
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      background:
-        radial-gradient(circle at top left, rgba(245,196,81,.18), transparent 36%),
-        linear-gradient(135deg, #050506, #10121b 55%, #050506);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    main {
-      width: min(920px, calc(100% - 32px));
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 34px;
-      background: linear-gradient(145deg, rgba(17,19,29,.96), rgba(5,5,8,.96));
-      box-shadow: 0 24px 80px rgba(0,0,0,.5);
-    }
-    .eyebrow {
-      color: var(--gold);
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      font-size: 12px;
-      font-weight: 800;
-    }
-    h1 {
-      margin: 14px 0 10px;
-      font-size: clamp(42px, 9vw, 88px);
-      line-height: .9;
-    }
-    p {
-      max-width: 620px;
-      color: var(--muted);
-      font-size: 18px;
-      line-height: 1.6;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 28px;
-    }
-    a {
-      display: block;
-      padding: 18px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      color: var(--text);
-      text-decoration: none;
-      background: rgba(255,255,255,.04);
-    }
-    a strong {
-      display: block;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-    a:hover {
-      border-color: var(--gold);
-      transform: translateY(-1px);
-    }
-  </style>
-  <link rel="stylesheet" href="/assets/css/relational-attractor-visuals.css?v=20260512-visual-layer">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GOLDLEVEL · Moment & Matter | Choose your route</title>
+  <meta name="description" content="Choose GOLDLEVEL Clarity Read for live or dense material, or Moment & Matter for custom visual pieces and clarity maps.">
+  <meta name="color-scheme" content="light">
+  <!-- GL_FLOW_PRELOAD_START v0.1.1 -->
+  <link rel="preload" href="assets/css/selector.css" as="style">
+  <!-- GL_FLOW_PRELOAD_END v0.1.1 -->
+  <link rel="stylesheet" href="assets/css/selector.css">
 </head>
 <body>
-<div class="gl-geometry-field" aria-hidden="true">
-  <div class="gl-metatron-cube"></div>
-  <div class="gl-basin-ribbon"></div>
-  <div class="gl-platonic-orbit"></div>
-</div>
+<a class="skip-link" href="#main">Skip to content</a>
+  <main id="main" class="route-selector" aria-label="Choose your route">
+    <section class="selector-shell" aria-labelledby="selector-title">
+      <div class="selector-kicker">GoldLevel.co.uk</div>
+      <h1 id="selector-title">Choose the right front door.</h1>
+      <p class="selector-intro">Two connected surfaces are held under one domain and separated clearly: GOLDLEVEL for one hybrid Clarity Read on live or dense material; Moment &amp; Matter for custom visual pieces and clarity maps.</p>
+      <div class="route-grid">
+        <article class="route-card route-card-gold" aria-labelledby="gold-route-title"><div class="route-card-inner"><div class="route-label">Commercial clarity</div><h2 id="gold-route-title">GOLDLEVEL</h2><p class="route-lede">For founders, independents, creators, operators, and small teams whose page, offer, artifact, route, message, AI output, or dense note is not landing clearly.</p><ul class="route-list"><li>One hybrid Clarity Read</li><li>Trust, meaning, route, and action breakpoints</li><li>Bounded first-move direction</li></ul><div class="route-actions"><a class="btn btn-gold" href="goldlevel/">Enter GOLDLEVEL</a><a class="route-small-link" href="goldlevel/#start">Start with one asset</a></div></div></article>
+        <article class="route-card route-card-matter" aria-labelledby="moment-route-title"><div class="route-card-inner"><div class="route-label">Storefront</div><h2 id="moment-route-title">Moment &amp; Matter</h2><p class="route-lede">For custom visual pieces, meaningful cards, prints, Moment Maps, Clarity Maps, digital files, and physical print editions.</p><ul class="route-list"><li>Custom Moment Cards and Moment Maps</li><li>Clarity Maps for decisions, relationships, and business direction</li><li>Digital delivery and physical formats</li></ul><div class="route-actions"><a class="btn btn-light" href="moment-matter/">Enter Storefront</a><a class="route-small-link" href="moment-matter/shop.html">Shop directly</a></div></div></article>
+      </div>
+      <p class="selector-footnote">GOLDLEVEL holds the commercial clarity route. Moment &amp; Matter holds the public shop and custom product offers.</p>
+    </section>
 
-  <main>
-    <div class="eyebrow">GOLDLEVEL</div>
-    <h1>Page selector.</h1>
-    <p>Select the public surface you want to view. The Offer Clarity landing page now lives under its own route instead of replacing the selector.</p>
-    <div class="cards">
-      <a href="/landing/">
-        <strong>Offer Clarity Read</strong>
-        Landing page for live-but-not-landing pages, posts, pitches, and offers.
+
+<!-- GOLDLEVEL_ROUTE_SELECTOR_START -->
+<section class="route-selector-section" id="offer-routes">
+  <div class="route-selector-wrap">
+    <p class="eyebrow">GOLDLEVEL routes</p>
+    <h2>Choose the right diagnostic entry point.</h2>
+    <p class="route-selector-intro">Use the visual Constraint Map system for the developed landing, intake stories, and professional example artifacts.</p>
+    <div class="route-selector-grid">
+
+      <a class="route-selector-card" href="/landing/">
+        <span class="route-selector-kicker">Small paid offer</span>
+        <strong>24-Hour Clarity Read</strong>
+        <span>For quick offer pressure when buyer meaning, trust leakage, first rewrite priority, or highest-ROI next action needs to be named.</span>
+      </a>
+
+      <a class="route-selector-card" href="/constraint-map/">
+        <span class="route-selector-kicker">Developed landing</span>
+        <strong>Constraint Map Example System</strong>
+        <span>The larger landing page with synthetic diagnostic examples, intake story panels, and professional case-style visuals.</span>
       </a>
     </div>
-  </main>
-
-
-
-<!-- GL_CONSTRAINT_MAP_SELECTOR_LINK_BEGIN 20260504T181444Z -->
-<section id="constraint-map-selector-link" style="margin:24px auto;padding:18px;max-width:760px;border:1px solid #d8c9ad;border-radius:18px;background:#fffaf0;">
-  <h2 style="margin:0 0 8px;">Constraint Map</h2>
-  <p style="margin:0 0 12px;">Open the live Constraint Map image page.</p>
-  <a href="/constraint-map/" style="display:inline-block;padding:10px 14px;border-radius:999px;background:#201a12;color:#fff;text-decoration:none;">Open Constraint Map</a>
+  </div>
 </section>
-<!-- GL_CONSTRAINT_MAP_SELECTOR_LINK_END -->
 
+<!-- GOLDLEVEL_SEED_V040_REPAIR_LINKS_START -->
+<div class="goldlevel-seed-v040-links" style="margin-top:16px;">
+  <a href="goldlevel/#start">Start with one asset</a>
+  <span aria-hidden="true"> · </span>
+  <a href="goldlevel/offer-clarity-read.html">Offer Clarity Read</a>
+  <span aria-hidden="true"> · </span>
+  <a href="goldlevel/seed-state-read.html">Seed-State Read</a>
+  <span aria-hidden="true"> · </span>
+  <a href="goldlevel-v0-4-0/">v0.4.0 Archive Front Door</a>
+  <span aria-hidden="true"> · </span>
+  <a href="goldlevel-v0-4-0/contact/">Seed Packet Intake</a>
+</div>
+<!-- GOLDLEVEL_SEED_V040_REPAIR_LINKS_END -->
+<!-- GOLDLEVEL_ROUTE_SELECTOR_END -->
+
+<!-- GOLDLEVEL_PUBLICATION_ARCHITECTURE_START v0.1.1 -->
+<section class="publication-architecture" id="publication-architecture" aria-labelledby="publication-architecture-title" data-flow-section="publication-architecture">
+  <div class="publication-architecture__shell">
+    <div class="publication-architecture__header">
+      <p class="publication-architecture__eyebrow">Publication architecture</p>
+      <h2 id="publication-architecture-title">One domain. Separated routes. Preserved archive.</h2>
+      <p>Use the capsules below as the public route map: each capsule separates the route title from the descriptor with a vertical rule for fast inspection.</p>
+    </div>
+    <div class="publication-architecture__pill" role="list" aria-label="GOLDLEVEL publication routes">
+      <a class="publication-capsule" href="/" role="listitem">
+        <span class="publication-capsule__title">Front Door</span>
+        <span class="publication-capsule__rule" aria-hidden="true"></span>
+        <span class="publication-capsule__descriptor">Primary selector for GOLDLEVEL and Moment &amp; Matter routes.</span>
+      </a>
+      <a class="publication-capsule" href="/goldlevel/" role="listitem">
+        <span class="publication-capsule__title">GOLDLEVEL</span>
+        <span class="publication-capsule__rule" aria-hidden="true"></span>
+        <span class="publication-capsule__descriptor">Commercial clarity route for live assets, dense material, and bounded first moves.</span>
+      </a>
+      <a class="publication-capsule" href="/moment-matter/" role="listitem">
+        <span class="publication-capsule__title">Moment &amp; Matter</span>
+        <span class="publication-capsule__rule" aria-hidden="true"></span>
+        <span class="publication-capsule__descriptor">Storefront for custom visual pieces, cards, maps, digital files, and prints.</span>
+      </a>
+      <a class="publication-capsule" href="/constraint-map/" role="listitem">
+        <span class="publication-capsule__title">Constraint Map</span>
+        <span class="publication-capsule__rule" aria-hidden="true"></span>
+        <span class="publication-capsule__descriptor">Developed diagnostic landing with examples, intake stories, and visual artifacts.</span>
+      </a>
+      <a class="publication-capsule" href="/goldlevel-v0-4-0/" role="listitem">
+        <span class="publication-capsule__title">Archive</span>
+        <span class="publication-capsule__rule" aria-hidden="true"></span>
+        <span class="publication-capsule__descriptor">Preserved public-safe version route and prior artifact front door.</span>
+      </a>
+      <a class="publication-capsule" href="/goldlevel-v0-4-0/contact/" role="listitem">
+        <span class="publication-capsule__title">Seed Intake</span>
+        <span class="publication-capsule__rule" aria-hidden="true"></span>
+        <span class="publication-capsule__descriptor">Contact/intake surface for seed packet routing.</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- GOLDLEVEL_PUBLICATION_ARCHITECTURE_END v0.1.1 -->
+
+
+
+  </main>
 </body>
 </html>
