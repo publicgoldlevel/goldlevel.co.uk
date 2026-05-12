@@ -312,3 +312,87 @@ video {
   }
 }
 /* GOLDLEVEL_FLOW_PATCH_END v0.1.1 */
+
+/* GOLDLEVEL_SRC_EDITORIAL_CLEANUP_START v0.1.0 */
+/*
+CANON_SLICE=GL-SRC-EDITORIAL-FRONTDOOR-CLEANUP-001
+SOURCE_BASIS=SRC SourceVoice editorial rule: make public vessels finite; protect reader entry; keep secondary routes subordinate.
+PURPOSE=Remove visible route sprawl, correct footer/secondary-link contrast, and preserve the two-card front-door selector as the primary public vessel.
+*/
+.selector-utility-footer {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 2rem));
+  margin: clamp(18px, 3vw, 32px) auto 0;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border: 1px solid rgba(201, 169, 91, .28);
+  border-radius: 999px;
+  background: rgba(9, 8, 5, .82);
+  color: #f4efe6;
+  box-shadow: 0 18px 56px rgba(0, 0, 0, .22);
+}
+
+.selector-utility-footer__label {
+  color: rgba(244, 239, 230, .64);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.selector-utility-footer a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 7px 12px;
+  border: 1px solid rgba(201, 169, 91, .26);
+  border-radius: 999px;
+  background: rgba(244, 239, 230, .065);
+  color: #f8e7b2;
+  text-decoration: none;
+  font-weight: 750;
+  white-space: nowrap;
+}
+
+.selector-utility-footer a:hover,
+.selector-utility-footer a:focus-visible {
+  color: #090805;
+  background: var(--gold);
+  border-color: var(--gold);
+  outline: none;
+}
+
+.goldlevel-seed-v040-links {
+  background: rgba(9, 8, 5, .88) !important;
+  color: #f4efe6 !important;
+  border-color: rgba(201, 169, 91, .32) !important;
+}
+
+.goldlevel-seed-v040-links a {
+  color: #f8e7b2 !important;
+  text-decoration-color: rgba(248, 231, 178, .72) !important;
+}
+
+.goldlevel-seed-v040-links a:hover,
+.goldlevel-seed-v040-links a:focus-visible {
+  color: #ffffff !important;
+}
+
+@media (max-width: 860px) {
+  .selector-utility-footer {
+    width: min(100% - 1rem, 720px);
+    border-radius: 20px;
+    justify-content: flex-start;
+  }
+
+  .selector-utility-footer__label {
+    width: 100%;
+  }
+}
+/* GOLDLEVEL_SRC_EDITORIAL_CLEANUP_END v0.1.0 */
