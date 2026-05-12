@@ -1,0 +1,5 @@
+PUBLIC BOUNDARY WARNINGS
+Storefront-facing pages contain terms that may be internal or claim-heavy.
+
+goldlevel/system.html:161: <article class="mode-card"><div class="mode-num">L</div><h3>LEADLEVEL</h3><p>Commercial and relationship execution layer.</p></article>
+goldlevel/seed-state-read.html:158: <article class="legend-card"><h3>RMD / portable-set use</h3><p>The RMD portable set and CHATRMD sidecar are used as an evidence/cartography discipline: archive informs, translation compresses, receipts decide. The live site does not expose 
