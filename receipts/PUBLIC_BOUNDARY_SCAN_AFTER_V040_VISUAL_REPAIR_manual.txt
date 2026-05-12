@@ -1,0 +1,8 @@
+PUBLIC BOUNDARY WARNINGS
+
+goldlevel/index.html:75: <article class="card"><div class="icon-chip">Trust</div><h3>Where does confidence drop?</h3><p>Names vague claims, missing proof, over-internal language, or friction that makes the reader hesitate.</p></article>
+goldlevel/index.html:77: <article class="card"><div class="icon-chip">Boundary</div><h3>What should stay private?</h3><p>Separates public-facing copy from internal doctrine, drafts, architecture, or unproven claims.</p></article>
+goldlevel/index.html:98: <article class="card"><div class="icon-chip">3</div><h3>What changes first</h3><p>A prioritized first move: rewrite, cut, reorder, add proof, simplify the CTA, or keep something internal.</p></article>
+goldlevel/system.html:161: <article class="mode-card"><div class="mode-num">L</div><h3>LEADLEVEL</h3><p>Commercial and relationship execution layer.</p></article>
+goldlevel/whats-live.html:207: <div class="kv-item"><div class="kv-key">Internal only</div><div class="kv-value">Not shown as a public library item unless a method page explicitly explains it.</div></div>
+goldlevel/seed-state-read.html:158: <article class="legend-card"><h3>RMD / portable-set use</h3><p>The RMD portable set and CHATRMD sidecar are used as an evidence/cartography discipline: archive informs, translation compresses, receipts decide. The live s
