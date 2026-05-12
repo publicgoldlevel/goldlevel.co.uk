@@ -313,7 +313,7 @@ video {
 }
 /* GOLDLEVEL_FLOW_PATCH_END v0.1.1 */
 
-/* GOLDLEVEL_SRC_EDITORIAL_CLEANUP_START v0.1.0 */
+/* GOLDLEVEL_SRC_EDITORIAL_CLEANUP_START v0.1.1 */
 /*
 CANON_SLICE=GL-SRC-EDITORIAL-FRONTDOOR-CLEANUP-001
 SOURCE_BASIS=SRC SourceVoice editorial rule: make public vessels finite; protect reader entry; keep secondary routes subordinate.
@@ -349,23 +349,25 @@ PURPOSE=Remove visible route sprawl, correct footer/secondary-link contrast, and
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 34px;
-  padding: 7px 12px;
-  border: 1px solid rgba(201, 169, 91, .26);
+  min-height: 38px;
+  padding: 8px 14px;
+  border: 1px solid rgba(244, 239, 230, .34);
   border-radius: 999px;
-  background: rgba(244, 239, 230, .065);
-  color: #f8e7b2;
+  background: linear-gradient(135deg, #f1d171 0%, var(--gold) 100%);
+  color: #090805;
   text-decoration: none;
-  font-weight: 750;
+  font-weight: 850;
   white-space: nowrap;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .22);
 }
 
 .selector-utility-footer a:hover,
 .selector-utility-footer a:focus-visible {
   color: #090805;
-  background: var(--gold);
-  border-color: var(--gold);
+  background: linear-gradient(135deg, #fff0b8 0%, #d8b764 100%);
+  border-color: rgba(255, 240, 184, .82);
   outline: none;
+  transform: translateY(-1px);
 }
 
 .goldlevel-seed-v040-links {
@@ -395,4 +397,4 @@ PURPOSE=Remove visible route sprawl, correct footer/secondary-link contrast, and
     width: 100%;
   }
 }
-/* GOLDLEVEL_SRC_EDITORIAL_CLEANUP_END v0.1.0 */
+/* GOLDLEVEL_SRC_EDITORIAL_CLEANUP_END v0.1.1 */
