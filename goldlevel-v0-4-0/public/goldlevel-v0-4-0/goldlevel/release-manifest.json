@@ -1,0 +1,56 @@
+{
+  "release_id": "GL-SITE-2026-04-22-CMODE",
+  "date": "2026-04-22",
+  "files": [
+    "README.md",
+    "assets/css/site.css",
+    "assets/js/site.js",
+    "book-a-read.html",
+    "boundary.html",
+    "briefs-packets.html",
+    "contact.html",
+    "diagnostic-read.html",
+    "good-fit.html",
+    "index.html",
+    "input-return.html",
+    "library.html",
+    "method.html",
+    "packages.html",
+    "proof.html",
+    "relationship-packet-payment.html",
+    "relationship_packet_public_facing_3page.pdf",
+    "scope.html",
+    "services.html",
+    "start-here.html",
+    "system.html",
+    "textbook-packets-fixed-two-live.html",
+    "what-this-is.html",
+    "whats-live.html"
+  ],
+  "version": "v3",
+  "notes": "SDG public readout download link updated to https://goldlevel.co.uk/assets/sdg_public_readout_3page across site files.",
+  "seed_state_gateway_v0_3_0": {
+    "status": "added",
+    "date": "2026-05-12",
+    "files_added": [
+      "goldlevel/seed-state-read.html",
+      "goldlevel/assets/js/seed-state-intake.js",
+      "goldlevel/assets/img/attractor/operator_field_phase_space_architecture.png",
+      "goldlevel/assets/img/attractor/operator_field_phase_architecture.png",
+      "goldlevel/assets/img/attractor/kaprekar_attractor_ladder.png",
+      "goldlevel/assets/img/attractor/kaprekar_phase_space_stack.png",
+      "goldlevel/assets/img/attractor/kaprekar_mod9_energy_flow.png",
+      "goldlevel/assets/img/attractor/cleaner_bayesian_full_path.png",
+      "goldlevel/assets/img/attractor/relational_reality_map_12d.png",
+      "goldlevel/assets/img/attractor/dimensional_attractor_geometry.png"
+    ],
+    "files_modified": [
+      "index.html",
+      "goldlevel/index.html",
+      "goldlevel/assets/css/site.css",
+      "goldlevel/README.md",
+      "goldlevel/release-manifest.json"
+    ],
+    "claim_boundary": "Public gateway only. Not a claim of established science, conversion guarantee, or market validation. Receipts decide."
+  }
+}

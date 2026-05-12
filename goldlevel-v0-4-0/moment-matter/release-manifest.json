@@ -1,0 +1,21 @@
+{
+  "name": "moment_matter_rebuilt_business_v2_wired",
+  "base": "moment_matter_rebuilt_business_v1.zip",
+  "created": "2026-04-28T17:06:34.082509Z",
+  "changes": [
+    "Added assets/img/product-artifacts/ folder for manual product artifact insertion",
+    "Wired Custom Moment Card, Custom Moment Map, and Clarity Map products to actual artifact image filenames",
+    "Added premium wide Clarity Map Print Edition treatment using CLARITY_MAP_Print_edition.png",
+    "Updated homepage, custom page, clarity maps page, about page, spaces page, product cards, product detail, cart image rendering",
+    "Added responsive wide-image handling and blended dark premium section styling"
+  ],
+  "required_artifact_filenames": [
+    "custom_moment_card_digital.png",
+    "custom_moment_card_physical.png",
+    "custom_moment_map_digital.png",
+    "custom_moment_map_digital_example.png",
+    "Custom_Moment_Map_printed.png",
+    "clarity_map_digital.png",
+    "CLARITY_MAP_Print_edition.png"
+  ]
+}

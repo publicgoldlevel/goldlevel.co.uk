@@ -1,0 +1,19 @@
+{
+  "version": "0.4.0",
+  "date": "2026-05-12",
+  "title": "GOLDLEVEL Full-Stack Relational Attractor Cartography Website",
+  "routes": [
+    "index.html",
+    "library/index.html",
+    "field-notes/index.html",
+    "radar/index.html",
+    "receipts/index.html",
+    "method/index.html",
+    "archive/index.html",
+    "contact/index.html"
+  ],
+  "rmd_file_count": 1196,
+  "sidecar_file_count": 2,
+  "validation_pass": true,
+  "claim_boundary": "Local build only. No deployment or market proof claimed."
+}

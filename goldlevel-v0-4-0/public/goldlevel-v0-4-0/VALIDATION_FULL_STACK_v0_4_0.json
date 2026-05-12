@@ -1,0 +1,97 @@
+{
+  "generated_utc": "2026-05-12T10:37:46.280205Z",
+  "version": "0.4.0",
+  "required_routes": {
+    "index.html": true,
+    "library/index.html": true,
+    "field-notes/index.html": true,
+    "radar/index.html": true,
+    "receipts/index.html": true,
+    "method/index.html": true,
+    "archive/index.html": true,
+    "contact/index.html": true
+  },
+  "required_md": {
+    "APPENDIX_UNPROCESSED.md": true,
+    "receipts/SITE_BUILD_RECEIPT_v0_4_0.md": true,
+    "receipts/STATE_PROMOTION_RECORD_v0_4_0.md": true,
+    "receipts/RMD_PORTABLE_SET_FEATURE_LEDGER.md": true
+  },
+  "images": {
+    "operator-field-phase-space-architecture.png": {
+      "size": 2934483,
+      "dimensions": [
+        1055,
+        1491
+      ],
+      "sha256": "bade704d2042820de14c42fe0adc2a4d9299a040a134343967f969cf4d75fe46"
+    },
+    "operator-field-phase-architecture.png": {
+      "size": 2767915,
+      "dimensions": [
+        1055,
+        1491
+      ],
+      "sha256": "d6c1d085a849cc3d0b824b84672cadb0ef9660e7712c2488d8d0a76175804923"
+    },
+    "kaprekar-attractor-ladder.png": {
+      "size": 2310242,
+      "dimensions": [
+        1491,
+        1055
+      ],
+      "sha256": "e166d15efea2e03a93b4bd97a070efbed6f89d7ed603a27cfd46f140c56c929b"
+    },
+    "kaprekar-phase-space-stack.png": {
+      "size": 2917491,
+      "dimensions": [
+        1055,
+        1491
+      ],
+      "sha256": "da1c139d77fd82c7c50368b8a30b16a679d432fd1dc020b161fe4cdaff45cdcf"
+    },
+    "kaprekar-mod9-energy-flow.png": {
+      "size": 2638603,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "sha256": "12509ee83903b676230c2ac3691a93e367ea3d1c4b72eb11aa3008a7e73ddd31"
+    },
+    "cleaner-bayesian-full-path.png": {
+      "size": 2835251,
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "sha256": "338d7c6ccc71195e331088529606f00dc0d720e19b873fc42b6842134d548f59"
+    },
+    "relational-reality-map-12d.png": {
+      "size": 2646895,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "d7f3fa7619905f3f88631510f2459e6220151ff716b826900696aec47d62eead"
+    },
+    "dimensional-attractor-geometry.png": {
+      "size": 3243341,
+      "dimensions": [
+        1491,
+        1055
+      ],
+      "sha256": "395020022e5d7439cd6d2626d022b45816211eca061d122f1e1f7aa97fc67bfa"
+    },
+    "futuristic-system-architecture.png": {
+      "size": 2780701,
+      "dimensions": [
+        1055,
+        1491
+      ],
+      "sha256": "e287da718f11b3b389e02fcfb0ec0aab0652c68cab5f454d9fdf7d8b1a12f57e"
+    }
+  },
+  "html_internal_link_warnings": [],
+  "canon_md_missing": [],
+  "pass": true
+}
