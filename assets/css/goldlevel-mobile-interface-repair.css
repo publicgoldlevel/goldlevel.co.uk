@@ -1,0 +1,191 @@
+/*
+CANON_HEADER v1.0.0
+TITLE=GOLDLEVEL Mobile Interface Repair
+TYPE=METHOD
+STATUS=PUBLIC_PROVISIONAL
+VERSION=0.1.0
+SCOPE=Scoped mobile/topbar/sidebar/footer repair for /goldlevel/ active storefront
+CLAIM_LEVEL=RECEIPT_BACKED
+PUBLIC_BOUNDARY=Interface CSS only. No claim expansion.
+*/
+
+/* Scoped to active GOLDLEVEL pages only. */
+body.goldlevel-live-repair {
+  overflow-x: hidden;
+}
+
+/* Restore stable topbar and brand behavior */
+body.goldlevel-live-repair .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  backdrop-filter: blur(16px);
+}
+
+body.goldlevel-live-repair .topbar-inner {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+}
+
+body.goldlevel-live-repair .brand {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  min-width: 0 !important;
+  max-width: calc(100% - 120px) !important;
+  text-decoration: none !important;
+  writing-mode: horizontal-tb !important;
+}
+
+body.goldlevel-live-repair .brand-dot {
+  flex: 0 0 auto !important;
+}
+
+body.goldlevel-live-repair .brand-stack,
+body.goldlevel-live-repair .brand-mark,
+body.goldlevel-live-repair .brand-name {
+  display: block !important;
+  writing-mode: horizontal-tb !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
+  line-height: 1.1 !important;
+  letter-spacing: 0.02em !important;
+}
+
+body.goldlevel-live-repair .brand-mark {
+  font-weight: 800 !important;
+}
+
+body.goldlevel-live-repair .brand-name {
+  opacity: 0.82 !important;
+  font-size: 0.78rem !important;
+}
+
+/* Sidebar overlay: bounded, readable, never vertical text */
+body.goldlevel-live-repair .sidebar {
+  z-index: 120 !important;
+  width: min(88vw, 360px) !important;
+  max-width: 360px !important;
+  overflow-y: auto !important;
+  writing-mode: horizontal-tb !important;
+}
+
+body.goldlevel-live-repair .sidebar *,
+body.goldlevel-live-repair .footer *,
+body.goldlevel-live-repair .topbar * {
+  writing-mode: horizontal-tb !important;
+  text-orientation: mixed !important;
+}
+
+body.goldlevel-live-repair .sidebar a,
+body.goldlevel-live-repair .sidebar .sidebar-cta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  width: 100% !important;
+  min-height: 42px !important;
+  line-height: 1.2 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
+  text-decoration: none !important;
+}
+
+body.goldlevel-live-repair .sidebar-cta,
+body.goldlevel-live-repair .nav-cta,
+body.goldlevel-live-repair .sidebar-toggle,
+body.goldlevel-live-repair .btn {
+  min-height: 44px !important;
+  border-radius: 999px !important;
+  white-space: normal !important;
+  text-align: center !important;
+}
+
+/* Fix bottom/mobile clusters */
+body.goldlevel-live-repair .hero-actions,
+body.goldlevel-live-repair .route-actions,
+body.goldlevel-live-repair .footer-links,
+body.goldlevel-live-repair .topbar-right {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px 12px !important;
+  align-items: center !important;
+}
+
+body.goldlevel-live-repair .footer-grid {
+  display: grid !important;
+  gap: 24px !important;
+}
+
+body.goldlevel-live-repair .footer-links a {
+  display: inline-flex !important;
+  width: fit-content !important;
+  margin: 0 !important;
+  line-height: 1.2 !important;
+}
+
+/* Avoid circular CTA text squeeze */
+body.goldlevel-live-repair .btn,
+body.goldlevel-live-repair .nav-cta,
+body.goldlevel-live-repair .sidebar-cta {
+  padding-inline: 1rem !important;
+  max-width: 100% !important;
+}
+
+/* Repair tiny mobile conditions */
+@media (max-width: 760px) {
+  body.goldlevel-live-repair .container,
+  body.goldlevel-live-repair .topbar-inner,
+  body.goldlevel-live-repair .footer-grid {
+    width: min(100% - 28px, 1120px) !important;
+    margin-inline: auto !important;
+  }
+
+  body.goldlevel-live-repair .brand {
+    max-width: calc(100% - 96px) !important;
+  }
+
+  body.goldlevel-live-repair .brand-mark {
+    font-size: 0.86rem !important;
+  }
+
+  body.goldlevel-live-repair .brand-name {
+    font-size: 0.68rem !important;
+  }
+
+  body.goldlevel-live-repair .topbar-right {
+    flex: 0 0 auto !important;
+    gap: 8px !important;
+  }
+
+  body.goldlevel-live-repair .nav-cta {
+    display: none !important;
+  }
+
+  body.goldlevel-live-repair .sidebar-toggle {
+    display: inline-flex !important;
+  }
+
+  body.goldlevel-live-repair .hero-actions .btn,
+  body.goldlevel-live-repair .path-card .btn,
+  body.goldlevel-live-repair .sidebar-cta {
+    width: 100% !important;
+  }
+
+  body.goldlevel-live-repair h1 {
+    font-size: clamp(2.55rem, 12vw, 4.25rem) !important;
+    line-height: 1.05 !important;
+  }
+}
+
+/* Emergency guard against text-column collapse */
+body.goldlevel-live-repair [class*="brand"],
+body.goldlevel-live-repair [class*="footer"],
+body.goldlevel-live-repair [class*="sidebar"],
+body.goldlevel-live-repair [class*="nav"] {
+  min-width: 0 !important;
+}
