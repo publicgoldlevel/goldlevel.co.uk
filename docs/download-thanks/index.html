@@ -4,14 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GOLDLEVEL · Download received</title>
-  <meta name="description" content="Thank you for downloading the GOLDLEVEL public policy review dossier. Return to the library or main route selector.">
+  <meta name="description" content="Thank you for downloading the GOLDLEVEL public policy review dossier. The file opens from this page, with routes back to the library and main selector.">
   <meta name="color-scheme" content="light">
   <meta name="robots" content="index,follow">
   <meta property="og:title" content="GOLDLEVEL · Download received">
   <meta property="og:description" content="Thank you for downloading the GOLDLEVEL public policy review dossier.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://goldlevel.co.uk/download-thanks/">
-  <link rel="canonical" href="https://goldlevel.co.uk/download-thanks/">
+  <meta property="og:url" content="https://goldlevel.co.uk/download/sainsburys-policy-review/">
+  <link rel="canonical" href="https://goldlevel.co.uk/download/sainsburys-policy-review/">
   <link rel="preload" href="/assets/css/selector.css" as="style">
   <link rel="stylesheet" href="/assets/css/selector.css">
 
@@ -32,7 +32,7 @@
       color: var(--bone);
     }
 
-    .download-thanks-status {
+    .download-status {
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -47,7 +47,7 @@
       text-transform: uppercase;
     }
 
-    .download-thanks-status::before {
+    .download-status::before {
       content: "";
       width: 9px;
       height: 9px;
@@ -67,12 +67,19 @@
       letter-spacing: -.065em;
     }
 
-    .download-thanks-copy {
-      max-width: 700px;
-      margin: 24px 0 36px;
+    .download-copy {
+      max-width: 720px;
+      margin: 24px 0 34px;
       color: rgba(244,239,230,.76);
       font-size: clamp(1.05rem, 2vw, 1.28rem);
       line-height: 1.55;
+    }
+
+    .download-primary-row {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin: 0 0 30px;
     }
 
     .download-actions {
@@ -111,6 +118,15 @@
       text-underline-offset: 4px;
     }
 
+    .download-hidden-frame {
+      width: 1px;
+      height: 1px;
+      border: 0;
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+    }
+
     @media(max-width: 860px) {
       .download-actions {
         grid-template-columns: 1fr;
@@ -133,14 +149,18 @@
   <section class="selector-shell download-thanks-shell" aria-labelledby="download-thanks-title">
 
     <div class="download-thanks-card">
-      <div class="download-thanks-status">Download opened</div>
+      <div class="download-status" id="download-status">Preparing download</div>
 
       <h1 id="download-thanks-title">Thank you for the download.</h1>
 
-      <p class="download-thanks-copy">
-        The public dossier has been made available. You can return to the library/archive route,
-        or go back to the main selector to choose another GOLDLEVEL surface.
+      <p class="download-copy">
+        The public policy review dossier is opening from this page. Keep this page open if you want to return to the library or the main selector after reading.
       </p>
+
+      <div class="download-primary-row" aria-label="Download actions">
+        <a class="btn btn-gold" id="manual-download" href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Open PDF now</a>
+        <a class="route-small-link" href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Direct file link</a>
+      </div>
 
       <div class="download-actions">
         <article class="route-card route-card-gold download-action-card" aria-labelledby="library-route-title">
@@ -167,12 +187,58 @@
       </div>
 
       <p class="download-footnote">
-        If the file did not open, use the direct PDF link:
-        <a href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">open the dossier again</a>.
+        Browser note: static hosting cannot force every browser to download a PDF. If it does not open automatically, use
+        <a href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Open PDF now</a>.
       </p>
     </div>
 
+    <iframe class="download-hidden-frame" id="download-frame" title="PDF download frame" aria-hidden="true"></iframe>
   </section>
 </main>
+
+<script>
+(function () {
+  var pdfUrl = "https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf";
+  var status = document.getElementById("download-status");
+  var frame = document.getElementById("download-frame");
+
+  function mark(text) {
+    if (status) status.textContent = text;
+  }
+
+  function startDownload() {
+    mark("Opening download");
+
+    try {
+      if (frame) {
+        frame.src = pdfUrl + "?download_started=1";
+      }
+    } catch (e) {}
+
+    try {
+      var a = document.createElement("a");
+      a.href = pdfUrl;
+      a.setAttribute("download", "sainsburys_policy_review_dossier_public_facing_hardened.pdf");
+      a.setAttribute("rel", "noopener");
+      a.style.position = "absolute";
+      a.style.left = "-9999px";
+      document.body.appendChild(a);
+
+      setTimeout(function () {
+        try { a.click(); } catch (e) {}
+        mark("Download opened");
+      }, 450);
+    } catch (e) {
+      mark("Ready to open");
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", startDownload);
+  } else {
+    startDownload();
+  }
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,9 @@
+GOLDLEVEL_PUBLIC_DOWNLOAD_LINK_MANIFEST
+created_utc=2026-05-25T17:52:08Z
+public_click_link=https://goldlevel.co.uk/download/sainsburys-policy-review/
+thank_you_route=https://goldlevel.co.uk/download-thanks/
+direct_pdf_file=https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf
+rule=Use public_click_link for QR, social, buttons, posts, and public download CTAs.
+rule=Keep direct_pdf_file as the file target only.
+gl_guard_mode=K9_DOWNLOAD_FLOW_FIX_PUBLIC_ONLY
+privacy_boundary=PUBLIC_ONLY_NO_PRIVATE_CORPUS
