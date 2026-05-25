@@ -320,3 +320,13 @@ h1 { font-size: clamp(42px, 8vw, 96px); line-height: .95; letter-spacing: -.065e
   .method-row { grid-template-columns: 1fr; gap: 10px; }
   .method-title { font-size: clamp(62px, 21vw, 116px); }
 }
+
+/* GOLDLEVEL primary signal only homepage pass v4 */
+.primary-signal-page { min-height: 100vh; background: #fff; color: var(--ink); }
+.primary-signal-shell { min-height: 100vh; display: grid; align-items: center; padding: clamp(42px, 8vw, 112px) 0; }
+.primary-signal-lockup { max-width: 1180px; }
+.primary-signal-main { font-size: clamp(50px, 9vw, 128px); line-height: .87; letter-spacing: -.078em; margin: 0; max-width: 1180px; }
+.primary-signal-actions { margin-top: clamp(30px, 4vw, 56px); display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .primary-signal-main { font-size: clamp(44px, 14vw, 78px); }
+}
