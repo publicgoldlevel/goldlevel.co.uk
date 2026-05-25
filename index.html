@@ -8,7 +8,7 @@
   <meta name="color-scheme" content="light">
   <meta name="robots" content="index,follow">
   <meta name="goldlevel-build-marker" content="GL_SWISS_STACK_CANONICAL_HOME">
-  <meta name="goldlevel-build-stamp" content="20260525T205128Z">
+  <meta name="goldlevel-build-stamp" content="20260525T210612Z">
   <link rel="canonical" href="https://goldlevel.co.uk/">
   <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
   <!-- GL_SWISS_STACK_CANONICAL_HOME -->
@@ -24,5 +24,128 @@
     </div>
   </div>
 </main>
+
+<script>
+(function primarySignalDynamicFit() {
+  var PRIMARY = "GOLDLEVEL turns messy material into a clear public version people can understand, trust, and act on.";
+  var CANDIDATES = [["GOLDLEVEL turns messy material", "into a clear public version", "people can understand, trust, and act on."], ["GOLDLEVEL turns", "messy material into a clear", "public version people can", "understand, trust, and act on."], ["GOLDLEVEL turns", "messy material", "into a clear public version", "people can understand,", "trust, and act on."], ["GOLDLEVEL turns", "messy material", "into a clear", "public version", "people can understand,", "trust, and act on."], ["GOLDLEVEL turns", "messy material", "into a clear", "public version", "people can", "understand, trust,", "and act on."]];
+  var h1 = document.querySelector(".primary-signal-main");
+  var action = document.querySelector(".primary-signal-actions");
+  var body = document.body;
+  if (!h1 || !action) return;
+
+  function esc(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function render(lines, size) {
+    h1.style.fontSize = size + "px";
+    h1.innerHTML = lines.map(function (line) {
+      return '<span class="primary-signal-line">' + esc(line) + '</span>';
+    }).join("");
+  }
+
+  function viewport() {
+    var visual = window.visualViewport;
+    return {
+      w: Math.max(280, Math.floor(visual ? visual.width : window.innerWidth)),
+      h: Math.max(280, Math.floor(visual ? visual.height : window.innerHeight))
+    };
+  }
+
+  function measure(lines, size) {
+    render(lines, size);
+    var hRect = h1.getBoundingClientRect();
+    var aRect = action.getBoundingClientRect();
+    var gap = Math.max(0, aRect.top - hRect.bottom);
+    var lineRects = Array.prototype.map.call(
+      h1.querySelectorAll(".primary-signal-line"),
+      function (node) { return node.getBoundingClientRect().width; }
+    );
+    var widest = Math.max.apply(null, lineRects);
+    var narrowest = Math.min.apply(null, lineRects);
+    return {
+      hWidth: hRect.width,
+      aWidth: aRect.width,
+      totalHeight: hRect.height + gap + aRect.height,
+      imbalance: widest - narrowest,
+      lineCount: lines.length
+    };
+  }
+
+  function fit() {
+    body.classList.add("is-fitting");
+
+    var vp = viewport();
+    var sideMargin = Math.max(36, Math.min(120, vp.w * 0.12));
+    var verticalMargin = Math.max(44, Math.min(128, vp.h * 0.13));
+    var maxWidth = vp.w - sideMargin;
+    var maxHeight = vp.h - verticalMargin;
+
+    var maxSize = Math.floor(Math.min(136, Math.max(32, Math.min(vp.w * 0.18, vp.h * 0.16))));
+    var minSize = Math.floor(Math.max(24, Math.min(38, vp.w * 0.09)));
+    var winner = null;
+
+    CANDIDATES.forEach(function (lines) {
+      for (var size = maxSize; size >= minSize; size -= 1) {
+        var m = measure(lines, size);
+        var fits =
+          m.hWidth <= maxWidth &&
+          m.aWidth <= maxWidth &&
+          m.totalHeight <= maxHeight;
+
+        if (fits) {
+          var heightFill = m.totalHeight / maxHeight;
+          var widthFill = m.hWidth / maxWidth;
+          var score =
+            (size * 1000) +
+            (heightFill * 120) +
+            (widthFill * 90) -
+            (m.imbalance * 0.35) -
+            (m.lineCount * 1.5);
+
+          if (!winner || score > winner.score) {
+            winner = { lines: lines, size: size, score: score };
+          }
+          break;
+        }
+      }
+    });
+
+    if (!winner) {
+      winner = { lines: CANDIDATES[CANDIDATES.length - 1], size: minSize, score: 0 };
+    }
+
+    render(winner.lines, winner.size);
+    body.classList.remove("is-fitting");
+    body.classList.add("is-fit");
+  }
+
+  var raf = 0;
+  function schedule() {
+    if (raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(fit);
+  }
+
+  window.addEventListener("resize", schedule, { passive: true });
+  window.addEventListener("orientationchange", schedule, { passive: true });
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", schedule, { passive: true });
+    window.visualViewport.addEventListener("scroll", schedule, { passive: true });
+  }
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(schedule);
+  }
+
+  schedule();
+})();
+</script>
+
 </body>
 </html>
