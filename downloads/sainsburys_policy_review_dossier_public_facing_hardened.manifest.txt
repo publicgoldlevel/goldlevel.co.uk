@@ -1,0 +1,9 @@
+GOLDLEVEL_PUBLIC_DOWNLOAD_MANIFEST
+created_utc=2026-05-25T16:35:13Z
+file=downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf
+live_url=https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf
+sha256=32a154b660070e5b0c673d73c9eaf2589e4aea0fe7df85858ce9f5838ddc2cba
+size_bytes=27446
+gl_brain_enabled=YES
+gl_guard_enabled=YES
+privacy_boundary=PUBLIC_ONLY_NO_PRIVATE_CORPUS
