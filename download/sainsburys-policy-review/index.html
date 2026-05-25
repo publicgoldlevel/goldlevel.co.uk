@@ -16,130 +16,22 @@
   <link rel="stylesheet" href="/assets/css/selector.css">
 
   <style>
-    .download-thanks-shell {
-      width: min(980px, 100%);
-      margin-inline: auto;
-    }
-
-    .download-thanks-card {
-      border: 1px solid rgba(201,169,91,.28);
-      border-radius: 38px;
-      padding: clamp(30px, 6vw, 72px);
-      background:
-        radial-gradient(circle at 15% 12%, rgba(201,169,91,.22), transparent 22rem),
-        linear-gradient(150deg, rgba(8,7,5,.96), rgba(31,24,15,.94));
-      box-shadow: 0 28px 90px rgba(0,0,0,.30);
-      color: var(--bone);
-    }
-
-    .download-status {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 13px;
-      margin-bottom: 22px;
-      border: 1px solid rgba(201,169,91,.30);
-      border-radius: 999px;
-      background: rgba(201,169,91,.12);
-      color: #e9d39b;
-      font-size: .74rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-
-    .download-status::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      border-radius: 999px;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(201,169,91,.12);
-    }
-
-    .download-thanks-card h1 {
-      max-width: 850px;
-      margin: 0;
-      color: var(--bone);
-      font-family: Georgia, "Times New Roman", serif;
-      font-weight: 500;
-      font-size: clamp(3.2rem, 9vw, 7.2rem);
-      line-height: .88;
-      letter-spacing: -.065em;
-    }
-
-    .download-copy {
-      max-width: 720px;
-      margin: 24px 0 34px;
-      color: rgba(244,239,230,.76);
-      font-size: clamp(1.05rem, 2vw, 1.28rem);
-      line-height: 1.55;
-    }
-
-    .download-primary-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin: 0 0 30px;
-    }
-
-    .download-actions {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: clamp(16px, 2.5vw, 28px);
-      margin-top: 26px;
-    }
-
-    .download-action-card {
-      min-height: 250px;
-      border-radius: 30px;
-    }
-
-    .download-action-card .route-card-inner {
-      padding: clamp(24px, 4vw, 38px);
-    }
-
-    .download-action-card h2 {
-      margin-top: 54px;
-      font-size: clamp(2.1rem, 4.5vw, 4rem);
-    }
-
-    .download-action-card .route-lede {
-      margin-bottom: 26px;
-    }
-
-    .download-footnote {
-      margin: 24px 0 0;
-      color: rgba(244,239,230,.66);
-      font-size: .96rem;
-      line-height: 1.5;
-    }
-
-    .download-footnote a {
-      text-underline-offset: 4px;
-    }
-
-    .download-hidden-frame {
-      width: 1px;
-      height: 1px;
-      border: 0;
-      position: absolute;
-      left: -9999px;
-      top: -9999px;
-    }
-
-    @media(max-width: 860px) {
-      .download-actions {
-        grid-template-columns: 1fr;
-      }
-
-      .download-thanks-card {
-        border-radius: 28px;
-      }
-
-      .download-action-card {
-        min-height: 230px;
-      }
-    }
+    .download-thanks-shell{width:min(980px,100%);margin-inline:auto}
+    .download-thanks-card{border:1px solid rgba(201,169,91,.28);border-radius:38px;padding:clamp(30px,6vw,72px);background:radial-gradient(circle at 15% 12%,rgba(201,169,91,.22),transparent 22rem),linear-gradient(150deg,rgba(8,7,5,.96),rgba(31,24,15,.94));box-shadow:0 28px 90px rgba(0,0,0,.30);color:var(--bone)}
+    .download-status{display:inline-flex;align-items:center;gap:10px;padding:8px 13px;margin-bottom:22px;border:1px solid rgba(201,169,91,.30);border-radius:999px;background:rgba(201,169,91,.12);color:#e9d39b;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
+    .download-status:before{content:"";width:9px;height:9px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 5px rgba(201,169,91,.12)}
+    .download-thanks-card h1{max-width:850px;margin:0;color:var(--bone);font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3.2rem,9vw,7.2rem);line-height:.88;letter-spacing:-.065em}
+    .download-copy{max-width:720px;margin:24px 0 34px;color:rgba(244,239,230,.76);font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.55}
+    .download-primary-row{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 30px}
+    .download-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.5vw,28px);margin-top:26px}
+    .download-action-card{min-height:250px;border-radius:30px}
+    .download-action-card .route-card-inner{padding:clamp(24px,4vw,38px)}
+    .download-action-card h2{margin-top:54px;font-size:clamp(2.1rem,4.5vw,4rem)}
+    .download-action-card .route-lede{margin-bottom:26px}
+    .download-footnote{margin:24px 0 0;color:rgba(244,239,230,.66);font-size:.96rem;line-height:1.5}
+    .download-footnote a{text-underline-offset:4px}
+    .download-hidden-frame{width:1px;height:1px;border:0;position:absolute;left:-9999px;top:-9999px}
+    @media(max-width:860px){.download-actions{grid-template-columns:1fr}.download-thanks-card{border-radius:28px}.download-action-card{min-height:230px}}
   </style>
 </head>
 <body>
@@ -187,7 +79,7 @@
       </div>
 
       <p class="download-footnote">
-        Browser note: static hosting cannot force every browser to download a PDF. If it does not open automatically, use
+        Browser note: static hosting cannot force every browser to download a PDF automatically. If it does not open automatically, use
         <a href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Open PDF now</a>.
       </p>
     </div>
@@ -197,44 +89,40 @@
 </main>
 
 <script>
-(function () {
-  var pdfUrl = "https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf";
-  var status = document.getElementById("download-status");
-  var frame = document.getElementById("download-frame");
+(function(){
+  var pdfUrl="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf";
+  var status=document.getElementById("download-status");
+  var frame=document.getElementById("download-frame");
 
-  function mark(text) {
-    if (status) status.textContent = text;
-  }
+  function mark(text){ if(status) status.textContent=text; }
 
-  function startDownload() {
+  function startDownload(){
     mark("Opening download");
 
     try {
-      if (frame) {
-        frame.src = pdfUrl + "?download_started=1";
-      }
-    } catch (e) {}
+      if(frame) frame.src = pdfUrl + "?download_started=1";
+    } catch(e) {}
 
     try {
-      var a = document.createElement("a");
-      a.href = pdfUrl;
-      a.setAttribute("download", "sainsburys_policy_review_dossier_public_facing_hardened.pdf");
-      a.setAttribute("rel", "noopener");
-      a.style.position = "absolute";
-      a.style.left = "-9999px";
+      var a=document.createElement("a");
+      a.href=pdfUrl;
+      a.setAttribute("download","sainsburys_policy_review_dossier_public_facing_hardened.pdf");
+      a.setAttribute("rel","noopener");
+      a.style.position="absolute";
+      a.style.left="-9999px";
       document.body.appendChild(a);
 
-      setTimeout(function () {
-        try { a.click(); } catch (e) {}
+      setTimeout(function(){
+        try { a.click(); } catch(e) {}
         mark("Download opened");
-      }, 450);
-    } catch (e) {
+      },450);
+    } catch(e) {
       mark("Ready to open");
     }
   }
 
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", startDownload);
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",startDownload);
   } else {
     startDownload();
   }

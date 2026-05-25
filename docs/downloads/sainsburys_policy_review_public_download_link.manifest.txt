@@ -1,9 +1,12 @@
 GOLDLEVEL_PUBLIC_DOWNLOAD_LINK_MANIFEST
-created_utc=2026-05-25T17:52:08Z
-public_click_link=https://goldlevel.co.uk/download/sainsburys-policy-review/
-thank_you_route=https://goldlevel.co.uk/download-thanks/
+created_utc=2026-05-25T17:56:04Z
+preferred_public_click_link=https://goldlevel.co.uk/download/sainsburys-policy-review/
+stable_public_click_link=https://goldlevel.co.uk/download-thanks/
+shallow_public_click_link=https://goldlevel.co.uk/sainsburys-policy-review/
+html_alias_public_click_link=https://goldlevel.co.uk/download-sainsburys-policy-review.html
 direct_pdf_file=https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf
-rule=Use public_click_link for QR, social, buttons, posts, and public download CTAs.
-rule=Keep direct_pdf_file as the file target only.
-gl_guard_mode=K9_DOWNLOAD_FLOW_FIX_PUBLIC_ONLY
+rule=Use a public_click_link for QR, buttons, posts, and public CTAs.
+rule=Do not use the direct_pdf_file as the public click link if a thank-you page must appear.
+rule=The direct_pdf_file remains the file target inside the HTML page.
+gl_guard_mode=K9_DOWNLOAD_ROUTE_STABILIZER_LIVE
 privacy_boundary=PUBLIC_ONLY_NO_PRIVATE_CORPUS
