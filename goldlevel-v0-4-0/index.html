@@ -3,650 +3,99 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GOLDLEVEL v0.4.0 — Public Archive Front Door</title>
-  <meta name="description" content="Light public archive front door for GOLDLEVEL v0.4.0: Relational Attractor Cartography, Seed-State Reads, Offer Clarity, library routes, receipts and proof-led public material.">
+  <title>METHOD — GOLDLEVEL</title>
+  <meta name="description" content="METHOD. Ten layers for reading messy material into clearer public form.">
   <meta name="color-scheme" content="light">
   <meta name="robots" content="index,follow">
-  <meta property="og:title" content="GOLDLEVEL v0.4.0 — Public Archive Front Door">
-  <meta property="og:description" content="Relational Attractor Cartography, Seed-State Reads, Offer Clarity, library routes, receipts and proof-led public material.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://goldlevel.co.uk/goldlevel-v0-4-0/">
-  <link rel="canonical" href="https://goldlevel.co.uk/goldlevel-v0-4-0/">
   <meta name="goldlevel-build-marker" content="GL_V040_LIGHT_SWISS_APPLIED">
-  <meta name="goldlevel-build-stamp" content="20260525T180518Z">
-  <meta name="goldlevel-build-lane" content="K9_V040_LIGHT_SWISS_PUBLIC_ROUTE_REPAIR">
+  <meta name="goldlevel-build-stamp" content="20260525T201007Z">
+  <link rel="canonical" href="https://goldlevel.co.uk/goldlevel-v0-4-0/">
+  <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
   <!-- GL_V040_LIGHT_SWISS_APPLIED -->
-  <style>
-    :root {
-      --ink: #0b0b0b;
-      --muted: #5d5d5d;
-      --line: #d9d9d9;
-      --paper: #ffffff;
-      --soft: #f5f5f3;
-      --soft-2: #eeeeea;
-      --accent: #111111;
-      --max: 1180px;
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 16px;
-      line-height: 1.5;
-    }
-
-    a { color: inherit; }
-
-    .skip-link {
-      position: fixed;
-      left: 16px;
-      top: 16px;
-      transform: translateY(-150%);
-      background: var(--ink);
-      color: var(--paper);
-      padding: 10px 14px;
-      z-index: 20;
-      text-decoration: none;
-      border-radius: 999px;
-    }
-
-    .skip-link:focus { transform: translateY(0); }
-
-    .wrap {
-      width: min(var(--max), calc(100% - 32px));
-      margin-inline: auto;
-    }
-
-    .topbar {
-      border-bottom: 1px solid var(--line);
-      background: rgba(255,255,255,.92);
-      backdrop-filter: blur(12px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .topbar-inner {
-      min-height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-      letter-spacing: -.02em;
-    }
-
-    .brand-mark {
-      width: 13px;
-      height: 13px;
-      border-radius: 999px;
-      background: var(--ink);
-      display: inline-block;
-    }
-
-    .brand strong {
-      font-size: .98rem;
-      letter-spacing: .02em;
-    }
-
-    .brand span:last-child {
-      display: grid;
-      line-height: 1.1;
-    }
-
-    .brand small {
-      color: var(--muted);
-      font-size: .72rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-    }
-
-    .nav {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      color: var(--muted);
-      font-size: .92rem;
-    }
-
-    .nav a {
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      padding-bottom: 2px;
-    }
-
-    .nav a:hover,
-    .nav a:focus-visible {
-      color: var(--ink);
-      border-bottom-color: var(--ink);
-      outline: none;
-    }
-
-    .hero {
-      padding: clamp(70px, 9vw, 128px) 0 clamp(44px, 7vw, 86px);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .eyebrow {
-      margin: 0 0 18px;
-      color: var(--muted);
-      font-size: .76rem;
-      text-transform: uppercase;
-      letter-spacing: .16em;
-      font-weight: 700;
-    }
-
-    h1, h2, h3, p { margin-top: 0; }
-
-    h1 {
-      max-width: 980px;
-      margin-bottom: 22px;
-      font-size: clamp(3.25rem, 9vw, 8.6rem);
-      line-height: .86;
-      letter-spacing: -.08em;
-      font-weight: 760;
-    }
-
-    .lede {
-      max-width: 760px;
-      margin-bottom: 34px;
-      color: var(--muted);
-      font-size: clamp(1.1rem, 2vw, 1.42rem);
-      line-height: 1.52;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 28px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 46px;
-      padding: 13px 18px;
-      border: 1px solid var(--ink);
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 750;
-      letter-spacing: -.01em;
-    }
-
-    .btn-primary {
-      background: var(--ink);
-      color: var(--paper);
-    }
-
-    .btn-secondary {
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    .btn:hover,
-    .btn:focus-visible {
-      transform: translateY(-1px);
-      outline: none;
-    }
-
-    .meta-strip {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      border: 1px solid var(--line);
-      margin-top: clamp(42px, 6vw, 74px);
-    }
-
-    .meta-strip div {
-      padding: 18px;
-      border-right: 1px solid var(--line);
-    }
-
-    .meta-strip div:last-child { border-right: 0; }
-
-    .meta-strip dt {
-      color: var(--muted);
-      font-size: .72rem;
-      text-transform: uppercase;
-      letter-spacing: .12em;
-      margin-bottom: 6px;
-    }
-
-    .meta-strip dd {
-      margin: 0;
-      font-weight: 760;
-      letter-spacing: -.02em;
-    }
-
-    section {
-      padding: clamp(52px, 7vw, 96px) 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-head {
-      display: grid;
-      grid-template-columns: minmax(0, .7fr) minmax(0, 1fr);
-      gap: clamp(26px, 5vw, 72px);
-      align-items: start;
-      margin-bottom: 36px;
-    }
-
-    h2 {
-      font-size: clamp(2.2rem, 5vw, 5rem);
-      line-height: .92;
-      letter-spacing: -.06em;
-      font-weight: 760;
-    }
-
-    .section-copy {
-      color: var(--muted);
-      font-size: clamp(1.02rem, 1.6vw, 1.24rem);
-      line-height: 1.58;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-    }
-
-    .card {
-      background: var(--paper);
-      min-height: 250px;
-      padding: 24px;
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .card:hover,
-    .card:focus-visible {
-      background: var(--soft);
-      outline: none;
-    }
-
-    .card .num {
-      color: var(--muted);
-      font-size: .76rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      margin-bottom: 52px;
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      font-size: clamp(1.35rem, 2.4vw, 2.25rem);
-      line-height: .98;
-      letter-spacing: -.04em;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .layers {
-      display: grid;
-      border: 1px solid var(--line);
-      background: var(--paper);
-    }
-
-    .layer {
-      display: grid;
-      grid-template-columns: 92px minmax(0, .78fr) minmax(0, 1fr);
-      gap: 18px;
-      padding: 22px 0;
-      border-bottom: 1px solid var(--line);
-      align-items: start;
-    }
-
-    .layer:last-child { border-bottom: 0; }
-
-    .layer-code {
-      padding-left: 18px;
-      color: var(--muted);
-      font-size: .78rem;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      font-weight: 800;
-    }
-
-    .layer h3 {
-      margin: 0;
-      font-size: clamp(1.22rem, 2vw, 1.8rem);
-      letter-spacing: -.035em;
-      line-height: 1.05;
-    }
-
-    .layer p {
-      margin: 0;
-      padding-right: 18px;
-      color: var(--muted);
-    }
-
-    .notice {
-      border: 1px solid var(--ink);
-      padding: clamp(22px, 4vw, 38px);
-      background: var(--soft);
-      display: grid;
-      gap: 10px;
-    }
-
-    .notice strong {
-      font-size: clamp(1.3rem, 2.6vw, 2.6rem);
-      line-height: 1;
-      letter-spacing: -.05em;
-    }
-
-    .term-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 28px;
-    }
-
-    .term {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 8px 11px;
-      color: var(--muted);
-      font-size: .84rem;
-      background: var(--paper);
-    }
-
-    .footer {
-      padding: 34px 0;
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-      font-size: .92rem;
-    }
-
-    @media (max-width: 920px) {
-      .topbar-inner,
-      .section-head {
-        grid-template-columns: 1fr;
-      }
-
-      .topbar-inner {
-        align-items: flex-start;
-        padding: 16px 0;
-      }
-
-      .nav {
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 4px;
-      }
-
-      .meta-strip,
-      .grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .layer {
-        grid-template-columns: 64px minmax(0, 1fr);
-      }
-
-      .layer p {
-        grid-column: 2;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .meta-strip,
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      .meta-strip div {
-        border-right: 0;
-        border-bottom: 1px solid var(--line);
-      }
-
-      .meta-strip div:last-child {
-        border-bottom: 0;
-      }
-
-      .layer {
-        grid-template-columns: 1fr;
-        padding: 22px 18px;
-      }
-
-      .layer-code {
-        padding-left: 0;
-      }
-
-      .layer p {
-        grid-column: auto;
-        padding-right: 0;
-      }
-    }
-  </style>
 </head>
-
-<body data-gl-marker="GL_V040_LIGHT_SWISS_APPLIED" data-gl-build="20260525T180518Z">
+<body class="method-page" data-gl-marker="GL_V040_LIGHT_SWISS_APPLIED">
 <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="topbar" aria-label="Site header">
-  <div class="wrap topbar-inner">
-    <a class="brand" href="/" aria-label="GOLDLEVEL home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span><strong>GOLDLEVEL</strong><small>v0.4.0 public archive</small></span>
-    </a>
-
-    <nav class="nav" aria-label="Primary routes">
-      <a href="/">Main selector</a>
-      <a href="/goldlevel-v0-4-0/goldlevel/library.html">Library</a>
-      <a href="/goldlevel-v0-4-0/goldlevel/diagnostic-read.html">Diagnostic read</a>
-      <a href="/download/sainsburys-policy-review/">Public dossier</a>
-      <a href="#terms">Terms</a>
-    </nav>
+<main id="main" class="method-shell">
+  <div class="wrap">
+    <h1 class="method-title">METHOD</h1>
+    <div class="method-list" aria-label="GOLDLEVEL method layers">
+    <section class="method-row">
+      <div class="method-num">I</div>
+      <div>
+        <h2 class="method-name">Surface Expression</h2>
+        <p class="method-text">Public-facing form layer: visible objects, signals, patterns, and available outcomes.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">II</div>
+      <div>
+        <h2 class="method-name">Field Layer</h2>
+        <p class="method-text">Context, environment, latent possibility space, and boundary conditions.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">III</div>
+      <div>
+        <h2 class="method-name">Selection Layer</h2>
+        <p class="method-text">Noise-to-signal, governed inclusion/exclusion, framing, and attention gate.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">IV</div>
+      <div>
+        <h2 class="method-name">Operator Layer</h2>
+        <p class="method-text">Selection, transformation, interpretation, responsibility, and proof demand.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">V</div>
+      <div>
+        <h2 class="method-name">Invariant Channels</h2>
+        <p class="method-text">Leading symmetry, constraints, conservation, residue, and stable structure.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">VI</div>
+      <div>
+        <h2 class="method-name">Radar / Calibration</h2>
+        <p class="method-text">Confidence, false-signal detection, pattern strength, and uncertainty control.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">VII</div>
+      <div>
+        <h2 class="method-name">Basin Topology Activation</h2>
+        <p class="method-text">Basin depth, transient paths, recurrent core, multi-basin ecology, and attraction pull.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">VIII</div>
+      <div>
+        <h2 class="method-name">Governance and Constraints</h2>
+        <p class="method-text">Permission gates, ethics, trajectory, constraint memory, pause, repair, and termination.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">IX</div>
+      <div>
+        <h2 class="method-name">Consequence and Cost Layer</h2>
+        <p class="method-text">Time, attention, repair, opportunity, reputation, and compounding costs.</p>
+      </div>
+    </section>
+    <section class="method-row">
+      <div class="method-num">X</div>
+      <div>
+        <h2 class="method-name">Proof and State Promotion</h2>
+        <p class="method-text">Receipts, tests, artifacts, measured results, and state promotion only when evidence exists.</p>
+      </div>
+    </section>
+    </div>
   </div>
-</header>
-
-<div hidden id="gl-v040-light-swiss-marker">GL_V040_LIGHT_SWISS_APPLIED</div>
-
-<main id="main">
-  <section class="hero">
-    <div class="wrap">
-      <p class="eyebrow">Canonical public home · light Swiss repair · K9 checked</p>
-      <h1>GOLDLEVEL v0.4.0 archive front door.</h1>
-      <p class="lede">
-        A public-safe route into Relational Attractor Cartography, Seed-State Read logic,
-        Offer Clarity material, library routes, receipts, and proof-led public artifacts.
-      </p>
-
-      <div class="actions" aria-label="Primary actions">
-        <a class="btn btn-primary" href="/download/sainsburys-policy-review/">Open public dossier</a>
-        <a class="btn btn-secondary" href="/goldlevel-v0-4-0/goldlevel/library.html">Return to library</a>
-        <a class="btn btn-secondary" href="/">Return to main selector</a>
-      </div>
-
-      <dl class="meta-strip" aria-label="Page status">
-        <div><dt>Status</dt><dd>Public archive</dd></div>
-        <div><dt>Version</dt><dd>v0.4.0</dd></div>
-        <div><dt>Boundary</dt><dd>Public-safe</dd></div>
-        <div><dt>Rule</dt><dd>No promotion without proof</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">What this page is</p>
-          <h2>Source of truth before distribution.</h2>
-        </div>
-        <div class="section-copy">
-          <p>
-            This page is the public front door for the v0.4.0 archive surface.
-            It separates method, library, receipts, Offer Clarity routes, and downloadable public artifacts.
-          </p>
-          <p>
-            Social channels are distribution relays. The website remains the source of truth.
-            Claims stay provisional unless receipts, artifacts, tests, or public state promotion records support them.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid" aria-label="Core routes">
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/diagnostic-read.html">
-          <span class="num">01</span>
-          <div>
-            <h3>Relational Attractor Cartography</h3>
-            <p>Readable method language for loops, trust breaks, basin drift, and repair direction.</p>
-          </div>
-        </a>
-
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/diagnostic-read.html">
-          <span class="num">02</span>
-          <div>
-            <h3>Seed-State Read</h3>
-            <p>A bounded read on one live asset, route, message, or public-facing signal.</p>
-          </div>
-        </a>
-
-        <a class="card" href="/landing/">
-          <span class="num">03</span>
-          <div>
-            <h3>Offer Clarity</h3>
-            <p>A clearer commercial route for live material that exists but is not landing.</p>
-          </div>
-        </a>
-
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/library.html">
-          <span class="num">04</span>
-          <div>
-            <h3>Library and Receipts</h3>
-            <p>Public artifacts, diagrams, PDFs, proof logs, checksums, and state-promotion records.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Publication architecture</p>
-          <h2>Routes kept separate.</h2>
-        </div>
-        <div class="section-copy">
-          <p>
-            The archive is not one overloaded page. It is a route system:
-            library, diagnostic read, services, briefs, packages, good-fit boundaries,
-            shop routes, and the current public dossier download flow.
-          </p>
-        </div>
-      </div>
-
-      <div class="grid" aria-label="Publication routes">
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/library.html"><span class="num">Library</span><div><h3>Library</h3><p>Versioned public artifacts and system-safe summaries.</p></div></a>
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/services.html"><span class="num">Services</span><div><h3>Services</h3><p>Commercial clarity and public-facing service surfaces.</p></div></a>
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/briefs-packets.html"><span class="num">Briefs</span><div><h3>Briefs + packets</h3><p>Structured public packets and bounded issue pages.</p></div></a>
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/packages.html"><span class="num">Packages</span><div><h3>Packages</h3><p>Offer containers and scope-separated delivery options.</p></div></a>
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/good-fit.html"><span class="num">Fit</span><div><h3>Good fit</h3><p>Boundary language for where the route is and is not useful.</p></div></a>
-        <a class="card" href="/goldlevel-v0-4-0/goldlevel/book-a-read.html"><span class="num">Book</span><div><h3>Book a read</h3><p>Start point for a bounded read or live material review.</p></div></a>
-        <a class="card" href="/goldlevel-v0-4-0/moment-matter/shop.html"><span class="num">Shop</span><div><h3>Moment &amp; Matter</h3><p>Storefront route for visual pieces and custom maps.</p></div></a>
-        <a class="card" href="/download/sainsburys-policy-review/"><span class="num">PDF</span><div><h3>Public dossier</h3><p>Current verified public download flow with thank-you page.</p></div></a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Ten-layer website pass</p>
-          <h2>Method terms retained.</h2>
-        </div>
-        <div class="section-copy">
-          <p>
-            The visual system has been simplified. The operating terms remain visible and checkable.
-          </p>
-        </div>
-      </div>
-
-      <div class="layers">
-        <article class="layer"><div class="layer-code">I</div><h3>Surface Expression</h3><p>Public-facing form layer: visible objects, signals, patterns, and available outcomes.</p></article>
-        <article class="layer"><div class="layer-code">II</div><h3>Field Layer</h3><p>Context, environment, latent possibility space, and boundary conditions.</p></article>
-        <article class="layer"><div class="layer-code">III</div><h3>Selection Layer</h3><p>Noise-to-signal, governed inclusion/exclusion, framing, and attention gate.</p></article>
-        <article class="layer"><div class="layer-code">IV</div><h3>Operator Layer</h3><p>Selection, transformation, interpretation, responsibility, and proof demand.</p></article>
-        <article class="layer"><div class="layer-code">V</div><h3>Invariant Channels</h3><p>Leading symmetry, constraints, conservation, residue, and stable structure.</p></article>
-        <article class="layer"><div class="layer-code">VI</div><h3>Radar / Calibration</h3><p>Confidence, false-signal detection, pattern strength, and uncertainty control.</p></article>
-        <article class="layer"><div class="layer-code">VII</div><h3>Basin Topology Activation</h3><p>Basin depth, transient paths, recurrent core, multi-basin ecology, and attraction pull.</p></article>
-        <article class="layer"><div class="layer-code">VIII</div><h3>Governance and Constraints</h3><p>Permission gates, ethics, trajectory, constraint memory, pause, repair, and termination.</p></article>
-        <article class="layer"><div class="layer-code">IX</div><h3>Consequence and Cost Layer</h3><p>Time, attention, repair, opportunity, reputation, and compounding costs.</p></article>
-        <article class="layer"><div class="layer-code">X</div><h3>Proof and State Promotion</h3><p>Receipts, tests, artifacts, measured results, and state promotion only when evidence exists.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section id="terms">
-    <div class="wrap">
-      <div class="notice">
-        <p class="eyebrow">Term recheck field</p>
-        <strong>Terms appearing after repair.</strong>
-        <p>
-          GOLDLEVEL · v0.4.0 · Relational Attractor Cartography · Seed-State Read · Offer Clarity · Library · Field notes · Radar · Receipts · Method · Archive · Proof · No promotion without proof · Public-safe · Source of truth · Publication architecture · Ten-layer website pass.
-        </p>
-        <div class="term-grid" aria-label="Terms retained">
-          <span class="term">GOLDLEVEL</span>
-          <span class="term">v0.4.0</span>
-          <span class="term">Relational Attractor Cartography</span>
-          <span class="term">Seed-State Read</span>
-          <span class="term">Offer Clarity</span>
-          <span class="term">Library</span>
-          <span class="term">Field notes</span>
-          <span class="term">Radar</span>
-          <span class="term">Receipts</span>
-          <span class="term">Method</span>
-          <span class="term">Archive</span>
-          <span class="term">Proof</span>
-          <span class="term">No promotion without proof</span>
-          <span class="term">Public-safe</span>
-          <span class="term">Source of truth</span>
-          <span class="term">Publication architecture</span>
-          <span class="term">Ten-layer website pass</span>
-        </div>
-      </div>
-    </div>
-  </section>
 </main>
 
-<footer class="footer">
-  <div class="wrap footer-inner">
-    <span>GOLDLEVEL v0.4.0 · public archive front door</span>
-    <span>Receipt-first · public-safe · proof-led</span>
-  </div>
+<footer class="method-footer">
+  <div class="wrap"><a href="/">GOLDLEVEL</a> · <a href="/landing/">Start</a></div>
 </footer>
 </body>
 </html>
