@@ -1,0 +1,1037 @@
+{
+  "created_utc": "2026-05-25T18:49:54Z",
+  "stamp": "20260525T184947Z",
+  "mode": "CSM144G_SMODE_PUBLIC_CANONICAL_SPINE",
+  "demote_old": true,
+  "demote_mode": "NOINDEX_BANNER",
+  "canonical_routes": [
+    {
+      "route": "/",
+      "role": "single Swiss mainstream front door",
+      "marker": "GL_SWISS_STACK_CANONICAL_HOME",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/"
+    },
+    {
+      "route": "/landing/",
+      "role": "Offer Clarity conversion route",
+      "marker": "GL_SWISS_STACK_OFFER_CLARITY_CANONICAL",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/landing/"
+    },
+    {
+      "route": "/goldlevel-v0-4-0/",
+      "role": "archive/library",
+      "marker": "GL_V040_LIGHT_SWISS_APPLIED",
+      "status": "preserved",
+      "public_url": "https://goldlevel.co.uk/goldlevel-v0-4-0/"
+    },
+    {
+      "route": "/download/sainsburys-policy-review/",
+      "role": "current proof example",
+      "marker": "GL_SAINSBURYS_POLICY_REVIEW_DOWNLOAD_FLOW",
+      "status": "preserved",
+      "public_url": "https://goldlevel.co.uk/download/sainsburys-policy-review/"
+    },
+    {
+      "route": "/receipts/",
+      "role": "proof/state records",
+      "marker": "GL_SWISS_STACK_RECEIPTS_CANONICAL",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/receipts/"
+    },
+    {
+      "route": "/archive/",
+      "role": "contained old/draft material",
+      "marker": "GL_SWISS_STACK_ARCHIVE_CANONICAL",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/archive/"
+    }
+  ],
+  "demoted_count": 150,
+  "skipped_demotions_count": 10,
+  "demoted": [
+    {
+      "file_hash": "128cc35baaf40bac",
+      "route": "/404.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "25bcc22bd4b3babd",
+      "route": "/constraint-map/404.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ed9a63d200cd3a3c",
+      "route": "/constraint-map/constraint-map.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "01ff76975dd5a9de",
+      "route": "/constraint-map/examples/professional_asset_sets_preview.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "019d32144eda20c9",
+      "route": "/download-sainsburys-policy-review.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "cf951a089b0b3d25",
+      "route": "/goldlevel/briefs-packets.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "79d849de418a26d3",
+      "route": "/goldlevel/library.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4916cbe971c1b213",
+      "route": "/goldlevel/whats-live.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f357863c566f6128",
+      "route": "/sainsburys-policy-review/",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "960de8aad498c3d5",
+      "route": "/download-sainsburys-policy-review.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "aeb86cd2fcc685ce",
+      "route": "/goldlevel-v0-4-0/404.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "e3595d9dbdbf5f9e",
+      "route": "/goldlevel-v0-4-0/GOLDLEVEL_FRONTDOOR_FOOTER_SNIPPET.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "531c34d3214ca432",
+      "route": "/goldlevel-v0-4-0/archive/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "a21fd91c52effa79",
+      "route": "/goldlevel-v0-4-0/contact/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6fcce23ab6a81d03",
+      "route": "/goldlevel-v0-4-0/field-notes/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "59d884381497cd7d",
+      "route": "/goldlevel-v0-4-0/goldlevel/book-a-read.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5aef8df2f6d8696f",
+      "route": "/goldlevel-v0-4-0/goldlevel/boundary.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4819f86730966d32",
+      "route": "/goldlevel-v0-4-0/goldlevel/briefs-packets.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f102f52a687aaed0",
+      "route": "/goldlevel-v0-4-0/goldlevel/contact.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4e41affda617c6ce",
+      "route": "/goldlevel-v0-4-0/goldlevel/diagnostic-read.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "e3bae4eb0d66631f",
+      "route": "/goldlevel-v0-4-0/goldlevel/good-fit.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0777254e9fd013c1",
+      "route": "/goldlevel-v0-4-0/goldlevel/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "66b6cf72bc84052b",
+      "route": "/goldlevel-v0-4-0/goldlevel/input-return.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "b42dec37e326314c",
+      "route": "/goldlevel-v0-4-0/goldlevel/library.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0e889b0645724eb5",
+      "route": "/goldlevel-v0-4-0/goldlevel/method.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6efeac608c4984cb",
+      "route": "/goldlevel-v0-4-0/goldlevel/offer-clarity-read.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "58fd8ff9ee8e30e1",
+      "route": "/goldlevel-v0-4-0/goldlevel/packages.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ed11ad5b6846d9e3",
+      "route": "/goldlevel-v0-4-0/goldlevel/proof.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "e8907966d2b2ab18",
+      "route": "/goldlevel-v0-4-0/goldlevel/relationship-packet-payment.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "759ffb80383d5593",
+      "route": "/goldlevel-v0-4-0/goldlevel/scope.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "50155beccdef6cc1",
+      "route": "/goldlevel-v0-4-0/goldlevel/seed-state-read.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "17b18d491ecc8afb",
+      "route": "/goldlevel-v0-4-0/goldlevel/services.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "7cd6241013881794",
+      "route": "/goldlevel-v0-4-0/goldlevel/start-here.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5ea425303b86e141",
+      "route": "/goldlevel-v0-4-0/goldlevel/structure-strategy.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "cd18ab004459f8f4",
+      "route": "/goldlevel-v0-4-0/goldlevel/system.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "765ff69390dbb75e",
+      "route": "/goldlevel-v0-4-0/goldlevel/textbook-packets-fixed-two-live.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "8b013f54e86976df",
+      "route": "/goldlevel-v0-4-0/goldlevel/what-this-is.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "55e3c4ece16985bb",
+      "route": "/goldlevel-v0-4-0/goldlevel/whats-live.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "b186acd3b6d30104",
+      "route": "/goldlevel-v0-4-0/library/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6872263ba08b5af1",
+      "route": "/goldlevel-v0-4-0/method/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "64e6a6567ae566d3",
+      "route": "/goldlevel-v0-4-0/moment-matter/about.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4b0fa71865028628",
+      "route": "/goldlevel-v0-4-0/moment-matter/archive.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "b9776eb11e2a07d1",
+      "route": "/goldlevel-v0-4-0/moment-matter/cart.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "c0ad2df9cc8a5081",
+      "route": "/goldlevel-v0-4-0/moment-matter/checkout.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ea47b3b9f40043ff",
+      "route": "/goldlevel-v0-4-0/moment-matter/clarity-maps.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f9aaf9074d022d9f",
+      "route": "/goldlevel-v0-4-0/moment-matter/contact.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0068330f2255cbe6",
+      "route": "/goldlevel-v0-4-0/moment-matter/custom.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ce3ff8152d2cdea0",
+      "route": "/goldlevel-v0-4-0/moment-matter/faq.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "7371b94e68438540",
+      "route": "/goldlevel-v0-4-0/moment-matter/gift-guide.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6ff3a8e50e1ce8db",
+      "route": "/goldlevel-v0-4-0/moment-matter/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0ba93e94ff2edf32",
+      "route": "/goldlevel-v0-4-0/moment-matter/privacy.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4c137053a4aed5d7",
+      "route": "/goldlevel-v0-4-0/moment-matter/product.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "7cd016d145e981ba",
+      "route": "/goldlevel-v0-4-0/moment-matter/shipping.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "31d6eb6a619c713d",
+      "route": "/goldlevel-v0-4-0/moment-matter/shop.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "7172af92341f90b9",
+      "route": "/goldlevel-v0-4-0/moment-matter/spaces.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5c534fd8db5272b5",
+      "route": "/goldlevel-v0-4-0/moment-matter/terms.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "a0fe1ecc010e0fe0",
+      "route": "/goldlevel-v0-4-0/moment-matter/thank-you.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6dd767c679d18ac5",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/404.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "32f280d2d8c7abd3",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/archive/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "869a21a9090e0ce3",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/contact/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "270588511101273f",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/field-notes/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "44ab4ce1aa79f571",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/book-a-read.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "fbd3c96c29fb7067",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/boundary.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "2df20aefd8365335",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/briefs-packets.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "1bb77814f81c6d29",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/contact.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "49a8a33a75a72475",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/diagnostic-read.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f90c76202b3a4d2a",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/good-fit.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "cfc6de628035d11f",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "10bdc6214e442015",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/input-return.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "119fd16615e97def",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/library.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "fddb46b3a992c5a7",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/method.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "bd8d67f985841f3c",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/offer-clarity-read.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "cc80390c5d6390f7",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/packages.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5d731456fda56cee",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/proof.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "670d5b48ebaf9552",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/relationship-packet-payment.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "38177877d4674c53",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/scope.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6bce946fad59a185",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/seed-state-read.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "facf0930c7cd0e57",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/services.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "051ffe9b2f884f62",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/start-here.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5e01dc570b5cfa31",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/system.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "384d7feb479be3a0",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/textbook-packets-fixed-two-live.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "662e4c7fdbe603b9",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/what-this-is.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "fe197fa7fedb1772",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/goldlevel/whats-live.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "9d9e24f806a4cc66",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0dbbb0dd4db71e9c",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/library/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "8a0f2f46f26f3d5d",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/method/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "8130eedc4247e08f",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/about.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "c99591402ae54ab9",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/archive.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "3d06bc76819ade7f",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/cart.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "b252681884661356",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/checkout.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "8380b2de0d79253f",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/clarity-maps.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4146da3ccbb32dbc",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/contact.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "8ed998acae5d89af",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/custom.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "c755fa962919bcab",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/faq.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "a2258c150185211c",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/gift-guide.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "b0d9e52b100e3d5e",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "a3d5b596b5b7b12d",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/privacy.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "3895033df2c6e31c",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/product.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "77c1b40efd29670d",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/shipping.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "d8bf3d2a0dff8341",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/shop.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "2dcfaa56ab4325ff",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/spaces.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "fdd038ad374a304a",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/terms.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5f0aceb52275af89",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/moment-matter/thank-you.html",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6623427cc0e66c88",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/radar/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "7fb02735e2314117",
+      "route": "/goldlevel-v0-4-0/public/goldlevel-v0-4-0/receipts/",
+      "decision": "QUARANTINE_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "d3157b0cd6623bf1",
+      "route": "/goldlevel-v0-4-0/radar/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "68682dd6f5e0bc74",
+      "route": "/goldlevel-v0-4-0/receipts/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "3dfe70e05edfe26c",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "86ca5867d6873b56",
+      "route": "/goldlevel/boundary.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "33e0a08b5ef0bc7f",
+      "route": "/goldlevel/briefs-packets.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "aa0e07d4c250f077",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "132610c722228595",
+      "route": "/goldlevel/diagnostic-read.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "c9ed2d5d4b09b88e",
+      "route": "/goldlevel/good-fit.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0b5bfaaeac972c7d",
+      "route": "/goldlevel/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f490436785580770",
+      "route": "/goldlevel/input-return.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "18b4672b299e1070",
+      "route": "/goldlevel/library.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5ae4f2bb5fe44bc1",
+      "route": "/goldlevel/method.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "0332b1132b0b96ba",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "e8d466ef9d9a4c48",
+      "route": "/goldlevel/packages.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f83afaca76f62a79",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6bb2c781e26c269c",
+      "route": "/goldlevel/relationship-packet-payment.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "2fb2af2a428e448f",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "e8fc60e08de8a1cf",
+      "route": "/goldlevel/seed-state-read.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "01639ad54092fb40",
+      "route": "/goldlevel/services.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6d108f8838b33b9e",
+      "route": "/goldlevel/start-here.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "6bf355cb90c94338",
+      "route": "/goldlevel/system.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ca2d4d9e31977dac",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "5b7251db4179d8e8",
+      "route": "/goldlevel/what-this-is.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "8a5fe68acad438e4",
+      "route": "/goldlevel/whats-live.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "dd5f7f9b3421167f",
+      "route": "/lifecoachlanding/components/clarity-gap-diagnostic-panel/problem_section.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "3c48b83f296d9143",
+      "route": "/lifecoachlanding/components/clarity-gap-scene/problem_scene.html",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "c20c7b581a9536e8",
+      "route": "/lifecoachlanding/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "d37ea97ad9f4abb6",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "7b672c18dc9ab196",
+      "route": "/moment-matter/archive.html",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "293b97e1fc672ccb",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "b3a953d699119c81",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "319ced6957bb92f5",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "1d48ceb89278fdde",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4756448ee718a2dc",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "40e43bf916fb279a",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ac899a771b3325bb",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "9519ae6c1d617b65",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "96431fb426aa023e",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "1c60eab5526cb26b",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "876e4297ad6b9374",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "12cf70e5c67bc0d1",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "ebfca3dc39c75a7b",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "dc688d7e8603d932",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "4c08f3e70c4a3479",
+      "route": "",
+      "decision": "DUPLICATE_ROUTE_OR_TITLE_CONTAINMENT",
+      "action": "already_demoted"
+    },
+    {
+      "file_hash": "f6f0340ac909b45e",
+      "route": "/sainsburys-policy-review/",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "already_demoted"
+    }
+  ],
+  "skipped_demotions": [
+    {
+      "file_hash": "413c7cbb379225dd",
+      "route": "/download-thanks/",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "55e0f5ab0d696d9a",
+      "route": "/download/sainsburys-policy-review/",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "08a2f4a405207c31",
+      "route": "/goldlevel-v0-4-0/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "b04b38d4e36f7a71",
+      "route": "/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "3aa5cf1e9ba7bfc8",
+      "route": "/landing/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "35c15566b123755b",
+      "route": "/download-thanks/",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "a681426c9951971c",
+      "route": "/download/sainsburys-policy-review/",
+      "decision": "REWRITE_TO_LIGHT_SWISS_OR_ARCHIVE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "92fea8433cf4b765",
+      "route": "/goldlevel-v0-4-0/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "0eb547304658805a",
+      "route": "/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "contained"
+    },
+    {
+      "file_hash": "e96b748cf2f0f1f9",
+      "route": "/landing/",
+      "decision": "REVIEW_FOR_DRAFT_COLLAPSE",
+      "action": "contained"
+    }
+  ],
+  "seed_summary": {
+    "result": "PASS_K9_ARCHITECTURE_SEED_CHECK_COMPLETE",
+    "architecture_state": "CHAOS_REBUILD_RECOMMENDED",
+    "chaos_score": 941,
+    "html_file_count": 160,
+    "public_html_count": 160,
+    "duplicate_conflict_count": 60,
+    "missing_local_link_count": 272,
+    "public_risk_file_count": 53,
+    "draft_heavy_count": 91,
+    "dark_or_mixed_count": 120,
+    "complex_heavy_count": 0
+  },
+  "safety_patch": {
+    "applied_utc": "2026-05-25T18:54:05Z",
+    "marker": "GL_SWISS_STACK_PUBLIC_ARCHIVE_REGISTRY_REDUCED",
+    "raw_titles_removed": true,
+    "raw_files_hashed": true,
+    "local_originals_kept_out_of_public_release": true
+  }
+}

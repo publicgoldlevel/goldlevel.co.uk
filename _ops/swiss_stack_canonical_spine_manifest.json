@@ -1,0 +1,108 @@
+{
+  "created_utc": "2026-05-25T18:49:55Z",
+  "stamp": "20260525T184947Z",
+  "result": "LOCAL_BUILD_COMPLETE_AWAITING_GIT_AND_LIVE_PROOF",
+  "canonical_routes": [
+    {
+      "route": "/",
+      "role": "single Swiss mainstream front door",
+      "marker": "GL_SWISS_STACK_CANONICAL_HOME",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/"
+    },
+    {
+      "route": "/landing/",
+      "role": "Offer Clarity conversion route",
+      "marker": "GL_SWISS_STACK_OFFER_CLARITY_CANONICAL",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/landing/"
+    },
+    {
+      "route": "/goldlevel-v0-4-0/",
+      "role": "archive/library",
+      "marker": "GL_V040_LIGHT_SWISS_APPLIED",
+      "status": "preserved",
+      "public_url": "https://goldlevel.co.uk/goldlevel-v0-4-0/"
+    },
+    {
+      "route": "/download/sainsburys-policy-review/",
+      "role": "current proof example",
+      "marker": "GL_SAINSBURYS_POLICY_REVIEW_DOWNLOAD_FLOW",
+      "status": "preserved",
+      "public_url": "https://goldlevel.co.uk/download/sainsburys-policy-review/"
+    },
+    {
+      "route": "/receipts/",
+      "role": "proof/state records",
+      "marker": "GL_SWISS_STACK_RECEIPTS_CANONICAL",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/receipts/"
+    },
+    {
+      "route": "/archive/",
+      "role": "contained old/draft material",
+      "marker": "GL_SWISS_STACK_ARCHIVE_CANONICAL",
+      "status": "rebuilt",
+      "public_url": "https://goldlevel.co.uk/archive/"
+    }
+  ],
+  "demoted_count": 150,
+  "skipped_demotions_count": 10,
+  "seed_report_id": "37eec1a72b3f7297",
+  "seed_report_name": "goldlevel_k9_architecture_seed_checker_20260525T183119Z",
+  "seed_summary": {
+    "result": "PASS_K9_ARCHITECTURE_SEED_CHECK_COMPLETE",
+    "architecture_state": "CHAOS_REBUILD_RECOMMENDED",
+    "chaos_score": 941,
+    "html_file_count": 160,
+    "public_html_count": 160,
+    "duplicate_conflict_count": 60,
+    "missing_local_link_count": 272,
+    "public_risk_file_count": 53,
+    "draft_heavy_count": 91,
+    "dark_or_mixed_count": 120,
+    "complex_heavy_count": 0
+  },
+  "files": {
+    "home": [
+      "index.html",
+      "docs/index.html"
+    ],
+    "landing": [
+      "landing/index.html",
+      "docs/landing/index.html"
+    ],
+    "receipts": [
+      "receipts/index.html",
+      "docs/receipts/index.html"
+    ],
+    "archive": [
+      "archive/index.html",
+      "docs/archive/index.html"
+    ],
+    "css": [
+      "assets/css/goldlevel-swiss-system.css"
+    ],
+    "archive_registry": [
+      "archive/legacy-route-registry.json",
+      "docs/archive/legacy-route-registry.json"
+    ]
+  },
+  "sha256": {
+    "index.html": "0557f167bae3155195e5dfebf2023af59934392280716353256de94490d3a457",
+    "docs/index.html": "0557f167bae3155195e5dfebf2023af59934392280716353256de94490d3a457",
+    "landing/index.html": "6bd78e0d8addf5ced30ede2d1eb499f51f9210a89eb8aebf644b3da29318ae5e",
+    "docs/landing/index.html": "6bd78e0d8addf5ced30ede2d1eb499f51f9210a89eb8aebf644b3da29318ae5e",
+    "receipts/index.html": "8a5a5a26dc4795fcd214787e47254e65617cfd541fc8a4dcac00d94badf3259e",
+    "docs/receipts/index.html": "8a5a5a26dc4795fcd214787e47254e65617cfd541fc8a4dcac00d94badf3259e",
+    "archive/index.html": "862dee6b91708328b6de4a2465356c9c7884861dc233d023fd7ea65ffaaa84d2",
+    "docs/archive/index.html": "862dee6b91708328b6de4a2465356c9c7884861dc233d023fd7ea65ffaaa84d2",
+    "assets/css/goldlevel-swiss-system.css": "255c64fedc766201c7ec0cbc5d4169c598e1d7e8151faa707ff9bb86ac5fcf43"
+  },
+  "safety_patch": {
+    "applied_utc": "2026-05-25T18:54:05Z",
+    "marker": "GL_SWISS_STACK_PUBLIC_MANIFEST_SANITISED",
+    "local_paths_removed": true,
+    "archive_originals_public": false
+  }
+}
