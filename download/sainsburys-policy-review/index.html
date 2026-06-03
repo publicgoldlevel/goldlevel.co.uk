@@ -3,142 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Defensive Research Submission Readiness Kit | Gold Level</title>
   <meta name="robots" content="noindex,nofollow">
-  <style>
-    :root {
-      --gl-bg: #0f0f0f;
-      --gl-panel: #171717;
-      --gl-text: #f4f1e8;
-      --gl-muted: #b8b0a0;
-      --gl-line: rgba(244,241,232,.16);
-      --gl-accent: #d7b56d;
-      --gl-accent-dark: #8f6f2f;
-    }
-    body {
-      margin: 0;
-      background: var(--gl-bg);
-      color: var(--gl-text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.55;
-    }
-    .gl-page {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 72px 24px;
-    }
-    .gl-kicker {
-      color: var(--gl-accent);
-      text-transform: uppercase;
-      letter-spacing: .14em;
-      font-size: .78rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
-    .gl-hero {
-      border-bottom: 1px solid var(--gl-line);
-      padding-bottom: 44px;
-      margin-bottom: 40px;
-    }
-    h1 {
-      font-size: clamp(2.4rem, 6vw, 5.2rem);
-      line-height: .95;
-      letter-spacing: -.05em;
-      margin: 0 0 24px;
-    }
-    h2 {
-      font-size: clamp(1.4rem, 3vw, 2.2rem);
-      margin: 0 0 18px;
-      letter-spacing: -.03em;
-    }
-    p {
-      color: var(--gl-muted);
-      max-width: 760px;
-      font-size: 1.05rem;
-    }
-    .gl-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 18px;
-      margin: 32px 0;
-    }
-    .gl-card {
-      background: var(--gl-panel);
-      border: 1px solid var(--gl-line);
-      border-radius: 18px;
-      padding: 22px;
-    }
-    .gl-card strong {
-      color: var(--gl-text);
-      display: block;
-      margin-bottom: 6px;
-    }
-    .gl-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 28px;
-    }
-    .gl-button {
-      display: inline-block;
-      text-decoration: none;
-      border-radius: 999px;
-      padding: 13px 20px;
-      font-weight: 700;
-      border: 1px solid var(--gl-accent);
-      color: #16120a;
-      background: var(--gl-accent);
-    }
-    .gl-button-secondary {
-      color: var(--gl-accent);
-      background: transparent;
-    }
-    .gl-boundary {
-      border-top: 1px solid var(--gl-line);
-      margin-top: 46px;
-      padding-top: 28px;
-      font-size: .95rem;
-      color: var(--gl-muted);
-    }
-    code {
-      color: var(--gl-accent);
-    }
-  </style>
+  <title>Defensive Research Readiness Pack | Gold Level</title>
+  <meta name="description" content="A ready-to-use research readiness pack for checking, organizing, and preparing serious research documents before review or submission.">
   <link rel="canonical" href="https://goldlevel.co.uk/download/sainsburys-policy-review/">
+  <style>
+    :root{
+      --bg:#080705;
+      --panel:#14100b;
+      --panel2:#1d1710;
+      --text:#f4efe6;
+      --muted:rgba(244,239,230,.72);
+      --line:rgba(201,169,91,.25);
+      --gold:#c9a95b;
+      --gold2:#e9d39b;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 10% 0%,rgba(201,169,91,.16),transparent 28rem),linear-gradient(180deg,#080705,#120e09);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+    a{color:inherit}
+    .shell{width:min(1080px,calc(100% - 32px));margin:0 auto;padding:56px 0 72px}
+    .eyebrow{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--gold2);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;background:rgba(201,169,91,.09)}
+    .hero{padding:34px 0 28px}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2.8rem,8vw,6.8rem);line-height:.9;letter-spacing:-.06em;margin:18px 0 20px;max-width:920px}
+    .lead{max-width:780px;color:var(--muted);font-size:clamp(1.05rem,2vw,1.28rem)}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 0}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 18px;border-radius:999px;text-decoration:none;font-weight:700;border:1px solid var(--line)}
+    .btn.primary{background:var(--gold);color:#120e09;border-color:var(--gold)}
+    .btn.secondary{background:rgba(255,255,255,.04);color:var(--text)}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+    .card{border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,rgba(20,16,11,.96),rgba(29,23,16,.92));padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.22)}
+    .wide{grid-column:1 / -1}
+    h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.55rem,3vw,2.35rem);line-height:1.05;margin:0 0 12px;letter-spacing:-.035em}
+    p{margin:0 0 13px;color:var(--muted)}
+    p:last-child{margin-bottom:0}
+    ul{margin:10px 0 0;padding-left:20px;color:var(--muted)}
+    li{margin:6px 0}
+    code,pre{font-family:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+    pre{white-space:pre-wrap;word-break:break-word;margin:12px 0 0;padding:14px;border-radius:18px;border:1px solid rgba(201,169,91,.18);background:rgba(0,0,0,.24);color:#f7eac7;font-size:.88rem}
+    .note{border-left:3px solid var(--gold);padding-left:14px;color:var(--muted)}
+    .footer{margin-top:28px;color:rgba(244,239,230,.58);font-size:.92rem}
+    @media (max-width:760px){.grid{grid-template-columns:1fr}.shell{width:min(100% - 24px,1080px);padding-top:34px}.card{padding:20px;border-radius:22px}}
+  </style>
 </head>
 <body>
-  <main class="gl-page">
-    <section class="gl-hero">
-      <div class="gl-kicker">Defensive Research · Readiness Kit · Private Staging</div>
-      <h1>Defensive Research Submission Readiness Kit</h1>
-      <p>
-        A structured readiness package for defensive research submission, safety review,
-        evidence discipline, reproducibility, and controlled release preparation.
-      </p>
-      <div class="gl-actions">
-        <a class="gl-button" href="/public/downloads/DEFENSIVE_RESEARCH_SUBMISSION_READINESS_KIT_v1_2_0_FINAL.zip" download>Download Readiness Kit</a>
-        <a class="gl-button gl-button-secondary" href="/public/downloads/DEFENSIVE_RESEARCH_SUBMISSION_READINESS_KIT_v1_2_0_FINAL.pdf" download>Download PDF</a>
-        
+  <main class="shell">
+    <section class="hero">
+      <span class="eyebrow">Research readiness pack</span>
+      <h1>Check the work before anyone treats it as finished.</h1>
+      <p class="lead">This is a ready-to-use research readiness pack. It helps you check, organize, and safely prepare a serious research document before sharing or submitting it.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://goldlevel.co.uk/downloads/DEFENSIVE_RESEARCH_SUBMISSION_READINESS_KIT_v1_2_0_FINAL.zip">Download full pack</a>
+        <a class="btn secondary" href="https://goldlevel.co.uk/downloads/DEFENSIVE_RESEARCH_SUBMISSION_READINESS_KIT_v1_2_0_FINAL.pdf">Open PDF</a>
       </div>
     </section>
 
-    <section>
-      <h2>What this package contains</h2>
-      <div class="gl-grid">
-        <div class="gl-card"><strong>Submission readiness</strong><span>Templates for submission, research-paper structure, article adaptation, and release review.</span></div>
-        <div class="gl-card"><strong>Safety preservation</strong><span>Guardrails for defensive-use boundaries, non-removal controls, and controlled disclosure discipline.</span></div>
-        <div class="gl-card"><strong>Evidence discipline</strong><span>Checklists for reproducibility, local proof, action logging, and bounded external claims.</span></div>
-        <div class="gl-card"><strong>Contributor review</strong><span>Rubrics for community review, sanitized examples, and readiness scoring.</span></div>
-      </div>
+    <section class="grid">
+      <article class="card wide">
+        <h2>What is this?</h2>
+        <p>This is a ready-to-use research readiness pack for checking, organizing, and preparing a serious research document before review or submission.</p>
+        <p>It can support policy papers, technical reports, cybersecurity disclosures, academic papers, governance dossiers, evidence packs, grant files, legal-adjacent review packs, due-diligence documents, and internal research submissions.</p>
+      </article>
+
+      <article class="card">
+        <h2>What does it do?</h2>
+        <p>The pack brings the main document, supporting files, receipts, safety boundaries, validation checks, and review steps into one organized system.</p>
+        <p>It is designed to be readable by people, useful for reviewers, and structured enough for LLM-assisted or technical checking.</p>
+      </article>
+
+      <article class="card">
+        <h2>Who is it for?</h2>
+        <p>It is for anyone handling a serious document that needs care before it is shared.</p>
+        <p>It can help beginners understand what is included, reviewers see what has been checked, and advanced users run local validation or use the files with an LLM.</p>
+      </article>
+
+      <article class="card">
+        <h2>Where can I use it?</h2>
+        <p>Use it anywhere a research document needs preparation before review, including academic research, policy work, cybersecurity disclosure, governance review, evidence preparation, technical due diligence, and LLM-assisted document checking.</p>
+      </article>
+
+      <article class="card">
+        <h2>What is inside?</h2>
+        <p>The pack may include the main research document, manifest files, validation files, receipts, safety notes, review guidance, download files, and supporting material.</p>
+        <p>The purpose is not only to store files. The purpose is to make the document easier to check, understand, and handle responsibly.</p>
+      </article>
+
+      <article class="card wide">
+        <h2>How do I use it?</h2>
+        <p>Download the pack and start at the level that fits you.</p>
+        <ul>
+          <li>If you are new to this, open the main document first and read it like a checklist.</li>
+          <li>If you are reviewing the work, use the receipts, manifest, safety notes, and validation files to check what has been prepared and what still needs attention.</li>
+          <li>If you are technical, you can run local validation to generate receipts and confirm the pack structure.</li>
+        </ul>
+        <pre>~/drrsk_144g_termux_supercharged_v0_2.sh</pre>
+        <p class="note">Optional local commit after dry-run review:</p>
+        <pre>RUN_LOCAL_COMMIT=1 ~/drrsk_144g_termux_supercharged_v0_2.sh</pre>
+        <p>You do not need to be technical to start using the pack. The command is for users who want machine-level validation.</p>
+      </article>
+
+      <article class="card wide">
+        <h2>How can I use it with an LLM?</h2>
+        <p>You can give the pack or main files to an LLM and ask it to review the structure without inventing claims.</p>
+        <pre>Read this readiness pack. Tell me what the document is, what files are included, what evidence is present, what is not proven, what safety boundaries apply, and what the next responsible review step should be. Do not invent claims. Separate known, inferred, and unknown.</pre>
+      </article>
+
+      <article class="card wide">
+        <h2>What should I not claim?</h2>
+        <p>Do not claim the pack proves approval, acceptance, publication, audit, endorsement, legal verification, or external validation unless you have separate evidence for that.</p>
+        <p>The pack supports preparation and review. It is not final approval.</p>
+      </article>
+
+      <article class="card wide">
+        <p><strong>A plug-and-play readiness kit for checking and preparing a serious research document with clear evidence, safety limits, validation steps, and review receipts before it is shared.</strong></p>
+      </article>
     </section>
 
-    <section class="gl-boundary">
-      <p>
-        Status: <code>private staging only</code>. This page is not a publication claim,
-        not an acceptance claim, not an affiliation claim, and not an external-validation claim.
-        Release, publication, audit, or external validation require separate receipts.
-      </p>
-    </section>
+    <p class="footer">Boundary: descriptive guide only. No approval, acceptance, publication, audit, endorsement, legal verification, or external-validation claim is made by this page.</p>
   </main>
 </body>
 </html>
