@@ -1,135 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GOLDLEVEL · Download received</title>
-  <meta name="description" content="Thank you for downloading the GOLDLEVEL public policy review dossier. The file opens from this page, with routes back to the library and main selector.">
-  <meta name="color-scheme" content="light">
-  <meta name="robots" content="index,follow">
-  <meta property="og:title" content="GOLDLEVEL · Download received">
-  <meta property="og:description" content="Thank you for downloading the GOLDLEVEL public policy review dossier.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://goldlevel.co.uk/download/sainsburys-policy-review/">
-  <link rel="canonical" href="https://goldlevel.co.uk/download/sainsburys-policy-review/">
-  <link rel="preload" href="/assets/css/selector.css" as="style">
-  <link rel="stylesheet" href="/assets/css/selector.css">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Defensive Research Submission Readiness Kit | Gold Level</title>
+  <meta name="robots" content="noindex,nofollow">
   <style>
-    .download-thanks-shell{width:min(980px,100%);margin-inline:auto}
-    .download-thanks-card{border:1px solid rgba(201,169,91,.28);border-radius:38px;padding:clamp(30px,6vw,72px);background:radial-gradient(circle at 15% 12%,rgba(201,169,91,.22),transparent 22rem),linear-gradient(150deg,rgba(8,7,5,.96),rgba(31,24,15,.94));box-shadow:0 28px 90px rgba(0,0,0,.30);color:var(--bone)}
-    .download-status{display:inline-flex;align-items:center;gap:10px;padding:8px 13px;margin-bottom:22px;border:1px solid rgba(201,169,91,.30);border-radius:999px;background:rgba(201,169,91,.12);color:#e9d39b;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase}
-    .download-status:before{content:"";width:9px;height:9px;border-radius:999px;background:var(--gold);box-shadow:0 0 0 5px rgba(201,169,91,.12)}
-    .download-thanks-card h1{max-width:850px;margin:0;color:var(--bone);font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(3.2rem,9vw,7.2rem);line-height:.88;letter-spacing:-.065em}
-    .download-copy{max-width:720px;margin:24px 0 34px;color:rgba(244,239,230,.76);font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.55}
-    .download-primary-row{display:flex;gap:14px;flex-wrap:wrap;margin:0 0 30px}
-    .download-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.5vw,28px);margin-top:26px}
-    .download-action-card{min-height:250px;border-radius:30px}
-    .download-action-card .route-card-inner{padding:clamp(24px,4vw,38px)}
-    .download-action-card h2{margin-top:54px;font-size:clamp(2.1rem,4.5vw,4rem)}
-    .download-action-card .route-lede{margin-bottom:26px}
-    .download-footnote{margin:24px 0 0;color:rgba(244,239,230,.66);font-size:.96rem;line-height:1.5}
-    .download-footnote a{text-underline-offset:4px}
-    .download-hidden-frame{width:1px;height:1px;border:0;position:absolute;left:-9999px;top:-9999px}
-    @media(max-width:860px){.download-actions{grid-template-columns:1fr}.download-thanks-card{border-radius:28px}.download-action-card{min-height:230px}}
+    :root {
+      --gl-bg: #0f0f0f;
+      --gl-panel: #171717;
+      --gl-text: #f4f1e8;
+      --gl-muted: #b8b0a0;
+      --gl-line: rgba(244,241,232,.16);
+      --gl-accent: #d7b56d;
+      --gl-accent-dark: #8f6f2f;
+    }
+    body {
+      margin: 0;
+      background: var(--gl-bg);
+      color: var(--gl-text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    .gl-page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+    .gl-kicker {
+      color: var(--gl-accent);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .78rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .gl-hero {
+      border-bottom: 1px solid var(--gl-line);
+      padding-bottom: 44px;
+      margin-bottom: 40px;
+    }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 5.2rem);
+      line-height: .95;
+      letter-spacing: -.05em;
+      margin: 0 0 24px;
+    }
+    h2 {
+      font-size: clamp(1.4rem, 3vw, 2.2rem);
+      margin: 0 0 18px;
+      letter-spacing: -.03em;
+    }
+    p {
+      color: var(--gl-muted);
+      max-width: 760px;
+      font-size: 1.05rem;
+    }
+    .gl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+      margin: 32px 0;
+    }
+    .gl-card {
+      background: var(--gl-panel);
+      border: 1px solid var(--gl-line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+    .gl-card strong {
+      color: var(--gl-text);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .gl-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .gl-button {
+      display: inline-block;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 13px 20px;
+      font-weight: 700;
+      border: 1px solid var(--gl-accent);
+      color: #16120a;
+      background: var(--gl-accent);
+    }
+    .gl-button-secondary {
+      color: var(--gl-accent);
+      background: transparent;
+    }
+    .gl-boundary {
+      border-top: 1px solid var(--gl-line);
+      margin-top: 46px;
+      padding-top: 28px;
+      font-size: .95rem;
+      color: var(--gl-muted);
+    }
+    code {
+      color: var(--gl-accent);
+    }
   </style>
-
-  <meta name="goldlevel-route-role" content="GL_SAINSBURYS_POLICY_REVIEW_DOWNLOAD_FLOW">
-  <!-- GL_SAINSBURYS_POLICY_REVIEW_DOWNLOAD_FLOW -->
+  <link rel="canonical" href="https://goldlevel.co.uk/download/sainsburys-policy-review/">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-
-<main id="main" class="route-selector" aria-label="Download thank-you page">
-  <section class="selector-shell download-thanks-shell" aria-labelledby="download-thanks-title">
-
-    <div class="download-thanks-card">
-      <div class="download-status" id="download-status">Preparing download</div>
-
-      <h1 id="download-thanks-title">Thank you for the download.</h1>
-
-      <p class="download-copy">
-        The public policy review dossier is opening from this page. Keep this page open if you want to return to the library or the main selector after reading.
+  <main class="gl-page">
+    <section class="gl-hero">
+      <div class="gl-kicker">Defensive Research · Readiness Kit · Private Staging</div>
+      <h1>Defensive Research Submission Readiness Kit</h1>
+      <p>
+        A structured readiness package for defensive research submission, safety review,
+        evidence discipline, reproducibility, and controlled release preparation.
       </p>
-
-      <div class="download-primary-row" aria-label="Download actions">
-        <a class="btn btn-gold" id="manual-download" href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Open PDF now</a>
-        <a class="route-small-link" href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Direct file link</a>
+      <div class="gl-actions">
+        <a class="gl-button" href="/public/downloads/DEFENSIVE_RESEARCH_SUBMISSION_READINESS_KIT_v1_2_0_FINAL.zip" download>Download Readiness Kit</a>
+        <a class="gl-button gl-button-secondary" href="/public/downloads/DEFENSIVE_RESEARCH_SUBMISSION_READINESS_KIT_v1_2_0_FINAL.pdf" download>Download PDF</a>
+        
       </div>
+    </section>
 
-      <div class="download-actions">
-        <article class="route-card route-card-gold download-action-card" aria-labelledby="library-route-title">
-          <div class="route-card-inner">
-            <div class="route-label">Library</div>
-            <h2 id="library-route-title">Return to library</h2>
-            <p class="route-lede">Go back to the archive/library surface and continue browsing published GOLDLEVEL material.</p>
-            <div class="route-actions">
-              <a class="btn btn-gold" href="/goldlevel-v0-4-0/">Return to library</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="route-card route-card-matter download-action-card" aria-labelledby="main-route-title">
-          <div class="route-card-inner">
-            <div class="route-label">Selector</div>
-            <h2 id="main-route-title">Return to main selector</h2>
-            <p class="route-lede">Return to the main front door where the available site routes are separated clearly.</p>
-            <div class="route-actions">
-              <a class="btn btn-light" href="/">Return to main selector</a>
-            </div>
-          </div>
-        </article>
+    <section>
+      <h2>What this package contains</h2>
+      <div class="gl-grid">
+        <div class="gl-card"><strong>Submission readiness</strong><span>Templates for submission, research-paper structure, article adaptation, and release review.</span></div>
+        <div class="gl-card"><strong>Safety preservation</strong><span>Guardrails for defensive-use boundaries, non-removal controls, and controlled disclosure discipline.</span></div>
+        <div class="gl-card"><strong>Evidence discipline</strong><span>Checklists for reproducibility, local proof, action logging, and bounded external claims.</span></div>
+        <div class="gl-card"><strong>Contributor review</strong><span>Rubrics for community review, sanitized examples, and readiness scoring.</span></div>
       </div>
+    </section>
 
-      <p class="download-footnote">
-        Browser note: static hosting cannot force every browser to download a PDF automatically. If it does not open automatically, use
-        <a href="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf">Open PDF now</a>.
+    <section class="gl-boundary">
+      <p>
+        Status: <code>private staging only</code>. This page is not a publication claim,
+        not an acceptance claim, not an affiliation claim, and not an external-validation claim.
+        Release, publication, audit, or external validation require separate receipts.
       </p>
-    </div>
-
-    <iframe class="download-hidden-frame" id="download-frame" title="PDF download frame" aria-hidden="true"></iframe>
-  </section>
-</main>
-
-<script>
-(function(){
-  var pdfUrl="https://goldlevel.co.uk/downloads/sainsburys_policy_review_dossier_public_facing_hardened.pdf";
-  var status=document.getElementById("download-status");
-  var frame=document.getElementById("download-frame");
-
-  function mark(text){ if(status) status.textContent=text; }
-
-  function startDownload(){
-    mark("Opening download");
-
-    try {
-      if(frame) frame.src = pdfUrl + "?download_started=1";
-    } catch(e) {}
-
-    try {
-      var a=document.createElement("a");
-      a.href=pdfUrl;
-      a.setAttribute("download","sainsburys_policy_review_dossier_public_facing_hardened.pdf");
-      a.setAttribute("rel","noopener");
-      a.style.position="absolute";
-      a.style.left="-9999px";
-      document.body.appendChild(a);
-
-      setTimeout(function(){
-        try { a.click(); } catch(e) {}
-        mark("Download opened");
-      },450);
-    } catch(e) {
-      mark("Ready to open");
-    }
-  }
-
-  if(document.readyState==="loading"){
-    document.addEventListener("DOMContentLoaded",startDownload);
-  } else {
-    startDownload();
-  }
-})();
-</script>
+    </section>
+  </main>
 </body>
 </html>
