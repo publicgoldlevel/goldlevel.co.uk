@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marrow - GOLDLEVEL</title>
+  <meta name="description" content="Marrow by Toms Jansons. The Pre-Form Architecture: a short illustrated fable of source, stone, and remembrance.">
+  <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
+  <link rel="stylesheet" href="/assets/top12/top12.css">
+  <style>
+    body { min-height: 100vh; }
+    .marrow-wrap { min-height: 100vh; display: grid; place-items: center; padding: clamp(24px, 6vw, 76px) 18px; }
+    .marrow-shell { width: min(1180px, 100%); display: grid; grid-template-columns: minmax(260px, 520px) minmax(260px, 1fr); gap: clamp(24px, 5vw, 70px); align-items: center; }
+    .marrow-cover-link { display: block; color: inherit; text-decoration: none; }
+    .marrow-cover { width: 100%; display: block; border: 1px solid rgba(0,0,0,.1); box-shadow: 0 18px 70px rgba(0,0,0,.08); filter: grayscale(1); }
+    .marrow-kicker { letter-spacing: .18em; text-transform: uppercase; font-size: 12px; opacity: .64; margin: 0 0 14px; }
+    .marrow-title { font-size: clamp(58px, 13vw, 160px); line-height: .78; letter-spacing: -.075em; margin: 0; text-wrap: balance; }
+    .marrow-subtitle { font-size: clamp(20px, 3vw, 38px); line-height: 1.02; letter-spacing: -.035em; margin: 18px 0 0; max-width: 620px; }
+    .marrow-copy { max-width: 640px; margin: 24px 0 0; font-size: clamp(16px, 2vw, 21px); line-height: 1.5; opacity: .78; }
+    .marrow-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+    .marrow-button { border: 1px solid currentColor; padding: 13px 16px; text-decoration: none; color: inherit; line-height: 1; }
+    .marrow-button.secondary { opacity: .72; }
+    .marrow-meta { margin-top: 24px; font-size: 13px; line-height: 1.5; opacity: .62; }
+    .marrow-nav { margin-top: 34px; display: flex; gap: 18px; flex-wrap: wrap; }
+    .marrow-nav a { color: inherit; opacity: .74; }
+    @media (max-width: 860px) {
+      .marrow-wrap { place-items: start center; }
+      .marrow-shell { grid-template-columns: 1fr; gap: 28px; }
+      .marrow-cover-link { width: min(420px, 100%); margin: 0 auto; }
+      .marrow-title, .marrow-subtitle, .marrow-copy, .marrow-meta { text-align: center; margin-left: auto; margin-right: auto; }
+      .marrow-actions, .marrow-nav { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="marrow-wrap">
+    <article class="marrow-shell" aria-labelledby="marrow-title">
+      <a class="marrow-cover-link" href="/downloads/marrow/Marrow_by_Toms_Jansons.pdf" download aria-label="Download Marrow by Toms Jansons as PDF">
+        <img class="marrow-cover" src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover showing a seated figure facing a luminous mountain valley">
+      </a>
+      <section>
+        <p class="marrow-kicker">GOLDLEVEL Publishing / Story-Vessel Edition</p>
+        <h1 id="marrow-title" class="marrow-title">MARROW</h1>
+        <p class="marrow-subtitle">The Pre-Form Architecture</p>
+        <p class="marrow-copy">A short illustrated fable of source, stone, and remembrance. The book opens from the cover image into a downloadable PDF vessel.</p>
+        <div class="marrow-actions" aria-label="Marrow actions">
+          <a class="marrow-button" href="/downloads/marrow/Marrow_by_Toms_Jansons.pdf" download>Download PDF</a>
+          <a class="marrow-button secondary" href="/downloads/marrow/Marrow_by_Toms_Jansons.pdf">Open PDF</a>
+        </div>
+        <p class="marrow-meta">Toms Jansons. Published: 10.08.2026. The inner substance that carries form forward.</p>
+        <nav class="marrow-nav" aria-label="Portfolio navigation">
+          <a href="/portfolio/">Portfolio</a>
+          <a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a>
+          <a href="/">Home</a>
+        </nav>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
