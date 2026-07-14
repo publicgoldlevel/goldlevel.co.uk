@@ -26,11 +26,7 @@
       padding:clamp(28px,5vw,64px) 20px 76px;
     }
     .portfolio-top{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) minmax(220px,300px);
-      gap:clamp(22px,5vw,60px);
-      align-items:end;
-      margin-bottom:32px;
+      margin-bottom:34px;
     }
     .eyebrow{
       text-transform:uppercase;
@@ -45,54 +41,17 @@
       margin:14px 0 18px;
     }
     .lead{
-      max-width:760px;
+      max-width:790px;
       color:var(--muted);
       font-size:clamp(17px,2vw,23px);
       line-height:1.38;
       margin:0;
     }
-    .portfolio-rail{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.35);
-      padding:14px;
-    }
-    .rail-title{
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      color:var(--muted);
-      margin:0 0 12px;
-    }
-    .rail-list{
-      display:grid;
-      gap:8px;
-      margin:0;
-      padding:0;
-      list-style:none;
-      counter-reset:portfolio;
-    }
-    .rail-list a{
-      display:flex;
-      justify-content:space-between;
-      gap:12px;
-      color:var(--ink);
-      text-decoration:none;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:9px 12px;
-      background:rgba(255,255,255,.42);
-      font-size:13px;
-    }
-    .rail-list a::before{
-      counter-increment:portfolio;
-      content:"0" counter(portfolio);
-      color:var(--muted);
-      font-variant-numeric:tabular-nums;
-    }
     .portfolio-grid{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
       gap:20px;
+      align-items:stretch;
     }
     .card{
       display:flex;
@@ -109,13 +68,74 @@
       transform:translateY(-2px);
       background:rgba(255,255,255,.68);
     }
-    .card img{
+    .card-media{
       width:100%;
       aspect-ratio:3/4;
-      object-fit:cover;
       display:block;
       background:#fff;
       margin-bottom:16px;
+      border:1px solid rgba(24,32,42,.08);
+      box-sizing:border-box;
+      overflow:hidden;
+    }
+    .card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    .archive-placeholder{
+      height:100%;
+      display:grid;
+      place-items:center;
+      background:
+        linear-gradient(135deg, rgba(24,32,42,.06), rgba(255,255,255,.64)),
+        repeating-linear-gradient(
+          0deg,
+          rgba(24,32,42,.08) 0,
+          rgba(24,32,42,.08) 1px,
+          transparent 1px,
+          transparent 22px
+        );
+      position:relative;
+    }
+    .archive-placeholder::before{
+      content:"";
+      position:absolute;
+      inset:28px;
+      border:1px solid rgba(24,32,42,.18);
+    }
+    .archive-placeholder-inner{
+      position:relative;
+      z-index:1;
+      display:grid;
+      gap:12px;
+      text-align:center;
+      width:min(72%,260px);
+    }
+    .archive-mark{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin:0 auto;
+      width:120px;
+    }
+    .archive-mark span{
+      aspect-ratio:1;
+      border:1px solid rgba(24,32,42,.28);
+      background:rgba(255,255,255,.42);
+    }
+    .archive-placeholder-title{
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(26px,4vw,40px);
+      line-height:.92;
+      letter-spacing:-.045em;
+    }
+    .archive-placeholder-sub{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
     }
     .card .number{
       font-size:12px;
@@ -144,31 +164,38 @@
       text-transform:uppercase;
       letter-spacing:.14em;
     }
-    .back-row{
-      margin-top:30px;
+    .footer-return{
+      margin-top:38px;
+      padding-top:26px;
+      border-top:1px solid var(--line);
       display:flex;
-      gap:12px;
-      flex-wrap:wrap;
+      justify-content:center;
     }
-    .back-row a{
+    .footer-return a{
       color:inherit;
       text-decoration:none;
       border:1px solid var(--line);
       border-radius:999px;
-      padding:10px 14px;
+      padding:11px 16px;
       background:rgba(255,255,255,.35);
+      font-size:14px;
+    }
+    .footer-return a:hover{
+      background:rgba(255,255,255,.68);
     }
     @media (max-width: 920px){
-      .portfolio-top{
-        grid-template-columns:1fr;
-      }
       .portfolio-grid{
         grid-template-columns:1fr;
       }
-      .card img{
+      .card-media{
         aspect-ratio:auto;
-        max-height:none;
+      }
+      .card img{
+        height:auto;
         object-fit:contain;
+      }
+      .archive-placeholder{
+        min-height:420px;
       }
     }
   </style>
@@ -176,25 +203,16 @@
 <body>
   <main class="portfolio-shell">
     <header class="portfolio-top">
-      <div>
-        <div class="eyebrow">Goldlevel portfolio</div>
-        <h1>Portfolio</h1>
-        <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The archive lane holds multiple thematic sets as they are added over time.</p>
-      </div>
-
-      <nav class="portfolio-rail" aria-label="Portfolio selection">
-        <p class="rail-title">Select</p>
-        <ol class="rail-list">
-          <li><a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a></li>
-          <li><a href="/portfolio/marrow/">Marrow</a></li>
-          <li><a href="/portfolio/archive/">Portfolio Archive</a></li>
-        </ol>
-      </nav>
+      <div class="eyebrow">Goldlevel portfolio</div>
+      <h1>Portfolio</h1>
+      <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The archive lane holds multiple thematic sets as they are added over time.</p>
     </header>
 
     <section class="portfolio-grid" aria-label="Portfolio entries">
       <a class="card" href="/portfolio/top-12-dispatch/">
-        <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels">
+        <span class="card-media">
+          <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels">
+        </span>
         <span class="number">01 / Portfolio selection</span>
         <h2>Top 12 Dispatch</h2>
         <p>A compact public-facing portfolio selection for reporting, systems literacy, and original visual analysis.</p>
@@ -202,7 +220,9 @@
       </a>
 
       <a class="card" href="/portfolio/marrow/">
-        <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover">
+        <span class="card-media">
+          <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover">
+        </span>
         <span class="number">02 / Book landing</span>
         <h2>Marrow</h2>
         <p>The Pre-Form Architecture — a short illustrated fable of source, stone, and remembrance.</p>
@@ -210,18 +230,27 @@
       </a>
 
       <a class="card" href="/portfolio/archive/">
-        <img src="/assets/portfolio/archive/authority-disappears-into-systems/06-standalone-overview.png" alt="Portfolio archive cover showing When Authority Disappears Into Systems overview">
+        <span class="card-media archive-placeholder" aria-hidden="true">
+          <span class="archive-placeholder-inner">
+            <span class="archive-mark">
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+              <span></span><span></span><span></span>
+            </span>
+            <span class="archive-placeholder-title">Archive</span>
+            <span class="archive-placeholder-sub">Series index</span>
+          </span>
+        </span>
         <span class="number">03 / Archive branch</span>
         <h2>Portfolio Archive</h2>
-        <p>Multiple visual series and thematic field maps, beginning with When Authority Disappears Into Systems.</p>
+        <p>Multiple visual series and thematic field maps. Open the archive to choose a specific series.</p>
         <span class="meta">Open archive</span>
       </a>
     </section>
 
-    <div class="back-row">
-      <a href="/">Home</a>
-      <a href="/portfolio/archive/authority-disappears-into-systems/">Latest archive series</a>
-    </div>
+    <footer class="footer-return">
+      <a href="/">Return Home</a>
+    </footer>
   </main>
 </body>
 </html>
