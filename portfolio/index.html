@@ -1,61 +1,227 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio - GOLDLEVEL</title>
-  <meta name="description" content="GOLDLEVEL portfolio index: public writing, visual systems, and book landing pages.">
-  <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — Goldlevel</title>
+  <meta name="description" content="Goldlevel portfolio: Top 12 Dispatch, Marrow, and portfolio archive series.">
   <link rel="stylesheet" href="/assets/top12/top12.css">
   <style>
-    body { min-height: 100vh; }
-    .gl-portfolio-wrap { min-height: 100vh; display: grid; place-items: center; padding: clamp(28px, 6vw, 80px) 18px; }
-    .gl-portfolio-inner { width: min(1120px, 100%); margin: 0 auto; }
-    .gl-portfolio-kicker { letter-spacing: .18em; text-transform: uppercase; font-size: 12px; opacity: .68; margin: 0 0 14px; }
-    .gl-portfolio-title { font-size: clamp(42px, 11vw, 112px); line-height: .86; letter-spacing: -.065em; margin: 0; text-wrap: balance; }
-    .gl-portfolio-sub { max-width: 760px; margin: 18px 0 38px; font-size: clamp(16px, 2.2vw, 22px); line-height: 1.45; opacity: .78; }
-    .gl-portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 3vw, 28px); }
-    .gl-portfolio-card { display: grid; gap: 14px; text-decoration: none; color: inherit; border: 1px solid rgba(0,0,0,.12); padding: clamp(16px, 2.5vw, 26px); background: rgba(255,255,255,.64); }
-    .gl-portfolio-card img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; filter: grayscale(1); }
-    .gl-portfolio-card-title { font-size: clamp(22px, 3vw, 34px); line-height: 1; letter-spacing: -.035em; margin: 0; }
-    .gl-portfolio-card-text { margin: 0; line-height: 1.45; opacity: .74; }
-    .gl-portfolio-home { display: inline-block; margin-top: 34px; color: inherit; opacity: .72; }
-    @media (max-width: 760px) { .gl-portfolio-grid { grid-template-columns: 1fr; } .gl-portfolio-wrap { place-items: start center; } }
+    :root{
+      --paper:#f4f2ed;
+      --ink:#18202a;
+      --muted:#5d6570;
+      --line:rgba(24,32,42,.16);
+      --panel:rgba(255,255,255,.48);
+    }
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .portfolio-shell{
+      max-width:1180px;
+      margin:0 auto;
+      padding:clamp(28px,5vw,64px) 20px 76px;
+    }
+    .portfolio-top{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) minmax(220px,300px);
+      gap:clamp(22px,5vw,60px);
+      align-items:end;
+      margin-bottom:32px;
+    }
+    .eyebrow{
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      color:var(--muted);
+      font-size:12px;
+    }
+    h1{
+      font-size:clamp(48px,9vw,108px);
+      line-height:.88;
+      letter-spacing:-.07em;
+      margin:14px 0 18px;
+    }
+    .lead{
+      max-width:760px;
+      color:var(--muted);
+      font-size:clamp(17px,2vw,23px);
+      line-height:1.38;
+      margin:0;
+    }
+    .portfolio-rail{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.35);
+      padding:14px;
+    }
+    .rail-title{
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+      color:var(--muted);
+      margin:0 0 12px;
+    }
+    .rail-list{
+      display:grid;
+      gap:8px;
+      margin:0;
+      padding:0;
+      list-style:none;
+      counter-reset:portfolio;
+    }
+    .rail-list a{
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      color:var(--ink);
+      text-decoration:none;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:9px 12px;
+      background:rgba(255,255,255,.42);
+      font-size:13px;
+    }
+    .rail-list a::before{
+      counter-increment:portfolio;
+      content:"0" counter(portfolio);
+      color:var(--muted);
+      font-variant-numeric:tabular-nums;
+    }
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:20px;
+    }
+    .card{
+      display:flex;
+      flex-direction:column;
+      min-height:100%;
+      color:inherit;
+      text-decoration:none;
+      border:1px solid var(--line);
+      background:var(--panel);
+      padding:14px;
+      transition:transform .16s ease, background .16s ease;
+    }
+    .card:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.68);
+    }
+    .card img{
+      width:100%;
+      aspect-ratio:3/4;
+      object-fit:cover;
+      display:block;
+      background:#fff;
+      margin-bottom:16px;
+    }
+    .card .number{
+      font-size:12px;
+      color:var(--muted);
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+    .card h2{
+      font-size:clamp(25px,3vw,38px);
+      line-height:.96;
+      letter-spacing:-.045em;
+      margin:0 0 10px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.45;
+      font-size:15px;
+    }
+    .card .meta{
+      margin-top:auto;
+      padding-top:20px;
+      color:var(--muted);
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+    }
+    .back-row{
+      margin-top:30px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .back-row a{
+      color:inherit;
+      text-decoration:none;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:10px 14px;
+      background:rgba(255,255,255,.35);
+    }
+    @media (max-width: 920px){
+      .portfolio-top{
+        grid-template-columns:1fr;
+      }
+      .portfolio-grid{
+        grid-template-columns:1fr;
+      }
+      .card img{
+        aspect-ratio:auto;
+        max-height:none;
+        object-fit:contain;
+      }
+    }
   </style>
 </head>
 <body>
-  <main class="gl-portfolio-wrap">
-    <section class="gl-portfolio-inner" aria-labelledby="portfolio-title">
-      <p class="gl-portfolio-kicker">GOLDLEVEL / Portfolio</p>
-      <h1 id="portfolio-title" class="gl-portfolio-title">Portfolio</h1>
-      <p class="gl-portfolio-sub">Selected public work, visual systems, and book vessels gathered into a single active surface.</p>
-      <div class="gl-portfolio-grid">
-        <a class="gl-portfolio-card" href="/portfolio/top-12-dispatch/">
-        <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels" loading="lazy">
-
-          <div>
-            <h2 class="gl-portfolio-card-title">Top 12 Dispatch</h2>
-            <p class="gl-portfolio-card-text">A compact public-facing portfolio selection for reporting, systems literacy, and original visual analysis.</p>
-          </div>
-        </a>
-        <a class="gl-portfolio-card" href="/portfolio/marrow/">
-          <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover by Toms Jansons">
-          <div>
-            <h2 class="gl-portfolio-card-title">Marrow</h2>
-            <p class="gl-portfolio-card-text">The Pre-Form Architecture - a short illustrated fable of source, stone, and remembrance.</p>
-          </div>
-        </a>
+  <main class="portfolio-shell">
+    <header class="portfolio-top">
+      <div>
+        <div class="eyebrow">Goldlevel portfolio</div>
+        <h1>Portfolio</h1>
+        <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The archive lane holds multiple thematic sets as they are added over time.</p>
       </div>
-      <a class="gl-portfolio-home" href="/">Return home</a>
-    
-      <a class="card" href="/portfolio/archive/authority-disappears-into-systems/">
-        <img src="/assets/portfolio/archive/authority-disappears-into-systems/06-standalone-overview.png" alt="When Authority Disappears Into Systems portfolio archive cover">
-        <h2>Authority Disappears Into Systems</h2>
-        <p>A six-image visual field map on delegated authority, classification, governance gaps, and human consequence.</p>
+
+      <nav class="portfolio-rail" aria-label="Portfolio selection">
+        <p class="rail-title">Select</p>
+        <ol class="rail-list">
+          <li><a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a></li>
+          <li><a href="/portfolio/marrow/">Marrow</a></li>
+          <li><a href="/portfolio/archive/">Portfolio Archive</a></li>
+        </ol>
+      </nav>
+    </header>
+
+    <section class="portfolio-grid" aria-label="Portfolio entries">
+      <a class="card" href="/portfolio/top-12-dispatch/">
+        <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels">
+        <span class="number">01 / Portfolio selection</span>
+        <h2>Top 12 Dispatch</h2>
+        <p>A compact public-facing portfolio selection for reporting, systems literacy, and original visual analysis.</p>
+        <span class="meta">Open selection</span>
       </a>
 
+      <a class="card" href="/portfolio/marrow/">
+        <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover">
+        <span class="number">02 / Book landing</span>
+        <h2>Marrow</h2>
+        <p>The Pre-Form Architecture — a short illustrated fable of source, stone, and remembrance.</p>
+        <span class="meta">Open book page</span>
+      </a>
+
+      <a class="card" href="/portfolio/archive/">
+        <img src="/assets/portfolio/archive/authority-disappears-into-systems/06-standalone-overview.png" alt="Portfolio archive cover showing When Authority Disappears Into Systems overview">
+        <span class="number">03 / Archive branch</span>
+        <h2>Portfolio Archive</h2>
+        <p>Multiple visual series and thematic field maps, beginning with When Authority Disappears Into Systems.</p>
+        <span class="meta">Open archive</span>
+      </a>
     </section>
+
+    <div class="back-row">
+      <a href="/">Home</a>
+      <a href="/portfolio/archive/authority-disappears-into-systems/">Latest archive series</a>
+    </div>
   </main>
 </body>
 </html>
-
