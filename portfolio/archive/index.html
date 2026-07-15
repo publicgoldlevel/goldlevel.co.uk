@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Portfolio Archive — Goldlevel</title>
-  <meta name="description" content="Goldlevel Portfolio Archive: visual sequences, field maps, and thematic series.">
+  <meta name="description" content="Goldlevel Portfolio Archive: visual sequences, field maps, and thematic archive series.">
   <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
   <link rel="stylesheet" href="/assets/top12/top12.css">
   <style>
@@ -21,56 +21,100 @@
       color:var(--ink);
       font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     }
-    .archive-overview{
-      min-height:100vh;
+    .archive-shell{
+      min-height:100svh;
+      display:grid;
+      grid-template-columns:minmax(230px,300px) minmax(0,1fr);
+    }
+    .archive-rail{
+      border-right:1px solid var(--line);
+      padding:28px 20px;
+      position:sticky;
+      top:0;
+      height:100svh;
+      background:rgba(244,242,237,.92);
+      box-sizing:border-box;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .archive-rail a{
+      color:inherit;
+      text-decoration:none;
+    }
+    .rail-kicker{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+    .rail-title{
+      font-size:24px;
+      line-height:1.05;
+      letter-spacing:-.03em;
+      margin:0 0 12px;
+    }
+    .rail-copy{
+      font-size:14px;
+      line-height:1.45;
+      color:var(--muted);
+      margin:0 0 24px;
+    }
+    .rail-list{
+      display:grid;
+      gap:8px;
+      margin-top:22px;
+    }
+    .rail-list a{
+      display:block;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:9px 12px;
+      font-size:13px;
+      color:var(--muted);
+      background:rgba(255,255,255,.35);
+    }
+    .rail-list a:hover{
+      color:var(--ink);
+      background:rgba(255,255,255,.7);
+    }
+    .archive-main{
+      min-height:100svh;
       box-sizing:border-box;
       display:grid;
       align-content:center;
-      max-width:1280px;
-      margin:0 auto;
-      padding:clamp(24px,5vw,64px) 20px;
+      padding:clamp(24px,4vw,56px);
     }
-    .overview-head{
-      display:grid;
-      grid-template-columns:minmax(0,1fr) auto;
-      gap:24px;
-      align-items:end;
-      margin-bottom:clamp(22px,4vw,42px);
+    .archive-header{
+      max-width:980px;
+      margin:0 0 clamp(20px,3vw,34px);
     }
-    .eyebrow{
+    .archive-header .eyebrow{
+      font-size:12px;
       text-transform:uppercase;
       letter-spacing:.18em;
       color:var(--muted);
-      font-size:12px;
     }
-    h1{
-      font-size:clamp(44px,8vw,104px);
-      line-height:.88;
-      letter-spacing:-.07em;
-      margin:14px 0 16px;
+    .archive-header h1{
+      margin:10px 0 12px;
+      font-size:clamp(42px,7vw,92px);
+      line-height:.9;
+      letter-spacing:-.065em;
     }
-    .lead{
-      max-width:780px;
+    .archive-header p{
+      max-width:790px;
       color:var(--muted);
-      font-size:clamp(16px,2vw,23px);
+      font-size:clamp(16px,2vw,22px);
       line-height:1.38;
       margin:0;
     }
-    .home-return{
-      color:inherit;
-      text-decoration:none;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:10px 14px;
-      background:rgba(255,255,255,.36);
-      white-space:nowrap;
-      font-size:14px;
-    }
     .archive-grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));
+      grid-template-columns:repeat(2,minmax(0,1fr));
       gap:clamp(14px,2vw,22px);
       align-items:stretch;
+      max-width:1040px;
     }
     .archive-card{
       display:flex;
@@ -80,7 +124,7 @@
       border:1px solid var(--line);
       background:var(--panel);
       padding:14px;
-      min-height:100%;
+      min-height:0;
       transition:transform .16s ease,background .16s ease;
     }
     .archive-card:hover{
@@ -89,18 +133,19 @@
     }
     .archive-card-media{
       width:100%;
-      aspect-ratio:3/4;
+      height:clamp(210px,34svh,360px);
       background:#fff;
       border:1px solid rgba(24,32,42,.08);
       box-sizing:border-box;
       overflow:hidden;
       margin-bottom:16px;
-      display:block;
+      display:grid;
+      place-items:center;
     }
     .archive-card-media img{
       width:100%;
       height:100%;
-      object-fit:cover;
+      object-fit:contain;
       display:block;
     }
     .archive-card .number{
@@ -124,18 +169,18 @@
     }
     .archive-card .meta{
       margin-top:auto;
-      padding-top:20px;
+      padding-top:18px;
       color:var(--muted);
       font-size:12px;
       text-transform:uppercase;
       letter-spacing:.14em;
     }
     .archive-footer{
-      margin-top:clamp(26px,4vw,44px);
-      padding-top:22px;
+      margin-top:clamp(22px,3vw,34px);
+      padding-top:18px;
       border-top:1px solid var(--line);
       display:flex;
-      justify-content:center;
+      justify-content:flex-start;
       gap:12px;
       flex-wrap:wrap;
     }
@@ -147,63 +192,89 @@
       padding:10px 14px;
       background:rgba(255,255,255,.35);
     }
-    @media (max-width:780px){
-      .archive-overview{
+    @media (max-width:920px){
+      .archive-shell{
+        display:block;
+      }
+      .archive-rail{
+        position:static;
+        height:auto;
+        border-right:0;
+        border-bottom:1px solid var(--line);
+        justify-content:flex-start;
+      }
+      .archive-main{
+        min-height:auto;
         align-content:start;
       }
-      .overview-head{
+      .archive-grid{
         grid-template-columns:1fr;
       }
-      .home-return{
-        width:max-content;
-      }
       .archive-card-media{
-        aspect-ratio:auto;
+        height:clamp(240px,46svh,520px);
       }
-      .archive-card-media img{
-        height:auto;
-        object-fit:contain;
+    }
+    @media (max-height:760px) and (min-width:921px){
+      .archive-card-media{
+        height:clamp(180px,28svh,300px);
+      }
+      .archive-header h1{
+        font-size:clamp(38px,6vw,72px);
+      }
+      .archive-header p{
+        font-size:16px;
       }
     }
   </style>
 </head>
 <body>
-  <main class="archive-overview">
-    <header class="overview-head">
-      <div>
+  <div class="archive-shell">
+    <aside class="archive-rail" aria-label="Portfolio archive navigation">
+      <a href="/portfolio/archive/" class="rail-kicker">Portfolio archive</a>
+      <h2 class="rail-title">Series index</h2>
+      <p class="rail-copy">Visual sequences, field maps, and thematic archive entries.</p>
+      <nav class="rail-list">
+        <a href="/portfolio/">Portfolio hub</a>
+        <a href="/portfolio/archive/">Archive index</a>
+        <a href="/portfolio/archive/authority-disappears-into-systems/">Authority disappears into systems</a>
+        <a href="/portfolio/archive/archive-set-12/">Archive Set 12</a>
+      </nav>
+    </aside>
+
+    <main class="archive-main">
+      <header class="archive-header">
         <div class="eyebrow">Goldlevel portfolio</div>
         <h1>Portfolio Archive</h1>
-        <p class="lead">A responsive overview of visual sequences, field maps, and thematic archive series. Each tile opens a separate sequence page.</p>
-      </div>
-      <a class="home-return" href="/portfolio/">Portfolio hub</a>
-    </header>
+        <p>Visual sequences, field maps, and thematic archive series. Each tile opens a separate sequence page.</p>
+      </header>
 
-    <section class="archive-grid" aria-label="Archive series">
-      <a class="archive-card" href="/portfolio/archive/authority-disappears-into-systems/">
-        <span class="archive-card-media">
-          <img src="/assets/portfolio/archive/authority-disappears-into-systems/06-standalone-overview.png" alt="When Authority Disappears Into Systems archive cover">
-        </span>
-        <span class="number">01 / Archive series</span>
-        <h2>When Authority Disappears Into Systems</h2>
-        <p>A six-image visual field map on delegated authority, classification, governance gaps, and human consequence.</p>
-        <span class="meta">Open series</span>
-      </a>
+      <section class="archive-grid" aria-label="Archive series overview">
+        <a class="archive-card" href="/portfolio/archive/authority-disappears-into-systems/">
+          <span class="archive-card-media">
+            <img src="/assets/portfolio/archive/authority-disappears-into-systems/06-standalone-overview.png" alt="When Authority Disappears Into Systems archive cover">
+          </span>
+          <span class="number">01 / Archive series</span>
+          <h2>When Authority Disappears Into Systems</h2>
+          <p>Six images on delegation, classification, governance gaps, and human consequence.</p>
+          <span class="meta">Open series</span>
+        </a>
 
-      <a class="archive-card" href="/portfolio/archive/archive-set-12/">
-        <span class="archive-card-media">
-          <img src="/assets/portfolio/archive/archive-set-12/01-chatgpt-image-jul-15-2026-11-56-25-pm.png" alt="Archive Set 12 cover image">
-        </span>
-        <span class="number">02 / Archive series</span>
-        <h2>Archive Set 12</h2>
-        <p>A twelve-image archive sequence ordered from 01 to 12 and published as its own standalone series page.</p>
-        <span class="meta">Open series</span>
-      </a>
-    </section>
+        <a class="archive-card" href="/portfolio/archive/archive-set-12/">
+          <span class="archive-card-media">
+            <img src="/assets/portfolio/archive/archive-set-12/01-chatgpt-image-jul-15-2026-11-56-25-pm.png" alt="Archive Set 12 cover image">
+          </span>
+          <span class="number">02 / Archive series</span>
+          <h2>Archive Set 12</h2>
+          <p>A twelve-image archive sequence ordered from 01 to 12 and published as its own standalone series page.</p>
+          <span class="meta">Open series</span>
+        </a>
+      </section>
 
-    <footer class="archive-footer">
-      <a href="/portfolio/">Back to portfolio</a>
-      <a href="/">Return Home</a>
-    </footer>
-  </main>
+      <footer class="archive-footer">
+        <a href="/portfolio/">Back to portfolio</a>
+        <a href="/">Return Home</a>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
