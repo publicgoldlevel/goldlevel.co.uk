@@ -1,10 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Portfolio — Goldlevel</title>
-  <meta name="description" content="Goldlevel portfolio: Top 12 Dispatch, Marrow, and portfolio archive series.">
+  <meta name="description" content="Goldlevel portfolio: Top 12 Dispatch, Marrow, Portfolio Archive, and archive series.">
+  <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
   <link rel="stylesheet" href="/assets/top12/top12.css">
   <style>
     :root{
@@ -21,12 +22,82 @@
       font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     }
     .portfolio-shell{
-      max-width:1180px;
-      margin:0 auto;
-      padding:clamp(28px,5vw,64px) 20px 76px;
+      min-height:100svh;
+      display:grid;
+      grid-template-columns:minmax(230px,300px) minmax(0,1fr);
     }
-    .portfolio-top{
-      margin-bottom:34px;
+    .portfolio-rail{
+      border-right:1px solid var(--line);
+      padding:28px 20px;
+      position:sticky;
+      top:0;
+      height:100svh;
+      background:rgba(244,242,237,.92);
+      box-sizing:border-box;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+    .portfolio-rail a{
+      color:inherit;
+      text-decoration:none;
+    }
+    .rail-kicker{
+      font-size:12px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:18px;
+    }
+    .rail-title{
+      font-size:24px;
+      line-height:1.05;
+      letter-spacing:-.03em;
+      margin:0 0 12px;
+    }
+    .rail-copy{
+      font-size:14px;
+      line-height:1.45;
+      color:var(--muted);
+      margin:0 0 24px;
+    }
+    .rail-section-label{
+      margin:22px 0 8px;
+      color:var(--muted);
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.16em;
+    }
+    .rail-list{
+      display:grid;
+      gap:8px;
+      margin:0;
+      padding:0;
+      list-style:none;
+    }
+    .rail-list a{
+      display:block;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:9px 12px;
+      font-size:13px;
+      color:var(--muted);
+      background:rgba(255,255,255,.35);
+    }
+    .rail-list a:hover{
+      color:var(--ink);
+      background:rgba(255,255,255,.7);
+    }
+    .portfolio-main{
+      min-height:100svh;
+      box-sizing:border-box;
+      display:grid;
+      align-content:center;
+      padding:clamp(24px,4vw,56px);
+    }
+    .portfolio-header{
+      max-width:980px;
+      margin:0 0 clamp(20px,3vw,34px);
     }
     .eyebrow{
       text-transform:uppercase;
@@ -35,34 +106,35 @@
       font-size:12px;
     }
     h1{
-      font-size:clamp(48px,9vw,108px);
-      line-height:.88;
-      letter-spacing:-.07em;
-      margin:14px 0 18px;
+      font-size:clamp(42px,7vw,92px);
+      line-height:.9;
+      letter-spacing:-.065em;
+      margin:10px 0 12px;
     }
     .lead{
       max-width:790px;
       color:var(--muted);
-      font-size:clamp(17px,2vw,23px);
+      font-size:clamp(16px,2vw,22px);
       line-height:1.38;
       margin:0;
     }
     .portfolio-grid{
       display:grid;
       grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:20px;
+      gap:clamp(14px,2vw,22px);
       align-items:stretch;
+      max-width:1160px;
     }
     .card{
       display:flex;
       flex-direction:column;
-      min-height:100%;
       color:inherit;
       text-decoration:none;
       border:1px solid var(--line);
       background:var(--panel);
       padding:14px;
-      transition:transform .16s ease, background .16s ease;
+      min-height:0;
+      transition:transform .16s ease,background .16s ease;
     }
     .card:hover{
       transform:translateY(-2px);
@@ -70,33 +142,29 @@
     }
     .card-media{
       width:100%;
-      aspect-ratio:3/4;
-      display:block;
+      height:clamp(210px,34svh,360px);
       background:#fff;
-      margin-bottom:16px;
       border:1px solid rgba(24,32,42,.08);
       box-sizing:border-box;
       overflow:hidden;
+      margin-bottom:16px;
+      display:grid;
+      place-items:center;
     }
-    .card img{
+    .card-media img{
       width:100%;
       height:100%;
-      object-fit:cover;
+      object-fit:contain;
       display:block;
     }
     .archive-placeholder{
       height:100%;
+      width:100%;
       display:grid;
       place-items:center;
       background:
         linear-gradient(135deg, rgba(24,32,42,.06), rgba(255,255,255,.64)),
-        repeating-linear-gradient(
-          0deg,
-          rgba(24,32,42,.08) 0,
-          rgba(24,32,42,.08) 1px,
-          transparent 1px,
-          transparent 22px
-        );
+        repeating-linear-gradient(0deg, rgba(24,32,42,.08) 0, rgba(24,32,42,.08) 1px, transparent 1px, transparent 22px);
       position:relative;
     }
     .archive-placeholder::before{
@@ -138,8 +206,8 @@
       color:var(--muted);
     }
     .card .number{
-      font-size:12px;
       color:var(--muted);
+      font-size:12px;
       letter-spacing:.14em;
       text-transform:uppercase;
       margin-bottom:10px;
@@ -151,106 +219,148 @@
       margin:0 0 10px;
     }
     .card p{
-      margin:0;
       color:var(--muted);
       line-height:1.45;
       font-size:15px;
+      margin:0;
     }
     .card .meta{
       margin-top:auto;
-      padding-top:20px;
+      padding-top:18px;
       color:var(--muted);
       font-size:12px;
       text-transform:uppercase;
       letter-spacing:.14em;
     }
-    .footer-return{
-      margin-top:38px;
-      padding-top:26px;
+    .portfolio-footer{
+      margin-top:clamp(22px,3vw,34px);
+      padding-top:18px;
       border-top:1px solid var(--line);
       display:flex;
-      justify-content:center;
+      justify-content:flex-start;
+      gap:12px;
+      flex-wrap:wrap;
     }
-    .footer-return a{
+    .portfolio-footer a{
       color:inherit;
       text-decoration:none;
       border:1px solid var(--line);
       border-radius:999px;
-      padding:11px 16px;
+      padding:10px 14px;
       background:rgba(255,255,255,.35);
-      font-size:14px;
     }
-    .footer-return a:hover{
-      background:rgba(255,255,255,.68);
+    @media (max-width:1080px){
+      .portfolio-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+      }
     }
-    @media (max-width: 920px){
+    @media (max-width:920px){
+      .portfolio-shell{
+        display:block;
+      }
+      .portfolio-rail{
+        position:static;
+        height:auto;
+        border-right:0;
+        border-bottom:1px solid var(--line);
+        justify-content:flex-start;
+      }
+      .portfolio-main{
+        min-height:auto;
+        align-content:start;
+      }
       .portfolio-grid{
         grid-template-columns:1fr;
       }
       .card-media{
-        aspect-ratio:auto;
+        height:clamp(240px,46svh,520px);
       }
-      .card img{
-        height:auto;
-        object-fit:contain;
+    }
+    @media (max-height:760px) and (min-width:921px){
+      .card-media{
+        height:clamp(180px,28svh,300px);
       }
-      .archive-placeholder{
-        min-height:420px;
+      h1{
+        font-size:clamp(38px,6vw,72px);
+      }
+      .lead{
+        font-size:16px;
       }
     }
   </style>
 </head>
 <body>
-  <main class="portfolio-shell">
-    <header class="portfolio-top">
-      <div class="eyebrow">Goldlevel portfolio</div>
-      <h1>Portfolio</h1>
-      <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The archive lane holds multiple thematic sets as they are added over time.</p>
-    </header>
+  <div class="portfolio-shell">
+    <aside class="portfolio-rail" aria-label="Portfolio side selector">
+      <a href="/portfolio/" class="rail-kicker">Portfolio</a>
+      <h2 class="rail-title">Select</h2>
+      <p class="rail-copy">Selected work, book-form pieces, and archive series from the Goldlevel public portfolio branch.</p>
 
-    <section class="portfolio-grid" aria-label="Portfolio entries">
-      <a class="card" href="/portfolio/top-12-dispatch/">
-        <span class="card-media">
-          <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels">
-        </span>
-        <span class="number">01 / Portfolio selection</span>
-        <h2>Top 12 Dispatch</h2>
-        <p>A compact public-facing portfolio selection for reporting, systems literacy, and original visual analysis.</p>
-        <span class="meta">Open selection</span>
-      </a>
+      <div class="rail-section-label">Primary</div>
+      <nav class="rail-list" aria-label="Primary portfolio entries">
+        <a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a>
+        <a href="/portfolio/marrow/">Marrow</a>
+        <a href="/portfolio/archive/">Portfolio Archive</a>
+      </nav>
 
-      <a class="card" href="/portfolio/marrow/">
-        <span class="card-media">
-          <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover">
-        </span>
-        <span class="number">02 / Book landing</span>
-        <h2>Marrow</h2>
-        <p>The Pre-Form Architecture — a short illustrated fable of source, stone, and remembrance.</p>
-        <span class="meta">Open book page</span>
-      </a>
+      <div class="rail-section-label">Archive series</div>
+      <nav class="rail-list" aria-label="Archive series entries">
+        <a href="/portfolio/archive/authority-disappears-into-systems/">Authority disappears into systems</a>
+        <a href="/portfolio/archive/archive-set-12/">Archive Set 12</a>
+      </nav>
+    </aside>
 
-      <a class="card" href="/portfolio/archive/">
-        <span class="card-media archive-placeholder" aria-hidden="true">
-          <span class="archive-placeholder-inner">
-            <span class="archive-mark">
-              <span></span><span></span><span></span>
-              <span></span><span></span><span></span>
-              <span></span><span></span><span></span>
-            </span>
-            <span class="archive-placeholder-title">Archive</span>
-            <span class="archive-placeholder-sub">Series index</span>
+    <main class="portfolio-main">
+      <header class="portfolio-header">
+        <div class="eyebrow">Goldlevel portfolio</div>
+        <h1>Portfolio</h1>
+        <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The side selector now exposes the full current portfolio structure.</p>
+      </header>
+
+      <section class="portfolio-grid" aria-label="Portfolio entries">
+        <a class="card" href="/portfolio/top-12-dispatch/">
+          <span class="card-media">
+            <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels">
           </span>
-        </span>
-        <span class="number">03 / Archive branch</span>
-        <h2>Portfolio Archive</h2>
-        <p>Multiple visual series and thematic field maps. Open the archive to choose a specific series.</p>
-        <span class="meta">Open archive</span>
-      </a>
-    </section>
+          <span class="number">01 / Portfolio selection</span>
+          <h2>Top 12 Dispatch</h2>
+          <p>A compact public-facing portfolio selection for reporting, systems literacy, and original visual analysis.</p>
+          <span class="meta">Open selection</span>
+        </a>
 
-    <footer class="footer-return">
-      <a href="/">Return Home</a>
-    </footer>
-  </main>
+        <a class="card" href="/portfolio/marrow/">
+          <span class="card-media">
+            <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover">
+          </span>
+          <span class="number">02 / Book landing</span>
+          <h2>Marrow</h2>
+          <p>The Pre-Form Architecture — a short illustrated fable of source, stone, and remembrance.</p>
+          <span class="meta">Open book page</span>
+        </a>
+
+        <a class="card" href="/portfolio/archive/">
+          <span class="card-media archive-placeholder" aria-hidden="true">
+            <span class="archive-placeholder-inner">
+              <span class="archive-mark">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+              </span>
+              <span class="archive-placeholder-title">Archive</span>
+              <span class="archive-placeholder-sub">Series index</span>
+            </span>
+          </span>
+          <span class="number">03 / Archive branch</span>
+          <h2>Portfolio Archive</h2>
+          <p>Multiple visual series and thematic field maps. Open the archive to choose a specific series.</p>
+          <span class="meta">Open archive</span>
+        </a>
+      </section>
+
+      <footer class="portfolio-footer">
+        <a href="/">Return Home</a>
+      </footer>
+    </main>
+  </div>
 </body>
 </html>
