@@ -1,325 +1,49 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Portfolio — Goldlevel</title>
   <meta name="description" content="Goldlevel portfolio: Top 12 Dispatch, Marrow, Portfolio Archive, and archive series.">
-  <link rel="stylesheet" href="/assets/css/goldlevel-swiss-system.css">
-  <link rel="stylesheet" href="/assets/top12/top12.css">
+  <link rel="stylesheet" href="/assets/portfolio/archive/opencomicseries/opencomicseries.css">
   <style>
-    :root{
-      --paper:#f4f2ed;
-      --ink:#18202a;
-      --muted:#5d6570;
-      --line:rgba(24,32,42,.16);
-      --panel:rgba(255,255,255,.48);
-    }
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    .portfolio-shell{
-      min-height:100svh;
-      display:grid;
-      grid-template-columns:minmax(230px,300px) minmax(0,1fr);
-    }
-    .portfolio-rail{
-      border-right:1px solid var(--line);
-      padding:28px 20px;
-      position:sticky;
-      top:0;
-      height:100svh;
-      background:rgba(244,242,237,.92);
-      box-sizing:border-box;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-    .portfolio-rail a{
-      color:inherit;
-      text-decoration:none;
-    }
-    .rail-kicker{
-      font-size:12px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:var(--muted);
-      margin-bottom:18px;
-    }
-    .rail-title{
-      font-size:24px;
-      line-height:1.05;
-      letter-spacing:-.03em;
-      margin:0 0 12px;
-    }
-    .rail-copy{
-      font-size:14px;
-      line-height:1.45;
-      color:var(--muted);
-      margin:0 0 24px;
-    }
-    .rail-section-label{
-      margin:22px 0 8px;
-      color:var(--muted);
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-    }
-    .rail-list{
-      display:grid;
-      gap:8px;
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-    .rail-list a{
-      display:block;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:9px 12px;
-      font-size:13px;
-      color:var(--muted);
-      background:rgba(255,255,255,.35);
-    }
-    .rail-list a:hover{
-      color:var(--ink);
-      background:rgba(255,255,255,.7);
-    }
-    .portfolio-main{
-      min-height:100svh;
-      box-sizing:border-box;
-      display:grid;
-      align-content:center;
-      padding:clamp(24px,4vw,56px);
-    }
-    .portfolio-header{
-      max-width:980px;
-      margin:0 0 clamp(20px,3vw,34px);
-    }
-    .eyebrow{
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--muted);
-      font-size:12px;
-    }
-    h1{
-      font-size:clamp(42px,7vw,92px);
-      line-height:.9;
-      letter-spacing:-.065em;
-      margin:10px 0 12px;
-    }
-    .lead{
-      max-width:790px;
-      color:var(--muted);
-      font-size:clamp(16px,2vw,22px);
-      line-height:1.38;
-      margin:0;
-    }
-    .portfolio-grid{
-      display:grid;
-      grid-template-columns:repeat(3,minmax(0,1fr));
-      gap:clamp(14px,2vw,22px);
-      align-items:stretch;
-      max-width:1160px;
-    }
-    .card{
-      display:flex;
-      flex-direction:column;
-      color:inherit;
-      text-decoration:none;
-      border:1px solid var(--line);
-      background:var(--panel);
-      padding:14px;
-      min-height:0;
-      transition:transform .16s ease,background .16s ease;
-    }
-    .card:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.68);
-    }
-    .card-media{
-      width:100%;
-      height:clamp(210px,34svh,360px);
-      background:#fff;
-      border:1px solid rgba(24,32,42,.08);
-      box-sizing:border-box;
-      overflow:hidden;
-      margin-bottom:16px;
-      display:grid;
-      place-items:center;
-    }
-    .card-media img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      display:block;
-    }
-    .archive-placeholder{
-      height:100%;
-      width:100%;
-      display:grid;
-      place-items:center;
-      background:
-        linear-gradient(135deg, rgba(24,32,42,.06), rgba(255,255,255,.64)),
-        repeating-linear-gradient(0deg, rgba(24,32,42,.08) 0, rgba(24,32,42,.08) 1px, transparent 1px, transparent 22px);
-      position:relative;
-    }
-    .archive-placeholder::before{
-      content:"";
-      position:absolute;
-      inset:28px;
-      border:1px solid rgba(24,32,42,.18);
-    }
-    .archive-placeholder-inner{
-      position:relative;
-      z-index:1;
-      display:grid;
-      gap:12px;
-      text-align:center;
-      width:min(72%,260px);
-    }
-    .archive-mark{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:8px;
-      margin:0 auto;
-      width:120px;
-    }
-    .archive-mark span{
-      aspect-ratio:1;
-      border:1px solid rgba(24,32,42,.28);
-      background:rgba(255,255,255,.42);
-    }
-    .archive-placeholder-title{
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:clamp(26px,4vw,40px);
-      line-height:.92;
-      letter-spacing:-.045em;
-    }
-    .archive-placeholder-sub{
-      font-size:11px;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      color:var(--muted);
-    }
-    .card .number{
-      color:var(--muted);
-      font-size:12px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:10px;
-    }
-    .card h2{
-      font-size:clamp(25px,3vw,38px);
-      line-height:.96;
-      letter-spacing:-.045em;
-      margin:0 0 10px;
-    }
-    .card p{
-      color:var(--muted);
-      line-height:1.45;
-      font-size:15px;
-      margin:0;
-    }
-    .card .meta{
-      margin-top:auto;
-      padding-top:18px;
-      color:var(--muted);
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-    }
-    .portfolio-footer{
-      margin-top:clamp(22px,3vw,34px);
-      padding-top:18px;
-      border-top:1px solid var(--line);
-      display:flex;
-      justify-content:flex-start;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .portfolio-footer a{
-      color:inherit;
-      text-decoration:none;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:10px 14px;
-      background:rgba(255,255,255,.35);
-    }
-    @media (max-width:1080px){
-      .portfolio-grid{
-        grid-template-columns:repeat(2,minmax(0,1fr));
-      }
-    }
-    @media (max-width:920px){
-      .portfolio-shell{
-        display:block;
-      }
-      .portfolio-rail{
-        position:static;
-        height:auto;
-        border-right:0;
-        border-bottom:1px solid var(--line);
-        justify-content:flex-start;
-      }
-      .portfolio-main{
-        min-height:auto;
-        align-content:start;
-      }
-      .portfolio-grid{
-        grid-template-columns:1fr;
-      }
-      .card-media{
-        height:clamp(240px,46svh,520px);
-      }
-    }
-    @media (max-height:760px) and (min-width:921px){
-      .card-media{
-        height:clamp(180px,28svh,300px);
-      }
-      h1{
-        font-size:clamp(38px,6vw,72px);
-      }
-      .lead{
-        font-size:16px;
-      }
-    }
+
+    html{scroll-behavior:smooth}
+    .portfolio-main{padding-bottom:1rem}
+    .portfolio-header{padding:3.25rem 0 2.25rem;border-bottom:2px solid var(--ink)}
+    .portfolio-header h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.12;margin:.2rem 0 1rem}
+    .portfolio-header .eyebrow{margin:0}
+    .lead{font-size:1.15rem;max-width:62ch;color:var(--ink-soft);margin:0}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;padding:2.25rem 0 1rem}
+    .portfolio-grid .card{display:flex;flex-direction:column;color:inherit;text-decoration:none;background:var(--card);border:1px solid var(--rule);border-radius:4px;overflow:hidden;padding:1rem;scroll-margin-top:1rem}
+    .card-media{width:100%;height:clamp(220px,34svh,380px);background:#fff;border:1px solid var(--rule);overflow:hidden;margin-bottom:1rem;display:grid;place-items:center}
+    .card-media img{width:100%;height:100%;object-fit:contain;display:block;aspect-ratio:auto}
+    .archive-placeholder{background:linear-gradient(135deg,rgba(26,30,35,.06),rgba(255,255,255,.74)),repeating-linear-gradient(0deg,rgba(26,30,35,.08) 0,rgba(26,30,35,.08) 1px,transparent 1px,transparent 22px);position:relative}
+    .archive-placeholder::before{content:"";position:absolute;inset:28px;border:1px solid var(--rule)}
+    .archive-placeholder-inner{position:relative;z-index:1;display:grid;gap:12px;text-align:center;width:min(72%,260px)}
+    .archive-mark{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 auto;width:120px}
+    .archive-mark span{aspect-ratio:1;border:1px solid var(--rule);background:rgba(255,255,255,.55)}
+    .archive-placeholder-title{font-family:var(--serif);font-size:clamp(2rem,4vw,2.8rem);line-height:.92;letter-spacing:-.035em}
+    .archive-placeholder-sub,.card .number,.card .meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+    .card .number{margin-bottom:.65rem;color:var(--bronze)}
+    .portfolio-grid .card h2{font-family:var(--serif);font-weight:600;font-size:1.35rem;line-height:1.2;margin:0 0 .55rem}
+    .portfolio-grid .card p{color:var(--ink-soft);font-size:.92rem;line-height:1.5;margin:0}
+    .card .meta{margin-top:auto;padding-top:1.1rem}
+    @media(max-width:900px){.portfolio-grid{grid-template-columns:1fr}.card-media{height:clamp(240px,46svh,520px)}}
   </style>
 </head>
 <body>
-  <div class="portfolio-shell">
-    <aside class="portfolio-rail" aria-label="Portfolio side selector">
-      <a href="/portfolio/" class="rail-kicker">Portfolio</a>
-      <h2 class="rail-title">Select</h2>
-      <p class="rail-copy">Selected work, book-form pieces, and archive series from the Goldlevel public portfolio branch.</p>
+<header class="site-head"><div class="wrap"><a class="wordmark" href="/">GOLD<span>LEVEL</span></a><p class="crumbs">portfolio</p></div></header>
 
-      <div class="rail-section-label">Primary</div>
-      <nav class="rail-list" aria-label="Primary portfolio entries">
-        <a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a>
-        <a href="/portfolio/marrow/">Marrow</a>
-        <a href="/portfolio/archive/">Portfolio Archive</a>
-      </nav>
-
-      <div class="rail-section-label">Archive series</div>
-      <nav class="rail-list" aria-label="Archive series entries">
-        <a href="/portfolio/archive/authority-disappears-into-systems/">Authority disappears into systems</a>
-        <a href="/portfolio/archive/archive-set-12/">Humanity at the Centre</a>
-        <a href="/portfolio/archive/when-scope-control-became-evidence/">When Scope Control Became Evidence</a>
-      </nav>
-    </aside>
-
-    <main class="portfolio-main">
+<main class="portfolio-main wrap">
       <header class="portfolio-header">
         <div class="eyebrow">Goldlevel portfolio</div>
         <h1>Portfolio</h1>
-        <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The side selector now exposes the full current portfolio structure.</p>
+        <p class="lead">A public-facing branch for selected reporting work, book-form pieces, and archive series. The footer selector exposes the full current portfolio structure.</p>
       </header>
 
       <section class="portfolio-grid" aria-label="Portfolio entries">
-        <a class="card" href="/portfolio/top-12-dispatch/">
+        <a class="card" id="portfolio-top-12" href="/portfolio/top-12-dispatch/">
           <span class="card-media">
             <img src="/assets/portfolio/top12dispatch.png" alt="Top 12 Dispatch cover image with Birmingham skyline and twelve reporting panels">
           </span>
@@ -329,7 +53,7 @@
           <span class="meta">Open selection</span>
         </a>
 
-        <a class="card" href="/portfolio/marrow/">
+        <a class="card" id="portfolio-marrow" href="/portfolio/marrow/">
           <span class="card-media">
             <img src="/assets/portfolio/marrow-cover.webp" alt="Marrow book cover">
           </span>
@@ -339,7 +63,7 @@
           <span class="meta">Open book page</span>
         </a>
 
-        <a class="card" href="/portfolio/archive/">
+        <a class="card" id="portfolio-archive" href="/portfolio/archive/">
           <span class="card-media archive-placeholder" aria-hidden="true">
             <span class="archive-placeholder-inner">
               <span class="archive-mark">
@@ -356,17 +80,51 @@
           <p>Multiple visual series and thematic field maps. Open the archive to choose a specific series.</p>
           <span class="meta">Open archive</span>
         </a>
-      </section>
+      </section></main>
 
-      <footer class="portfolio-footer">
-        <a href="/">Return Home</a>
-      </footer>
-    </main>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="footer-nav" aria-label="Portfolio footer navigation">
+      <section>
+        <h2>Portfolio</h2>
+        <ul>
+          <li><a href="/">Goldlevel home</a></li>
+          <li><a href="/portfolio/" aria-current="page">Portfolio hub</a></li>
+          <li><a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a></li>
+          <li><a href="/portfolio/marrow/">Marrow</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Archive</h2>
+        <ul>
+          <li><a href="/portfolio/archive/">Archive index</a></li>
+          <li><a href="/portfolio/archive/opencomicseries/">Open Comic Series</a></li>
+          <li><a href="/portfolio/archive/authority-disappears-into-systems/">Authority Into Systems</a></li>
+          <li><a href="/portfolio/archive/archive-set-12/">Humanity at the Centre</a></li>
+          <li><a href="/portfolio/archive/when-scope-control-became-evidence/">Scope Control</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Comic families</h2>
+        <ul>
+          <li><a href="/portfolio/archive/opencomicseries/evidence-that-holds/">Evidence That Holds</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Portfolio selector</h2>
+        <ul>
+          <li><a href="#portfolio-top-12">01 / Top 12 Dispatch</a></li>
+          <li><a href="#portfolio-marrow">02 / Marrow</a></li>
+          <li><a href="#portfolio-archive">03 / Portfolio Archive</a></li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <div class="receipt"><b>Goldlevel Portfolio</b><span>&middot;</span><span>public work selector</span><span>&middot;</span><span>goldlevel.co.uk</span></div>
+      <p>Editorial visual essays and conceptual systems maps. They make no legal, audit, or certification claims.</p>
+      <p>&copy; 2026 GOLDLEVEL</p>
+    </div>
   </div>
-<!-- portfolio-side-selector-refresh-20260716_004424 -->
+</footer>
 </body>
 </html>
-
-
-
-

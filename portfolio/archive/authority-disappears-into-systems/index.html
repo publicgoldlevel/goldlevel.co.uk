@@ -5,269 +5,39 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>When Authority Disappears Into Systems — Goldlevel Portfolio Archive</title>
   <meta name="description" content="A six-image visual field map on delegated authority, classification, governance gaps, and human consequence.">
-  <link rel="stylesheet" href="/assets/top12/top12.css">
+  <link rel="stylesheet" href="/assets/portfolio/archive/opencomicseries/opencomicseries.css">
   <style>
-    :root{
-      --paper:#f4f2ed;
-      --ink:#18202a;
-      --muted:#5d6570;
-      --line:rgba(24,32,42,.16);
-      --panel:rgba(255,255,255,.48);
-    }
-    body{
-      margin:0;
-      background:var(--paper);
-      color:var(--ink);
-      font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    }
-    .archive-shell{
-      min-height:100svh;
-      display:grid;
-      grid-template-columns:minmax(230px,300px) minmax(0,1fr);
-    }
-    .archive-rail{
-      border-right:1px solid var(--line);
-      padding:28px 20px;
-      position:sticky;
-      top:0;
-      height:100svh;
-      background:rgba(244,242,237,.94);
-      box-sizing:border-box;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-    .archive-rail a{color:inherit;text-decoration:none;}
-    .rail-kicker{
-      font-size:12px;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-      color:var(--muted);
-      margin-bottom:18px;
-    }
-    .rail-title{
-      font-size:24px;
-      line-height:1.05;
-      letter-spacing:-.03em;
-      margin:0 0 12px;
-    }
-    .rail-copy{
-      font-size:14px;
-      line-height:1.45;
-      color:var(--muted);
-      margin:0 0 24px;
-    }
-    .rail-list{
-      display:grid;
-      gap:8px;
-      margin-top:22px;
-    }
-    .rail-list a{
-      display:block;
-      border:1px solid var(--line);
-      border-radius:999px;
-      padding:9px 12px;
-      font-size:13px;
-      color:var(--muted);
-      background:rgba(255,255,255,.35);
-    }
-    .rail-list a:hover{
-      color:var(--ink);
-      background:rgba(255,255,255,.72);
-    }
-    .authority-main{
-      min-height:100svh;
-      box-sizing:border-box;
-      padding:clamp(24px,4vw,56px);
-    }
-    .authority-hero{
-      max-width:1160px;
-      display:grid;
-      grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);
-      gap:clamp(20px,4vw,48px);
-      align-items:end;
-      margin:0 0 clamp(24px,4vw,46px);
-    }
-    .eyebrow{
-      font-size:12px;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:var(--muted);
-    }
-    h1{
-      margin:10px 0 14px;
-      font-size:clamp(44px,7vw,104px);
-      line-height:.88;
-      letter-spacing:-.07em;
-    }
-    .lead{
-      max-width:760px;
-      color:var(--muted);
-      font-size:clamp(16px,2vw,22px);
-      line-height:1.38;
-      margin:0;
-    }
-    .hero-cover{
-      border:1px solid var(--line);
-      background:var(--panel);
-      padding:14px;
-    }
-    .hero-cover img{
-      display:block;
-      width:100%;
-      height:clamp(260px,48svh,560px);
-      object-fit:contain;
-      background:#fff;
-    }
-    .authority-grid{
-      max-width:1160px;
-      display:grid;
-      grid-template-columns:repeat(4,minmax(0,1fr));
-      gap:clamp(12px,1.6vw,18px);
-      margin-bottom:clamp(34px,5vw,64px);
-    }
-    .authority-card{
-      display:flex;
-      flex-direction:column;
-      color:inherit;
-      text-decoration:none;
-      border:1px solid var(--line);
-      background:var(--panel);
-      padding:12px;
-      min-height:100%;
-      transition:transform .16s ease,background .16s ease;
-    }
-    .authority-card:hover{
-      transform:translateY(-2px);
-      background:rgba(255,255,255,.68);
-    }
-    .authority-card-media{
-      width:100%;
-      height:clamp(150px,24svh,280px);
-      display:grid;
-      place-items:center;
-      background:#fff;
-      border:1px solid rgba(24,32,42,.08);
-      box-sizing:border-box;
-      overflow:hidden;
-      margin-bottom:12px;
-    }
-    .authority-card-media img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      display:block;
-    }
-    .authority-card-kicker{
-      font-size:11px;
-      color:var(--muted);
-      letter-spacing:.14em;
-      text-transform:uppercase;
-      margin-bottom:8px;
-    }
-    .authority-card h2{
-      font-size:clamp(20px,2vw,28px);
-      line-height:.96;
-      letter-spacing:-.04em;
-      margin:0 0 8px;
-    }
-    .authority-card p{
-      color:var(--muted);
-      font-size:13px;
-      line-height:1.38;
-      margin:0;
-    }
-    .sequence-section{
-      max-width:1160px;
-      display:grid;
-      gap:28px;
-    }
-    .section-label{
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      color:var(--muted);
-      border-top:1px solid var(--line);
-      padding-top:16px;
-      font-size:12px;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-    }
-    .sequence-frame{
-      border:1px solid var(--line);
-      background:var(--panel);
-      padding:clamp(10px,2vw,18px);
-      scroll-margin-top:24px;
-      margin:0;
-    }
-    .sequence-frame img{
-      display:block;
-      width:100%;
-      height:auto;
-      object-fit:contain;
-      background:#fff;
-    }
-    .sequence-frame figcaption{
-      display:flex;
-      justify-content:space-between;
-      gap:16px;
-      color:var(--muted);
-      font-size:13px;
-      margin-top:10px;
-    }
-    .back-row{
-      max-width:1160px;
-      margin:34px 0 0;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-    .back-row a{
-      border:1px solid var(--line);
-      padding:10px 14px;
-      border-radius:999px;
-      color:var(--ink);
-      text-decoration:none;
-      background:rgba(255,255,255,.35);
-    }
-    @media (max-width:1120px){
-      .authority-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
-    }
-    @media (max-width:920px){
-      .archive-shell{display:block;}
-      .archive-rail{
-        position:static;
-        height:auto;
-        border-right:0;
-        border-bottom:1px solid var(--line);
-        justify-content:flex-start;
-      }
-      .authority-main{min-height:auto;}
-      .authority-hero{grid-template-columns:1fr;}
-      .authority-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-      .hero-cover img{height:auto;}
-      .authority-card-media{height:clamp(190px,36svh,420px);}
-    }
-    @media (max-width:560px){
-      .authority-grid{grid-template-columns:1fr;}
-    }
+
+    html{scroll-behavior:smooth}
+    .authority-main{padding-bottom:1rem}
+    .authority-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr);gap:clamp(1.5rem,4vw,3rem);align-items:end;padding:3.25rem 0 2.25rem;border-bottom:2px solid var(--ink)}
+    .authority-hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,3rem);line-height:1.12;margin:.2rem 0 1rem}
+    .authority-hero .eyebrow{margin:0}
+    .lead{font-size:1.15rem;max-width:62ch;color:var(--ink-soft);margin:0}
+    .hero-cover{margin:0;background:var(--card);border:1px solid var(--rule);border-radius:4px;padding:1rem}
+    .hero-cover img{display:block;width:100%;height:clamp(280px,48svh,560px);object-fit:contain;background:var(--ink)}
+    .authority-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.15rem;padding:2.25rem 0 1rem}
+    .authority-card{display:flex;flex-direction:column;color:inherit;text-decoration:none;background:var(--card);border:1px solid var(--rule);border-radius:4px;overflow:hidden;padding:.8rem;transition:transform .15s ease,box-shadow .15s ease}
+    .authority-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(26,30,35,.12)}
+    .authority-card-media{width:100%;height:clamp(190px,28svh,330px);display:grid;place-items:center;background:var(--ink);overflow:hidden;margin-bottom:.8rem}
+    .authority-card-media img{width:100%;height:100%;object-fit:contain;display:block}
+    .authority-card-kicker{font-family:var(--mono);font-size:.7rem;color:var(--bronze);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.45rem}
+    .authority-card h2{font-family:var(--serif);font-weight:600;font-size:1.08rem;line-height:1.25;margin:0 0 .4rem}
+    .authority-card p{color:var(--ink-soft);font-size:.84rem;line-height:1.45;margin:0}
+    .sequence-section{display:grid;gap:1.75rem;margin-top:3rem}
+    .section-label{display:flex;justify-content:space-between;gap:1rem;color:var(--ink-soft);border-top:2px dotted var(--rule);padding-top:.8rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+    .sequence-frame{border:1px solid var(--rule);background:var(--card);border-radius:4px;padding:clamp(.75rem,2vw,1.15rem);scroll-margin-top:1rem;margin:0}
+    .sequence-frame img{display:block;width:100%;height:auto;object-fit:contain;background:var(--ink)}
+    .sequence-frame figcaption{display:flex;justify-content:space-between;gap:1rem;color:var(--ink-soft);font-size:.82rem;margin-top:.65rem}
+    @media(max-width:860px){.authority-hero{grid-template-columns:1fr}.hero-cover img{height:auto}.authority-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:520px){.authority-grid{grid-template-columns:1fr}.authority-card-media{height:auto}}
+    @media(prefers-reduced-motion:reduce){.authority-card,.authority-card:hover{transition:none;transform:none;box-shadow:none}}
   </style>
 </head>
 <body>
-  <div class="archive-shell">
-    <aside class="archive-rail" aria-label="Portfolio archive navigation">
-      <a href="/portfolio/archive/" class="rail-kicker">Portfolio archive</a>
-      <h2 class="rail-title">Series index</h2>
-      <p class="rail-copy">Visual sequences, field maps, and thematic archive entries.</p>
-      <nav class="rail-list">
-        <a href="/portfolio/">Portfolio hub</a>
-        <a href="/portfolio/archive/">Archive index</a>
-        <a href="/portfolio/archive/authority-disappears-into-systems/">Authority disappears into systems</a>
-        <a href="/portfolio/archive/archive-set-12/">Humanity at the Center</a>
-      </nav>
-    </aside>
+<header class="site-head"><div class="wrap"><a class="wordmark" href="/">GOLD<span>LEVEL</span></a><p class="crumbs"><a href="/portfolio/">portfolio</a> / <a href="/portfolio/archive/">archive</a> / authority-into-systems</p></div></header>
 
-    <main class="authority-main">
+<main class="authority-main wrap">
       <header class="authority-hero">
         <div>
           <div class="eyebrow">Portfolio archive / six-image visual field map</div>
@@ -359,14 +129,54 @@
           <img src="/assets/portfolio/archive/authority-disappears-into-systems/06-standalone-overview.png" alt="When Authority Disappears Into Systems full-size frame 06 of 06">
           <figcaption><span>06 / 06</span><span>Standalone overview field map</span></figcaption>
         </figure>
-      </section>
+      </section></main>
 
-      <div class="back-row">
-        <a href="/portfolio/archive/">Back to portfolio archive</a>
-        <a href="/portfolio/">Portfolio hub</a>
-        <a href="/">Return Home</a>
-      </div>
-    </main>
+<footer class="site-foot">
+  <div class="wrap">
+    <nav class="footer-nav" aria-label="When Authority Disappears Into Systems footer navigation">
+      <section>
+        <h2>Portfolio</h2>
+        <ul>
+          <li><a href="/">Goldlevel home</a></li>
+          <li><a href="/portfolio/">Portfolio hub</a></li>
+          <li><a href="/portfolio/top-12-dispatch/">Top 12 Dispatch</a></li>
+          <li><a href="/portfolio/marrow/">Marrow</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Archive</h2>
+        <ul>
+          <li><a href="/portfolio/archive/">Archive index</a></li>
+          <li><a href="/portfolio/archive/opencomicseries/">Open Comic Series</a></li>
+          <li><a href="/portfolio/archive/authority-disappears-into-systems/" aria-current="page">Authority Into Systems</a></li>
+          <li><a href="/portfolio/archive/archive-set-12/">Humanity at the Centre</a></li>
+          <li><a href="/portfolio/archive/when-scope-control-became-evidence/">Scope Control</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Comic families</h2>
+        <ul>
+          <li><a href="/portfolio/archive/opencomicseries/evidence-that-holds/">Evidence That Holds</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Frame selector</h2>
+        <ul>
+          <li><a href="#frame-01">01 / Series cover</a></li>
+          <li><a href="#frame-02">02 / First principles</a></li>
+          <li><a href="#frame-03">03 / The pattern now</a></li>
+          <li><a href="#frame-04">04 / Effects and gaps</a></li>
+          <li><a href="#frame-05">05 / If correction fails</a></li>
+          <li><a href="#frame-06">06 / Field map</a></li>
+        </ul>
+      </section>
+    </nav>
+    <div class="footer-meta">
+      <div class="receipt"><b>Authority Into Systems</b><span>&middot;</span><span>6 ordered frames</span><span>&middot;</span><span>goldlevel.co.uk</span></div>
+      <p>Editorial visual essays and conceptual field maps. They make no legal, audit, or certification claims.</p>
+      <p>&copy; 2026 GOLDLEVEL</p>
+    </div>
   </div>
+</footer>
 </body>
 </html>
