@@ -1,0 +1,79 @@
+/* GOLDLEVEL — Open Comic Series
+   Direct design lineage: Top 12 Dispatch Portfolio v1.3.
+   Self-contained, no external requests. */
+:root{--ink:#1A1E23;--ink-soft:#3A4048;--paper:#EEF0EC;--card:#FFFFFF;--bronze:#8C6A1D;
+--gold:#C9A227;--rule:#C7CBC2;
+--serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+--mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+font-size:1.0625rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--bronze)}a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--bronze);outline-offset:2px;border-radius:2px}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+.site-head{background:var(--ink);color:var(--paper)}
+.site-head .wrap{display:flex;justify-content:space-between;align-items:baseline;
+padding-top:.9rem;padding-bottom:.9rem;gap:1rem;flex-wrap:wrap}
+.wordmark{font-family:var(--serif);font-size:1.15rem;letter-spacing:.14em;color:var(--paper);
+text-decoration:none;font-weight:600}.wordmark span{color:var(--gold)}
+.crumbs{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:#B9BFC6;margin:0}
+.crumbs a{color:var(--gold);text-decoration:none}.crumbs a:hover{text-decoration:underline}
+.hero{padding:3.25rem 0 2.25rem;border-bottom:2px solid var(--ink)}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.5vw,3rem);
+line-height:1.12;margin:.2rem 0 1rem}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+color:var(--bronze);margin:0}
+.lede{font-size:1.15rem;max-width:62ch;color:var(--ink-soft)}
+.receipt{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+color:var(--ink-soft);border-top:2px dotted var(--rule);padding-top:.55rem;margin-top:.9rem;
+display:flex;gap:.6rem;flex-wrap:wrap}.receipt b{color:var(--ink);font-weight:600}
+.grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fill,minmax(16.5rem,1fr));
+padding:2.25rem 0 1rem;margin:0;list-style:none}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:4px;overflow:hidden;
+display:flex;flex-direction:column;transition:transform .15s ease,box-shadow .15s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(26,30,35,.12)}
+.card a.thumb{display:block;background:var(--ink)}
+.card img{aspect-ratio:38/53;object-fit:cover;width:100%}
+.card .body{padding:1rem 1.1rem 1.2rem;display:flex;flex-direction:column;gap:.55rem;flex:1}
+.card .no{font-family:var(--mono);font-size:1.5rem;font-weight:700;color:var(--bronze);line-height:1}
+.card h2{font-family:var(--serif);font-weight:600;font-size:1.12rem;line-height:1.3;margin:0}
+.card h2 a{color:var(--ink);text-decoration:none}
+.card h2 a:hover{color:var(--bronze);text-decoration:underline}
+.card p{margin:0;font-size:.92rem;color:var(--ink-soft);flex:1}
+.card .receipt{margin-top:auto}
+.item-head{padding:2.75rem 0 1.5rem}
+.item-head h1{font-family:var(--serif);font-weight:600;font-size:clamp(1.7rem,4vw,2.5rem);
+line-height:1.15;margin:.4rem 0 .9rem;max-width:26ch}
+figure{margin:1.5rem 0}
+figure .frame{background:var(--card);border:1px solid var(--rule);padding:1rem;border-radius:4px;
+max-width:48rem}
+figcaption{font-size:.92rem;color:var(--ink-soft);margin-top:.7rem;max-width:70ch}
+.item-body{max-width:70ch}
+.item-body h2{font-family:var(--serif);font-size:1.3rem;font-weight:600;margin:2rem 0 .4rem}
+.pn{display:flex;justify-content:space-between;gap:1rem;border-top:2px dotted var(--rule);
+margin-top:2.5rem;padding:1.25rem 0;font-family:var(--mono);font-size:.8rem;flex-wrap:wrap}
+.pn a{text-decoration:none}.pn a:hover{text-decoration:underline}
+.site-foot{background:var(--ink);color:#B9BFC6;margin-top:3.5rem}
+.site-foot .wrap{padding-top:1.6rem;padding-bottom:1.9rem}
+.site-foot .receipt{border-top-color:#3A4048;color:#B9BFC6}
+.site-foot .receipt b{color:var(--gold)}
+.site-foot p{font-size:.85rem;max-width:76ch;margin:.8rem 0 0}
+.family-grid .card img,.comic-grid .card img{aspect-ratio:1229/1536;object-fit:contain;background:var(--ink)}
+.comic-grid .card a.thumb{display:grid;place-items:center}
+.hero .receipt{max-width:48rem}
+.site-foot .wrap{padding-top:2rem;padding-bottom:2rem}
+.footer-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.75rem;
+padding-bottom:1.75rem}
+.footer-nav section{min-width:0}
+.footer-nav h2{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+text-transform:uppercase;color:var(--gold);margin:0 0 .75rem}
+.footer-nav ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
+.footer-nav a{color:#D9DDE1;text-decoration:none;font-size:.86rem;line-height:1.35}
+.footer-nav a:hover{text-decoration:underline;color:#FFF}
+.footer-nav a[aria-current="page"]{color:var(--gold);font-weight:700}
+.footer-meta{border-top:1px solid #3A4048;padding-top:.2rem}
+@media (max-width:760px){.footer-nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:460px){.footer-nav{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.card,.card:hover{transition:none;transform:none;box-shadow:none}}
