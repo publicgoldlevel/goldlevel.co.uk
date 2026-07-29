@@ -1,0 +1,34 @@
+/* GOLDLEVEL legal-defense evidence public surface v0.3.0 */
+.evidence-page{background:var(--paper);color:var(--ink);min-height:100vh}
+.evidence-page .topbar{position:relative;background:#fff}
+.evidence-main{border-bottom:2px solid var(--ink)}
+.evidence-hero{padding:clamp(70px,11vw,150px) 0 clamp(52px,8vw,104px);border-bottom:2px solid var(--ink)}
+.evidence-hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:clamp(34px,7vw,92px);align-items:end}
+.evidence-kicker,.evidence-label,.evidence-index{font-size:12px;letter-spacing:.16em;text-transform:uppercase;font-weight:700}
+.evidence-title{max-width:980px;margin:14px 0 22px;font-size:clamp(56px,9vw,132px);line-height:.82;letter-spacing:-.075em}
+.evidence-lede{max-width:760px;font-size:clamp(20px,2.5vw,32px);line-height:1.14;letter-spacing:-.025em}
+.evidence-status{border:1px solid var(--ink);padding:24px;background:#fff}
+.evidence-status strong{display:block;font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:14px}
+.evidence-status p{margin:0;color:var(--muted)}
+.evidence-band{border-bottom:2px solid var(--ink)}
+.evidence-band.alt{background:var(--soft)}
+.evidence-band-inner{display:grid;grid-template-columns:.52fr 1.48fr;gap:clamp(28px,6vw,84px);padding:clamp(52px,8vw,104px) 0}
+.evidence-band h2{margin:0;font-size:clamp(34px,5vw,72px);line-height:.92;letter-spacing:-.055em}
+.evidence-copy{max-width:850px;font-size:clamp(20px,2.3vw,30px);line-height:1.18;letter-spacing:-.025em;margin:0}
+.evidence-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--ink);border-left:1px solid var(--ink);margin-top:32px}
+.evidence-card{padding:24px;min-height:178px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:#fff}
+.evidence-card h3{font-size:22px;line-height:1.05;margin:10px 0}
+.evidence-card p{margin:0;color:var(--muted)}
+.evidence-sequence{counter-reset:step;display:grid;gap:0;border-top:1px solid var(--ink);margin-top:30px}
+.evidence-sequence li{list-style:none;display:grid;grid-template-columns:72px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--ink)}
+.evidence-sequence li::before{counter-increment:step;content:counter(step,decimal-leading-zero);font-size:12px;letter-spacing:.14em;font-weight:700}
+.evidence-download{padding:clamp(60px,9vw,124px) 0}
+.evidence-download-box{border:2px solid var(--ink);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1.25fr .75fr;gap:32px;align-items:end}
+.evidence-download h2{font-size:clamp(42px,7vw,96px);line-height:.86;letter-spacing:-.065em;margin:0}
+.evidence-download p{max-width:680px;color:var(--muted)}
+.evidence-file-facts{display:grid;gap:10px;font-size:14px}
+.evidence-file-facts span{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding-bottom:8px}
+@media(max-width:860px){
+  .evidence-hero-grid,.evidence-band-inner,.evidence-download-box,.evidence-grid{grid-template-columns:1fr}
+  .evidence-title{font-size:clamp(54px,18vw,94px)}
+}
