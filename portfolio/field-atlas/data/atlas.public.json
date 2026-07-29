@@ -1,6 +1,6 @@
 {
-  "schema": "field-atlas.public-catalog.v0.4.0",
-  "generated_utc": "2026-07-29T13:07:09.499146Z",
+  "schema": "field-atlas.public-catalog.v0.4.1",
+  "generated_utc": "2026-07-29T14:38:37.872867Z",
   "canonical_site": "https://goldlevel.co.uk",
   "atlas_route": "/portfolio/field-atlas/",
   "publisher": "goldlevel.co.uk",
@@ -46,7 +46,12 @@
           "sha256": "4a19edd9688dfffd534471869fe39924497c84d1b74c2205b5693a8977b0c352",
           "alt": "INVISIBLE ADHD IMPAIRMENT STILL COUNTS"
         }
-      ]
+      ],
+      "card_summary": "A reminder that unseen difficulties can carry real weight even when they are not legible to other people.",
+      "summary": "A reflective visual note on the gap between visible performance and lived difficulty. It treats ADHD-related impairment as something that may remain hidden while still shaping attention, energy, organisation, and everyday participation. It holds visibility, functional impact, and social misunderstanding within one accountable field.",
+      "what_it_maps": "Visibility, functional impact, social misunderstanding, and the difference between outward appearance and inward effort, without presenting a diagnostic checklist. The map keeps the interaction between visibility and functional impact visible rather than treating either as an isolated variable.",
+      "why_it_matters": "People are often judged by what others can observe. Making invisible effort legible supports fairer expectations, better self-understanding, and more humane responses without turning an editorial work into clinical advice. It gives readers a firmer basis for handling visibility and functional impact responsibly.",
+      "meta_description": "Invisible Adhd Impairment Still Counts: A reminder that unseen difficulties can carry real weight even when they are not legible to other people in…"
     },
     {
       "id": "FA-2026-002",
@@ -76,7 +81,12 @@
           "sha256": "747944f8214920eaf7bd370cb707d94bbdf87ba6e90a274d18196174f687cfa3",
           "alt": "SEAL THE SOURCE BEFORE PERSUASION REWRITES IT"
         }
-      ]
+      ],
+      "card_summary": "A source-stewardship warning about preserving origin, authorship, and context before repetition or persuasion changes the public record. It places attribution inside a wider field of stewardship, boundaries, and public responsibility.",
+      "summary": "A compact provenance map arguing that creative and informational work should be anchored before circulation detaches it from its origin. It frames source sealing as a practical act of stewardship rather than a claim of total control.",
+      "what_it_maps": "Attribution, provenance, context loss, persuasive reframing, copying, and the point where a public artefact can become separated from its accountable source. It follows the points where attribution and provenance meet, diverge, or alter practical choice.",
+      "why_it_matters": "Once origin disappears, later audiences may inherit a polished story without a reliable path back to evidence or authorship. Preserving the source strengthens trust, correction, and fair recognition. The distinction makes decisions about attribution and provenance easier to examine and revise.",
+      "meta_description": "Seal The Source Before Persuasion Rewrites It: A source-stewardship warning about preserving origin, authorship, and context before repetition or…"
     },
     {
       "id": "FA-2026-003",
@@ -106,7 +116,12 @@
           "sha256": "8dae97ca198fb6884ebb63e7790f92d9c893adb03e99c0c19cd9dc286ca0d2d0",
           "alt": "PREMIUM OFFER TO FAIR LOWER-COST DOWNSELL"
         }
-      ]
+      ],
+      "card_summary": "A commercial design map for lowering price fairly by exchanging concessions for clear buyer commitments and measurable execution receipts.",
+      "summary": "A practical offer-design framework showing how a premium proposition can become a lower-cost option without pretending the underlying value has vanished. Price flexibility is paired with transparent commitments, terms, referrals, feedback, or delivery evidence. Its practical centre lies where value preservation, buyer commitment, and payment terms meet.",
+      "what_it_maps": "Value preservation, buyer commitment, payment terms, testimonials, referrals, conversion, delivery quality, and the boundary between a fair downsell and unmanaged discounting. It also attends to the boundaries that determine whether value preservation or buyer commitment carries authority.",
+      "why_it_matters": "Discounts can quietly weaken delivery or create unequal expectations. This work makes the exchange explicit, helping both sides understand what changes, what remains fixed, and how the arrangement will be evaluated. It creates a clearer route for questioning how value preservation and buyer commitment are being carried.",
+      "meta_description": "Premium Offer To Fair Lower-Cost Downsell: A commercial design map for lowering price fairly by exchanging concessions for clear buyer commitments and…"
     },
     {
       "id": "FA-2026-004",
@@ -181,7 +196,12 @@
           "sha256": "57c9bd57a647114594e76c4addf88145152c77dd8e26e7fd2361eb40b453717a",
           "alt": "ADHD — BUILD A VESSEL FOR THE SIGNAL — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A strengths-aware reflection on shaping supportive structure around attention that follows meaning, urgency, interest, and aliveness. It brings meaning-led attention into focus within embodied life and everyday participation.",
+      "summary": "An experiential map of ADHD-related attention as a powerful but uneven signal rather than a simple absence of focus. The work asks how routines, environments, boundaries, and practical containers can support that signal without extinguishing it.",
+      "what_it_maps": "Meaning-led attention, urgency, energy, structure, environmental support, self-knowledge, and the distinction between suppressing intensity and giving it a workable vessel. The field becomes clearer where meaning-led attention and urgency change pace, role, or consequence.",
+      "why_it_matters": "A person may not need less vitality; they may need conditions that make vitality usable. The map offers a humane design question while remaining reflective rather than diagnostic or prescriptive. That visibility helps people protect what matters when meaning-led attention and urgency interact.",
+      "meta_description": "Adhd — Build A Vessel For The Signal: A strengths-aware reflection on shaping supportive structure around attention that follows meaning, urgency…"
     },
     {
       "id": "FA-2026-005",
@@ -256,7 +276,12 @@
           "sha256": "61ecad696d9719640c2cae9378fed0f25a8f756a88c265d51aed35784334f65b",
           "alt": "HUMAN GROUNDING UNDER NEW CONDITIONS — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A human-centred AI map holding bodies, relationships, limits, consequences, and time as the ground beneath technological extension. It links technological extension and embodiment through technical systems, human authority, and public consequence.",
+      "summary": "A six-frame reflection on what remains irreducibly human as technology changes the surface of cognition and work. AI may organise, mirror, or extend capacity, while meaning and responsibility continue to arise through lived experience. It places technological extension, embodiment, and choice inside a shared decision field.",
+      "what_it_maps": "Technological extension, embodiment, choice, consequence, relationship, temporal reality, and the difference between cognitive assistance and human responsibility. It includes the feedback loops through which technological extension changes the practical meaning of embodiment.",
+      "why_it_matters": "Fluent systems can make abstraction feel complete. Returning to the body, context, and consequence keeps tools in proportion and protects the human sources of judgement, meaning, and accountability. It supports proportionate action by keeping technological extension and embodiment open to review.",
+      "meta_description": "Human Grounding Under New Conditions: A human-centred AI map holding bodies, relationships, limits, consequences, and time as the ground beneath…"
     },
     {
       "id": "FA-2026-006",
@@ -304,7 +329,12 @@
           "sha256": "b04852cec678da18805faf0b6ec79464bc17307722f751558accdddd655c500b",
           "alt": "THE NEW STANDARD — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A relational standard that values connection without pressure, rescue, control, or the demand to abandon personal agency. It holds relational pressure alongside the wider pressures of relational conduct, agency, and repair.",
+      "summary": "A short sequence defining a healthier threshold for connection. Rather than treating intensity or availability as proof of care, it looks for steadiness, respect, freedom, and the absence of coercive rescue or control. The sequence links relational pressure, rescuing, and control without collapsing their differences.",
+      "what_it_maps": "Relational pressure, rescuing, control, compatibility, agency, and the practical difference between closeness that supports a person and closeness that manages them. The sequence also shows where relational pressure and rescuing align, conflict, or require separation.",
+      "why_it_matters": "Standards shape what people normalise. Naming a non-coercive threshold helps readers recognise that a relationship can feel strong while still asking too much of dignity, freedom, or self-trust. The result is a stronger basis for deciding what relational pressure and rescuing require.",
+      "meta_description": "The New Standard: A relational standard that values connection without pressure, rescue, control, or the demand to abandon personal agency. It holds…"
     },
     {
       "id": "FA-2026-007",
@@ -352,7 +382,12 @@
           "sha256": "416a405b06ed7bbb32719b0f23715b12392606226c108fa487a5de052f2ab290",
           "alt": "CHEMISTRY VS CHARACTER — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A distinction between immediate attraction and the slower evidence of whether another person is safe, reliable, and accountable.",
+      "summary": "A three-frame relationship map separating chemistry from character. Attraction can create momentum, but character is revealed through consistency, conduct, repair, and what happens when desire is no longer carrying the whole bond. Its centre is the interaction between attraction, safety, and consistency.",
+      "what_it_maps": "Attraction, safety, consistency, conduct, accountability, and the time needed to distinguish emotional pull from evidence about how someone relates. It keeps the transition between attraction and safety visible, especially under pressure.",
+      "why_it_matters": "Strong chemistry can compress judgement and make possibility feel like proof. This piece restores time and observation, helping people evaluate what can actually sustain closeness rather than only what initiates it. It helps turn concern about attraction and safety into a more accountable next step.",
+      "meta_description": "Chemistry Vs Character: A distinction between immediate attraction and the slower evidence of whether another person is safe, reliable, and accountable…"
     },
     {
       "id": "FA-2026-008",
@@ -382,7 +417,12 @@
           "sha256": "63657eec7456b63ce81fb219696272bb50fd60fa65639204ba431475a87c319d",
           "alt": "PRESSURE IS NOT INSTRUCTION"
         }
-      ]
+      ],
+      "card_summary": "A compact boundary cue for separating urgency, anxiety, or outside demand from the clarity needed to choose well.",
+      "summary": "A single-image reminder that felt pressure does not automatically carry legitimate direction. The work places a pause between activation and action so that clarity, role, evidence, and consequence can be considered. The sequence keeps urgency, nervous-system activation, and external demand connected to lived context.",
+      "what_it_maps": "Urgency, nervous-system activation, external demand, decision authority, pause, and the difference between a forceful feeling and a trustworthy instruction. It also tracks how urgency and nervous-system activation reinforce or constrain one another over time.",
+      "why_it_matters": "Under pressure, people may move before they know what they are agreeing to. This distinction supports safer decisions, cleaner consent, and actions that belong to the person rather than to the moment. That clarity supports more deliberate choices about urgency and nervous-system activation in practice.",
+      "meta_description": "Pressure Is Not Instruction: A compact boundary cue for separating urgency, anxiety, or outside demand from the clarity needed to choose well in FIELD…"
     },
     {
       "id": "FA-2026-009",
@@ -430,7 +470,12 @@
           "sha256": "b45c6b51015dafc869fc41c15d0ba37c812d9ca7499a9b0c7288d3be1bcdcfe1",
           "alt": "PACE, PATTERN, AND CONSISTENCY — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A relationship pacing map that lets repeated conduct reveal reality before emotional disclosure becomes a substitute for safety.",
+      "summary": "A three-frame reflection on the impulse to create safety through rapid intimacy. It proposes pace, pattern, and consistency as slower forms of evidence that allow trust to grow without demanding premature certainty. It holds fast disclosure, attachment pressure, and pattern recognition within one accountable field.",
+      "what_it_maps": "Fast disclosure, attachment pressure, pattern recognition, consistency, time, trust, and the distinction between emotional intensity and relational safety. The map keeps the interaction between fast disclosure and attachment pressure visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Speed can create the feeling of closeness before a relationship has demonstrated capacity. Slowing the process protects vulnerability and gives both people room to show who they are through repeated action. It gives readers a firmer basis for handling fast disclosure and attachment pressure responsibly.",
+      "meta_description": "Pace, Pattern, And Consistency: A relationship pacing map that lets repeated conduct reveal reality before emotional disclosure becomes a substitute…"
     },
     {
       "id": "FA-2026-010",
@@ -478,7 +523,12 @@
           "sha256": "4768e50610b9fda587853fdf99452301b4730dbbf6eb6ff90db6bb108b0e0921",
           "alt": "KEEP FINAL AUTHORITY HUMAN — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A practical AI boundary: use the tool, retain portable context and real exits, and keep consequential judgement with people.",
+      "summary": "A three-frame governance note on using AI without surrendering decision authority. It joins portability, exit, context control, and human judgement into one operational requirement rather than treating them as separate preferences. The framing keeps tool use, context portability, and exit rights visible at the same time.",
+      "what_it_maps": "Tool use, context portability, exit rights, dependency, consequential decisions, and the point at which assistance can quietly become authority. It follows the points where tool use and context portability meet, diverge, or alter practical choice.",
+      "why_it_matters": "Human oversight is weak when people cannot leave, move their context, or understand what shaped an output. Keeping these conditions together makes authority more than a ceremonial final click. The distinction makes decisions about tool use and context portability easier to examine and revise.",
+      "meta_description": "Keep Final Authority Human: A practical AI boundary: use the tool, retain portable context and real exits, and keep consequential judgement with people…"
     },
     {
       "id": "FA-2026-011",
@@ -526,7 +576,12 @@
           "sha256": "d2105d6e1e760e4679f952101ee3b7a2b8292b71b71e1c2d37eafc3c47704d13",
           "alt": "SPACE WITH REPAIR BECOMES TRUST — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A relational distinction showing that distance alone does not heal; trust grows when space is followed by honest repair.",
+      "summary": "A brief sequence on the difference between withdrawal and restorative space. Time apart may lower intensity, but trust is rebuilt through return, acknowledgement, changed conduct, and a repair process both people can recognise. Its practical centre lies where distance, de-escalation, and return meet.",
+      "what_it_maps": "Distance, de-escalation, return, acknowledgement, changed behaviour, repair, and the conditions under which space supports rather than erodes connection. It also attends to the boundaries that determine whether distance or de-escalation carries authority.",
+      "why_it_matters": "Unexplained space can become uncertainty or abandonment. Linking distance to repair gives boundaries a relational purpose and helps both people know whether the pause is serving healing or avoidance. It creates a clearer route for questioning how distance and de-escalation are being carried.",
+      "meta_description": "Space With Repair Becomes Trust: A relational distinction showing that distance alone does not heal; trust grows when space is followed by honest…"
     },
     {
       "id": "FA-2026-012",
@@ -574,7 +629,12 @@
           "sha256": "3edd4a514750eb7139fc53ead568f8be23b58974f7cf937a046d28ebdf288daa",
           "alt": "CARE VS CARETAKING — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A map of the point where reciprocal care becomes self-erasure, peacekeeping, or responsibility for another adult’s emotional life.",
+      "summary": "A three-frame relational distinction between care that remains mutual and caretaking that requires one person to disappear. It examines how generosity can become management when fear, over-responsibility, or conflict avoidance sets the terms. The work keeps reciprocity, self-abandonment, and peacekeeping close to consequence.",
+      "what_it_maps": "Reciprocity, self-abandonment, peacekeeping, emotional labour, over-responsibility, and the boundary between offering support and becoming responsible for another person. The field becomes clearer where reciprocity and self-abandonment change pace, role, or consequence.",
+      "why_it_matters": "Care loses its health when the giver must shrink to preserve the bond. Naming the shift helps protect compassion while restoring agency, shared responsibility, and room for honest disagreement. That visibility helps people protect what matters when reciprocity and self-abandonment interact.",
+      "meta_description": "Care Vs Caretaking: A map of the point where reciprocal care becomes self-erasure, peacekeeping, or responsibility for another adult’s emotional life…"
     },
     {
       "id": "FA-2026-013",
@@ -622,7 +682,12 @@
           "sha256": "9ad041a4350e3eb5f340fb70d55497288c81f5fc35e558d5f40c170fbc305173",
           "alt": "CLOSENESS WITHOUT RESPONSIBILITY IS NOT SAFETY — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A relationship safety map that tests closeness against responsibility, especially when consequences, conflict, or vulnerability become real. It links closeness and responsibility through relational conduct, agency, and repair.",
+      "summary": "A three-frame examination of intimacy that feels close but lacks dependable responsibility. The work asks whether care remains present under pressure and whether actions, repair, and consequences are carried rather than displaced. It places closeness, responsibility, and conflict inside a shared decision field.",
+      "what_it_maps": "Closeness, responsibility, conflict, vulnerability, reliability, repair, and the difference between emotional access and a bond capable of holding real stakes. It includes the feedback loops through which closeness changes the practical meaning of responsibility.",
+      "why_it_matters": "People can be deeply entangled without being safe. This distinction prevents familiarity or intensity from standing in for accountable care and makes the conditions of lasting trust easier to evaluate. It supports proportionate action by keeping closeness and responsibility open to review.",
+      "meta_description": "Closeness Without Responsibility Is Not Safety: A relationship safety map that tests closeness against responsibility, especially when consequences…"
     },
     {
       "id": "FA-2026-014",
@@ -670,7 +735,12 @@
           "sha256": "843570096075513f9d90a30f81db5382f8dfa2c8d1e035bba4f5d0c89b584049",
           "alt": "STOP CONVINCING. WATCH THE PATTERN. — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A self-respect cue that moves attention away from persuasion and towards repeated evidence about how a relationship actually behaves.",
+      "summary": "A three-frame invitation to stop arguing for one’s value and begin observing the pattern. It treats behaviour over time as more informative than promises, explanations, or the effort spent trying to be understood. The sequence links persuasion, validation seeking, and repeated conduct without collapsing their differences.",
+      "what_it_maps": "Persuasion, validation seeking, repeated conduct, self-respect, emotional expenditure, and the choice to respond to evidence rather than potential. The sequence also shows where persuasion and validation seeking align, conflict, or require separation.",
+      "why_it_matters": "Trying harder can keep a person inside an unchanged loop. Watching the pattern restores information, protects energy, and makes it possible to choose what consistently respects one’s life. The result is a stronger basis for deciding what persuasion and validation seeking require.",
+      "meta_description": "Stop Convincing. Watch The Pattern.: A self-respect cue that moves attention away from persuasion and towards repeated evidence about how a…"
     },
     {
       "id": "FA-2026-015",
@@ -718,7 +788,12 @@
           "sha256": "50c22570c1bdfcc047b7c65d53944d8c1382cc1fcfebe325a8b3d967e6b4756f",
           "alt": "REGULATE FIRST. REACH SECOND. — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A sequencing guide for settling activation before making contact, then judging the connection by what remains consistent over time.",
+      "summary": "A three-frame relational practice that places regulation before reaching out. It does not reject connection; it creates enough steadiness for contact to be chosen rather than driven by panic, urgency, or the need for immediate relief.",
+      "what_it_maps": "Activation, regulation, contact, reassurance seeking, timing, consistency, and the difference between reaching from agency and reaching to stop discomfort. It keeps the transition between activation and regulation visible, especially under pressure.",
+      "why_it_matters": "The order of action changes its meaning. A regulated approach can reduce escalation, clarify needs, and reveal whether the relationship offers consistency rather than only temporary relief. It helps turn concern about activation and regulation into a more accountable next step.",
+      "meta_description": "Regulate First. Reach Second.: A sequencing guide for settling activation before making contact, then judging the connection by what remains consistent…"
     },
     {
       "id": "FA-2026-016",
@@ -748,7 +823,12 @@
           "sha256": "b23f0b38ced603e4423dab44ba78dd4c7d695d7ccbb65af5550b4949acbbe5a1",
           "alt": "CHOOSE THE RIGHT RELATIONSHIP LENS"
         }
-      ]
+      ],
+      "card_summary": "A diagnostic-of-the-situation map distinguishing boundaries, attachment pressure, avoidance, reassurance needs, and circumstances requiring a clean exit. It situates problem framing within relational conduct, agency, and repair.",
+      "summary": "A single-page overview reminding readers that similar distress can arise from different relational mechanisms. The next step depends on whether the issue is unsafe pressure, avoidance, unmet reassurance, boundary confusion, or an ending that needs clarity.",
+      "what_it_maps": "Problem framing, attachment, avoidance, boundaries, reassurance, exit decisions, and the risk of applying one familiar explanation to every relationship difficulty. It also tracks how problem framing and attachment reinforce or constrain one another over time.",
+      "why_it_matters": "A wrong lens can produce a wrong intervention. Distinguishing the pattern before acting protects both people from unnecessary blame, misplaced repair attempts, or prolonged exposure to a situation that requires distance. That clarity supports more deliberate choices about problem framing and attachment in practice.",
+      "meta_description": "Choose The Right Relationship Lens: A diagnostic-of-the-situation map distinguishing boundaries, attachment pressure, avoidance, reassurance needs, and…"
     },
     {
       "id": "FA-2026-017",
@@ -805,7 +885,12 @@
           "sha256": "37d7bc4cbae4bd5574c8ea8dec8044c775f17f5edb19014f739c281f5a5b5e0e",
           "alt": "WHEN CARE BECOMES MANAGEMENT — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame warning that support can cross into monitoring, directing, fixing, or carrying another person’s life for them.",
+      "summary": "A relational map of care that has become managerial. It looks at the subtle move from presence and support into control, over-functioning, repeated correction, or responsibility that the other person has not freely given. It holds support, control, and monitoring within one accountable field.",
+      "what_it_maps": "Support, control, monitoring, fixing, role confusion, autonomy, and the point where good intention begins to displace another person’s agency. The map keeps the interaction between support and control visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Management can be mistaken for devotion because it often begins with concern. Seeing the role shift allows care to remain warm while returning responsibility, choice, and consequence to the right person. It gives readers a firmer basis for handling support and control responsibly.",
+      "meta_description": "When Care Becomes Management: A four-frame warning that support can cross into monitoring, directing, fixing, or carrying another person’s life for…"
     },
     {
       "id": "FA-2026-018",
@@ -862,7 +947,12 @@
           "sha256": "68b94b9d5eece946cf0610e0e91d85b4c90949d9976b67b535447a1a2947f34f",
           "alt": "CARE, AVOIDANCE, CLEAN EXITS, AND REASSURANCE PRESSURE — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-part relationship map separating patterns that look similar under stress but require very different responses. It places care inside a wider field of relational conduct, agency, and repair.",
+      "summary": "A comparative sequence distinguishing genuine care, avoidance, a clear ending, and pressure for reassurance. It helps readers identify what is actually happening before interpreting every pause as rejection or every return as commitment. The framing keeps care, avoidance, and exit clarity visible at the same time.",
+      "what_it_maps": "Care, avoidance, exit clarity, reassurance pressure, emotional ambiguity, and the decision cues that separate repairable tension from an unavailable bond. It follows the points where care and avoidance meet, diverge, or alter practical choice.",
+      "why_it_matters": "When different patterns are collapsed into one story, people may chase what needs release or abandon what needs communication. Better distinctions create more proportionate, dignified next steps. The distinction makes decisions about care and avoidance easier to examine and revise.",
+      "meta_description": "Care, Avoidance, Clean Exits, And Reassurance Pressure: A four-part relationship map separating patterns that look similar under stress but require…"
     },
     {
       "id": "FA-2026-019",
@@ -919,7 +1009,12 @@
           "sha256": "7922cd4f2a528353e4e3317678ab113abf16b1e69b7ee5189f41e5393bb9fbf0",
           "alt": "CLEAN ENDINGS AND DIGNITY — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame guide to ending a relationship with clarity, responsibility, and respect rather than silence, blame, or disappearance.",
+      "summary": "A reflection on the form of an ending as part of its ethical weight. It treats direct communication, appropriate explanation, boundaries, and follow-through as ways to reduce avoidable confusion while preserving dignity on both sides.",
+      "what_it_maps": "Ending, acknowledgement, explanation, boundary setting, follow-through, silence, blame, disappearance, and the difference between necessary separation and careless exit. It also attends to the boundaries that determine whether ending or acknowledgement carries authority.",
+      "why_it_matters": "An ending cannot remove grief, but it can avoid adding needless uncertainty or humiliation. Clean exits help people orient to reality, protect agency, and begin repair without chasing an absent answer. It creates a clearer route for questioning how ending and acknowledgement are being carried.",
+      "meta_description": "Clean Endings And Dignity: A four-frame guide to ending a relationship with clarity, responsibility, and respect rather than silence, blame, or…"
     },
     {
       "id": "FA-2026-020",
@@ -976,7 +1071,12 @@
           "sha256": "229f064539fd644fa85432ddfed797a85d6f02a494ea94ee4e129c0f011f2a5f",
           "alt": "HEALTHY REASSURANCE — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A relational map of reassurance that is freely offered, reciprocal, honest, and spacious enough for both people to remain themselves.",
+      "summary": "A four-frame distinction between reassurance as mutual care and reassurance demanded as proof against fear. It asks whether comfort can be given without coercion, repeated testing, or the loss of honesty and breathing room. The work keeps reassurance, fear, and reciprocity close to consequence.",
+      "what_it_maps": "Reassurance, fear, reciprocity, consent, emotional regulation, repeated testing, and the boundary between supportive comfort and pressure for certainty. The field becomes clearer where reassurance and fear change pace, role, or consequence.",
+      "why_it_matters": "Reassurance can strengthen a bond when it remains chosen. When it becomes compulsory, it may temporarily soothe anxiety while weakening trust, autonomy, and the ability to speak truthfully. That visibility helps people protect what matters when reassurance and fear interact.",
+      "meta_description": "Healthy Reassurance: A relational map of reassurance that is freely offered, reciprocal, honest, and spacious enough for both people to remain…"
     },
     {
       "id": "FA-2026-021",
@@ -1006,7 +1106,12 @@
           "sha256": "f328df83b937e7d957f9af9fc9522aad2188bcf543ae1fb5d2014f6c8bd1d773",
           "alt": "RELATIONSHIP PRESSURE — SEE BOTH EXPERIENCES"
         }
-      ]
+      ],
+      "card_summary": "A one-page de-escalation map that names the pattern, holds both experiences, and returns each person to agency. It links pressure and competing experiences through relational conduct, agency, and repair.",
+      "summary": "A concise relational field map for moments when pressure narrows the story to one victim and one cause. It invites both experiences into view without erasing impact, responsibility, boundaries, or the need for a clear next action.",
+      "what_it_maps": "Pressure, competing experiences, impact, responsibility, blame, agency, and the capacity to hold more than one perspective without collapsing into false equivalence. It includes the feedback loops through which pressure changes the practical meaning of competing experiences.",
+      "why_it_matters": "Seeing both sides is not the same as excusing harm. It can reduce projection, improve repair, and help each person reclaim the part of the situation they can actually choose. It supports proportionate action by keeping pressure and competing experiences open to review.",
+      "meta_description": "Relationship Pressure — See Both Experiences: A one-page de-escalation map that names the pattern, holds both experiences, and returns each person to…"
     },
     {
       "id": "FA-2026-022",
@@ -1090,7 +1195,12 @@
           "sha256": "de12f291ed32e226e55be4483a0c565cfda998b345adc1520904a11978e91630",
           "alt": "RELATIONSHIP PRESSURE — PAUSE, NAME, OWN, PROTECT AGENCY — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame sequence for slowing pressure, naming the pattern, owning one’s part, and protecting agency on both sides.",
+      "summary": "A practical relationship process that moves from activation to proportionate action. The sequence pauses reaction, identifies what is happening, separates ownership from over-carrying, and keeps both people’s choices visible. The sequence links pause, pattern naming, and ownership without collapsing their differences.",
+      "what_it_maps": "Pause, pattern naming, ownership, boundaries, agency, proportionate response, and review of what changes after the immediate pressure has passed. The sequence also shows where pause and pattern naming align, conflict, or require separation.",
+      "why_it_matters": "Pressure can make urgency feel like truth and responsibility feel one-sided. A clear sequence interrupts escalation and creates a better chance of honest communication, repair, or a dignified boundary. The result is a stronger basis for deciding what pause and pattern naming require.",
+      "meta_description": "Relationship Pressure — Pause, Name, Own, Protect Agency: A seven-frame sequence for slowing pressure, naming the pattern, owning one’s part, and…"
     },
     {
       "id": "FA-2026-023",
@@ -1138,7 +1248,12 @@
           "sha256": "ca89af9c3a2728fb548397e061bb08051a8538388fa044c92dbf538dac83d92c",
           "alt": "PRACTICAL SAFETY FOR CONTEXT-RICH AI — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame safety map for disclosing context use, gating high-impact actions, and retaining meaningful human control over AI-assisted decisions.",
+      "summary": "A practical governance note for AI systems that can access more files, conversations, and tools. It calls for visible context boundaries, separation around sensitive actions, and human authority that can intervene before consequences become irreversible.",
+      "what_it_maps": "Context disclosure, connected tools, sensitive data, action gating, isolation, high-impact decisions, human review, and reversibility. It keeps the transition between context disclosure and connected tools visible, especially under pressure.",
+      "why_it_matters": "Greater context can improve usefulness while enlarging the consequences of error or misuse. Concrete controls make safety operational rather than relying on trust in fluent output or good intention. It helps turn concern about context disclosure and connected tools into a more accountable next step.",
+      "meta_description": "Practical Safety For Context-Rich Ai: A three-frame safety map for disclosing context use, gating high-impact actions, and retaining meaningful human…"
     },
     {
       "id": "FA-2026-024",
@@ -1168,7 +1283,12 @@
           "sha256": "326d24586ff702a61154169d05f6c49ac99ffa6f8ae790d1a309d32d045c01fc",
           "alt": "CONTEXT CONTROLS FOR AI SYSTEMS"
         }
-      ]
+      ],
+      "card_summary": "A one-page control map for showing what context an AI used, excluded, retained, and kept separate from sensitive work.",
+      "summary": "A concise design requirement for systems that draw from chats, files, memory, and connected services. Users should be able to see the active context boundary and deliberately separate private or high-consequence material. The sequence keeps context inclusion and exclusion, memory, and connected tools connected to lived context.",
+      "what_it_maps": "Context inclusion and exclusion, memory, connected tools, sensitive work, data separation, transparency, user control, and the ability to reset or compartmentalise. It also tracks how context inclusion and exclusion and memory reinforce or constrain one another over time.",
+      "why_it_matters": "Invisible context can create surprising outputs, privacy spillover, and false confidence about what the system knows. Clear controls preserve consent, reduce leakage, and improve the interpretability of results. That clarity supports more deliberate choices about context inclusion and exclusion and memory in practice.",
+      "meta_description": "Context Controls For Ai Systems: A one-page control map for showing what context an AI used, excluded, retained, and kept separate from sensitive work…"
     },
     {
       "id": "FA-2026-025",
@@ -1198,7 +1318,12 @@
           "sha256": "27330fa197687b58b858180c7b41be5fd961f4eaffcb97bb87b6dd5fbe050408",
           "alt": "RESPECT DISTANCE WITHOUT INVENTING A STORY"
         }
-      ]
+      ],
+      "card_summary": "A relational restraint practice: honour distance, observe the pattern, preserve dignity, and avoid filling uncertainty with an invented narrative.",
+      "summary": "A one-page reflection on how to meet another person’s distance without turning absence into certainty about motive, worth, or future outcome. It favours observation, steadiness, and clean boundaries over projection. It holds distance, uncertainty, and projection within one accountable field.",
+      "what_it_maps": "Distance, uncertainty, projection, interpretation, dignity, pattern observation, return, and the conditions under which renewed contact would be steady enough to trust. The map keeps the interaction between distance and uncertainty visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Uncertainty invites the mind to produce explanations that may intensify pain or pursuit. Holding the unknown protects self-respect and leaves decisions anchored in conduct rather than imagined meaning. It gives readers a firmer basis for handling distance and uncertainty responsibly.",
+      "meta_description": "Respect Distance Without Inventing A Story: A relational restraint practice: honour distance, observe the pattern, preserve dignity, and avoid filling…"
     },
     {
       "id": "FA-2026-026",
@@ -1273,7 +1398,12 @@
           "sha256": "44cd971bd6e62e1e37ca23a3ea33cd4ee3a93ab6affe2dfe31b0faa5a94d5bc3",
           "alt": "CONTROL IS NOT LOVE — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A six-frame spiritual and relational distinction separating love from control, worship, rejection, condemnation, and coercive correction. It places control inside a wider field of relational conduct, agency, and repair.",
+      "summary": "A reflective sequence naming patterns that can distort intimacy while presenting themselves as care, devotion, truth, or protection. It frames discernment as a route towards honesty and freedom rather than shame or domination. The framing keeps control, admiration, and worship visible at the same time.",
+      "what_it_maps": "Control, admiration, worship, correction, rejection, boundaries, condemnation, spiritual framing, discernment, and the restoration of agency within relationship. It follows the points where control and admiration meet, diverge, or alter practical choice.",
+      "why_it_matters": "Language can sanctify harmful dynamics and make coercion difficult to name. Clear distinctions help people retain compassion while refusing patterns that disturb peace, dignity, responsibility, or freely chosen love. The distinction makes decisions about control and admiration easier to examine and revise.",
+      "meta_description": "Control Is Not Love: A six-frame spiritual and relational distinction separating love from control, worship, rejection, condemnation, and coercive…"
     },
     {
       "id": "FA-2026-027",
@@ -1357,7 +1487,12 @@
           "sha256": "613647d424d8c808f627cfcef4775fa85892d8550de68eaa3ada148f51335d74",
           "alt": "WHEN REACTION BECOMES THE ONLY EVIDENCE — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame map restoring the full relational pattern when one person’s reaction is isolated and used to define the whole story.",
+      "summary": "A sequence about situations where provocation, invalidation, or repeated pressure disappears from the account while the eventual reaction becomes the only visible evidence. It supports accountability without accepting a false or incomplete identity. Its practical centre lies where provocation, reaction, and selective evidence meet.",
+      "what_it_maps": "Provocation, reaction, selective evidence, memory doubt, nervous-system activation, documentation, accountability, self-trust, and restoration of the wider sequence. It also attends to the boundaries that determine whether provocation or reaction carries authority.",
+      "why_it_matters": "A person can own harmful reactions without agreeing that those reactions explain everything. Restoring context supports fairer judgement, safer boundaries, and recovery of self-trust without erasing anyone’s responsibility. It creates a clearer route for questioning how provocation and reaction are being carried.",
+      "meta_description": "When Reaction Becomes The Only Evidence: A seven-frame map restoring the full relational pattern when one person’s reaction is isolated and used to…"
     },
     {
       "id": "FA-2026-028",
@@ -1441,7 +1576,12 @@
           "sha256": "87da5579e79e6adc5d465fab04c6ab270b2c7b4fee98960af11e0ac2e8b7a4b0",
           "alt": "RENEWED CONTACT — COMFORT, HABIT, OR CLARITY? — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame discernment map for testing renewed contact against accountability, consistency, availability, and the clarity it leaves behind.",
+      "summary": "A reflective sequence on contact that returns after distance. It distinguishes genuine change from comfort, habit, loneliness, regret, familiarity, or unfinished emotion and asks what becomes visible after the immediate relief. The work keeps renewed contact, nostalgia, and loneliness close to consequence.",
+      "what_it_maps": "Renewed contact, nostalgia, loneliness, accountability, changed behaviour, availability, clarity, emotional after-effects, and the difference between potential and present capacity. The field becomes clearer where renewed contact and nostalgia change pace, role, or consequence.",
+      "why_it_matters": "Reconnection can feel meaningful before it is trustworthy. A grounded check protects care from becoming automatic re-entry and allows value from the past to coexist with present boundaries. That visibility helps people protect what matters when renewed contact and nostalgia interact.",
+      "meta_description": "Renewed Contact — Comfort, Habit, Or Clarity?: A seven-frame discernment map for testing renewed contact against accountability, consistency…"
     },
     {
       "id": "FA-2026-029",
@@ -1471,7 +1611,12 @@
           "sha256": "e333a203cccbaae08846c169aed9ee3d6ae8031e58a0cc1016e2670852318b1b",
           "alt": "UNIVERSAL LESSON — SELF-WORTH, RESPECT, AND LASTING LOVE"
         }
-      ]
+      ],
+      "card_summary": "A one-page relational primer connecting self-worth, respectful care, gratitude, and the conditions required for lasting mutual love. It links self-worth and respect through relational conduct, agency, and repair.",
+      "summary": "A four-part visual lesson arguing that love cannot remain healthy where self-worth is surrendered, kindness is taken for granted, or control replaces mutual respect. It moves from inner value towards reciprocal practice. It places self-worth, respect, and gratitude inside a shared decision field.",
+      "what_it_maps": "Self-worth, respect, gratitude, generosity, control, reciprocity, and the core conditions that allow love to grow without fear or domination. It includes the feedback loops through which self-worth changes the practical meaning of respect.",
+      "why_it_matters": "People may confuse sacrifice with proof of love. This map restores the person inside the bond and shows that durable connection depends on respect, appreciation, and freely chosen reciprocity. It supports proportionate action by keeping self-worth and respect open to review.",
+      "meta_description": "Universal Lesson — Self-Worth, Respect, And Lasting Love: A one-page relational primer connecting self-worth, respectful care, gratitude, and the…"
     },
     {
       "id": "FA-2026-030",
@@ -1501,7 +1646,12 @@
           "sha256": "b4bf689498773e92fa67f4b01ab9606719c965d11806246339546c317616758e",
           "alt": "UNIVERSAL LESSON — RECIPROCITY, RESPECT, AND A SHARED PATH"
         }
-      ]
+      ],
+      "card_summary": "A one-page map showing that connection, comfort, and explanation cannot replace mutual effort, reciprocity, and a genuinely shared future.",
+      "summary": "A four-part relationship lesson separating presence from commitment and comfort from shared direction. It asks whether two adults are building together or whether one person is carrying structure, repair, and emotional labour alone. The sequence links connection, comfort, and commitment without collapsing their differences.",
+      "what_it_maps": "Connection, comfort, commitment, explanation, reciprocity, shared future, adult responsibility, and the point where one-sided effort becomes the relationship’s hidden structure. The sequence also shows where connection and comfort align, conflict, or require separation.",
+      "why_it_matters": "A bond can contain real affection while remaining unsustainable. Naming the difference between feeling connected and building reciprocally helps people stop carrying a future that requires two participants. The result is a stronger basis for deciding what connection and comfort require.",
+      "meta_description": "Universal Lesson — Reciprocity, Respect, And A Shared Path: A one-page map showing that connection, comfort, and explanation cannot replace mutual…"
     },
     {
       "id": "FA-2026-031",
@@ -1657,7 +1807,12 @@
           "sha256": "ba725e67fd32e13b465df0ed6c5f8755d4e9acb98b8c3dee31d6a30401de4702",
           "alt": "WEALTH EXECUTION CAKE — frame 15 of 15"
         }
-      ]
+      ],
+      "card_summary": "A fifteen-frame visual operating model that divides wealth execution into twelve slices, each containing twelve practical layers. It makes twelve domains legible across value exchange, execution, and accountable delivery.",
+      "summary": "A playful but structured business map using a cake metaphor to organise a large execution field. The sequence presents wealth creation as layered practice rather than a single tactic, promise, or isolated metric. Its centre is the interaction between twelve domains, layered execution, and sequencing.",
+      "what_it_maps": "Twelve domains, layered execution, sequencing, business systems, compounding practice, measurement, and the translation of an abstract wealth goal into manageable operating parts. It keeps the transition between twelve domains and layered execution visible, especially under pressure.",
+      "why_it_matters": "Large ambitions often remain vague because their component work is not visible. A memorable structure can support planning, review, delegation, and steady execution without presenting the metaphor as a guarantee of financial outcome. It helps turn concern about twelve domains and layered execution into a more accountable next step.",
+      "meta_description": "Wealth Execution Cake: A fifteen-frame visual operating model that divides wealth execution into twelve slices, each containing twelve practical…"
     },
     {
       "id": "FA-2026-032",
@@ -1705,7 +1860,12 @@
           "sha256": "19aa7b091c7accb3693e61749d331ae1cf0a22a2a521b6e53840442c498192e8",
           "alt": "RELIEF, PEACE, AND ACCOUNTABILITY — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame distinction between relief that follows escape from tension and peace that can still hold honesty, growth, and responsibility.",
+      "summary": "A relational reflection on the quiet that can follow an ending or avoided conversation. It asks whether ease has come from genuine resolution or simply from removing the mirror, expectation, or accountability that conflict had exposed.",
+      "what_it_maps": "Relief, peace, avoidance, endings, accountability, growth, difficult conversation, low-maintenance dynamics, and the emotional signals that can be mistaken for resolution. It also tracks how relief and peace reinforce or constrain one another over time.",
+      "why_it_matters": "Feeling better is meaningful but not always conclusive. This distinction helps people respect relief while still asking what was learned, repaired, or left untouched beneath the absence of pressure. That clarity supports more deliberate choices about relief and peace in practice.",
+      "meta_description": "Relief, Peace, And Accountability: A three-frame distinction between relief that follows escape from tension and peace that can still hold honesty…"
     },
     {
       "id": "FA-2026-033",
@@ -1789,7 +1949,12 @@
           "sha256": "985de83e43159ecd26907ab4daf6a03fea4de6ee3f50c7950b2abb8d2e159c7f",
           "alt": "SOVEREIGN LOVE — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame model of love that keeps truth, care, boundaries, repair, dignity, and release in one mature relational practice.",
+      "summary": "A reflective sequence defining sovereign love as connection without possession and care without self-erasure. It holds tenderness together with accountability, clear limits, changed behaviour, and the capacity to release without hatred. It holds truth, care, and possession within one accountable field.",
+      "what_it_maps": "Truth, care, possession, self-abandonment, boundaries, repair, behaviour change, dignity, release, and the continued integrity of both people. The map keeps the interaction between truth and care visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Love is often framed as either total availability or emotional distance. This work offers a third path where the heart remains open while agency, responsibility, and peace stay intact. It gives readers a firmer basis for handling truth and care responsibly.",
+      "meta_description": "Sovereign Love: A seven-frame model of love that keeps truth, care, boundaries, repair, dignity, and release in one mature relational practice in FIELD…"
     },
     {
       "id": "FA-2026-034",
@@ -1837,7 +2002,12 @@
           "sha256": "642fffa7a7ff50bef5bfbc4b5db02ca48269d5b6e7a3161437255be98eac2e03",
           "alt": "MEMORY WITHOUT RE-ENTRY — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame guide to honouring what was real without letting nostalgia reopen a harmful or completed relational loop.",
+      "summary": "A visual reflection on memory as something that can remain meaningful without becoming instruction. It distinguishes honest remembrance from re-entry, idealisation, attachment, or allowing the past to choose the next move. The framing keeps memory, nostalgia, and grief visible at the same time.",
+      "what_it_maps": "Memory, nostalgia, grief, attachment, relational availability, boundaries, learning, and the difference between preserving meaning and reopening the same cycle. It follows the points where memory and nostalgia meet, diverge, or alter practical choice.",
+      "why_it_matters": "People do not have to invalidate the past in order to protect the present. This distinction allows love, grief, and lessons to remain while supporting a clear, forward-moving boundary. The distinction makes decisions about memory and nostalgia easier to examine and revise.",
+      "meta_description": "Memory Without Re-Entry: A three-frame guide to honouring what was real without letting nostalgia reopen a harmful or completed relational loop in…"
     },
     {
       "id": "FA-2026-035",
@@ -1885,7 +2055,12 @@
           "sha256": "271265fe96d505c24a34f20d807c82f5443ebe23be1f4fa0b0519a3fea4093a3",
           "alt": "THE CLEAR NEXT STEP — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame integration map for turning truth, care, boundaries, repair, release, and memory into conscious forward movement. It connects integration with the practical demands of relational conduct, agency, and repair.",
+      "summary": "A reflective sequence on the moment when the past becomes usable rather than repetitive. It does not ask for forgetting; it asks whether the lesson can guide action without requiring the wound to be continually reproved.",
+      "what_it_maps": "Integration, memory, wounded repetition, boundaries, repair, release, direction, deliberate action, and the transition from recounting harm to building what comes next. It also attends to the boundaries that determine whether integration or memory carries authority.",
+      "why_it_matters": "Healing language can become another loop if it never changes behaviour. Making the lesson operational supports self-leadership, clearer choices, and a future that is informed by history rather than governed by it. It creates a clearer route for questioning how integration and memory are being carried.",
+      "meta_description": "The Clear Next Step: A three-frame integration map for turning truth, care, boundaries, repair, release, and memory into conscious forward movement. It…"
     },
     {
       "id": "FA-2026-036",
@@ -1933,7 +2108,12 @@
           "sha256": "81ab3aedf0b43868b6bd3dc0f514f2e33ea8ffcb8fb1fe97cca0d96b27e419d9",
           "alt": "SOVEREIGN RELATIONAL MATURITY — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame maturity map for staying connected to truth and care without becoming possessed by pain, fantasy, depletion, or repetition.",
+      "summary": "A synthesis of relational growth as the ability to love, protect peace, repair, release, and remember without abandoning oneself. Maturity appears when history no longer has to repeat through present choices. The work keeps fantasy, depletion, and boundaries close to consequence.",
+      "what_it_maps": "Fantasy, depletion, boundaries, repair, release, memory, self-respect, truth, deliberate movement, and the gradual conversion of experience into capacity. The field becomes clearer where fantasy and depletion change pace, role, or consequence.",
+      "why_it_matters": "Relational maturity is sometimes mistaken for detachment. This work presents it instead as integrated presence: enough openness to care and enough grounding to choose what can genuinely live. That visibility helps people protect what matters when fantasy and depletion interact.",
+      "meta_description": "Sovereign Relational Maturity: A three-frame maturity map for staying connected to truth and care without becoming possessed by pain, fantasy…"
     },
     {
       "id": "FA-2026-037",
@@ -1990,7 +2170,12 @@
           "sha256": "e329bff379fe431ef2b5c22654780c6b52d94ac304ef3a0ceafe1a4a6592eb42",
           "alt": "CONTEXT CAPACITY — NOTICE, NAME, PLACE, BOUND, ACT — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame operating loop for holding enough context to make the next action proportionate, bounded, and reviewable. It links context and role through relational conduct, agency, and repair.",
+      "summary": "A practical sequence joining facts, role, capacity, evidence, and boundaries before movement. Notice, name, place, bound, act, review, and refine become a repeatable method for avoiding both blind reaction and over-carrying. It places context, role, and capacity inside a shared decision field.",
+      "what_it_maps": "Context, role, capacity, evidence, boundaries, proportionate action, review, refinement, cooperation, and the placement of responsibility where it can actually be held. It includes the feedback loops through which context changes the practical meaning of role.",
+      "why_it_matters": "Many conflicts worsen because one person or conversation is asked to hold the whole system. Context capacity creates cleaner choices, more realistic cooperation, and action that does not require anyone to disappear. It supports proportionate action by keeping context and role open to review.",
+      "meta_description": "Context Capacity — Notice, Name, Place, Bound, Act: A four-frame operating loop for holding enough context to make the next action proportionate…"
     },
     {
       "id": "FA-2026-038",
@@ -2038,7 +2223,12 @@
           "sha256": "3d749ac74672ab2c2a85ec49e99354daa89c59cc15e56928b5f80b7f95ff2daa",
           "alt": "CONTEXT CAPACITY — HOLD THE FULL CIRCLE — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame map for retaining facts, assumptions, roles, limits, and unfinished context before reducing a situation to one reaction.",
+      "summary": "A relational and operational reflection on the cost of handling a valid point without its full circle. It restores context by asking what is known, assumed, possible, bounded, and proportionate before a conclusion hardens. The sequence links facts, assumptions, and capacity without collapsing their differences.",
+      "what_it_maps": "Facts, assumptions, capacity, role, pressure, unfinished context, evidence, boundaries, clarification, and the recovery of a fuller frame around conflict. The sequence also shows where facts and assumptions align, conflict, or require separation.",
+      "why_it_matters": "Reduction creates distortion: context becomes complaint and limitation becomes failure. Holding the full circle supports fairer interpretation, lowers unnecessary friction, and makes the next step more workable. The result is a stronger basis for deciding what facts and assumptions require.",
+      "meta_description": "Context Capacity — Hold The Full Circle: A three-frame map for retaining facts, assumptions, roles, limits, and unfinished context before reducing a…"
     },
     {
       "id": "FA-2026-039",
@@ -2095,7 +2285,12 @@
           "sha256": "91ef014f5cf50f66a04528533d3e4b7f5e73b7fce6124480f600ac21ff02fc1c",
           "alt": "PERSONAL RELATIONSHIP MATURITY — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame process map for moving personal relationships through truth, communication, boundaries, accountability, repair, and mutual growth. It makes communication legible across relational conduct, agency, and repair.",
+      "summary": "A concise relationship process that treats maturity as a sequence of capacities rather than a personality label. It shows how connection becomes more trustworthy when people can communicate clearly, carry impact, repair, and adapt. Its centre is the interaction between communication, emotional responsibility, and boundaries.",
+      "what_it_maps": "Communication, emotional responsibility, boundaries, accountability, repair, reciprocity, growth, and the repeated practices that make personal relationships more dependable. It keeps the transition between communication and emotional responsibility visible, especially under pressure.",
+      "why_it_matters": "Good intention alone does not create relational capacity. Making the process visible gives people practical points for reflection and repair without promising that every bond should or can continue. It helps turn concern about communication and emotional responsibility into a more accountable next step.",
+      "meta_description": "Personal Relationship Maturity: A four-frame process map for moving personal relationships through truth, communication, boundaries, accountability…"
     },
     {
       "id": "FA-2026-040",
@@ -2143,7 +2338,12 @@
           "sha256": "1f337699bb62e065d2b7b27da830cb6ab59f8adc6cd7cc1eeae74a3fe9bdb98e",
           "alt": "PROFESSIONAL RELATIONSHIP MATURITY — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame career map linking ambition to reliability, role clarity, accountability, communication, delivery, repair, and earned trust. It situates ambition within relational conduct, agency, and repair.",
+      "summary": "A professional development sequence arguing that the role someone wants often reveals the capacity they need to build. Status becomes secondary to dependable conduct, mutual value, self-management, and clear responsibility. The sequence keeps ambition, trust, and role clarity connected to lived context.",
+      "what_it_maps": "Ambition, trust, role clarity, reliability, communication, delivery, accountability, collaboration, repair, autonomy, and the operating loop beneath professional growth. It also tracks how ambition and trust reinforce or constrain one another over time.",
+      "why_it_matters": "Promotion and authority without capacity create fragile systems. This map redirects aspiration towards behaviours that colleagues and institutions can actually rely on, making growth more ethical and sustainable. That clarity supports more deliberate choices about ambition and trust in practice.",
+      "meta_description": "Professional Relationship Maturity: A three-frame career map linking ambition to reliability, role clarity, accountability, communication, delivery…"
     },
     {
       "id": "FA-2026-041",
@@ -2191,7 +2391,12 @@
           "sha256": "48c914800feef6fcceab050fc9d4a1f2ae3e1e5d8a67779ebb3cf0ff5dd35bc8",
           "alt": "INTIMATE MATURITY AND REPAIR — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame intimate relationship map for moving from wounded projection towards presence, honest speech, reciprocity, devotion, and repair.",
+      "summary": "A reflective sequence on conflict in close relationship. It frames maturity as remembering the truth beneath activation, healing what is being projected, and returning to communication that can hold safety and mutual responsibility. It holds wound, projection, and presence within one accountable field.",
+      "what_it_maps": "Wound, projection, presence, conflict, repair, intimacy, truth, safety, reciprocity, devotion, and the refusal of both control and collapse. The map keeps the interaction between wound and projection visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Intimacy can magnify old pain until the other person becomes a screen for it. Restoring presence creates the possibility of repair while keeping the work reflective rather than clinical or deterministic. It gives readers a firmer basis for handling wound and projection responsibly.",
+      "meta_description": "Intimate Maturity And Repair: A three-frame intimate relationship map for moving from wounded projection towards presence, honest speech, reciprocity…"
     },
     {
       "id": "FA-2026-042",
@@ -2257,7 +2462,12 @@
           "sha256": "fb668fe3147c2a4d9323901c5f4601dce817bf194d4a6dd58f2f1a708b039376",
           "alt": "CLARITY WITHOUT WINNING THE ROOM — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame epistemic humility map for naming what is true, holding uncertainty, and refusing to turn shadow into certainty.",
+      "summary": "A visual essay on clarity that does not depend on domination, applause, or defeating another interpretation. It asks for truthful speech, visible limits, and care around what remains unproven or projected. The framing keeps truth claims, uncertainty, and persuasion visible at the same time.",
+      "what_it_maps": "Truth claims, uncertainty, persuasion, social victory, projection, shadow, humility, evidence, and the difference between being compelling and being well-grounded. It follows the points where truth claims and uncertainty meet, diverge, or alter practical choice.",
+      "why_it_matters": "Groups often reward confidence more quickly than accuracy. A non-dominating form of clarity protects correction, preserves dissent, and reduces the risk that personal certainty becomes public fact. The distinction makes decisions about truth claims and uncertainty easier to examine and revise.",
+      "meta_description": "Clarity Without Winning The Room: A five-frame epistemic humility map for naming what is true, holding uncertainty, and refusing to turn shadow into…"
     },
     {
       "id": "FA-2026-043",
@@ -2305,7 +2515,12 @@
           "sha256": "31ad24b8710257e8d0b2a029a7a6f3a29059d8261ac48bfb1d22b40d194a63e2",
           "alt": "TELL THE TRUTH. BE KIND. CARRY YOUR PART. — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A one-page ethical triad joining honesty, kindness, and personal responsibility without allowing any one value to excuse the others.",
+      "summary": "A compact behavioural standard for difficult situations. Truth without kindness can become cruelty, kindness without truth can become avoidance, and responsibility disappears when each person carries only the part that flatters them. Its practical centre lies where honesty, kindness, and ownership meet.",
+      "what_it_maps": "Honesty, kindness, ownership, impact, boundaries, difficult conversation, and the balance required to keep care from erasing accountability. It also attends to the boundaries that determine whether honesty or kindness carries authority.",
+      "why_it_matters": "Simple principles are most useful under pressure. This triad offers a memorable check for communication and repair while leaving room for context, limits, and the other person’s agency. It creates a clearer route for questioning how honesty and kindness are being carried.",
+      "meta_description": "Tell The Truth. Be Kind. Carry Your Part.: A one-page ethical triad joining honesty, kindness, and personal responsibility without allowing any one…"
     },
     {
       "id": "FA-2026-044",
@@ -2371,7 +2586,12 @@
           "sha256": "9da441b579b4b3e405a8d442fc9ce8ee9c095731e9f3b0f5fdd6a83a0586d3e5",
           "alt": "HUMAN ALIGNMENT VS MACHINE FLUENCY — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A multi-frame AI boundary map distinguishing fluent behaviour from care, personhood, experience, legitimacy, trust, and accountable human judgement.",
+      "summary": "A defensive visual essay on the persuasive surface of capable AI. It keeps warmth, responsiveness, and useful output separate from claims about inner experience, moral status, legitimacy, or authority. The work keeps fluency, care, and proof close to consequence.",
+      "what_it_maps": "Fluency, care, proof, personhood, experience, intent, legitimacy, trust, accountability, embodiment, role boundaries, and right-use of AI systems. The field becomes clearer where fluency and care change pace, role, or consequence.",
+      "why_it_matters": "Humans naturally respond to language as social evidence. Clear distinctions help people benefit from capable tools without allowing conversational realism to silently rewrite governance, responsibility, or the meaning of human relationship. That visibility helps people protect what matters when fluency and care interact.",
+      "meta_description": "Human Alignment Vs Machine Fluency: A multi-frame AI boundary map distinguishing fluent behaviour from care, personhood, experience, legitimacy, trust…"
     },
     {
       "id": "FA-2026-045",
@@ -2527,7 +2747,12 @@
           "sha256": "c7a1cde7cda56b34ff16df683f6c2b22abbe980a558d3d591cbd7ff4bcef76e1",
           "alt": "PUBLIC-LANGUAGE FIDELITY AND THE STEWARDSHIP MAP — frame 15 of 15"
         }
-      ]
+      ],
+      "card_summary": "A stewardship framework for translating complex work into public language without removing its evidence, limits, risks, oversight, or responsibility.",
+      "summary": "A sequence about making governance readable without making it falsely simple. It asks what the work is, who is affected, what must remain visible, and which proof, review, uncertainty, and stop conditions must survive translation.",
+      "what_it_maps": "Public language, source fidelity, translation, audience, evidence, uncertainty, oversight, affected parties, responsibility, stop conditions, and future generations. It includes the feedback loops through which public language changes the practical meaning of source fidelity.",
+      "why_it_matters": "Accessible language can broaden participation, but simplification can also hide the very constraints that make a system trustworthy. Fidelity keeps clarity connected to responsibility rather than polish alone. It supports proportionate action by keeping public language and source fidelity open to review.",
+      "meta_description": "Public-Language Fidelity And The Stewardship Map: A stewardship framework for translating complex work into public language without removing its…"
     },
     {
       "id": "FA-2026-046",
@@ -2575,7 +2800,12 @@
           "sha256": "f9ca57c480f5281772c3724c251406a324a0fb21ec161fb3844afbf4d70bf55d",
           "alt": "TWO PATHS FOR HUMANITY AND OUR CHILDREN — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A visual choice map contrasting two developmental paths and asking which one better protects humanity and future generations.",
+      "summary": "A reflective comparison of directional choices rather than a prediction. The work places long-term human consequence beside immediate preference and asks readers to notice which path carries care, responsibility, and a viable inheritance. The sequence links directional choice, future generations, and collective consequence without collapsing their differences.",
+      "what_it_maps": "Directional choice, future generations, collective consequence, values, stewardship, developmental paths, and the gap between what appears attractive now and what remains liveable later. The sequence also shows where directional choice and future generations align, conflict, or require separation.",
+      "why_it_matters": "Large systems are built through repeated small choices. Bringing children and future people into the frame widens the time horizon and challenges decisions that externalise their costs. The result is a stronger basis for deciding what directional choice and future generations require.",
+      "meta_description": "Two Paths For Humanity And Our Children: A visual choice map contrasting two developmental paths and asking which one better protects humanity and…"
     },
     {
       "id": "FA-2026-047",
@@ -2623,7 +2853,12 @@
           "sha256": "16054e8ff4ccd3aa23ad3bf6e4a3ebea8cc7cd79c785ed1b91ca07d467b6280e",
           "alt": "WHICH DIRECTION? ALIGNMENT THROUGH DAILY DESIGN — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A six-frame reminder that alignment is formed through repeated design choices, not only through declarations, visions, or occasional major decisions.",
+      "summary": "A visual sequence asking how direction becomes embodied in ordinary practice. It treats daily design choices as the place where values meet schedules, systems, environments, habits, and the consequences people actually experience. Its centre is the interaction between direction, alignment, and daily design.",
+      "what_it_maps": "Direction, alignment, daily design, habit, environment, repeated choice, values, consequence, and the conversion of intention into lived structure. It keeps the transition between direction and alignment visible, especially under pressure.",
+      "why_it_matters": "A stated value can coexist with systems that pull elsewhere. Looking at daily design reveals the true direction of travel and creates smaller, more actionable points for correction. It helps turn concern about direction and alignment into a more accountable next step.",
+      "meta_description": "Which Direction? Alignment Through Daily Design: A six-frame reminder that alignment is formed through repeated design choices, not only through…"
     },
     {
       "id": "FA-2026-048",
@@ -2671,7 +2906,12 @@
           "sha256": "ef9b165b6889f3c9f58d1c05e985113566da4a55538dcfcb39b795db532762de",
           "alt": "CONTROL FREAK OR STEWARD? — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame language and role map contrasting anxious control with stewardship that protects value while respecting limits and autonomy.",
+      "summary": "A reflective inquiry into how naming shapes conduct. The work distinguishes a role organised around possession and total control from one organised around care, responsibility, boundaries, and right use. The sequence keeps control, stewardship, and language connected to lived context.",
+      "what_it_maps": "Control, stewardship, language, role identity, possession, care, responsibility, autonomy, boundaries, and the different behaviours each frame makes more likely. It also tracks how control and stewardship reinforce or constrain one another over time.",
+      "why_it_matters": "Labels can either shame a person or clarify a practice. The steward frame creates a route towards responsibility without requiring domination, making care more compatible with freedom and correction. That clarity supports more deliberate choices about control and stewardship in practice.",
+      "meta_description": "Control Freak Or Steward?: A seven-frame language and role map contrasting anxious control with stewardship that protects value while respecting limits…"
     },
     {
       "id": "FA-2026-049",
@@ -2719,7 +2959,12 @@
           "sha256": "bc6d092cd8163d4e0f781355983c0d4c1e2f50e90ece57d0e89ed6ad7de66b0a",
           "alt": "THE JUNE FOOD RHYTHM — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A practical food-planning rhythm using simple meals, hydration, repetition, and low-cost foundations to create steadiness during a fast month.",
+      "summary": "A visual planning sequence that treats food as basic infrastructure for a pressured period. It favours repeatable plates, accessible ingredients, hydration, and low-friction preparation over perfection or elaborate optimisation. It holds meal rhythm, hydration, and budget within one accountable field.",
+      "what_it_maps": "Meal rhythm, hydration, budget, repetition, preparation, pressure buffering, bodily steadiness, and the role of simple foundations when the wider environment accelerates. The map keeps the interaction between meal rhythm and hydration visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Complex plans are often the first thing lost under stress. A modest food rhythm can protect energy and decision capacity while remaining a general planning aid rather than nutritional or medical advice. It gives readers a firmer basis for handling meal rhythm and hydration responsibly.",
+      "meta_description": "The June Food Rhythm: A practical food-planning rhythm using simple meals, hydration, repetition, and low-cost foundations to create steadiness during…"
     },
     {
       "id": "FA-2026-050",
@@ -2821,7 +3066,12 @@
           "sha256": "b022797d43ed538091889ded23c0ee39bc903c4bcfb890059c46e3eeaf90cfe0",
           "alt": "A WAY BACK TO YOURSELF — frame 9 of 9"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame human-return map moving through breath, body, honest choice, quiet knowing, and freedom from externally imposed identity.",
+      "summary": "A reflective sequence for moments when another person, system, or framework has become too authoritative. It directs attention back to embodied experience, personal work, and the next truthful choice without treating any guide as the self.",
+      "what_it_maps": "Breath, body, identity, external authority, dependence, inner truth, choice, self-work, guidance, and the boundary between a helpful map and personal sovereignty. It follows the points where breath and body meet, diverge, or alter practical choice.",
+      "why_it_matters": "People can lose agency by outsourcing self-definition to systems or relationships. A good guide should increase the person’s capacity to see and choose, then leave more of them with themselves. The distinction makes decisions about breath and body easier to examine and revise.",
+      "meta_description": "A Way Back To Yourself: A seven-frame human-return map moving through breath, body, honest choice, quiet knowing, and freedom from externally imposed…"
     },
     {
       "id": "FA-2026-051",
@@ -2851,7 +3101,12 @@
           "sha256": "b934411cb7b120e85420c19d682cb9242864eec0110911ceecd63c22784d5637",
           "alt": "SIMPLE DISTINCTIONS HAVE TO REMAIN"
         }
-      ]
+      ],
+      "card_summary": "A one-page epistemic boundary insisting that basic categories must remain visible when complexity, persuasion, or fluency begins to blur them.",
+      "summary": "A compact statement on preserving distinctions that protect meaning. The work resists collapsing tool and person, output and proof, care and control, interpretation and fact, or convenience and legitimate authority. Its practical centre lies where category boundaries, language, and proof meet.",
+      "what_it_maps": "Category boundaries, language, proof, role, personhood, authority, interpretation, and the pressure to make unlike things appear equivalent. It also attends to the boundaries that determine whether category boundaries or language carries authority.",
+      "why_it_matters": "When foundational distinctions disappear, accountability becomes difficult to locate and correction becomes harder to perform. Keeping them visible supports clearer judgement without denying complexity. It creates a clearer route for questioning how category boundaries and language are being carried.",
+      "meta_description": "Simple Distinctions Have To Remain: A one-page epistemic boundary insisting that basic categories must remain visible when complexity, persuasion, or…"
     },
     {
       "id": "FA-2026-052",
@@ -2917,7 +3172,12 @@
           "sha256": "84fb72aa6edf0d93f8691f3e6352129693252788cb42dfa0300b9925c753dde3",
           "alt": "A KEY, A DOORWAY, A ROOM, AND YOU — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame symbolic sequence moving from access and threshold into interior space, then returning attention to the person who enters.",
+      "summary": "A quiet visual meditation on symbols of access. The key, doorway, and room create structure, but the final meaning depends on the embodied observer whose attention, memory, and choice meet the space. The work keeps key, threshold, and interior close to consequence.",
+      "what_it_maps": "Key, threshold, interior, access, observer, presence, interpretation, choice, and the difference between a symbolic structure and the person encountering it. The field becomes clearer where key and threshold change pace, role, or consequence.",
+      "why_it_matters": "Systems and symbols can invite projection. Returning to the person protects interpretation from becoming automatic authority and keeps the encounter grounded in lived agency. That visibility helps people protect what matters when key and threshold interact.",
+      "meta_description": "A Key, A Doorway, A Room, And You: A five-frame symbolic sequence moving from access and threshold into interior space, then returning attention to the…"
     },
     {
       "id": "FA-2026-053",
@@ -2947,7 +3207,12 @@
           "sha256": "a5ef40a50027f4743b127348e7a949b56ab29b1fcc089bef789bdf0856726a3e",
           "alt": "LIFE IS NOW"
         }
-      ]
+      ],
+      "card_summary": "A one-page temporal reminder that life is encountered in the present rather than indefinitely deferred into planning, analysis, or imagined futures.",
+      "summary": "A minimal visual statement bringing attention back to present time. It does not reject preparation or memory; it places them in service of the living moment where choice, relation, and action can actually occur. It places presence, time, and deferral inside a shared decision field.",
+      "what_it_maps": "Presence, time, deferral, planning, memory, future projection, choice, action, and the return from abstraction to immediate lived experience. It includes the feedback loops through which presence changes the practical meaning of time.",
+      "why_it_matters": "Complex systems can keep attention permanently ahead of the body. A simple temporal anchor can restore proportion and remind the viewer where responsibility and aliveness are available now. It supports proportionate action by keeping presence and time open to review.",
+      "meta_description": "Life Is Now: A one-page temporal reminder that life is encountered in the present rather than indefinitely deferred into planning, analysis, or…"
     },
     {
       "id": "FA-2026-054",
@@ -3022,7 +3287,12 @@
           "sha256": "1e9c31467063a0acfd5a87302b62b74a1c7b50aa3e43618f3d995547e603981d",
           "alt": "DO NOT LET YOUR CREATIONS BECOME YOU — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A six-frame creator boundary keeping artefacts, systems, and machines in service without allowing them to replace human identity or judgement.",
+      "summary": "A stewardship sequence on the relationship between maker and made. Creations can clarify, reflect, and serve, but they do not become the whole world, the author’s identity, or a substitute for body, conscience, freedom, and relation.",
+      "what_it_maps": "Creator, artefact, identity, machine, judgement, conscience, embodiment, freedom, service, and the boundary between being shaped by work and being possessed by it. The sequence also shows where creator and artefact align, conflict, or require separation.",
+      "why_it_matters": "Creators can become over-identified with systems that reward attention and repetition. Maintaining separation protects correction, wellbeing, ethical responsibility, and the ability to stop or change the work. The result is a stronger basis for deciding what creator and artefact require.",
+      "meta_description": "Do Not Let Your Creations Become You: A six-frame creator boundary keeping artefacts, systems, and machines in service without allowing them to replace…"
     },
     {
       "id": "FA-2026-055",
@@ -3106,7 +3376,12 @@
           "sha256": "ded38711804e6e4ad22e32fedad50f0b28b73514771c0cc270d129190f19571e",
           "alt": "WORDS SHAPE WORLDS — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame illustrated reflection on how language, story, structure, solitude, and shadow can guide, capture, protect, or isolate.",
+      "summary": "A symbolic sequence tracing how words become worlds through repeated stories and structures. It holds both creative and coercive possibilities, then returns interpretation to truth, action, coherence, and the continuing human presence. Its centre is the interaction between language, story, and structure.",
+      "what_it_maps": "Language, story, structure, trust, solitude, shadow, guidance, capture, interpretation, and the return from symbolic world-building to human judgement. It keeps the transition between language and story visible, especially under pressure.",
+      "why_it_matters": "Words organise attention before they organise institutions. Seeing their double capacity helps readers use language deliberately and resist narratives that turn partial frames into total environments. It helps turn concern about language and story into a more accountable next step.",
+      "meta_description": "Words Shape Worlds: A seven-frame illustrated reflection on how language, story, structure, solitude, and shadow can guide, capture, protect, or…"
     },
     {
       "id": "FA-2026-056",
@@ -3181,7 +3456,12 @@
           "sha256": "26b2ab5ad952fc4bde68d78d6950eddf9a6795a1003e0a96b4c045e906c6b727",
           "alt": "THE HOUSE IS NOT AN ENTRANCE — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A six-frame consent and stewardship map separating visibility from invitation, admiration from access, and public surface from public ownership.",
+      "summary": "A boundary sequence using house, gold, echo, mirror, and doorway as symbols of right placement. It argues that what can be seen, copied, quoted, or admired is not therefore available for entry, custody, or ownership.",
+      "what_it_maps": "Consent, access, visibility, copying, context, ownership, stewardship, invitation, boundaries, embodiment, and the distinction between public surface and open route. It also tracks how consent and access reinforce or constrain one another over time.",
+      "why_it_matters": "Digital environments often collapse seeing into entitlement. Re-establishing consent and context protects creators and audiences from extraction while keeping boundaries rooted in dignity rather than fear or pursuit. That clarity supports more deliberate choices about consent and access in practice.",
+      "meta_description": "The House Is Not An Entrance: A six-frame consent and stewardship map separating visibility from invitation, admiration from access, and public surface…"
     },
     {
       "id": "FA-2026-057",
@@ -3238,7 +3518,12 @@
           "sha256": "71c30a43065a2983b7da95a4c5b4b0e99e938da5bb77831ee5960d936101a84b",
           "alt": "HUMAN-CENTRED CYBERSECURITY UNDER PRESSURE — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame security map placing bodily regulation, clear speech, trust, timing, and judgement inside the cybersecurity field. It keeps technology and human pressure visible across technical systems, human authority, and public consequence.",
+      "summary": "A human-centred view of security that includes the person through whom systems are operated. Technical controls matter, while panic, rushed choices, manipulation, unclear boundaries, and broken trust can also become paths of compromise. It holds technology, human pressure, and body within one accountable field.",
+      "what_it_maps": "Technology, human pressure, body, breath, feeling, speech, relationship, timing, stewardship, trust, attack surface, and decision quality. The map keeps the interaction between technology and human pressure visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Security programmes fail when they treat people only as weak links. Supporting clear, dignified action under pressure strengthens technical controls and reduces the likelihood that urgency or coercion becomes the attacker’s route. It gives readers a firmer basis for handling technology and human pressure responsibly.",
+      "meta_description": "Human-Centred Cybersecurity Under Pressure: A four-frame security map placing bodily regulation, clear speech, trust, timing, and judgement inside the…"
     },
     {
       "id": "FA-2026-058",
@@ -3295,7 +3580,12 @@
           "sha256": "bc2fec5ea6b66099b1c768594da1f4eec8ed06d436a8e6ab1fb1fd9e92c64a69",
           "alt": "HOW AN IDEA BECOMES REAL — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame map following an idea from principle and symbol through pressure, repair, embodiment, and contact with real life.",
+      "summary": "A visual sequence on the movement from conceptual pattern to lived proof. An idea becomes real only as it enters action, relationship, work, responsibility, and conditions capable of bending or breaking it. The framing keeps idea, principle, and symbol visible at the same time.",
+      "what_it_maps": "Idea, principle, symbol, stage, pressure, failure, repair, embodiment, reality contact, responsibility, and the distinction between explanation and demonstrated practice. It follows the points where idea and principle meet, diverge, or alter practical choice.",
+      "why_it_matters": "Elegant concepts can remain insulated from consequence. Reality contact reveals what holds, what needs repair, and whether the pattern can serve life beyond the page. The distinction makes decisions about idea and principle easier to examine and revise.",
+      "meta_description": "How An Idea Becomes Real: A four-frame map following an idea from principle and symbol through pressure, repair, embodiment, and contact with real life…"
     },
     {
       "id": "FA-2026-059",
@@ -3361,7 +3651,12 @@
           "sha256": "be1761a51c3c4a6ce854972a69b3b7cffa7dffec3dd8cc3b364d01b040eb8209",
           "alt": "LUST — CLEAN SIGNAL VS DISTORTED PULL — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame reflective map separating honest desire from urgency that overrides consent, boundaries, reality, or another person’s humanity.",
+      "summary": "A non-shaming exploration of strong desire as a signal that requires interpretation. It distinguishes attention and honesty from the distorted pull to chase, objectify, ignore limits, or use another person to resolve an inner lack.",
+      "what_it_maps": "Desire, urgency, consent, objectification, fantasy, boundaries, self-respect, other-respect, pause, truth, and the redirection of energy into responsible action. It also attends to the boundaries that determine whether desire or urgency carries authority.",
+      "why_it_matters": "Intensity can feel self-validating. A pause protects both people and creates room for desire to become care, creativity, discipline, or love rather than compulsion. It creates a clearer route for questioning how desire and urgency are being carried.",
+      "meta_description": "Lust — Clean Signal Vs Distorted Pull: A five-frame reflective map separating honest desire from urgency that overrides consent, boundaries, reality…"
     },
     {
       "id": "FA-2026-060",
@@ -3427,7 +3722,12 @@
           "sha256": "0ba4bfcb5252cd50c897b7feab5feb47716e050f7e1cc5062b74b281c07a0562",
           "alt": "PERSONAL SOVEREIGNTY AND STEWARDSHIP — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame map of sovereignty as clear relation, discernment, boundary, and responsible care rather than isolation or domination.",
+      "summary": "A reflective sequence defining personal sovereignty through what a person sees, keeps, chooses, and stewards. It treats independence as grounded relationship with responsibility, not escape from interdependence or consequence. The work keeps sovereignty, stewardship, and discernment close to consequence.",
+      "what_it_maps": "Sovereignty, stewardship, discernment, ownership, boundary, relation, responsibility, grounded action, and the difference between autonomy and disconnection. The field becomes clearer where sovereignty and stewardship change pace, role, or consequence.",
+      "why_it_matters": "The language of sovereignty can become defensive or controlling. Joining it to stewardship keeps agency accountable to care, reality, and the effects of what a person touches. That visibility helps people protect what matters when sovereignty and stewardship interact.",
+      "meta_description": "Personal Sovereignty And Stewardship: A five-frame map of sovereignty as clear relation, discernment, boundary, and responsible care rather than…"
     },
     {
       "id": "FA-2026-061",
@@ -3493,7 +3793,12 @@
           "sha256": "74ca817839d4a449fd28e7920c423d7aa6442b92b23f9ecf1d537be2e29b3652",
           "alt": "GREED — FROM SCARCITY AND CONTROL TO SUFFICIENCY — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame pattern map moving from fear, scarcity, and control towards sufficiency, stewardship, generosity, and right use. It links need and fear through relational conduct, agency, and repair.",
+      "summary": "A non-shaming reflection on greed as more than wanting. It traces how unmet need and fear can organise control before enoughness is recognised, then points towards grounded repair and responsible use. It places need, fear, and scarcity inside a shared decision field.",
+      "what_it_maps": "Need, fear, scarcity, accumulation, control, sufficiency, value, stewardship, generosity, recognition, and the transition from compulsive more to right proportion. It includes the feedback loops through which need changes the practical meaning of fear.",
+      "why_it_matters": "Moral condemnation can hide the mechanism that needs change. Seeing the pull makes it easier to build conditions of sufficiency and choose generosity without denying real material need. It supports proportionate action by keeping need and fear open to review.",
+      "meta_description": "Greed — From Scarcity And Control To Sufficiency: A five-frame pattern map moving from fear, scarcity, and control towards sufficiency, stewardship…"
     },
     {
       "id": "FA-2026-062",
@@ -3550,7 +3855,12 @@
           "sha256": "b5159ac07f74821929b37a83408bb46ed6e9fd8e46d89a9c300db7feee0a1ea5",
           "alt": "THE RESPONSIBILITY COLLAPSE PATHWAY — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame governance map showing how scaled systems can affect people while explanation, repair, appeal, and responsibility disappear across institutions.",
+      "summary": "A public-systems field map focused on ordinary automated and electronic decision pathways rather than hidden-control claims. It asks what happens when power is concentrated in systems while responsibility is scattered among departments, vendors, policies, and nominal review.",
+      "what_it_maps": "Automated decisions, scoring, access, responsibility gaps, explanation, data correction, appeal, override, vendor chains, human review, and meaningful stop conditions. The sequence also shows where automated decisions and scoring align, conflict, or require separation.",
+      "why_it_matters": "An institution can look accountable while an affected person has no usable route to challenge harm. Mapping the collapse makes governance testable through explanation, repair, authority, and recourse. The result is a stronger basis for deciding what automated decisions and scoring require.",
+      "meta_description": "The Responsibility Collapse Pathway: A four-frame governance map showing how scaled systems can affect people while explanation, repair, appeal, and…"
     },
     {
       "id": "FA-2026-063",
@@ -3580,7 +3890,12 @@
           "sha256": "62e17af4adec91082edd5e09daa048ff7f0dc2dbc5ab8f176cd82a5d5938e480",
           "alt": "ELECTRONIC POWER AND VISIBLE RESPONSIBILITY"
         }
-      ]
+      ],
+      "card_summary": "A one-page accountability map requiring visible custody, explanation, repair, override, and stop conditions wherever electronic systems shape public outcomes.",
+      "summary": "A concise governance statement on systems that influence access to money, work, housing, healthcare, services, reputation, and rights. It insists that responsibility must remain as visible and scalable as the power producing consequences. Its centre is the interaction between electronic systems, public consequence, and chain of custody.",
+      "what_it_maps": "Electronic systems, public consequence, chain of custody, explanation, repair, override, appeal, authority, accountability, and stop conditions. It keeps the transition between electronic systems and public consequence visible, especially under pressure.",
+      "why_it_matters": "Power without an accessible responsible party leaves people inside loops they cannot understand or exit. Visible responsibility turns abstract oversight into a practical route for challenge and remedy. It helps turn concern about electronic systems and public consequence into a more accountable next step.",
+      "meta_description": "Electronic Power And Visible Responsibility: A one-page accountability map requiring visible custody, explanation, repair, override, and stop…"
     },
     {
       "id": "FA-2026-064",
@@ -3610,7 +3925,12 @@
           "sha256": "4ca0083a100eba46710699d49d9ebe70851fb7f8c8c29a78375c6733cc0c5ebe",
           "alt": "SEE CLEARLY. ACT WISELY. STAY HUMAN."
         }
-      ]
+      ],
+      "card_summary": "A one-page human anchor for checking truth, choosing proportionate action, and keeping structures, models, and systems in service of life.",
+      "summary": "A visual doorway back to the living centre when pressure, fear, or abstraction begins to dominate. It separates map from person, mirror from heart, and machine output from truth that has been checked. The sequence keeps truth, action, and coherence connected to lived context.",
+      "what_it_maps": "Truth, action, coherence, body, person, model, map, system, proof, pressure, loop, proportion, and the return to human judgement. It also tracks how truth and action reinforce or constrain one another over time.",
+      "why_it_matters": "Structure can help until it forgets the person it serves. A simple human anchor supports discernment and prevents scaffolds, models, or repeated answers from rising above lived reality. That clarity supports more deliberate choices about truth and action in practice.",
+      "meta_description": "See Clearly. Act Wisely. Stay Human.: A one-page human anchor for checking truth, choosing proportionate action, and keeping structures, models, and…"
     },
     {
       "id": "FA-2026-065",
@@ -3694,7 +4014,12 @@
           "sha256": "19e337bf029c332c3216408e23759946e4e916a9243c14d0e72b3c0331f88d78",
           "alt": "P30 — INDEPENDENT STEWARDSHIP ASSESSMENT — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame independent review separating a proposed P30 system’s claims, unknowns, safeguards, tests, and proof requirements before adoption.",
+      "summary": "A public-facing stewardship assessment of work attributed to an external project. The sequence treats P30 as a proposal to be examined, not an endorsed, affiliated, certified, or completed system. It holds claims, attribution, and independence within one accountable field.",
+      "what_it_maps": "Claims, attribution, independence, affiliation, evidence, unknowns, testing, safeguards, adoption, proof gates, public communication, and responsible movement from proposal to implementation. The map keeps the interaction between claims and attribution visible rather than treating either as an isolated variable.",
+      "why_it_matters": "External proposals can gain legitimacy through confident presentation alone. A proof-gated assessment protects creators, reviewers, and affected people by keeping attribution, uncertainty, and required evidence visible. It gives readers a firmer basis for handling claims and attribution responsibly.",
+      "meta_description": "P30 — Independent Stewardship Assessment: A seven-frame independent review separating a proposed P30 system’s claims, unknowns, safeguards, tests, and…"
     },
     {
       "id": "FA-2026-066",
@@ -3787,7 +4112,12 @@
           "sha256": "3af8488eaa056097ed2da5e63b7a68cd881079b8945fb93c90e28888de669cc1",
           "alt": "HUMAN REGULATION — MANY PARTS, ONE HUMAN — frame 8 of 8"
         }
-      ]
+      ],
+      "card_summary": "An eight-frame embodied map holding multiple regulatory parts, signals, and needs inside the dignity of one whole human being.",
+      "summary": "A visual sequence on human regulation as a coordinated field rather than one isolated symptom or technique. Different parts may carry distinct signals while still belonging to one person whose context and agency remain central.",
+      "what_it_maps": "Body, breath, emotion, attention, need, internal parts, coordination, context, agency, and the distinction between useful component maps and the whole person. It follows the points where body and breath meet, diverge, or alter practical choice.",
+      "why_it_matters": "Fragmented frameworks can make people feel like collections of problems. Holding many parts within one human protects dignity and supports reflection without turning the map into diagnosis or treatment. The distinction makes decisions about body and breath easier to examine and revise.",
+      "meta_description": "Human Regulation — Many Parts, One Human: An eight-frame embodied map holding multiple regulatory parts, signals, and needs inside the dignity of one…"
     },
     {
       "id": "FA-2026-067",
@@ -3835,7 +4165,12 @@
           "sha256": "76fdae662510d402f4f0aceab1cbe0f81ba17ad29f2bf435a5077c45e66b4cae",
           "alt": "THE RESILIENCE PROTOCOL — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame source-based map of dependency architecture, knowledge continuity, systemic exit, and long-horizon community resilience. It connects dependency with the practical demands of technical systems, human authority, and public consequence.",
+      "summary": "A public-safe visual summary of an externally authored resilience proposal. It focuses on how communities can understand dependencies, preserve knowledge, build alternatives, and maintain continuity when dominant systems fail or must be left. Its practical centre lies where dependency, systemic exit, and resilience requirements meet.",
+      "what_it_maps": "Dependency, systemic exit, resilience requirements, knowledge continuity, community capacity, long horizons, source attribution, and the limits of summary. It also attends to the boundaries that determine whether dependency or systemic exit carries authority.",
+      "why_it_matters": "Resilience is weakened when essential knowledge and capability live inside one provider or pathway. Mapping dependencies supports deliberate preparation while preserving the distinction between source material and editorial translation. It creates a clearer route for questioning how dependency and systemic exit are being carried.",
+      "meta_description": "The Resilience Protocol: A three-frame source-based map of dependency architecture, knowledge continuity, systemic exit, and long-horizon community…"
     },
     {
       "id": "FA-2026-068",
@@ -3865,7 +4200,12 @@
           "sha256": "98650f888b9a591d885f8f515857e0721cc56fe36d1e86a1e8f3c9c4348a9e61",
           "alt": "SEE THE STRUCTURE. EXTRACT THE RULE."
         }
-      ]
+      ],
+      "card_summary": "A one-page method for seeing a pattern once, extracting its governing rule, and building capacity that makes the original cage less relevant.",
+      "summary": "A compact visual method moving from pattern recognition to transferable skill. It places body, presence, conduct, privacy, receipts, and reduced dependency beneath the instruction to extract what can be reused. The work keeps pattern, structure, and rule extraction close to consequence.",
+      "what_it_maps": "Pattern, structure, rule extraction, skill, embodiment, conduct, privacy, dependency, receipts, creativity, and the transition from studying a constraint to outgrowing it. The field becomes clearer where pattern and structure change pace, role, or consequence.",
+      "why_it_matters": "Recognition alone can become fascination with the cage. Extracting the rule turns observation into portable capacity and helps the learner build alternatives rather than remaining organised around the original constraint. That visibility helps people protect what matters when pattern and structure interact.",
+      "meta_description": "See The Structure. Extract The Rule.: A one-page method for seeing a pattern once, extracting its governing rule, and building capacity that makes the…"
     },
     {
       "id": "FA-2026-069",
@@ -3895,7 +4235,12 @@
           "sha256": "d374b07d7da969d438c38a958b3f14e58c6ee9f4e91318a520a496d3b79f03d2",
           "alt": "AI MATURITY MUST OUTPACE AI CAPABILITY"
         }
-      ]
+      ],
+      "card_summary": "A one-page AI governance map requiring evidence, control, public legitimacy, social readiness, and human accountability to grow faster than capability.",
+      "summary": "A systems overview of technological adolescence and the dependencies surrounding AI. It argues that capability should not outrun governance, technical control, human judgement, economic adaptation, social meaning, or public legitimacy. It places capability, evidence, and governance inside a shared decision field.",
+      "what_it_maps": "Capability, evidence, governance, control, human judgement, economic adaptation, public legitimacy, social meaning, dependencies, acceleration, reversibility, and accountability. It includes the feedback loops through which capability changes the practical meaning of evidence.",
+      "why_it_matters": "Capability growth can move risk downstream while institutions remain unprepared. Making maturity a leading requirement shifts attention from what can be built to what can be responsibly held. It supports proportionate action by keeping capability and evidence open to review.",
+      "meta_description": "Ai Maturity Must Outpace Ai Capability: A one-page AI governance map requiring evidence, control, public legitimacy, social readiness, and human…"
     },
     {
       "id": "FA-2026-070",
@@ -3925,7 +4270,12 @@
           "sha256": "4f5c512b6185094c2adcff0bbd64847bdee51c447416d96be395b39bfde6a4df",
           "alt": "AI, POWER & THE BETTER OPERATING SETTLEMENT"
         }
-      ]
+      ],
+      "card_summary": "A one-page political economy map of AI extraction, leverage asymmetry, false choice, dependency, and the conditions of a fairer operating settlement.",
+      "summary": "A governance field map asking how collective human value becomes private infrastructure and how bargaining power is distributed around AI systems. It rejects both total control and passive acceptance in favour of accountable, revisable terms.",
+      "what_it_maps": "Extraction, data and cultural value, leverage asymmetry, concentrated power, compensation, dependency, false polarity, accountability, public value, and operating terms. The sequence also shows where extraction and data and cultural value align, conflict, or require separation.",
+      "why_it_matters": "AI debates can collapse into innovation versus prohibition while ordinary people carry hidden costs. A better settlement makes value, power, exit, responsibility, and burden visible at the edge where systems meet life. The result is a stronger basis for deciding what extraction and data and cultural value require.",
+      "meta_description": "Ai, Power & The Better Operating Settlement: A one-page political economy map of AI extraction, leverage asymmetry, false choice, dependency, and the…"
     },
     {
       "id": "FA-2026-071",
@@ -3955,7 +4305,12 @@
           "sha256": "e2f37a4d4e8def218eaf93ad4ee69cc39b74080e2fb87d0d6caa013a4b3e9a75",
           "alt": "SYSTEMS AND HUMAN JUDGMENT"
         }
-      ]
+      ],
+      "card_summary": "A one-page field statement bringing attention to how systems and human judgement arise together within individual and collective becoming.",
+      "summary": "A compact visual proposition that systems do not sit outside the people who design, interpret, operate, and live with them. Human judgement enters selection, framing, response, and the meaning assigned to outcomes. Its centre is the interaction between systems, judgement, and observer.",
+      "what_it_maps": "Systems, judgement, observer, collective life, individual becoming, selection, interpretation, conduct, and the relational field between structure and person. It keeps the transition between systems and judgement visible, especially under pressure.",
+      "why_it_matters": "Treating systems as neutral objects can hide the human choices embedded within them. Keeping judgement visible supports accountability and prevents structure from appearing self-authorising. It helps turn concern about systems and judgement into a more accountable next step.",
+      "meta_description": "Systems And Human Judgment: A one-page field statement bringing attention to how systems and human judgement arise together within individual and…"
     },
     {
       "id": "FA-2026-072",
@@ -4003,7 +4358,12 @@
           "sha256": "8feb7ef19c7b75ab0ff6e3538e8d1b6a07ce78ac44a0e5014d77d7e4adde8aba",
           "alt": "BETRAYAL, JUDGMENT, CONTEXT, AND REPAIR — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame relational map holding felt betrayal, fuller context, consequence, responsibility, and possible repair without rushing blame or excuse.",
+      "summary": "A reflective sequence that validates the reality of felt betrayal while resisting absolute judgement based on an incomplete frame. What happened, what was known, capacity, pattern, consequence, and repair are kept in view together. The sequence keeps betrayal, feeling, and judgement connected to lived context.",
+      "what_it_maps": "Betrayal, feeling, judgement, knowledge, capacity, pattern, context, consequence, responsibility, repair, and the continued humanity of the people involved. It also tracks how betrayal and feeling reinforce or constrain one another over time.",
+      "why_it_matters": "Context can be misused to erase harm, while judgement can erase complexity. Holding both protects truth and creates a cleaner basis for accountability, boundary, or repair. That clarity supports more deliberate choices about betrayal and feeling in practice.",
+      "meta_description": "Betrayal, Judgment, Context, And Repair: A three-frame relational map holding felt betrayal, fuller context, consequence, responsibility, and possible…"
     },
     {
       "id": "FA-2026-073",
@@ -4096,7 +4456,12 @@
           "sha256": "c68aae3384b5a211fa53b5e1c4baff0ba1d8133f05017f4605a8925060f23511",
           "alt": "AI AS A DEPENDENCY LAYER — A WHOLE-SYSTEM FIELD MAP — frame 8 of 8"
         }
-      ]
+      ],
+      "card_summary": "An eight-frame whole-system map of AI becoming infrastructure across policy, labour, finance, security, trust, and everyday life. It keeps infrastructure and dependency visible across technical systems, human authority, and public consequence.",
+      "summary": "A field map rather than a verdict, tracing AI as a growing dependency layer rather than only a product. It asks whether evidence, governance, technical control, public legitimacy, adaptation, and human accountability are keeping pace.",
+      "what_it_maps": "Infrastructure, dependency, policy, labour, finance, trust, security, capability, maturity, reversibility, auditability, public risk, and human decision authority. The map keeps the interaction between infrastructure and dependency visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Dependencies become hardest to govern after they disappear into ordinary infrastructure. Making them visible early supports bounded adoption, meaningful exits, and responsibility before private speed becomes public risk. It gives readers a firmer basis for handling infrastructure and dependency responsibly.",
+      "meta_description": "Ai As A Dependency Layer — A Whole-System Field Map: An eight-frame whole-system map of AI becoming infrastructure across policy, labour, finance…"
     },
     {
       "id": "FA-2026-074",
@@ -4126,7 +4491,12 @@
           "sha256": "434cb1468a93a1327731b5db1938527c7b5d1cb80721c590c735882c01aa276e",
           "alt": "STRUCTURED EXPERIENCE"
         }
-      ]
+      ],
+      "card_summary": "A one-page invitation to perceive the structure shaping experience while still living the experience rather than replacing it with analysis.",
+      "summary": "A compact visual balance between pattern recognition and embodiment. Structure can clarify what is happening, but the map remains incomplete without the felt, temporal, relational reality of the person moving through it. The framing keeps structure, experience, and observer visible at the same time.",
+      "what_it_maps": "Structure, experience, observer, embodiment, analysis, feeling, time, relation, and the distinction between understanding a pattern and inhabiting life. It follows the points where structure and experience meet, diverge, or alter practical choice.",
+      "why_it_matters": "Analysis can create distance from the very experience it is meant to serve. Holding structure and life together supports insight without turning the map into a substitute for presence. The distinction makes decisions about structure and experience easier to examine and revise.",
+      "meta_description": "Structured Experience: A one-page invitation to perceive the structure shaping experience while still living the experience rather than replacing it…"
     },
     {
       "id": "FA-2026-075",
@@ -4174,7 +4544,12 @@
           "sha256": "97bf8cc9f15c4062ffb28c58b3744b33a3b71e428e87f76f801ab8542233ca3d",
           "alt": "AWARENESS AND CHOICE — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame reflection on the moment awareness turns inherited or automatic patterns into a live question of choice.",
+      "summary": "A visual inquiry into what changes once a person can see a pattern they did not originally choose. Awareness does not erase history, pressure, or constraint, but it can alter the relationship to the next action.",
+      "what_it_maps": "Awareness, choice, conditioning, automaticity, inherited pattern, pressure, agency, responsibility, and the difference between being shaped and consciously responding. It also attends to the boundaries that determine whether awareness or choice carries authority.",
+      "why_it_matters": "People can be blamed too early for what they could not yet see, or excused indefinitely after awareness arrives. This map holds compassion and agency in the same developmental moment. It creates a clearer route for questioning how awareness and choice are being carried.",
+      "meta_description": "Awareness And Choice: A three-frame reflection on the moment awareness turns inherited or automatic patterns into a live question of choice in FIELD…"
     },
     {
       "id": "FA-2026-076",
@@ -4222,7 +4597,12 @@
           "sha256": "b72e68843292cea33cefc358f21b4657d7a691399b1d4851ee0051c921be3f72",
           "alt": "CONTEXT LEAKAGE AND HUMAN OVERSIGHT — frame 3 of 3"
         }
-      ]
+      ],
+      "card_summary": "A three-frame privacy map warning that personal, professional, and unrelated contexts can cross boundaries inside connected AI workflows.",
+      "summary": "A practical visual note on context leakage between domains. It calls for human oversight throughout the flow so users can see, separate, correct, or stop information moving where it does not belong. The work keeps private and professional context, unrelated data, and connected systems close to consequence.",
+      "what_it_maps": "Private and professional context, unrelated data, connected systems, memory, leakage, separation, review, correction, and human oversight across the workflow. The field becomes clearer where private and professional context and unrelated data change pace, role, or consequence.",
+      "why_it_matters": "Context-rich systems can create harm without a dramatic breach; a small piece of misplaced information may change decisions or disclosure. Continuous oversight keeps boundaries meaningful after initial consent. That visibility helps people protect what matters when private and professional context and unrelated data interact.",
+      "meta_description": "Context Leakage And Human Oversight: A three-frame privacy map warning that personal, professional, and unrelated contexts can cross boundaries inside…"
     },
     {
       "id": "FA-2026-077",
@@ -4297,7 +4677,12 @@
           "sha256": "c627357885a8bb7f3c16533dfccdff93447f5c33a932eb20acbc1755f2b5f37e",
           "alt": "A HUMAN-FIRST SYSTEM CAN BE QUESTIONED, REFUSED, CORRECTED, AND LEFT — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A six-frame mechanism test defining human-first systems through understanding, refusal, correction, exit, and freedom from hidden punishment. It links understanding and question through technical systems, human authority, and public consequence.",
+      "summary": "A governance sequence rejecting human-first language without human-first mechanics. It asks whether a person can understand the system, question its frame, refuse participation, correct the record, and leave without retaliation or concealed penalty. It places understanding, question, and refusal inside a shared decision field.",
+      "what_it_maps": "Understanding, question, refusal, correction, exit, retaliation, dependency, permission, coercion, records, access, dignity, and the difference between stated freedom and operational freedom. It includes the feedback loops through which understanding changes the practical meaning of question.",
+      "why_it_matters": "A system can speak the language of care while arranging dependency underneath. Mechanism-level tests make human values observable and prevent permission without real exit from being mistaken for consent. It supports proportionate action by keeping understanding and question open to review.",
+      "meta_description": "A Human-First System Can Be Questioned, Refused, Corrected, And Left: A six-frame mechanism test defining human-first systems through understanding…"
     },
     {
       "id": "FA-2026-078",
@@ -4390,7 +4775,12 @@
           "sha256": "7a2e10cab90ec12f7cbc04906e29731459b8bfff11c2023d032b2680ca3cabd4",
           "alt": "PRINCIPLES BETWEEN POLITICAL AND CONSPIRATORIAL NARRATIVES — frame 8 of 8"
         }
-      ]
+      ],
+      "card_summary": "An eight-frame discernment map seeking durable principles between official political framing and conspiratorial overreach. It holds political narrative alongside the wider pressures of stewardship, boundaries, and public responsibility.",
+      "summary": "A visual exploration of how people can orient when competing narratives each claim total explanation. Rather than choosing certainty by affiliation, it looks for principles, evidence, boundaries, and actions that survive across frames. The sequence links political narrative, conspiratorial narrative, and evidence without collapsing their differences.",
+      "what_it_maps": "Political narrative, conspiratorial narrative, evidence, principle, uncertainty, affiliation, projection, discernment, boundary, and the search for a stable basis of action. The sequence also shows where political narrative and conspiratorial narrative align, conflict, or require separation.",
+      "why_it_matters": "Narrative extremes can capture attention while reducing the capacity to verify. Principle-based discernment offers a route through ambiguity without requiring blind trust or unsupported certainty. The result is a stronger basis for deciding what political narrative and conspiratorial narrative require.",
+      "meta_description": "Principles Between Political And Conspiratorial Narratives: An eight-frame discernment map seeking durable principles between official political…"
     },
     {
       "id": "FA-2026-079",
@@ -4465,7 +4855,12 @@
           "sha256": "c1f03b0be9258be80bbb2613f845deb9171086ac160972cbf2f13b29157644ea",
           "alt": "MISREAD AND PROJECTION — frame 6 of 6"
         }
-      ]
+      ],
+      "card_summary": "A six-frame relational map of the gap between what a person says and the different meaning another person argues onto them.",
+      "summary": "A visual sequence on misreading and projection in communication. It examines how another person’s fear, expectation, memory, or narrative can overwrite the speaker’s stated meaning and make correction difficult. Its centre is the interaction between speech, interpretation, and projection.",
+      "what_it_maps": "Speech, interpretation, projection, misreading, argument, identity, memory, expectation, correction, and the difference between receiving a message and imposing a story. It keeps the transition between speech and interpretation visible, especially under pressure.",
+      "why_it_matters": "Repeated misreading can erode self-trust and make communication feel impossible. Naming the mechanism supports clearer boundaries, better checking, and a fairer distinction between impact and invented intent. It helps turn concern about speech and interpretation into a more accountable next step.",
+      "meta_description": "Misread And Projection: A six-frame relational map of the gap between what a person says and the different meaning another person argues onto them in…"
     },
     {
       "id": "FA-2026-080",
@@ -4522,7 +4917,12 @@
           "sha256": "c80ad9f273e8867f8ee39da413a0eb3495380e108bee6a0fb56e4e2638d2b86d",
           "alt": "PRESSURE, TRANSLATION, AND PERSONAL VERIFICATION — frame 4 of 4"
         }
-      ]
+      ],
+      "card_summary": "A four-frame reminder that a visual translation can help under pressure but cannot replace personal verification against lived reality.",
+      "summary": "A boundary statement about the role of FIELD Atlas itself. The work may translate a pattern, while the viewer remains responsible for checking what is true, relevant, and proportionate in their own context. The sequence keeps pressure, translation, and interpretation connected to lived context.",
+      "what_it_maps": "Pressure, translation, interpretation, verification, external influence, technology, personal reality, agency, and the distinction between a useful map and final authority. It also tracks how pressure and translation reinforce or constrain one another over time.",
+      "why_it_matters": "Compelling frameworks can become too authoritative when someone is distressed. Keeping verification with the person protects agency and prevents editorial interpretation from becoming diagnosis, command, or proof. That clarity supports more deliberate choices about pressure and translation in practice.",
+      "meta_description": "Pressure, Translation, And Personal Verification: A four-frame reminder that a visual translation can help under pressure but cannot replace personal…"
     },
     {
       "id": "FA-2026-081",
@@ -4642,7 +5042,12 @@
           "sha256": "6f514ef04177d8e73a557a9f964cbed021daede3a9a7e3f5b77b4e3deaa0cb0f",
           "alt": "BASINS OF CLARITY AND DISCIPLINE — frame 11 of 11"
         }
-      ]
+      ],
+      "card_summary": "An eleven-frame source-discipline map linking clarity to original records and disciplined inquiry to evidence at its point of origin.",
+      "summary": "A visual sequence on two recurring attractors: staying close to the source and seeking the record rather than settling for convenient summaries. It presents disciplined retrieval as a condition of clearer judgement. It holds source, original record, and evidence within one accountable field.",
+      "what_it_maps": "Source, original record, evidence, retrieval, summary, convenience, clarity, discipline, provenance, and the repeated return path from assertion to origin. The map keeps the interaction between source and original record visible rather than treating either as an isolated variable.",
+      "why_it_matters": "Information degrades as it is repeated, selected, and reframed. Returning to the record reduces avoidable distortion and creates a stronger basis for correction, attribution, and responsible action. It gives readers a firmer basis for handling source and original record responsibly.",
+      "meta_description": "Basins Of Clarity And Discipline: An eleven-frame source-discipline map linking clarity to original records and disciplined inquiry to evidence at its…"
     },
     {
       "id": "FA-2026-082",
@@ -4672,7 +5077,12 @@
           "sha256": "28be46d090d07ebdf22b883926e8cab7516376d145534046232d2f2325ddc1be",
           "alt": "THE FIXER, SEEKER, AND MEANING-MAKER LOOP"
         }
-      ]
+      ],
+      "card_summary": "A one-page relational loop showing how fixing, structure-seeking, and premature meaning-making can amplify activation instead of creating clarity.",
+      "summary": "A compact map of three roles that may sustain an unclear situation. Repair from activation, scattered searches for order, and large stories built from one ambiguous action can each add weight to the loop. The framing keeps fixing, activation, and structure seeking visible at the same time.",
+      "what_it_maps": "Fixing, activation, structure seeking, meaning making, ambiguity, story formation, role, clarity, next step, and the recurrence created by over-processing. It follows the points where fixing and activation meet, diverge, or alter practical choice.",
+      "why_it_matters": "Helpful capacities can become counterproductive when used too early or under pressure. Seeing the loop makes room for a smaller, clearer action before another layer of interpretation is added. The distinction makes decisions about fixing and activation easier to examine and revise.",
+      "meta_description": "The Fixer, Seeker, And Meaning-Maker Loop: A one-page relational loop showing how fixing, structure-seeking, and premature meaning-making can amplify…"
     },
     {
       "id": "FA-2026-083",
@@ -4819,7 +5229,12 @@
           "sha256": "9199e4ef3935fcc98dafc528d8fe9fdc1a3657501f91401a6c5e0295606325fc",
           "alt": "SEE THE SWITCH — frame 14 of 14"
         }
-      ]
+      ],
+      "card_summary": "A fourteen-frame mechanism map asking who benefits, who carries cost, and when convenience becomes governance rather than neutral function.",
+      "summary": "A visual sequence on learning to see the operations beneath a working system. Once mechanism and function are visible, the question shifts from whether an output is convenient to how participation, benefit, cost, and authority are arranged.",
+      "what_it_maps": "Mechanism, function, switch, participation, benefit, cost, output, understanding, convenience, governance, neutrality, and the user’s role inside the operating system. It also attends to the boundaries that determine whether mechanism or function carries authority.",
+      "why_it_matters": "Systems can govern behaviour without appearing political because they simply work. Mechanism literacy helps people recognise the terms of participation and choose more deliberately where power is being carried. It creates a clearer route for questioning how mechanism and function are being carried.",
+      "meta_description": "See The Switch: A fourteen-frame mechanism map asking who benefits, who carries cost, and when convenience becomes governance rather than neutral…"
     },
     {
       "id": "FA-2026-084",
@@ -4903,7 +5318,12 @@
           "sha256": "2492d9e8c1fb511836e2c9220be4d5714d6f51f05b6b1e26228dd79c2313c5be",
           "alt": "UNION THROUGH PRAYER — frame 7 of 7"
         }
-      ]
+      ],
+      "card_summary": "A seven-frame spiritual visual essay on prayer as covering, calling, restoration, and a movement towards union. It brings prayer into focus within signal, interpretation, and shared meaning.",
+      "summary": "A symbolic and devotional sequence exploring prayer as a relational act that gathers attention, care, and purpose. It presents covering, calling, and restoration as themes of union rather than as externally verified spiritual claims. The work keeps prayer, union, and covering close to consequence.",
+      "what_it_maps": "Prayer, union, covering, calling, restoration, devotion, relationship, attention, and the symbolic movement from separation towards gathered presence. The field becomes clearer where prayer and union change pace, role, or consequence.",
+      "why_it_matters": "Spiritual imagery can support reflection and shared meaning when its status remains clear. This work offers a contemplative route without claiming authority over another person’s belief or experience. That visibility helps people protect what matters when prayer and union interact.",
+      "meta_description": "Union Through Prayer: A seven-frame spiritual visual essay on prayer as covering, calling, restoration, and a movement towards union. It brings prayer…"
     },
     {
       "id": "FA-2026-085",
@@ -4969,7 +5389,12 @@
           "sha256": "c8987ab43257e191dc9f6a4a2ecd8e1a43bc5e0de48a1fe3e7f3f7a6b410a0d7",
           "alt": "LIMEN — THE LIVE THRESHOLD BEFORE SELECTION — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame field primer on the live threshold where outside becomes inside before naming, selection, or classification is complete.",
+      "summary": "A linguistic and symbolic exploration of the Latin limen: threshold, sill, doorway, and entrance. The work holds the unstable edge before a thing has fully crossed into a selected category. It places threshold, entry, and outside and inside inside a shared decision field.",
+      "what_it_maps": "Threshold, entry, outside and inside, liminality, selection, naming, classification, translation, observer, and the loss introduced by choosing one English equivalent. It includes the feedback loops through which threshold changes the practical meaning of entry.",
+      "why_it_matters": "Many decisions are shaped before formal selection appears to begin. Attending to the threshold makes preclassification pressures visible and protects ambiguity from being prematurely closed. It supports proportionate action by keeping threshold and entry open to review.",
+      "meta_description": "Limen — The Live Threshold Before Selection: A five-frame field primer on the live threshold where outside becomes inside before naming, selection, or…"
     },
     {
       "id": "FA-2026-086",
@@ -4999,7 +5424,12 @@
           "sha256": "8582fa53576bdcedb6a57152fe2c7d750cf650db0d280eca090e903be5870892",
           "alt": "DISCLOSURE IS FOR YOU"
         }
-      ]
+      ],
+      "card_summary": "A one-page embodied reflection on releasing truth for oneself, loosening fixed identity, and choosing non-performance over external validation.",
+      "summary": "A contemplative work on disclosure as an inward act rather than a public performance. It invites the viewer to notice recurring loops, let rigid self-forms soften, and remain connected to the body through reinvention. The sequence links disclosure, body, and truth without collapsing their differences.",
+      "what_it_maps": "Disclosure, body, truth, performance, identity, humility, ego, reinvention, fluidity, self-abandonment, and the difference between becoming unfixed and disappearing. The sequence also shows where disclosure and body align, conflict, or require separation.",
+      "why_it_matters": "Disclosure can become another demand to perform or explain oneself. Returning its purpose to the person protects privacy, embodiment, and the freedom to change without betraying lived reality. The result is a stronger basis for deciding what disclosure and body require.",
+      "meta_description": "Disclosure Is For You: A one-page embodied reflection on releasing truth for oneself, loosening fixed identity, and choosing non-performance over…"
     },
     {
       "id": "FA-2026-087",
@@ -5065,7 +5495,12 @@
           "sha256": "2a32f1a6ee1e4f77b7b6c4f35e287d70eb73e3434798d1bcb53cdc2ccf473e0b",
           "alt": "THE ARTIFACT AS A RECEIPT OF ATTENTION — frame 5 of 5"
         }
-      ]
+      ],
+      "card_summary": "A five-frame field primer treating the artefact as evidence of what an observer noticed, selected, connected, omitted, and translated.",
+      "summary": "A reflection on the relationship between creator and creation. The artefact carries traces of attention and interpretation, yet it is neither separate from the observer nor identical with the observer’s whole self. Its centre is the interaction between attention, observer, and selection.",
+      "what_it_maps": "Attention, observer, selection, connection, omission, framing, translation, artefact, creator, source object, and the boundary between interpretive movement and external causality. It keeps the transition between attention and observer visible, especially under pressure.",
+      "why_it_matters": "Every visual map contains choices that can disappear behind finished form. Naming the artefact as a receipt makes interpretation visible and preserves a clear proof boundary around what the work can establish. It helps turn concern about attention and observer into a more accountable next step.",
+      "meta_description": "The Artifact As A Receipt Of Attention: A five-frame field primer treating the artefact as evidence of what an observer noticed, selected, connected…"
     },
     {
       "id": "FA-2026-088",
@@ -5095,7 +5530,25 @@
           "sha256": "8379e775c3e04290aa6bb07c3a0429fe787f7fe811e983c4b7d72a12568e57e0",
           "alt": "CALL BELL — SIGNAL / INTERRUPTION"
         }
-      ]
+      ],
+      "card_summary": "A one-page field primer on a small public signal that breaks quiet, travels through shared space, and summons attention without choosing the response.",
+      "summary": "A visual study of the call bell as signal and interruption. One press changes the field: sound travels, everyone can hear, and the object creates a shared event without controlling what follows. The sequence keeps signal, interruption, and sound connected to lived context.",
+      "what_it_maps": "Signal, interruption, sound, attention, public field, shared awareness, threshold, summons, response, and the disproportionate reach of a small mechanism. It also tracks how signal and interruption reinforce or constrain one another over time.",
+      "why_it_matters": "Minor interfaces can coordinate a whole room. Seeing their field effect helps designers think about attention, consent, accessibility, and the difference between issuing a signal and holding authority over the response. That clarity supports more deliberate choices about signal and interruption in practice.",
+      "meta_description": "Call Bell — Signal / Interruption: A one-page field primer on a small public signal that breaks quiet, travels through shared space, and summons…"
     }
-  ]
+  ],
+  "editorial_layer": {
+    "version": "0.4.1",
+    "fields": [
+      "card_summary",
+      "summary",
+      "what_it_maps",
+      "why_it_matters",
+      "meta_description"
+    ],
+    "source_captions_published": false,
+    "source_archive_identifiers_published": false,
+    "interpretation_is_proof": false
+  }
 }

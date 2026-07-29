@@ -11,7 +11,7 @@
     if(!cards.length)return;
     var q=normal(search&&search.value),t=normal(type&&type.value),c=normal(collection&&collection.value),visible=0;
     cards.forEach(function(card){
-      var ok=(!q||normal(card.dataset.title+" "+card.dataset.id+" "+card.dataset.collection).indexOf(q)!==-1)&&(!t||normal(card.dataset.type)===t)&&(!c||normal(card.dataset.collection)===c);
+      var ok=(!q||normal(card.dataset.search||card.dataset.title+" "+card.dataset.id+" "+card.dataset.collection).indexOf(q)!==-1)&&(!t||normal(card.dataset.type)===t)&&(!c||normal(card.dataset.collection)===c);
       card.hidden=!ok;if(ok)visible+=1;
     });
     if(count)count.textContent=visible+" of "+cards.length+" works shown";
