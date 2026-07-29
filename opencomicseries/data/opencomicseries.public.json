@@ -1,0 +1,153 @@
+{
+  "schema": "opencomicseries.public-catalog.v0.1.0",
+  "generated_utc": "2026-07-29T17:14:12.186109Z",
+  "canonical_site": "https://goldlevel.co.uk",
+  "series_route": "/opencomicseries/",
+  "publisher": "goldlevel.co.uk",
+  "counts": {
+    "families": 1,
+    "series": 1,
+    "assets": 10
+  },
+  "families": [
+    {
+      "id": "OCS-2026-001",
+      "slug": "evidence-that-holds",
+      "title": "EVIDENCE THAT HOLDS",
+      "route": "/opencomicseries/evidence-that-holds/",
+      "canonical_url": "https://goldlevel.co.uk/opencomicseries/evidence-that-holds/",
+      "work_type": "SERIES",
+      "asset_count": 10,
+      "cover": {
+        "sequence_index": 1,
+        "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/00-cover.jpg",
+        "width": 1229,
+        "height": 1536,
+        "mime_type": "image/jpeg",
+        "sha256": "eec5b5bfb01eaed53831e64679b260909fe5f7de6319ba5a0dbfab20117f7964",
+        "title": "Series cover",
+        "alt": "Evidence That Holds — plate 1 of 10: Series cover",
+        "description": "Evidence That Holds — case-building versus truth-seeking."
+      },
+      "ordered_assets": [
+        {
+          "sequence_index": 1,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/00-cover.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "eec5b5bfb01eaed53831e64679b260909fe5f7de6319ba5a0dbfab20117f7964",
+          "title": "Series cover",
+          "alt": "Evidence That Holds — plate 1 of 10: Series cover",
+          "description": "Evidence That Holds — case-building versus truth-seeking."
+        },
+        {
+          "sequence_index": 2,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/01-selective-case-building.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "cd019766d99089ca465bd6012fd940b0644b3fb0384c9ea2ef3cd1e38437490f",
+          "title": "Selective Case-Building",
+          "alt": "Evidence That Holds — plate 2 of 10: Selective Case-Building",
+          "description": "Selective evidence, omitted context, and one-sided framing."
+        },
+        {
+          "sequence_index": 3,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/02-asymmetric-selection.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "2e0fa69e30ef16d3d2c6dc894d9eea866dac571310a4e8d9e71a9eaeed651bd5",
+          "title": "Asymmetric Selection",
+          "alt": "Evidence That Holds — plate 3 of 10: Asymmetric Selection",
+          "description": "Uneven standards for inclusion, exclusion, and scrutiny."
+        },
+        {
+          "sequence_index": 4,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/03-echoed-authority.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "a7a65e06c4e7c19680143f662ce2559c81c816e30971f5eb3353ab803174ce92",
+          "title": "Echoed Authority",
+          "alt": "Evidence That Holds — plate 4 of 10: Echoed Authority",
+          "description": "Claims gaining apparent force through repetition rather than verification."
+        },
+        {
+          "sequence_index": 5,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/04-crowd-and-institution-pressure.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "583f53192ffa21c90d1806c87f8f48b3d8a019fae98dc07d4f8784bc488b138d",
+          "title": "Crowd and Institution Pressure",
+          "alt": "Evidence That Holds — plate 5 of 10: Crowd and Institution Pressure",
+          "description": "Social and institutional pressure displacing independent examination."
+        },
+        {
+          "sequence_index": 6,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/05-story-and-cause-traps.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "be0767c8208a847d51d87073d4e52bb1af2add4c3c3060fecd5e952f53059ef0",
+          "title": "Story and Cause Traps",
+          "alt": "Evidence That Holds — plate 6 of 10: Story and Cause Traps",
+          "description": "Narrative coherence being mistaken for causal proof."
+        },
+        {
+          "sequence_index": 7,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/06-the-numbers-trap.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "94c63668796b1f7c225e046a7e40e586a43ab342f02a6ad50ee47875921e0a22",
+          "title": "The Numbers Trap",
+          "alt": "Evidence That Holds — plate 7 of 10: The Numbers Trap",
+          "description": "Quantification masking weak definitions, missing context, or unsupported inference."
+        },
+        {
+          "sequence_index": 8,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/07-context-and-language-fog.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "d1a546e677dd170ef08ffdfe8641571fa5da71331d04f6738ba6faa7e8746d17",
+          "title": "Context and Language Fog",
+          "alt": "Evidence That Holds — plate 8 of 10: Context and Language Fog",
+          "description": "Ambiguity, threshold drift, timing bias, and language inflation."
+        },
+        {
+          "sequence_index": 9,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/08-attachment-and-escalation.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "c3ce9053e78deb38378b27ac3c144af7ca53ee5c0ceffd53d21c6fdf8d1ea142",
+          "title": "Attachment and Escalation",
+          "alt": "Evidence That Holds — plate 9 of 10: Attachment and Escalation",
+          "description": "Identity and momentum making correction feel personally threatening."
+        },
+        {
+          "sequence_index": 10,
+          "src": "/assets/portfolio/archive/opencomicseries/evidence-that-holds/09-false-finals.jpg",
+          "width": 1229,
+          "height": 1536,
+          "mime_type": "image/jpeg",
+          "sha256": "6cdc226c0248f378d10f7be8d9affedfb6f4144de79ffb470e03fb18d4f0486f",
+          "title": "False Finals",
+          "alt": "Evidence That Holds — plate 10 of 10: False Finals",
+          "description": "Premature closure, false binaries, and conclusions that outrun the record."
+        }
+      ],
+      "card_summary": "A ten-plate comic field map of 52 distortions that bend evidence, from selective case-building to false finals.",
+      "summary": "A pure comic expression of evidence discipline. The sequence follows the ways a record can be narrowed, echoed, inflated, pressured, and closed before it has been tested well enough to hold.",
+      "what_it_maps": "Selective case-building, asymmetric selection, echoed authority, crowd and institution pressure, story and cause traps, numerical overreach, context and language fog, attachment, escalation, and premature closure.",
+      "why_it_matters": "Public reasoning becomes more trustworthy when claims remain inspectable, contextual, revisable, and proportionate to the evidence. Comic form makes those distortions visible without requiring the reader to adopt a specialist vocabulary first.",
+      "meta_description": "Evidence That Holds: a ten-plate Open Comic Series mapping 52 distortions that bend evidence and public reasoning.",
+      "display_rank": 1,
+      "front_facing": true
+    }
+  ]
+}
