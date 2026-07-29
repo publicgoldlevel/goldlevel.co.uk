@@ -15,3 +15,14 @@
 .item-body h2:first-child{margin-top:0}.item-body p{margin:.15rem 0;color:var(--ink);max-width:72ch}
 @media(max-width:42rem){.item-body{padding:1.05rem 1rem}.atlas-card__summary{font-size:.93rem}}
 /* FIELD_ATLAS_EDITORIAL_LAYER_END */
+/* FIELD_ATLAS_CURATED_ORDER_LAYER_START v0.4.2 */
+.atlas-field-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;padding:1.25rem 0;border-bottom:1px solid var(--rule)}
+.atlas-field-nav a{display:flex;gap:.55rem;align-items:baseline;padding:.75rem .8rem;border:1px solid var(--rule);background:rgba(255,255,255,.55);text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:600;line-height:1.25}
+.atlas-field-nav a span{font-family:var(--mono);font-size:.68rem;color:var(--bronze);letter-spacing:.08em}.atlas-field-nav a:hover{border-color:var(--bronze);color:var(--bronze)}
+.atlas-field{scroll-margin-top:8rem;padding:2.2rem 0 1rem;border-bottom:2px solid var(--ink)}.atlas-field:last-of-type{border-bottom:0}.atlas-field[hidden]{display:none}
+.atlas-field__head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(18rem,.9fr);gap:2rem;align-items:end}.atlas-field__head h2{font-family:var(--serif);font-size:clamp(1.8rem,4vw,3.25rem);line-height:1.08;margin:.2rem 0 0}.atlas-field__head>p{margin:0;color:var(--ink-soft);max-width:58ch}.atlas-field__note{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--ink-soft);margin:.85rem 0 0}
+.atlas-field .atlas-grid{padding-top:1.35rem}.atlas-card--primary{border-color:var(--bronze);box-shadow:0 0 0 1px var(--bronze)}.atlas-card__topline{display:flex;align-items:center;justify-content:space-between;gap:.5rem}.atlas-card__primary,.work-primary{font-family:var(--mono);font-size:.62rem;letter-spacing:.09em;text-transform:uppercase;background:var(--ink);color:var(--gold);padding:.18rem .38rem;border-radius:999px}.atlas-card h3{font-family:var(--serif);font-weight:600;font-size:1.18rem;line-height:1.25;margin:0}.atlas-card h3 a{color:var(--ink);text-decoration:none}.atlas-card h3 a:hover{text-decoration:underline;color:var(--bronze)}
+.item-head .eyebrow a{text-decoration:none}.item-head .eyebrow a:hover{text-decoration:underline}.work-primary{margin-left:auto}
+@media(max-width:900px){.atlas-field-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-field__head{grid-template-columns:1fr;gap:.75rem}.atlas-field__head>p{max-width:68ch}}
+@media(max-width:640px){.atlas-field-nav{grid-template-columns:1fr}.atlas-field{scroll-margin-top:1rem}}
+/* FIELD_ATLAS_CURATED_ORDER_LAYER_END */

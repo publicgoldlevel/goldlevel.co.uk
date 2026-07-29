@@ -2,23 +2,32 @@
   "use strict";
   var search=document.querySelector("[data-atlas-search]");
   var type=document.querySelector("[data-atlas-type]");
-  var collection=document.querySelector("[data-atlas-collection]");
+  var theme=document.querySelector("[data-atlas-theme]");
   var cards=Array.prototype.slice.call(document.querySelectorAll("[data-atlas-card]"));
+  var sections=Array.prototype.slice.call(document.querySelectorAll("[data-theme-section]"));
   var count=document.querySelector("[data-atlas-count]");
   var empty=document.querySelector("[data-atlas-empty]");
   function normal(v){return String(v||"").toLowerCase().trim();}
   function filter(){
     if(!cards.length)return;
-    var q=normal(search&&search.value),t=normal(type&&type.value),c=normal(collection&&collection.value),visible=0;
+    var q=normal(search&&search.value),t=normal(type&&type.value),f=normal(theme&&theme.value),visible=0;
     cards.forEach(function(card){
-      var ok=(!q||normal(card.dataset.search||card.dataset.title+" "+card.dataset.id+" "+card.dataset.collection).indexOf(q)!==-1)&&(!t||normal(card.dataset.type)===t)&&(!c||normal(card.dataset.collection)===c);
+      var hay=normal(card.dataset.search||card.dataset.title+" "+card.dataset.id+" "+card.dataset.theme);
+      var ok=(!q||hay.indexOf(q)!==-1)&&(!t||normal(card.dataset.type)===t)&&(!f||normal(card.dataset.theme)===f);
       card.hidden=!ok;if(ok)visible+=1;
+    });
+    sections.forEach(function(section){
+      var shown=Array.prototype.some.call(section.querySelectorAll("[data-atlas-card]"),function(card){return !card.hidden;});
+      section.hidden=!shown;
     });
     if(count)count.textContent=visible+" of "+cards.length+" works shown";
     if(empty)empty.hidden=visible!==0;
   }
-  [search,type,collection].forEach(function(node){if(node)node.addEventListener(node.tagName==="INPUT"?"input":"change",filter);});
-  if(collection){var params=new URLSearchParams(location.search);var preset=params.get("collection");if(preset)collection.value=preset;}
+  [search,type,theme].forEach(function(node){if(node)node.addEventListener(node.tagName==="INPUT"?"input":"change",filter);});
+  var params=new URLSearchParams(location.search);
+  if(type&&params.get("type"))type.value=params.get("type");
+  if(theme&&params.get("theme"))theme.value=params.get("theme");
+  if(search&&params.get("q"))search.value=params.get("q");
   filter();
 
   Array.prototype.forEach.call(document.querySelectorAll("[data-sequence-shell]"),function(shell){
