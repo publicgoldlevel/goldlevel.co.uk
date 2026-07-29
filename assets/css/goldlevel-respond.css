@@ -110,6 +110,9 @@
   z-index: 40;
   top: max(clamp(14px, 3vw, 30px), env(safe-area-inset-top));
   left: max(clamp(14px, 3vw, 34px), env(safe-area-inset-left));
+  min-height: 0;
+  height: auto;
+  align-items: flex-start;
   opacity: .72;
 }
 
