@@ -1,0 +1,33 @@
+/* GOLDLEVEL contact route — Swiss public layer v0.1.0 */
+.contact-page{min-height:100vh;background:var(--paper);color:var(--ink)}
+.contact-page .topbar{position:relative;background:#fff}
+.contact-page .brand strong{letter-spacing:.14em}
+.contact-page .brand span{font-size:12px}
+.contact-main{border-bottom:2px solid var(--ink)}
+.contact-hero{padding:clamp(64px,10vw,132px) 0 clamp(44px,7vw,86px);border-bottom:2px solid var(--ink)}
+.contact-hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:clamp(30px,6vw,76px);align-items:end}
+.contact-hero h1{max-width:920px}
+.contact-hero .lede{max-width:720px}
+.contact-note{border:1px solid var(--ink);padding:24px;background:#fff}
+.contact-note b,.contact-label{display:block;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.contact-note b{margin-bottom:14px}
+.contact-note p{margin:0;color:var(--muted)}
+.contact-band{border-bottom:2px solid var(--ink)}
+.contact-band:nth-of-type(even){background:var(--soft)}
+.contact-band-inner{display:grid;grid-template-columns:.55fr 1.45fr;gap:clamp(26px,5vw,72px);padding:clamp(46px,7vw,86px) 0}
+.contact-band h2{font-size:clamp(31px,5vw,66px);line-height:.94;letter-spacing:-.055em;margin:0}
+.contact-statement{font-size:clamp(21px,2.7vw,33px);line-height:1.12;letter-spacing:-.03em;max-width:820px;margin:0}
+.contact-cells{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink);margin-top:30px}
+.contact-cells article{min-height:168px;padding:22px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);background:#fff}
+.contact-cells b{display:block;font-size:19px;letter-spacing:-.02em;margin-bottom:9px}
+.contact-cells p{margin:0;color:var(--muted);font-size:14px}
+.contact-direct{padding:clamp(54px,8vw,104px) 0}
+.contact-direct-box{border:1px solid var(--ink);padding:clamp(24px,4vw,44px);display:grid;grid-template-columns:1.15fr .85fr;gap:26px;align-items:center}
+.contact-direct h2{margin:0;font-size:clamp(32px,5vw,64px);line-height:.95;letter-spacing:-.055em}
+.contact-direct p{margin:12px 0 0;color:var(--muted);max-width:650px}
+.contact-address{font-style:normal;display:grid;gap:8px;font-size:15px}
+.contact-address a{font-weight:700;text-underline-offset:4px}
+.contact-page .footer{border-top:1px solid var(--line)}
+@media(max-width:860px){
+  .contact-hero-grid,.contact-band-inner,.contact-direct-box,.contact-cells{grid-template-columns:1fr}
+}
