@@ -362,19 +362,27 @@ html { scroll-behavior: smooth; }
   .dispatch-cv-items article { break-inside: avoid; }
 }
 
-/* Dispatch v1.2.2 fast-track: keep primary CTA text visible before hover. */
+/* Dispatch v1.2.2 fast-track: primary CTAs are highlighted before hover. */
 .dispatch-page a.dispatch-button-primary,
+.dispatch-page a.dispatch-button-primary:link,
 .dispatch-page a.dispatch-button-primary:visited {
-  background: var(--dispatch-ink);
-  border-color: var(--dispatch-ink);
-  color: #fff;
+  background-color: var(--dispatch-gold);
+  background-image: none;
+  border-color: var(--dispatch-gold);
+  color: var(--dispatch-ink);
+  -webkit-text-fill-color: var(--dispatch-ink);
   opacity: 1;
+  filter: none;
+  text-decoration: none;
 }
 .dispatch-page a.dispatch-button-primary:hover,
 .dispatch-page a.dispatch-button-primary:focus-visible,
 .dispatch-page a.dispatch-button-primary:active {
-  background: var(--dispatch-bronze);
+  background-color: var(--dispatch-bronze);
+  background-image: none;
   border-color: var(--dispatch-bronze);
   color: #fff;
+  -webkit-text-fill-color: #fff;
   opacity: 1;
+  filter: none;
 }
