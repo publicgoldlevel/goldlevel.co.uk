@@ -361,3 +361,20 @@ html { scroll-behavior: smooth; }
   .dispatch-cv-items { display: block; }
   .dispatch-cv-items article { break-inside: avoid; }
 }
+
+/* Dispatch v1.2.2 fast-track: keep primary CTA text visible before hover. */
+.dispatch-page a.dispatch-button-primary,
+.dispatch-page a.dispatch-button-primary:visited {
+  background: var(--dispatch-ink);
+  border-color: var(--dispatch-ink);
+  color: #fff;
+  opacity: 1;
+}
+.dispatch-page a.dispatch-button-primary:hover,
+.dispatch-page a.dispatch-button-primary:focus-visible,
+.dispatch-page a.dispatch-button-primary:active {
+  background: var(--dispatch-bronze);
+  border-color: var(--dispatch-bronze);
+  color: #fff;
+  opacity: 1;
+}
