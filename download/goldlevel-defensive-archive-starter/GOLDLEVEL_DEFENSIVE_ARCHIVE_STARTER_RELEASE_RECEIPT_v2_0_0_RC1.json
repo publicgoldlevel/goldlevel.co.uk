@@ -1,0 +1,72 @@
+{
+  "artifact": {
+    "bytes": 97030,
+    "crc": "PASS",
+    "deterministic_rebuild": true,
+    "filename": "goldlevel-defensive-archive-starter-v2.0.0-rc1.zip",
+    "members": 54,
+    "sha256": "d74d407429fc69c73dc13391c09190f1b27fcf215ebb86918c8cfd6c8e27648f",
+    "sha512": "57137cc560ea05ce814782884633b509ad462196d61b6e3d079f84f60441a69cf08204eb6b8c2bd90ee6598ff83ddc599c5d9443d2deb045c11f311c5fc61ca0"
+  },
+  "authenticity": {
+    "algorithm": "Ed25519",
+    "private_key_exported": false,
+    "public_key_der_sha256": "9c2d0c40fe8b2c6c70f19cda0e00a78c0c1c47b500f4c21431b7c3947069f8b9",
+    "publisher_identity": "REQUIRES_INDEPENDENT_PIN",
+    "signing_identity_state": "PROVISIONAL_REVIEW_KEY_REQUIRES_LOCAL_CANONICAL_REBUILD"
+  },
+  "external_assurance": {
+    "antivirus": "REQUIRES_LOCAL_PROOF",
+    "behavioural_sandbox": "REQUIRES_LOCAL_PROOF",
+    "malware_free_claim": false,
+    "yara": "REQUIRES_LOCAL_PROOF"
+  },
+  "gate": "PASS_HARDENED_FULL_SPECTRUM_REVIEW_CANDIDATE",
+  "human_release_required": true,
+  "identity": {
+    "artifact_role": "PUBLIC_RELEASE_RECEIPT",
+    "audience": "PUBLIC",
+    "canonical_route": "https://goldlevel.co.uk/download/goldlevel-defensive-archive-starter/",
+    "copyright": "Copyright (c) 2026 GOLDLEVEL",
+    "license": "MIT",
+    "product": "GOLDLEVEL Defensive Archive Starter",
+    "publisher": "GOLDLEVEL",
+    "publisher_display": "Gold Level",
+    "release_state": "HARDENED_FULL_SPECTRUM_REVIEW_CANDIDATE",
+    "version": "2.0.0-rc1"
+  },
+  "predecessor": {
+    "sha256": "fde36977f5af75802ce4fa8bef6c087429f4dc6e461d6d28476a9cc4d4ebf9e8",
+    "sha512": "9ccc6398f1b8ddf9176303b33824f5fa5824bb7bbac9e754ca0b18004f3eacad9850fd6dd76124a2d5e1024b18539da1403603ebf822a8a5e55bc2a6c68197ee",
+    "version": "1.3.1"
+  },
+  "repository_mutation": false,
+  "schema": "goldlevel.defensive-archive-starter.release-receipt.v2",
+  "security_model": {
+    "cells": 64,
+    "dimensions": 8,
+    "emergence_watch_cases": 16,
+    "stages": 8,
+    "universal_protection_claim": false
+  },
+  "site_mutation": false,
+  "validation": {
+    "adversarial_cases": 23,
+    "adversarial_standard": "PASS",
+    "bytecode_hits": 0,
+    "email_hits": 0,
+    "local_capture": "QUALIFIED",
+    "local_path_hits": 0,
+    "local_verify": "PASS",
+    "private_method_term_hits": 0,
+    "provenance": "PASS",
+    "public_ip_metadata_hits": 0,
+    "python_compile": "PASS",
+    "release_audit": "PASS",
+    "release_envelope": "PASS",
+    "release_envelope_unit": "PASS",
+    "secret_hits": 0,
+    "security_dimension": "PASS",
+    "security_regression": "PASS"
+  }
+}
