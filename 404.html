@@ -9,7 +9,39 @@
 
   <!-- GOLDLEVEL_RESPOND_CSS_BEGIN -->
   <link rel="stylesheet" href="/assets/css/goldlevel-respond.css">
-  <!-- GOLDLEVEL_RESPOND_CSS_END --></head><body>
+  <!-- GOLDLEVEL_RESPOND_CSS_END -->  <!-- GOLDLEVEL_DISPATCH_HIDDEN_LINK_SANITIZER_V1 -->
+<script>
+(function () {
+  "use strict";
+
+  var encodedPath = window.location.pathname;
+  var decodedPath = encodedPath;
+
+  try {
+    decodedPath = decodeURI(encodedPath);
+  } catch (_) {
+    decodedPath = encodedPath;
+  }
+
+  if (decodedPath.indexOf("/portfolio/dispatch-application/") !== 0) {
+    return;
+  }
+
+  var cleaned = decodedPath.replace(
+    /[\u00AD\u034F\u061C\u115F\u1160\u17B4\u17B5\u180B-\u180E\u200B-\u200F\u202A-\u202E\u2060-\u206F\u3164\uFE00-\uFE0F\uFEFF\uFFA0]/g,
+    ""
+  );
+
+  if (cleaned !== decodedPath) {
+    window.location.replace(
+      encodeURI(cleaned) +
+      window.location.search +
+      window.location.hash
+    );
+  }
+})();
+</script>
+</head><body>
 <div class="gl-archive-demotion-banner" style="border:1px solid #d9d9d9;background:#fff;padding:12px 16px;margin:12px auto;max-width:1120px;font:14px/1.4 system-ui,-apple-system,Segoe UI,sans-serif;color:#111;"><strong>Archived legacy page.</strong> This route is retained for reference, but it is no longer part of the primary GOLDLEVEL public journey. <a href="/" style="color:#111;text-decoration:underline;">Start from the current Swiss front door</a> or <a href="/archive/" style="color:#111;text-decoration:underline;">open the archive map</a>.</div>
 
 <div class="gl-geometry-field" aria-hidden="true">
