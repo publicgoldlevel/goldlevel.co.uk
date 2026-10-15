@@ -1,0 +1,17 @@
+# Merge into the EXISTING goldlevel.co.uk HTTPS site block; preserve the site.
+# The generated private copy contains the ingress key. Restrict its readability
+# to the actual Caddy service principal; never copy it into a public repository.
+@uc_factual_record path /uc_factual_record /uc_factual_record/*
+handle @uc_factual_record {
+    request_body {
+        max_size 4KB
+    }
+    header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex"
+    reverse_proxy 127.0.0.1:8787 {
+        header_up Host goldlevel.co.uk
+        header_up X-Forwarded-Proto https
+        header_up X-Portal-Client-IP {http.request.remote.host}
+        header_up X-Portal-Edge-Key "@@EDGE_KEY@@"
+        header_up -X-Forwarded-For
+    }
+}

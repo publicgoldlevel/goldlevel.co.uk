@@ -1,0 +1,290 @@
+{
+  "schema": "goldlevel.uc.risk-register.v1",
+  "reviewDate": "2026-10-15",
+  "scale": "Qualitative pre-deployment assessment; no quantitative exploitation forecast",
+  "acceptanceAuthority": "operator with evidence; package generation does not accept unresolved production risk",
+  "risks": [
+    {
+      "id": "R01",
+      "severity": "HIGH",
+      "scenario": "Accidental public evidence in repository/static webroot/image",
+      "mitigation": "Separate private runtime and authenticated fixed routes; inspect staged diff and image",
+      "requiredActionOrResidual": "Never deploy private payload through public source/artifacts",
+      "status": "DEPLOYMENT_REVIEW_REQUIRED",
+      "controls": [
+        "C03",
+        "C15"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R02",
+      "severity": "HIGH",
+      "scenario": "Unauthorized access via guessed document/text/range/HEAD routes",
+      "mitigation": "Authentication before every evidence byte and default deny",
+      "requiredActionOrResidual": "Run all negative route tests and live smoke checks",
+      "status": "LOCAL_CHECKS_PASSED_LIVE_VERIFICATION_REQUIRED",
+      "controls": [
+        "C04",
+        "C05"
+      ],
+      "owner": "deployment operator",
+      "evidence": [
+        "registries/local-test-summary.json"
+      ]
+    },
+    {
+      "id": "R03",
+      "severity": "HIGH",
+      "scenario": "Direct origin or forged trusted headers bypass ingress",
+      "mitigation": "Secret edge key, exact Host/proto, loopback publication, overwritten headers",
+      "requiredActionOrResidual": "Verify live ingress, firewall and absent public upstream",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C06"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R04",
+      "severity": "HIGH",
+      "scenario": "Same-origin XSS or compromised scripts on existing website",
+      "mitigation": "Portal CSP and closed content surface; whole-origin audit required",
+      "requiredActionOrResidual": "Existing repository/scripts/dependencies unavailable; review before launch",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C16"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R05",
+      "severity": "HIGH",
+      "scenario": "Existing root-scoped service worker intercepts or caches evidence",
+      "mitigation": "No new service worker, no-store, explicit scope inspection",
+      "requiredActionOrResidual": "Remove/restrict any covering worker and check actual registrations before launch",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C16"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R06",
+      "severity": "HIGH",
+      "scenario": "Stolen/shared credentials or recipient device compromise",
+      "mitigation": "Named accounts, strong passwords, short expiry, revocation",
+      "requiredActionOrResidual": "Share privately; review recipient need; copies cannot be revoked",
+      "status": "RESIDUAL_REQUIRES_OPERATOR_REVIEW",
+      "controls": [
+        "C04",
+        "C05"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R07",
+      "severity": "MEDIUM",
+      "scenario": "Password guessing or global lockout of legitimate readers",
+      "mitigation": "Scrypt plus per-IP/account/global limits and hashing concurrency bound",
+      "requiredActionOrResidual": "Observe owned deployment rate behavior and provide access help",
+      "status": "LOCAL_CHECKS_PASSED_LIVE_VERIFICATION_REQUIRED",
+      "controls": [
+        "C04"
+      ],
+      "owner": "deployment operator",
+      "evidence": [
+        "registries/local-test-summary.json"
+      ]
+    },
+    {
+      "id": "R08",
+      "severity": "MEDIUM",
+      "scenario": "Stale sessions after account changes or multiple instances",
+      "mitigation": "Change the operator-owned source accounts and redeploy a new read-only installed snapshot; memory-only sessions are revoked on recreation/restart",
+      "requiredActionOrResidual": "Use one instance; source edits plus restart of the old snapshot do not copy account changes, and restart alone allows still-enabled accounts to sign in. Stop urgently before updating/redeploying; replicas need redesign. Rollback/restore must preserve the latest approved disabled/expiry state; changed-account deployment failure must not automatically reactivate an older snapshot.",
+      "status": "RESIDUAL_DOCUMENTED",
+      "controls": [
+        "C05",
+        "C10"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R09",
+      "severity": "MEDIUM",
+      "scenario": "Cross-site request forgery/login CSRF",
+      "mitigation": "Origin checks and one-use/session-bound proofs",
+      "requiredActionOrResidual": "Test malformed/missing/duplicate and expired proofs",
+      "status": "LOCAL_CHECKS_PASSED_LIVE_VERIFICATION_REQUIRED",
+      "controls": [
+        "C05"
+      ],
+      "owner": "deployment operator",
+      "evidence": [
+        "registries/local-test-summary.json"
+      ]
+    },
+    {
+      "id": "R10",
+      "severity": "HIGH",
+      "scenario": "CDN/proxy cache, search/referrer or browser download exposure",
+      "mitigation": "No-store, noindex, no-referrer, no public listing",
+      "requiredActionOrResidual": "Disable edge cache and inspect live headers; downloads remain recipient-controlled",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C06",
+        "C15"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R11",
+      "severity": "MEDIUM",
+      "scenario": "Traversal/smuggling/parser disagreement",
+      "mitigation": "Fixed IDs, ambiguous-path/duplicate-boundary-header rejection, limits",
+      "requiredActionOrResidual": "Maintain proxy/runtime and test actual ingress parsing",
+      "status": "LOCAL_CHECKS_PASSED_LIVE_VERIFICATION_REQUIRED",
+      "controls": [
+        "C03",
+        "C06"
+      ],
+      "owner": "deployment operator",
+      "evidence": [
+        "registries/local-test-summary.json"
+      ]
+    },
+    {
+      "id": "R12",
+      "severity": "MEDIUM",
+      "scenario": "Denial of service or excessive password/PDF resource use",
+      "mitigation": "Bounded forms, sessions/preauth/rate maps, hashing, connections and container resources",
+      "requiredActionOrResidual": "Ingress/host capacity and internet-scale DoS remain outside bounded tests",
+      "status": "RESIDUAL_REQUIRES_OPERATOR_REVIEW",
+      "controls": [
+        "C04",
+        "C08"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R13",
+      "severity": "HIGH",
+      "scenario": "Unknown runtime/image/host/proxy vulnerability",
+      "mitigation": "Small no-npm service, digest pin, reduced privileges and patch/revalidation policy",
+      "requiredActionOrResidual": "Review real digest/advisories; no zero-day elimination claim",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C08",
+        "C12"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R14",
+      "severity": "MEDIUM",
+      "scenario": "Original PDF contains malicious content",
+      "mitigation": "Exact authenticated bytes; no server-side PDF execution/parsing",
+      "requiredActionOrResidual": "Hash identity is not document safety; maintained viewer/source assessment needed",
+      "status": "RESIDUAL_DOCUMENTED",
+      "controls": [
+        "C03"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R15",
+      "severity": "HIGH",
+      "scenario": "Secrets/private data leak in host/proxy logs/backups",
+      "mitigation": "Allowlisted audit schema with stable private domain-separated HMAC account pseudonyms and opaque document-response metadata; no intended token/filename/content logging; encrypted protected backups",
+      "requiredActionOrResidual": "Inspect host/proxy logs and retention, protect linkable pseudonym/source-hash metadata, record rotation correlation boundary and perform restore/custody review",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C09",
+        "C15"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R16",
+      "severity": "HIGH",
+      "scenario": "Loss of source or failed rollback/restore",
+      "mitigation": "Immutable source/manifests, known-good image-content pair and isolated encrypted backup; installer disables automatic fallback when approved account or edge-key state changes",
+      "requiredActionOrResidual": "Target-host clean restore exercise pending. Reconcile latest account revocations/expiry and current ingress key before starting a restored/rolled-back code-content pair; historical credential/key snapshots must not undo revocation. Reconcile actual container and release pointer after an interrupted deployment.",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C10",
+        "C11"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R17",
+      "severity": "MEDIUM",
+      "scenario": "Reviewer blocked by accessibility or enterprise browser/network friction",
+      "mitigation": "Labels, keyboard/text/PDF support and documented assistance",
+      "requiredActionOrResidual": "Target-environment keyboard/assistive-technology/PDF check pending",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C17"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R18",
+      "severity": "HIGH",
+      "scenario": "Assuming per-team privacy when account grants whole dossier",
+      "mitigation": "Whole-dossier scope explicitly documented; restricted financial originals excluded",
+      "requiredActionOrResidual": "Operator approves included bundle for every enabled reviewer before provisioning",
+      "status": "LIVE_GATE_OPEN",
+      "controls": [
+        "C01",
+        "C04",
+        "C18"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R19",
+      "severity": "MEDIUM",
+      "scenario": "Mistaking HTTP access for official receipt/acceptance or legal effect",
+      "mitigation": "RECORD_REQUESTED and DOCUMENT_RESPONSE_SENT on server finish are bounded operational events; no client-read, identity, official-receipt or decision assertion",
+      "requiredActionOrResidual": "HEAD records zero body bytes and ranges record partial response bytes; neither server finish nor accumulated events prove a complete client download, reading, official receipt, consideration, acceptance or record linkage",
+      "status": "RESIDUAL_DOCUMENTED",
+      "controls": [
+        "C09",
+        "C18"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "R20",
+      "severity": "HIGH",
+      "scenario": "Future AI/upload/tool feature expands attack surface silently",
+      "mitigation": "Closed capability policy and no such routes",
+      "requiredActionOrResidual": "New threat model, dependencies, permissions, isolation and tests before policy change",
+      "status": "CHANGE_GATE_REQUIRED",
+      "controls": [
+        "C07",
+        "C18"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    }
+  ]
+}

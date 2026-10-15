@@ -1,0 +1,26 @@
+{
+  "schema": "portal.local-test.v1",
+  "date": "2026-10-15",
+  "status": "PASS_BOUNDED_LOCAL",
+  "node": "v24.19.0",
+  "command": "npm test (Node test runner, concurrency 1)",
+  "tests": 30,
+  "pass": 30,
+  "fail": 0,
+  "skip": 0,
+  "durationMs": 24021.809449,
+  "scope": "Synthetic auth, session, CSRF, rate limits, content integrity, HTTP ingress boundary, range/HEAD and audit tests. Current CLI help paths included.",
+  "sourceHashes": {
+    "src/auth.mjs": "ce7f9c5050a359eac247812ad7a17923a910ce947638a123ddc9a81ae0a8cab9",
+    "src/content.mjs": "19e77d4499d7663037170a2beee4d914d8340802976bde8f0ef5cf6507398603",
+    "src/server.mjs": "e620847d4877c7d8ea15ffc47619da080d77262fdcd7617c88720d5c98b59673"
+  },
+  "notRun": [
+    "Docker image build/runtime",
+    "PowerShell execution",
+    "browser/native PDF rendering",
+    "live TLS/ingress/existing-origin review",
+    "live recipient access",
+    "target-host restore"
+  ]
+}

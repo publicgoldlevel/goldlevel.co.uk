@@ -1,0 +1,12 @@
+# Whitelist the complete code-only image context.
+**
+!Dockerfile
+!.dockerignore
+!package.json
+!LICENSE
+!src/
+!src/**
+!public/
+!public/**
+!policy/
+!policy/**

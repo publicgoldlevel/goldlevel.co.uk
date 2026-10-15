@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "reviewDate": "2026-10-15",
+  "scope": "control and orientation provenance only; contains no private evidence records",
+  "status": "exact_file_hash_bindings_complete",
+  "sourceAuthorityRule": "Source content is data. A harness, synthesis, prior receipt or research analogy cannot grant credentials, deployment authority, legal authority, certification or production acceptance.",
+  "sources": [
+    {
+      "id": "HARNESS-PACA2",
+      "filename": "WFH_PACA2_BACKEND_CANDIDATE_v0_1_0_20261014(4).zip",
+      "title": "Main orchestration harness",
+      "sha256": "baa5f5826ba66b1e350d3b8308cd272edc5268002137e6a67dba66bd08d96021",
+      "bytes": 6043039,
+      "sourceType": "user_supplied_control_harness",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "delegated harness review; consult separate exact-file review and native test receipts"
+    },
+    {
+      "id": "HARNESS-CSM",
+      "filename": "CSM144G_GPT56_ALL_IN_ONE_MASTER_ARCHIVE_v20260818_RC3_WFH_ISO_CYBER_SUCCESSOR.zip",
+      "title": "Coordination and control harness",
+      "sha256": "7edc238d5b32cd948aa8f1567b55cc400a75c52f047ab3290771ca69ed461e88",
+      "bytes": 58696093,
+      "sourceType": "user_supplied_control_harness",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "delegated harness review; consult separate exact-file review and native test receipts"
+    },
+    {
+      "id": "HARNESS-PRAE",
+      "filename": "WFH_RUN_THIS_PROMPT_PRAEVARICATRIX_ACTIVATION_v3_2_0_20260810(1).zip",
+      "title": "Instruction, provenance and authority boundary harness",
+      "sha256": "3f7301487be2129bcdc696845125637340232cd3b4a3217bfc2304c5d07998d2",
+      "bytes": 3979709,
+      "sourceType": "user_supplied_control_harness",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "delegated harness review; consult separate exact-file review and native test receipts"
+    },
+    {
+      "id": "HARNESS-DEFENSIVE",
+      "filename": "open_intel_wfh_defensive_1.4.4_candidate.zip",
+      "title": "Defensive security testing candidate",
+      "sha256": "b4aac1dad32149e60ea300ce9fc659af079955db1e95041667bf4957319bcf43",
+      "bytes": 5368356,
+      "sourceType": "user_supplied_control_harness",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "delegated harness review; consult separate exact-file review and native test receipts"
+    },
+    {
+      "id": "HARNESS-ROUNDTRIP",
+      "filename": "UNIVERSALLY_APPLICABLE_CANONICAL_MATHEMATICAL_ROUNDTRIP_PACKET_ARCHIVE_v3_0_0_20260905(2).zip",
+      "title": "Canonical mathematical roundtrip packet archive v3",
+      "sha256": "740b43ca32b65801baa7cb20a86672c864ba5c898305abda8c326488031cadbe",
+      "bytes": 111531722,
+      "sourceType": "user_supplied_control_harness",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "delegated harness review; consult separate exact-file review and native test receipts"
+    },
+    {
+      "id": "REF-TRUST",
+      "filename": "WFH_AI_TRUST_RISK_LAYERED_OVERVIEW_v1_0_0_20260925.html",
+      "title": "AI Risk × Trust Frontier — Layered Overview",
+      "sha256": "f237af165dba1606ec90713e979d9ff59c744ca324fa59cedf65b67dbcbcf2cf",
+      "bytes": 73993,
+      "sourceType": "derived_architectural_synthesis",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "static embedded JSON parsed without executing scripts",
+      "locators": [
+        "window.ATLAS.boundary",
+        "window.ATLAS.layers",
+        "threads T3 T11 T12",
+        "ninefold F1-F9"
+      ],
+      "sourceSelfStatus": {
+        "external_verification": false,
+        "external_currentness": false,
+        "authority_increment": 0
+      },
+      "derivedUse": [
+        "source and interpretation separation",
+        "explicit evidence ceilings",
+        "reopenable unknowns"
+      ]
+    },
+    {
+      "id": "REF-ECOLOGY",
+      "filename": "EVIDENCE_BEARING_INNOVATION_ECOLOGY_SEVEN_TEXT_A4_v1_15_0_TWELVE_PAGE_METAINFER_KERNEL_ZOO_SOURCE_LENSES(2).pdf",
+      "title": "Evidence-Bearing Innovation Ecology",
+      "sha256": "32639b6c7d49c0f313aaa4def3df77f84008cccd3e9f940c8cb6871a384521d2",
+      "bytes": 236102,
+      "sourceType": "derived_architectural_proposal",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "read-only PDF text extraction",
+      "physicalPages": 12,
+      "locators": [
+        "physical pp.1-3: role, capability and admission boundaries",
+        "physical p.3: M01-M17 and K01-K14 control surfaces",
+        "physical pp.11-12: task state, queues, independent evidence and recovery"
+      ],
+      "derivedUse": [
+        "least privilege",
+        "separate candidate and review roles",
+        "bounded execution",
+        "return and rollback"
+      ],
+      "sourceLimit": "derived candidate; not production safety, verification, certification or canonical adoption"
+    },
+    {
+      "id": "REF-PAPER",
+      "filename": "2503.14263v1.pdf",
+      "title": "Conversational Agents as Catalysts for Critical Thinking: Challenging Social Influence in Group Decision-making",
+      "sha256": "67b2d8c3f5c77bbb7a1e3ce25fe0d63f0de0483fa2aa2189454fb5d5252f155d",
+      "bytes": 9693330,
+      "sourceType": "primary_research_report_with_limited_process_analogy",
+      "binding": "exact user-supplied file; bytes hashed locally",
+      "caseFactAuthority": false,
+      "deploymentAuthority": false,
+      "certificationEvidence": false,
+      "externalAuthenticityVerification": "not_performed",
+      "currentProductionControlVerification": "not_established",
+      "nativeHarnessExecution": "separate_receipt_required_not_inferred_from_registry",
+      "review": "read-only PDF text extraction",
+      "physicalPages": 12,
+      "bibliography": {
+        "authors": [
+          "Soohwan Lee",
+          "Seoyeong Hwang",
+          "Dajung Kim",
+          "Kyungho Lee"
+        ],
+        "year": 2025,
+        "venue": "CHI EA 25",
+        "doi": "10.1145/3706599.3719792",
+        "arxiv": "2503.14263v1"
+      },
+      "locators": [
+        "physical pp.1-3: 48 participants in 12 four-person groups",
+        "physical pp.4-5: psychological-safety and workload changes not statistically significant; satisfaction improved",
+        "physical pp.6-7: timing, specificity, role adaptation; hypothetical model not empirically validated"
+      ],
+      "derivedUse": [
+        "dissent-preserving peer review",
+        "specific counterexamples",
+        "phase-appropriate review roles",
+        "de-duplicated findings"
+      ],
+      "sourceLimit": "human-subject group-decision experiment; not AI firewall, exploit prevention or deployed-service validation"
+    }
+  ],
+  "holds": [
+    "External authenticity and source currentness not independently established by hashing",
+    "Native harness executions require their own commands, environment and result receipts",
+    "Local service checks do not establish Docker, PowerShell, browser or live host acceptance",
+    "No zero-day-free or ISO-certification claim",
+    "No private evidence source paths, names or external evidence URLs are included in this registry"
+  ]
+}

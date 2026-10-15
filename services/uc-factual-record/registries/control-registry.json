@@ -1,0 +1,555 @@
+{
+  "schema": "goldlevel.uc.control-registry.v1",
+  "reviewDate": "2026-10-15",
+  "scope": "Private read-only portal engineering controls; no ISO clause crosswalk",
+  "claimCeiling": "REFERENCE_ALIGNED_LOCAL_ENGINEERING_EVIDENCE",
+  "controls": [
+    {
+      "id": "C01",
+      "theme": "SCOPE_CONTEXT",
+      "requirement": "Read-only fixed-route private dossier service; code and runtime data are separate.",
+      "implementationPaths": [
+        "src/server.mjs",
+        "registries/route-registry.json",
+        "README.md"
+      ],
+      "verificationRequired": "Route inventory and anonymous-route tests",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PASS_BOUNDED_LOCAL",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "No per-team ACL; each enabled account accesses the whole included dossier."
+    },
+    {
+      "id": "C02",
+      "theme": "RISK_UNCERTAINTY",
+      "requirement": "Explicit threats, residual risks, unknown deployment state and live release gates.",
+      "implementationPaths": [
+        "docs/THREAT-MODEL.md",
+        "registries/risk-register.json",
+        "registries/release-gates.json"
+      ],
+      "verificationRequired": "Review unresolved risks and attach dated decisions",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "DOCUMENT_REVIEW_ONLY_OR_LIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "docs/CONTROL-MAPPING.md",
+        "registries/release-gates.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Existing site, hosting, DNS/TLS and production custody are not observed here."
+    },
+    {
+      "id": "C03",
+      "theme": "INTEGRITY_CONFIGURATION",
+      "requirement": "Manifest validates the exact imported evidence payload at startup; private bytes are excluded from Git and image.",
+      "implementationPaths": [
+        "src/content.mjs",
+        "scripts/import-bundle.mjs",
+        "scripts/check-source.mjs"
+      ],
+      "verificationRequired": "Tamper/missing-file/symlink tests and source checks",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PASS_BOUNDED_LOCAL",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Hashes establish selected-byte identity, not factual truth or safe PDF content."
+    },
+    {
+      "id": "C04",
+      "theme": "ACCESS_AUTHORITY",
+      "requirement": "Named salted-scrypt accounts, server-side auth before every evidence byte, expiration and offline administration.",
+      "implementationPaths": [
+        "src/auth.mjs",
+        "src/server.mjs",
+        "scripts/account.mjs"
+      ],
+      "verificationRequired": "Authentication/expiry/revocation/range/HEAD/text route tests",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PASS_BOUNDED_LOCAL",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Credential possession does not prove official identity; downloaded copies are not revocable."
+    },
+    {
+      "id": "C05",
+      "theme": "SESSION_CSRF",
+      "requirement": "Rotated random in-memory sessions; secure strict HttpOnly path cookies; login/logout CSRF checks.",
+      "implementationPaths": [
+        "src/auth.mjs",
+        "src/server.mjs"
+      ],
+      "verificationRequired": "Session fixation/expiry/logout/CSRF/restart tests",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PASS_BOUNDED_LOCAL",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Single-instance only; same-origin compromise can issue authenticated requests."
+    },
+    {
+      "id": "C06",
+      "theme": "COMMUNICATION_NETWORK_BOUNDARY",
+      "requirement": "Exact Host, trusted edge key and forwarded HTTPS are required; upstream host publication is loopback.",
+      "implementationPaths": [
+        "src/server.mjs",
+        "compose.yaml",
+        "scripts/deploy-host.sh"
+      ],
+      "verificationRequired": "Wrong Host/edge/protocol tests plus live ingress/origin smoke tests",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Actual TLS/proxy/firewall settings require target-host verification."
+    },
+    {
+      "id": "C07",
+      "theme": "CLOSED_CAPABILITY_BOUNDARY",
+      "requirement": "No AI/model/tool/upload/remote-fetch capability; closed policy checked at startup.",
+      "implementationPaths": [
+        "policy/ai-boundary.json",
+        "src/server.mjs",
+        "scripts/check-source.mjs"
+      ],
+      "verificationRequired": "Policy-negative and source-route checks",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PASS_BOUNDED_LOCAL",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "This is a closed capability boundary, not a general AI-firewall detection engine."
+    },
+    {
+      "id": "C08",
+      "theme": "SECURE_CHANGE",
+      "requirement": "Zero npm packages, digest-pinned runtime image, constrained container, explicit stage/push/deploy and rollback.",
+      "implementationPaths": [
+        "package.json",
+        "Dockerfile",
+        "compose.yaml",
+        "scripts/Bridge-Goldlevel.ps1"
+      ],
+      "verificationRequired": "Source/CI/build checks and inspected staged diff",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Runtime/image/OS/host/proxy still require vulnerability review and updates."
+    },
+    {
+      "id": "C09",
+      "theme": "LOGGING_AUDIT_TRACEABILITY",
+      "requirement": "UTC audit events use stable private account HMAC pseudonyms domain-separated from the edge key; DOCUMENT_RESPONSE_SENT is logged on response finish with opaque document ID, whole-source SHA-256, method/status/body-byte count; RECORD_REQUESTED denotes the HTML request path.",
+      "implementationPaths": [
+        "src/server.mjs",
+        "docs/OPERATIONS.md"
+      ],
+      "verificationRequired": "Audit-schema/redaction/finish-event tests; pseudonym stability across restart and key rotation semantics; host log-retention inspection",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Pseudonyms and source-hash metadata are private linkable operational data. A server finish event does not prove client receipt, complete download, reading, DWP consideration/acceptance or official record linkage. Host/proxy retention requires configuration."
+    },
+    {
+      "id": "C10",
+      "theme": "INCIDENT_ANOMALY_CONTAINMENT",
+      "requirement": "Stop ingress/service; change operator-owned source accounts and redeploy a protected snapshot to revoke accounts; restart invalidates sessions. Installer compares account and edge-key state, stops prior service before build on changes, and disables automatic old-state fallback. Manual restore retains latest approved accounts and edge key.",
+      "implementationPaths": [
+        "docs/OPERATIONS.md",
+        "docs/SECURITY.md"
+      ],
+      "verificationRequired": "Revocation/restart tests and target-host recovery exercise",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Editing source and restarting the unchanged installed snapshot does not disable an account. Host interruption can leave pointer/container state inconsistent; reconcile before recovery. Target-host incident/restore exercise remains pending."
+    },
+    {
+      "id": "C11",
+      "theme": "INTEROPERABILITY_PORTABILITY",
+      "requirement": "Provider-neutral source/config/registries; manifest-backed imports and matching known-good rollback pair.",
+      "implementationPaths": [
+        "scripts/import-bundle.mjs",
+        "scripts/Bridge-Goldlevel.ps1",
+        "docs/OPERATIONS.md"
+      ],
+      "verificationRequired": "Reconstitution/export/restore hash checks",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Actual target-host restore and backup custody are not observed."
+    },
+    {
+      "id": "C12",
+      "theme": "SUPPLIER_PROVIDER_BOUNDARY",
+      "requirement": "Separate runtime/host/proxy/CI dependencies, permissions and evidence rights from new code license.",
+      "implementationPaths": [
+        "package.json",
+        "LICENSE",
+        "docs/SECURITY.md"
+      ],
+      "verificationRequired": "Dependency/image/license inventory and least-privilege configuration review",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Open source and free availability do not prove control effectiveness."
+    },
+    {
+      "id": "C13",
+      "theme": "CONTROL_EFFECTIVENESS",
+      "requirement": "Keep design, implementation, configuration, test, observation and effectiveness as separate statuses.",
+      "implementationPaths": [
+        "registries/control-registry.json",
+        "registries/release-gates.json",
+        "docs/CONTROL-MAPPING.md"
+      ],
+      "verificationRequired": "Validate status/evidence fields against actual receipts",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "DOCUMENT_REVIEW_ONLY_OR_LIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "docs/CONTROL-MAPPING.md",
+        "registries/release-gates.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Local synthetic tests are bounded; continuing production effectiveness is not claimed."
+    },
+    {
+      "id": "C14",
+      "theme": "FORMAL_CONFORMITY_CERTIFICATION",
+      "requirement": "Reference-aligned mapping only; no conformity, certification, zero-day elimination or full native-framework execution claim.",
+      "implementationPaths": [
+        "docs/CONTROL-MAPPING.md",
+        "docs/SECURITY.md"
+      ],
+      "verificationRequired": "Claims review and catalogue metadata references",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "DOCUMENT_REVIEW_ONLY_OR_LIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "docs/CONTROL-MAPPING.md",
+        "registries/release-gates.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Full normative texts, exact clause crosswalk and formal assessment not obtained."
+    },
+    {
+      "id": "C15",
+      "theme": "PRIVATE_BOUNDARY",
+      "requirement": "No source evidence, private account hashes or edge key in repository/build/image; secret-bearing ingress fragments stay private.",
+      "implementationPaths": [
+        "scripts/check-source.mjs",
+        "scripts/deploy-host.sh",
+        "scripts/Bridge-Goldlevel.ps1"
+      ],
+      "verificationRequired": "Inspect diff/build context/image layers and runtime permissions",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "A bounded marker scan cannot prove every private value absent."
+    },
+    {
+      "id": "C16",
+      "theme": "SHARED_ORIGIN_ISOLATION",
+      "requirement": "Retain same-origin XSS and root-scoped service-worker risks as blocking live-release gates.",
+      "implementationPaths": [
+        "docs/SECURITY.md",
+        "docs/THREAT-MODEL.md",
+        "registries/release-gates.json"
+      ],
+      "verificationRequired": "Review existing-site code, scripts, dependencies and service-worker scope",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "DOCUMENT_REVIEW_ONLY_OR_LIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "docs/CONTROL-MAPPING.md",
+        "registries/release-gates.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Requested path is not a separate origin; existing site unavailable for local review."
+    },
+    {
+      "id": "C17",
+      "theme": "ACCESSIBILITY_LEGITIMATE_USE",
+      "requirement": "Labeled login, keyboard-friendly navigation, text alternatives, ordinary PDFs and access assistance.",
+      "implementationPaths": [
+        "public/login.css",
+        "public/case.js",
+        "docs/OPERATIONS.md"
+      ],
+      "verificationRequired": "Keyboard/screen-reader/zoom/mobile/PDF tests on intended environment",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "PARTIAL_LOCAL_CHECKS_LIVE_OR_NATIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/bridge-static-checks.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Real recipient devices, enterprise filtering and assistive tools require live checks."
+    },
+    {
+      "id": "C18",
+      "theme": "PROVENANCE_CONSENT_PROVIDER_CHANGE",
+      "requirement": "Preserve source/creator provenance and distinct evidence rights; no consent/publication from access; revalidate material changes.",
+      "implementationPaths": [
+        "README.md",
+        "LICENSE",
+        "docs/CONTROL-MAPPING.md",
+        "docs/OPERATIONS.md"
+      ],
+      "verificationRequired": "Rights/scope review and change-trigger receipts",
+      "owner": "release operator",
+      "lifecycle": {
+        "design": "DOCUMENTED",
+        "implementation": "PRESENT_SOURCE_REVIEW",
+        "configuration": "REQUIRED_AT_DEPLOYMENT",
+        "test": "DOCUMENT_REVIEW_ONLY_OR_LIVE_GATE_OPEN",
+        "observation": "NOT_OBSERVED_TARGET_HOST",
+        "effectiveness": "NOT_CLAIMED"
+      },
+      "testEvidence": [
+        "docs/CONTROL-MAPPING.md",
+        "registries/release-gates.json"
+      ],
+      "deploymentEvidence": [],
+      "residualRisk": "Providing an access route is not official acceptance, data-isolation or consent evidence."
+    }
+  ],
+  "isoReferences": [
+    {
+      "standard": "ISO/IEC 27001:2022",
+      "amendment": "Amd 1:2024",
+      "sources": [
+        "https://www.iso.org/standard/27001",
+        "https://www.iso.org/standard/88435.html"
+      ],
+      "checkedDate": "2026-10-15",
+      "scope": "OFFICIAL_CATALOGUE_METADATA_ONLY",
+      "fullNormativeTextReviewed": false,
+      "clauseMapping": "NOT_PERFORMED",
+      "conformity": "NOT_ASSESSED",
+      "certification": false
+    },
+    {
+      "standard": "ISO/IEC 27002:2022",
+      "amendment": null,
+      "sources": [
+        "https://www.iso.org/standard/75652.html"
+      ],
+      "checkedDate": "2026-10-15",
+      "scope": "OFFICIAL_CATALOGUE_METADATA_ONLY",
+      "fullNormativeTextReviewed": false,
+      "clauseMapping": "NOT_PERFORMED",
+      "conformity": "NOT_ASSESSED",
+      "certification": false
+    },
+    {
+      "standard": "ISO/IEC 27037:2012",
+      "amendment": null,
+      "sources": [
+        "https://www.iso.org/standard/44381.html"
+      ],
+      "checkedDate": "2026-10-15",
+      "scope": "OFFICIAL_CATALOGUE_METADATA_ONLY",
+      "fullNormativeTextReviewed": false,
+      "clauseMapping": "NOT_PERFORMED",
+      "conformity": "NOT_ASSESSED",
+      "certification": false
+    },
+    {
+      "standard": "ISO/IEC 27040:2024",
+      "amendment": null,
+      "sources": [
+        "https://www.iso.org/standard/80194.html"
+      ],
+      "checkedDate": "2026-10-15",
+      "scope": "OFFICIAL_CATALOGUE_METADATA_ONLY",
+      "fullNormativeTextReviewed": false,
+      "clauseMapping": "NOT_PERFORMED",
+      "conformity": "NOT_ASSESSED",
+      "certification": false
+    },
+    {
+      "standard": "ISO 22301:2019",
+      "amendment": "Amd 1:2024",
+      "sources": [
+        "https://www.iso.org/standard/75106.html",
+        "https://www.iso.org/standard/88412.html"
+      ],
+      "checkedDate": "2026-10-15",
+      "scope": "OFFICIAL_CATALOGUE_METADATA_ONLY",
+      "fullNormativeTextReviewed": false,
+      "clauseMapping": "NOT_PERFORMED",
+      "conformity": "NOT_ASSESSED",
+      "certification": false
+    }
+  ],
+  "sourceFrameworkExecution": "SOURCE_GUIDED_TASK_LOCAL_REVIEWS_NOT_FULL_NATIVE_FRAMEWORK_EXECUTION",
+  "paperOrientation": {
+    "reference": "Lee et al. (2025), arXiv:2503.14263v1",
+    "url": "https://arxiv.org/abs/2503.14263v1",
+    "use": "Specific timed counterarguments, minority concerns and independent evidence-based reconciliation",
+    "limits": [
+      "Human-group study is not software security validation",
+      "Reported psychological-safety change was not statistically significant",
+      "Virtuous/vicious-cycle diagram is theoretical and unvalidated",
+      "Agent agreement does not establish proof"
+    ]
+  }
+}

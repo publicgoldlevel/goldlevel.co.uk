@@ -1,0 +1,33 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "application",
+      "name": "goldlevel-uc-private-portal",
+      "version": "1.0.0",
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ],
+      "bom-ref": "goldlevel-uc-private-portal"
+    },
+    "properties": [
+      {
+        "name": "scope",
+        "value": "New application source only; no npm dependencies. Runtime/OS package inventory is created on the deployment host; full image SBOM and vulnerability scan are pending."
+      }
+    ]
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "goldlevel-uc-private-portal",
+      "dependsOn": []
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schema": "portal.config.v1",
+  "serviceCount": 1,
+  "replicasSupported": 1,
+  "basePath": "/uc_factual_record",
+  "publicOrigin": "https://goldlevel.co.uk",
+  "settings": [
+    {
+      "name": "CONTENT_DIR",
+      "type": "private read-only mount",
+      "default": "/content",
+      "gitAllowed": false
+    },
+    {
+      "name": "USERS_FILE",
+      "type": "private account hash file",
+      "default": "/run/secrets/users.json",
+      "gitAllowed": false,
+      "apply": "operator source -> private snapshot -> recreate service"
+    },
+    {
+      "name": "EDGE_KEY_FILE",
+      "type": "private random file",
+      "default": "/run/secrets/edge-key",
+      "gitAllowed": false,
+      "apply": "coordinated service and ingress rotation"
+    },
+    {
+      "name": "NODE_IMAGE",
+      "type": "reviewed Node24 image at exact digest",
+      "resolvedAt": "deployment",
+      "credential": false
+    }
+  ],
+  "session": {
+    "idleSeconds": 1800,
+    "absoluteSeconds": 28800,
+    "state": "memory; restart revokes all"
+  },
+  "loginRateWindowSeconds": 900,
+  "loginLimits": {
+    "perIp": 20,
+    "perAccount": 10,
+    "global": 100,
+    "concurrentPasswordChecks": 2
+  },
+  "serverLimits": {
+    "formBytes": 4096,
+    "headerBytes": 8192,
+    "requestSeconds": 15,
+    "headerSeconds": 10,
+    "maxConnections": 128
+  },
+  "logging": {
+    "eventFormat": "UTC JSON, stable private HMAC subject, allowlisted per-file response facts",
+    "secretsOrContent": false,
+    "dockerRotation": "5m x3",
+    "operatorRetentionDays": 30,
+    "retentionEnforcedByApp": false
+  }
+}

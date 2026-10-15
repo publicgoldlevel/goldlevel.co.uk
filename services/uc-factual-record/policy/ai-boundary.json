@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "mode": "closed",
+  "allowModels": false,
+  "allowTools": false,
+  "allowUploads": false,
+  "allowOutboundRequests": false,
+  "allowedRoutes": [
+    "/_health",
+    "/",
+    "/login",
+    "/logout",
+    "/record",
+    "/documents/:id",
+    "/api/documents/:id/text",
+    "/assets/login.css",
+    "/assets/case.css",
+    "/assets/case.js",
+    "/api/session"
+  ]
+}

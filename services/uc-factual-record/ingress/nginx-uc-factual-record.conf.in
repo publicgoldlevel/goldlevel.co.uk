@@ -1,0 +1,38 @@
+# Merge these locations into the EXISTING goldlevel.co.uk HTTPS server block.
+# The host installer replaces @@EDGE_KEY@@ in a private, mode-0600 copy.
+# Review the real-IP chain if another proxy precedes this ingress.
+location = /uc_factual_record {
+    client_max_body_size 4k;
+    access_log off;
+    proxy_pass http://127.0.0.1:8787;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_set_header Host goldlevel.co.uk;
+    proxy_set_header X-Forwarded-Proto https;
+    proxy_set_header X-Portal-Client-IP $remote_addr;
+    proxy_set_header X-Portal-Edge-Key "@@EDGE_KEY@@";
+    proxy_set_header X-Forwarded-For "";
+    proxy_buffering off;
+    proxy_cache off;
+    proxy_intercept_errors off;
+    proxy_read_timeout 20s;
+    add_header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex" always;
+}
+
+location ^~ /uc_factual_record/ {
+    client_max_body_size 4k;
+    access_log off;
+    proxy_pass http://127.0.0.1:8787;
+    proxy_http_version 1.1;
+    proxy_set_header Connection "";
+    proxy_set_header Host goldlevel.co.uk;
+    proxy_set_header X-Forwarded-Proto https;
+    proxy_set_header X-Portal-Client-IP $remote_addr;
+    proxy_set_header X-Portal-Edge-Key "@@EDGE_KEY@@";
+    proxy_set_header X-Forwarded-For "";
+    proxy_buffering off;
+    proxy_cache off;
+    proxy_intercept_errors off;
+    proxy_read_timeout 20s;
+    add_header X-Robots-Tag "noindex, nofollow, noarchive, nosnippet, noimageindex" always;
+}

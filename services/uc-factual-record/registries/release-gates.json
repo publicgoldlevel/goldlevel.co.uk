@@ -1,0 +1,267 @@
+{
+  "schema": "goldlevel.uc.release-gates.v1",
+  "reviewDate": "2026-10-15",
+  "packageReadiness": "SOURCE_PACKAGE_READY_FOR_BRIDGE_INTEGRATION",
+  "productionReadiness": "GATES_OPEN_NOT_DEPLOYED",
+  "automaticDeploy": false,
+  "currentTaskEffect": "Prepare repo-ready code/private-runtime package and explicit deployment bridge; no deployment inferred",
+  "evidenceLadder": [
+    "design",
+    "implementation",
+    "configuration",
+    "test",
+    "observation",
+    "effectiveness"
+  ],
+  "rule": "A stage does not imply the next. Local package success never auto-closes deployment gates. Operator records dated exact-target evidence.",
+  "gates": [
+    {
+      "id": "G01",
+      "scope": "PACKAGE",
+      "name": "Source syntax/private-boundary/closed-capability checks",
+      "requiredEvidence": "Run source check and record exact output",
+      "status": "PASS_BOUNDED_LOCAL",
+      "controlIds": [
+        "C03",
+        "C07",
+        "C15"
+      ],
+      "owner": "build owner",
+      "evidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ]
+    },
+    {
+      "id": "G02",
+      "scope": "PACKAGE",
+      "name": "Synthetic authentication/boundary/content test suite",
+      "requiredEvidence": "Run tests on selected Node 24 runtime; record command/runtime/results",
+      "status": "PASS_BOUNDED_LOCAL",
+      "controlIds": [
+        "C04",
+        "C05",
+        "C06"
+      ],
+      "owner": "build owner",
+      "evidence": [
+        "registries/local-test-summary.json",
+        "delivery-package:assurance/private-roundtrip-tests.json"
+      ]
+    },
+    {
+      "id": "G03",
+      "scope": "PACKAGE",
+      "name": "Code-only image build",
+      "requiredEvidence": "Resolve image digest; build without evidence; inspect image/build context",
+      "status": "NOT_RUN_DOCKER_UNAVAILABLE",
+      "controlIds": [
+        "C08",
+        "C15"
+      ],
+      "owner": "build owner",
+      "evidence": [
+        "Dockerfile and context allowlist statically inspected; CI and target host run actual image build."
+      ]
+    },
+    {
+      "id": "G04",
+      "scope": "DEPLOYMENT",
+      "name": "Repository and branch identity/visibility",
+      "requiredEvidence": "Record chosen repository, branch, inspected diff and code-only push",
+      "status": "NOT_CONFIGURED",
+      "controlIds": [
+        "C01",
+        "C15"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G05",
+      "scope": "DEPLOYMENT",
+      "name": "Private payload integrity and file permissions",
+      "requiredEvidence": "Verify exact manifest, private runtime path, owner and access permissions",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C03",
+        "C15"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G06",
+      "scope": "DEPLOYMENT",
+      "name": "Named account provisioning and custody",
+      "requiredEvidence": "Create enabled unexpired accounts; approve whole included dossier for each; deliver credentials privately",
+      "status": "NOT_CONFIGURED",
+      "controlIds": [
+        "C04",
+        "C18"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G07",
+      "scope": "DEPLOYMENT",
+      "name": "TLS/DNS/ingress integration",
+      "requiredEvidence": "Review/merge ingress fragment, validate/reload actual proxy, verify certificate renewal and uncached response headers",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C06"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G08",
+      "scope": "DEPLOYMENT",
+      "name": "No direct origin or trusted-header bypass",
+      "requiredEvidence": "Prove upstream is loopback only; test missing/wrong key, Host, proto and external origin paths",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C06"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G09",
+      "scope": "DEPLOYMENT",
+      "name": "Existing same-origin website XSS/security review",
+      "requiredEvidence": "Inspect whole-origin scripts, user-controlled content, dependencies and CSP; document resolution",
+      "status": "OPEN_EXISTING_REPOSITORY_UNAVAILABLE",
+      "controlIds": [
+        "C16"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G10",
+      "scope": "DEPLOYMENT",
+      "name": "Existing service-worker scope review",
+      "requiredEvidence": "Inspect code and actual registrations; remove/restrict workers controlling portal path; verify no residual interception/cache",
+      "status": "OPEN_EXISTING_SITE_UNAVAILABLE",
+      "controlIds": [
+        "C16"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G11",
+      "scope": "DEPLOYMENT",
+      "name": "Live authenticated/anonymous route smoke checks",
+      "requiredEvidence": "Confirm anonymous byte/text/range/HEAD requests fail and authenticated bytes match manifest",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C03",
+        "C04"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G12",
+      "scope": "DEPLOYMENT",
+      "name": "Revocation and restart exercise",
+      "requiredEvidence": "Stop for urgent revocation; disable test account in operator-owned source and redeploy its new protected snapshot; verify disabled login fails, all old sessions are revoked and a permitted account can sign in. Plain restart alone must not be represented as account disable. Exercise failed deployment/rollback so an older enabled account snapshot cannot silently undo revocation. Verify changed approved account or edge-key state stops the previous service before build and disables automatic incompatible fallback.",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C05",
+        "C10"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G13",
+      "scope": "DEPLOYMENT",
+      "name": "Operational log retention/privacy",
+      "requiredEvidence": "Inspect proxy/Docker/app logs; exclude secrets/private content; configure bounded rotation and retention policy",
+      "status": "NOT_CONFIGURED",
+      "controlIds": [
+        "C09"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G14",
+      "scope": "DEPLOYMENT",
+      "name": "Backup and clean restore exercise",
+      "requiredEvidence": "Restore encrypted isolated backup to clean private location; compare hashes and verify synthetic login/protected routes Reconcile latest account revocations/expiry and current ingress key before restart; do not reactivate historical access.",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C10",
+        "C11"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G15",
+      "scope": "DEPLOYMENT",
+      "name": "Accessibility and recipient environment",
+      "requiredEvidence": "Keyboard/screen-reader/zoom/mobile/PDF/enterprise-network check and workable alternative access route",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C17"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G16",
+      "scope": "DEPLOYMENT",
+      "name": "Runtime/image/host/proxy update review",
+      "requiredEvidence": "Record tested image digest and host/runtime/proxy versions and current advisory review",
+      "status": "NOT_OBSERVED_TARGET_HOST",
+      "controlIds": [
+        "C08",
+        "C12"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G17",
+      "scope": "CLAIMS",
+      "name": "Accurate assurance and receipt statements",
+      "requiredEvidence": "Retain no certification/zero-day/full-native-framework/official-receipt claim; update only with bounded evidence",
+      "status": "DOCUMENTED_NO_EXTERNAL_ASSURANCE",
+      "controlIds": [
+        "C13",
+        "C14",
+        "C18"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    },
+    {
+      "id": "G18",
+      "scope": "CHANGE",
+      "name": "Material source/provider/runtime/AI capability change",
+      "requiredEvidence": "Freeze scope, reassess risks, rerun affected checks, keep rollback and operator decision receipt",
+      "status": "REQUIRED_ON_MATERIAL_CHANGE",
+      "controlIds": [
+        "C07",
+        "C08",
+        "C18"
+      ],
+      "owner": "deployment operator",
+      "evidence": []
+    }
+  ],
+  "claimRestrictions": [
+    "No unknown-vulnerability or zero-day elimination claim",
+    "No ISO conformity or certification claim",
+    "No full native framework execution claim",
+    "No official receipt/acceptance/record linkage inferred from HTTP events",
+    "No per-team data isolation claim",
+    "No production effectiveness claim before observation"
+  ]
+}

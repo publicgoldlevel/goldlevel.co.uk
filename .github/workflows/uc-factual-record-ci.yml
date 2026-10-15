@@ -1,0 +1,48 @@
+name: Private record portal checks
+on:
+  push:
+    paths: ['services/uc-factual-record/**', '.github/workflows/uc-factual-record-ci.yml']
+  pull_request:
+    paths: ['services/uc-factual-record/**', '.github/workflows/uc-factual-record-ci.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: uc-portal-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: services/uc-factual-record
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6.1.0, checked 2026-10-15
+        with:
+          persist-credentials: false
+          submodules: false
+      - name: Resolve and record current Node 24 image digest
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker pull node:24-bookworm-slim
+          image=$(docker image inspect node:24-bookworm-slim --format '{{index .RepoDigests 0}}')
+          [[ "$image" =~ ^node@sha256:[a-f0-9]{64}$ ]]
+          echo "PORTAL_TEST_IMAGE=$image" >> "$GITHUB_ENV"
+          echo "Runtime image: $image" >> "$GITHUB_STEP_SUMMARY"
+      - name: Source boundary and syntax checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --memory 768m --tmpfs /tmp:rw,nosuid,nodev,noexec,size=96m -u "$(id -u):$(id -g)" -v "$PWD:/work:ro" -w /work "$PORTAL_TEST_IMAGE" node scripts/check-source.mjs
+      - name: Synthetic integration and adversarial tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --memory 768m --tmpfs /tmp:rw,nosuid,nodev,noexec,size=96m -u "$(id -u):$(id -g)" -v "$PWD:/work:ro" -w /work "$PORTAL_TEST_IMAGE" npm test
+      - name: Validate production container build with no case content
+        shell: bash
+        run: |
+          set -euo pipefail
+          docker build --pull=false --build-arg NODE_IMAGE="$PORTAL_TEST_IMAGE" -t uc-private-portal:ci .

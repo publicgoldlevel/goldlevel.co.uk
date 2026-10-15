@@ -1,0 +1,22 @@
+# Private evidence and secrets are transferred directly to the host, never Git.
+private-runtime/
+**/private-runtime/
+.env
+.env.*
+!.env.example
+users.json
+edge-key
+*.key
+*.pem
+*.pfx
+*.p12
+*.tar
+*.tgz
+*.zip
+*.pdf
+*.html
+node_modules/
+.state/
+receipts/private/
+deploy.env
+*.log

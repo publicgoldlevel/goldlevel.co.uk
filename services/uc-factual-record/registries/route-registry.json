@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "basePath": "/uc_factual_record",
+  "default": "deny",
+  "trustedIngressRequired": true,
+  "routes": [
+    {"path":"/_health","methods":["GET","HEAD"],"authentication":false,"edgeRequired":false,"content":"empty liveness response"},
+    {"path":"/","methods":["GET","HEAD"],"authentication":false,"content":"fixed redirect"},
+    {"path":"/login","methods":["GET","HEAD","POST"],"authentication":false,"csrfOnPost":true,"content":"generic login only"},
+    {"path":"/assets/login.css","methods":["GET","HEAD"],"authentication":false,"content":"generic login style"},
+    {"path":"/record","methods":["GET","HEAD"],"authentication":true,"content":"private HTML with per-session logout token"},
+    {"path":"/assets/case.js","methods":["GET","HEAD"],"authentication":true,"content":"generic reader code"},
+    {"path":"/assets/case.css","methods":["GET","HEAD"],"authentication":true,"content":"reader style"},
+    {"path":"/documents/:id","methods":["GET","HEAD"],"authentication":true,"range":"single bytes range","content":"exact allowlisted source bytes"},
+    {"path":"/api/documents/:id/text","methods":["GET","HEAD"],"authentication":true,"content":"escaped at presentation using textContent"},
+    {"path":"/api/session","methods":["GET","HEAD"],"authentication":true,"content":"session proof only"},
+    {"path":"/logout","methods":["POST"],"authentication":true,"csrfOnPost":true,"content":"session invalidation and fixed redirect"}
+  ],
+  "prohibited": ["uploads", "filesystem paths from requests", "model calls", "tool execution", "arbitrary outbound fetch", "remote account administration", "URL supplied redirects", "service workers"]
+}
