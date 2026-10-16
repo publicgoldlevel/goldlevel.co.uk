@@ -59,7 +59,7 @@ The bridge requires PowerShell 7. Its modes are separate:
 
 The Linux helper accepts `--bundle`, `--root` and `--node-image`. It builds the code image and starts the service with host binding `127.0.0.1:8787`. Generated Nginx/Caddy ingress fragments reside in the private runtime ingress directory because they contain the edge key. Review and merge the selected fragment into the existing HTTPS site's configuration; never replace the site's entire configuration. Validate and reload the actual ingress using its native tooling. This merge/reload is an explicit deployment gate.
 
-Resolve and review the Node 24 base image digest before deployment; do not invent a digest or use a floating tag for the release. Record the tested digest in the deployment receipt. Rebuild and retest deliberately when it changes.
+Resolve and review the Node 26.4.0 base image digest before deployment; do not invent a digest or use a floating tag for the release. Record the tested digest in the deployment receipt. Rebuild and retest deliberately when it changes.
 
 ## Pre-launch gates
 

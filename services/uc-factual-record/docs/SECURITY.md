@@ -27,7 +27,7 @@ Authenticated responses carry restrictive cache, indexing, referrer and framing 
 
 ## Runtime and supply chain
 
-Use the supported Node.js 24 runtime and an explicitly resolved image digest. There are no npm dependencies. The runtime, container base, operating system, Docker, reverse proxy and host still require security updates and vulnerability review. Rerun checks after a runtime/image/proxy/content-policy change. The production container runs with reduced privileges, a read-only filesystem, constrained resources and an internal network as defined in the deployment files. No outbound application feature is implemented.
+Use the pinned Node.js 26.4.0 runtime and an explicitly resolved image digest. There are no npm dependencies. The runtime, container base, operating system, Docker, reverse proxy and host still require security updates and vulnerability review. Rerun checks after a runtime/image/proxy/content-policy change. The production container runs with reduced privileges, a read-only filesystem, constrained resources and an internal network as defined in the deployment files. No outbound application feature is implemented.
 
 Keep GitHub permissions and deployment credentials separate from recipient accounts. The workflow tests synthetic material and builds without private evidence; it does not deploy. Never add evidence or credentials to Actions artifacts, caches, release attachments or image layers. Administrative GitHub/host accounts should use phishing-resistant MFA where supported and a separately protected recovery route.
 

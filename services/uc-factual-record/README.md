@@ -1,6 +1,6 @@
 # Goldlevel private factual record service
 
-Read-only authenticated service at `/uc_factual_record`. Requires Node.js 24 LTS; no third-party npm packages are installed. It is intended for one container behind an existing trusted HTTPS ingress. The service starts only with a valid private content manifest, at least one enabled unexpired account and an ingress authentication key.
+Read-only authenticated service at `/uc_factual_record`. Requires exact Node.js 26.4.0; no third-party npm packages are installed. It is intended for one container behind an existing trusted HTTPS ingress. The service starts only with a valid private content manifest, at least one enabled unexpired account and an ingress authentication key.
 
 ## Check the source
 

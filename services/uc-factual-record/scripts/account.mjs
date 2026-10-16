@@ -112,7 +112,7 @@ async function atomicWrite(file, dir, data) {
 }
 
 export async function main(argv = process.argv.slice(2)) {
-  if (Number(process.versions.node.split('.')[0]) !== 24) fail();
+  if (process.versions.node !== '26.4.0') fail();
   const args = options(argv), dir = await privateParent(args.file);
   if (args.command === 'list') {
     const data = await readUsers(args.file, false);
@@ -153,7 +153,7 @@ export async function main(argv = process.argv.slice(2)) {
 
 if (process.argv[1] && pathToFileURL(resolve(process.argv[1])).href === import.meta.url) {
   if (process.argv.length === 3 && ['--help','-h'].includes(process.argv[2])) {
-    process.stdout.write('Offline account administration (Node.js 24):\n  account.mjs add|rotate --file ABSOLUTE_PRIVATE_FILE --user recipient-id --days 1..90 --stdin\n  account.mjs revoke --file ABSOLUTE_PRIVATE_FILE --user recipient-id\n  account.mjs list --file ABSOLUTE_PRIVATE_FILE\nPasswords: one UTF-8 line on stdin, at least 20 characters and at most 256 UTF-8 bytes.\nCreate/protect the parent directory first. Never use command-line passwords.\nUpdate your operator-owned source account file, then redeploy it through the bridge.\nThe service reloads accounts only on restart; redeployment revokes all sessions.\n');
+    process.stdout.write('Offline account administration (Node.js 26.4.0):\n  account.mjs add|rotate --file ABSOLUTE_PRIVATE_FILE --user recipient-id --days 1..90 --stdin\n  account.mjs revoke --file ABSOLUTE_PRIVATE_FILE --user recipient-id\n  account.mjs list --file ABSOLUTE_PRIVATE_FILE\nPasswords: one UTF-8 line on stdin, at least 20 characters and at most 256 UTF-8 bytes.\nCreate/protect the parent directory first. Never use command-line passwords.\nUpdate your operator-owned source account file, then redeploy it through the bridge.\nThe service reloads accounts only on restart; redeployment revokes all sessions.\n');
   } else main().catch(() => {
     process.stderr.write('Account operation failed. Check options, private directory permissions, account state and input.\n');
     process.exitCode = 1;

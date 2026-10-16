@@ -27,7 +27,7 @@
     },
     {
       "name": "NODE_IMAGE",
-      "type": "reviewed Node24 image at exact digest",
+      "type": "reviewed exact Node 26.4.0 image at exact digest",
       "resolvedAt": "deployment",
       "credential": false
     }

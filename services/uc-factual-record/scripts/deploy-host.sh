@@ -13,7 +13,7 @@ usage() {
   cat <<'EOF'
 Usage: sudo bash scripts/deploy-host.sh --bundle /private/staged-bundle \
   --root /opt/goldlevel-uc-private-portal \
-  --node-image node:24-bookworm-slim@sha256:<reviewed-64-hex-digest>
+  --node-image node:26.4.0-bookworm-slim@sha256:<reviewed-64-hex-digest>
 
 The bundle has service/, private-runtime/content/ and
 private-runtime/secrets/users.json. No password or ingress key is an argument.
@@ -39,7 +39,7 @@ case "$ROOT" in
   /opt/goldlevel-uc-private-portal|/srv/goldlevel-uc-private-portal) ;;
   *) fail 'Use the dedicated /opt or /srv installation root shown in help.' ;;
 esac
-[[ "$NODE_IMAGE" =~ ^node:24(-[a-z0-9.-]+)?@sha256:[a-f0-9]{64}$ ]] || fail 'A Node 24 image with an exact SHA-256 digest is mandatory.'
+[[ "$NODE_IMAGE" =~ ^node:26\.4\.0(-[a-z0-9.-]+)?@sha256:[a-f0-9]{64}$ ]] || fail 'A Node 26.4.0 image with an exact SHA-256 digest is mandatory.'
 [[ -n "$BUNDLE" && -d "$BUNDLE" && ! -L "$BUNDLE" ]] || fail 'A real staged bundle directory is required.'
 for command in docker realpath find install cp chown chmod date openssl awk sha256sum stat readlink ln mv tr cmp curl; do
   command -v "$command" >/dev/null || fail "Required host command is unavailable: $command"
@@ -122,6 +122,8 @@ fi
 
 # Pull the exact reviewed base digest. Builds perform no network operations.
 docker pull "$NODE_IMAGE"
+actual_node=$(docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --user 10001:10001 "$NODE_IMAGE" node -p 'process.version')
+[[ "$actual_node" == 'v26.4.0' ]] || fail 'Refusing deploy: reviewed image does not execute Node v26.4.0.' 
 docker image inspect --format '{{json .RepoDigests}}' "$NODE_IMAGE" > "$RUNTIME/receipts/runtime-image-digests.json"
 docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --user 10001:10001 "$NODE_IMAGE" node -p 'JSON.stringify({node:process.version,versions:process.versions,platform:process.platform,arch:process.arch})' > "$RUNTIME/receipts/runtime-versions.json"
 docker run --rm --network none --read-only --cap-drop ALL --security-opt no-new-privileges:true --user 10001:10001 --entrypoint sh "$NODE_IMAGE" -c 'if command -v dpkg-query >/dev/null 2>&1; then dpkg-query -W; elif command -v apk >/dev/null 2>&1; then apk info -v; else printf "%s\n" "PACKAGE_INVENTORY_TOOL_UNAVAILABLE"; fi' > "$RUNTIME/receipts/os-package-inventory.txt"

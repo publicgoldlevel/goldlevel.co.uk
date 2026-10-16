@@ -1,6 +1,6 @@
 import test, { before } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtemp, chmod, readFile, readdir, rm, symlink, stat, writeFile } from 'node:fs/promises';
+import { mkdtemp, chmod, readFile, readdir, realpath, rm, symlink, stat, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { spawn } from 'node:child_process';
@@ -87,7 +87,10 @@ function cli(args, input='') {
 }
 
 test('account CLI writes atomically, lists safely, rejects duplicates, rotates explicitly and revokes', async () => {
-  const dir=await mkdtemp(join(tmpdir(),'uc-auth-test-'));
+  // Android/Termux can expose the OS-owned /data/data alias for /data/user/0.
+  // The CLI intentionally rejects linked ancestors; create this fixture using
+  // the canonical parent rather than weakening the CLI security boundary.
+  const dir=await mkdtemp(join(await realpath(tmpdir()),'uc-auth-test-'));
   await chmod(dir,0o700);
   const file=join(dir,'users.json');
   try {
@@ -116,10 +119,13 @@ test('account CLI writes atomically, lists safely, rejects duplicates, rotates e
 
 test('account CLI refuses linked files, unsafe directory permissions and stale locks', async () => {
   if(process.platform==='win32') return;
-  const dir=await mkdtemp(join(tmpdir(),'uc-auth-boundary-'));await chmod(dir,0o700);
+  const dir=await mkdtemp(join(await realpath(tmpdir()),'uc-auth-boundary-'));await chmod(dir,0o700);
   const file=join(dir,'users.json'), target=join(dir,'target.json');
   try {
     await writeFile(target,JSON.stringify(configuration()),{mode:0o600});
+    assert.equal((await cli(['list','--file',target])).code,0);
+    await symlink(dir,join(dir,'linked-parent'),'dir');
+    assert.notEqual((await cli(['list','--file',join(dir,'linked-parent','target.json')])).code,0);
     await symlink(target,file);
     assert.notEqual((await cli(['list','--file',file])).code,0);
     await rm(file);await writeFile(join(dir,'.users.json.lock'),'synthetic lock',{mode:0o600});

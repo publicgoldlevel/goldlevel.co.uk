@@ -215,7 +215,7 @@ export async function createPortal(config) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
-    if (Number(process.versions.node.split('.')[0]) !== 24) throw new Error('Node.js 24 LTS is required');
+    if (process.versions.node !== '26.4.0') throw new Error('Node.js 26.4.0 is required');
     const edgeKey=(await readFile(process.env.EDGE_KEY_FILE||'/run/secrets/edge-key','utf8')).trim();
     const app=await createPortal({publicOrigin:process.env.PUBLIC_ORIGIN,basePath:process.env.BASE_PATH,contentDir:process.env.CONTENT_DIR||'/content',usersFile:process.env.USERS_FILE||'/run/secrets/users.json',edgeKey});
     const port=Number(process.env.PORT||8080), host=process.env.HOST||'127.0.0.1';

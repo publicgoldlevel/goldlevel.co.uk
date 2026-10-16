@@ -6,7 +6,7 @@
     "component": {
       "type": "application",
       "name": "goldlevel-uc-private-portal",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "licenses": [
         {
           "license": {

@@ -1,3 +1,5 @@
+**Node 26.4.0 migration (15 October 2026):** The Node 24.19.0 statement below describes a superseded historical build, not this modified 26.4.0 candidate. Native 26.4.0 testing and release-image review remain open.
+
 # Assurance limits and release conditions
 
 This package is a candidate implementation for a private, password-protected route. Source review and local automated checks provide bounded evidence for the tested code and inputs. They do not establish production security, official receipt, a zero-day-free system or ISO certification.

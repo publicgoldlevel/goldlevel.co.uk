@@ -36,8 +36,8 @@
       "id": "G02",
       "scope": "PACKAGE",
       "name": "Synthetic authentication/boundary/content test suite",
-      "requiredEvidence": "Run tests on selected Node 24 runtime; record command/runtime/results",
-      "status": "PASS_BOUNDED_LOCAL",
+      "requiredEvidence": "Run unchanged code on native Node v26.4.0 on Termux AND selected production-image digest; record complete npm check/test outputs",
+      "status": "HOLD_NODE26_4_0_NATIVE_ACCEPTANCE",
       "controlIds": [
         "C04",
         "C05",
@@ -46,7 +46,8 @@
       "owner": "build owner",
       "evidence": [
         "registries/local-test-summary.json",
-        "delivery-package:assurance/private-roundtrip-tests.json"
+        "delivery-package:assurance/private-roundtrip-tests.json",
+        "Historical Node 22 and Node 24 test receipts apply to superseded code and are not Node 26.4.0 acceptance"
       ]
     },
     {
@@ -263,5 +264,7 @@
     "No official receipt/acceptance/record linkage inferred from HTTP events",
     "No per-team data isolation claim",
     "No production effectiveness claim before observation"
-  ]
+  ],
+  "runtimeTarget": "26.4.0",
+  "nativeTargetAcceptance": "NOT_EXECUTED_THIS_BUILD"
 }

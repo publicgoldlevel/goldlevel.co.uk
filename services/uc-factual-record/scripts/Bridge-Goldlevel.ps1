@@ -10,7 +10,7 @@ Stage copies the service source and uc-factual-record*.yml workflow from the
 delivered overlay into an existing clone. It does not commit or push.
 Push stages code, runs the source check and tests, then commits and pushes only
 the named branch. -ConfirmPush is mandatory. There is no force-push mode.
-Deploy requires a reviewed Node 24 image digest, an SSH identity file and a
+Deploy requires a reviewed Node 26.4.0 image digest, an SSH identity file and a
 separately verified known_hosts file. Private content and users.json go directly
 over SSH. The host installer does not change the existing HTTPS ingress.
 Credentials are not accepted as string parameters. Prepare accounts with the
@@ -23,7 +23,7 @@ their contents are never written to the console or passed as command arguments.
 .EXAMPLE
 ./scripts/Bridge-Goldlevel.ps1 -Mode Push -RepoPath C:\work\goldlevel -ConfirmPush
 .EXAMPLE
-./scripts/Bridge-Goldlevel.ps1 -Mode Deploy -RuntimePath C:\private\private-runtime -SshTarget deploy@example.org -SshIdentityFile C:\keys\id_ed25519 -KnownHostsFile C:\keys\known_hosts -NodeImage node:24-bookworm-slim@sha256:<reviewed-64-hex-digest>
+./scripts/Bridge-Goldlevel.ps1 -Mode Deploy -RuntimePath C:\private\private-runtime -SshTarget deploy@example.org -SshIdentityFile C:\keys\id_ed25519 -KnownHostsFile C:\keys\known_hosts -NodeImage node:26.4.0-bookworm-slim@sha256:<reviewed-64-hex-digest>
 #>
 [CmdletBinding()]
 param(
@@ -272,7 +272,7 @@ if ($Mode -eq 'Stage' -or $Mode -eq 'Push') {
 # Deploy is an independent direct SSH transfer; it does not commit or push.
 foreach ($name in @('ssh', 'scp', 'tar')) { Get-Command $name -ErrorAction Stop | Out-Null }
 if ($SshTarget -notmatch '^[a-z_][a-z0-9_-]{0,31}@[A-Za-z0-9](?:[A-Za-z0-9.-]{0,251}[A-Za-z0-9])?$') { throw 'SshTarget must be a validated user@hostname (no shell syntax).' }
-if ($NodeImage -notmatch '^node:24(?:-[a-z0-9.-]+)?@sha256:[a-f0-9]{64}$') { throw 'NodeImage must pin a reviewed Node 24 image by SHA-256 digest.' }
+if ($NodeImage -notmatch '^node:26\.4\.0(?:-[a-z0-9.-]+)?@sha256:[a-f0-9]{64}$') { throw 'NodeImage must pin a reviewed Node 26.4.0 image by SHA-256 digest.' }
 if ([string]::IsNullOrWhiteSpace($RuntimePath)) { throw '-RuntimePath is required for Deploy; it must remain outside the repository.' }
 $runtime = (Resolve-Path -LiteralPath $RuntimePath).Path
 Assert-OutsideRepository $runtime

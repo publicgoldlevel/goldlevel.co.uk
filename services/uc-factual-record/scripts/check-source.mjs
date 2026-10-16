@@ -24,6 +24,13 @@ for(const file of files){
 }
 const pkg=JSON.parse(await readFile(resolve(root,'package.json'),'utf8'));
 if(Object.keys(pkg.dependencies||{}).length||Object.keys(pkg.devDependencies||{}).length)problems.push('Unexpected npm dependency; update inventory and assurance');
+if(pkg.engines?.node!=='26.4.0')problems.push('Node 26.4.0 package engine contract missing');
+const serverSource=await readFile(resolve(root,'src/server.mjs'),'utf8');
+const accountSource=await readFile(resolve(root,'scripts/account.mjs'),'utf8');
+if(!serverSource.includes("process.versions.node !== '26.4.0'"))problems.push('Server exact Node 26.4.0 gate missing');
+if(!accountSource.includes("process.versions.node !== '26.4.0'"))problems.push('Account CLI exact Node 26.4.0 gate missing');
+const hostDeploy=await readFile(resolve(root,'scripts/deploy-host.sh'),'utf8');
+if(!hostDeploy.includes('actual_node')||!hostDeploy.includes("'v26.4.0'"))problems.push('Deployment container runtime version validation missing');
 const policy=JSON.parse(await readFile(resolve(root,'policy/ai-boundary.json'),'utf8'));
 if(policy.mode!=='closed'||['allowModels','allowTools','allowUploads','allowOutboundRequests'].some(k=>policy[k]!==false))problems.push('Open AI capability policy');
 const app=await readFile(resolve(root,'src/server.mjs'),'utf8');
